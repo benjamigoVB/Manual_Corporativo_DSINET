@@ -3,6 +3,10 @@
     {
       "source": "/",
       "destination": "/GENERALIDADES/0.0_Que_es_DSINET.html"
+    },
+    {
+      "source": "/:match*",
+      "destination": "/GENERALIDADES/:match*"
     }
   ]
 }
