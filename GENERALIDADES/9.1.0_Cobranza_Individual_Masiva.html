@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.0 Conceptos Generales: Módulo de Cobranzas y Cuentas por Cobrar | DSI-NET Docs</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ============ HEADER SUPERIOR ============ -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <button class="topbar__menu-toggle" id="sidebarToggle" aria-label="Abrir/cerrar menú lateral" aria-expanded="true">
+        <span></span><span></span><span></span>
+      </button>
+      <img src="../Imagenes/DSI_NET_Logo.png" alt="logo dsi" width="50px" height="50px">
+    </div>
+
+    <div class="topbar__search">
+      <i data-lucide="search" class="topbar__search-icon"></i>
+      <input type="search" id="topSearch" placeholder="Buscar en la documentación de DSI-NET..." aria-label="Buscar en la documentación">
+      <kbd class="topbar__kbd">Ctrl+K</kbd>
+    </div>
+
+    <nav class="topbar__links" aria-label="Enlaces de soporte">
+      <a href="#" class="topbar__link"><i data-lucide="book-open" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Glosario</a>
+      <a href="#" class="topbar__link"><i data-lucide="life-buoy" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Soporte Técnico</a>
+      <a href="#" class="topbar__link"><i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>DSI SAC</a>
+      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
+        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
+        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="layout">
+
+    <!-- ============ ASIDE: SIDEBAR / TOC ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__filter">
+        <input type="text" id="tocFilter" placeholder="Filtrar por título..." aria-label="Filtrar por título">
+      </div>
+
+      <nav class="toc" aria-label="Tabla de contenidos">
+        <ul class="toc__list" id="tocList">
+
+          <!-- GRUPO: 0. Generalidades y Arquitectura -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">0. Generalidades y Arquitectura</button>
+            <ul class="toc__sublist">
+              <li><a href="0.0_Que_es_DSINET.html" class="toc__link">0.0 ¿Qué es DSI-NET? y Conceptos</a></li>
+              <li><a href="0.1_Requisitos_del_Sistema.html" class="toc__link">0.1 Requisitos y Entorno de Ejecución</a></li>
+              <li><a href="0.2_Autenticacion.html" class="toc__link">0.2 Autenticación y Selección de Empresa</a></li>
+
+              <!-- SUBGRUPO: 0.3 Entorno de Trabajo y Barra Global -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">0.3 Entorno de Trabajo y Barra Global</button>
+                <ul class="toc__sublist">
+                  <li><a href="0.3.0_Entorno_de_Trabajo.html" class="toc__link">0.3.0 Entorno de Trabajo</a></li>
+                  <li><a href="0.3.1_Menu_comun.html" class="toc__link">0.3.1 Menú Común</a></li>
+
+                  <!-- SUBGRUPO: 0.3.2 Menú Documentos -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">0.3.2 Menú Documentos</button>
+                    <ul class="toc__sublist">
+                      <li><a href="0.3.2.0_Concepto_General.html" class="toc__link">0.3.2.0 Concepto General</a></li>
+                      <li><a href="0.3.2.1_Gestion_Ventas.html" class="toc__link">0.3.2.1 Gestión de ventas</a></li>
+                      <li><a href="0.3.2.2_Gestion_Cobranza.html" class="toc__link">0.3.2.2 Gestión de cobranza</a></li>
+                      <li><a href="0.3.2.3_Gestion_Devoluciones.html" class="toc__link">0.3.2.3 Gestión de devoluciones</a></li>
+                      <li><a href="0.3.2.4_Gestion_Letras.html" class="toc__link">0.3.2.4 Gestión de Letras</a></li>
+
+                      <!-- SUBGRUPO IMPORTACIONES -->
+                      <li class="toc__item toc__item--group">
+                        <button class="toc__toggle" type="button" aria-expanded="false">0.3.2.5 Importaciones</button>
+                        <ul class="toc__sublist">
+                          <li><a href="#" class="toc__link">0.3.2.5.1 Pedido de Producción</a></li>
+                          <li><a href="0.3.2.5.2_Orden_de_Compra_Imp.html" class="toc__link">0.3.2.5.2 Orden de Compra - Imp.</a></li>
+                          <li><a href="0.3.2.5.3_Importacion.html" class="toc__link">0.3.2.5.3 Importación</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.4 Comp. de pago ext.</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.5 Comp. descuento ext.</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.6 Declaración única Adua.</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.7 Comp. de pago Nacional</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.8 Calculo de Costo Almac.</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="0.3.2.6_Almacen.html" class="toc__link">0.3.2.6 Almacén</a></li>
+                      <li><a href="0.3.2.7_Distribucion.html" class="toc__link">0.3.2.7 Distribución</a></li>
+                      <li><a href="0.3.2.8_Nota_pedido.html" class="toc__link">0.3.2.8 Nota de pedido</a></li>
+                      <li><a href="0.3.2.9_Facturacion.html" class="toc__link">0.3.2.9 Facturación</a></li>
+                      <li><a href="0.3.2.10_Cobranza.html" class="toc__link">0.3.2.10 Cobranza</a></li>
+                      <li><a href="0.3.2.11_Caja_Chica.html" class="toc__link">0.3.2.11 Caja Chica</a></li>
+                      <li><a href="0.3.2.12_Rend_Ctas.html" class="toc__link">0.3.2.12 Rend. Ctas</a></li>
+                      <li><a href="0.3.2.13_Bancos.html" class="toc__link">0.3.2.13 Bancos</a></li>
+                      <li><a href="0.3.2.14_Compras.html" class="toc__link">0.3.2.14 Compras</a></li>
+                      <li><a href="0.3.2.15_Letras_Cobrar.html" class="toc__link">0.3.2.15 Letras por Cobrar</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="0.3.3_Menu_reportes.html" class="toc__link">0.3.3 Menú Reportes</a></li>
+                  <li><a href="0.3.4_Menu_financiero_contable.html" class="toc__link">0.3.4 Menú Financiero Contable</a></li>
+                  <li><a href="0.3.5_Menu_configuracion.html" class="toc__link">0.3.5 Menú Configuración</a></li>
+                  <li><a href="0.3.6_Menu_maestros.html" class="toc__link">0.3.6 Menú Maestros</a></li>
+                  <li><a href="0.3.7_Menu_procesos.html" class="toc__link">0.3.7 Menú Procesos</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 1. MÓDULO DE COMPRAS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">1. Módulo de Compras </button>
+            <ul class="toc__sublist">
+              <li><a href="1.0_Modulo_de_Compras.html" class="toc__link">1.0 Módulo de Compras</a></li>
+              <li><a href="1.1_Orden_de_Compra.html" class="toc__link">1.1 Orden de Compra</a></li>
+              <li><a href="1.2_Provision_de_Compras.html" class="toc__link">1.2 Provisión de Compras</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. MÓDULO DE CAJA CHICA -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">2. Módulo de Caja Chica</button>
+            <ul class="toc__sublist">
+              <li><a href="2.0_Conceptos_Generales.html" class="toc__link">2.0 Conceptos Generales</a></li>
+              <li><a href="2.1_Apertura_Caja_Chica.html" class="toc__link">2.1 Apertura y Asignación de Fondo</a></li>
+              <li><a href="2.2_Registro_Gastos.html" class="toc__link">2.2 Registro de Gastos y Vales</a></li>
+              <li><a href="2.3_Rendicion_Reembolso.html" class="toc__link">2.3 Rendición y Reembolso</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MÓDULO DE ENTREGA POR RENDIR -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">3. Módulo de Entrega por Rendir</button>
+            <ul class="toc__sublist">
+              <li><a href="3.0_Conceptos_Generales.html" class="toc__link">3.0 Conceptos Generales</a></li>
+              <li><a href="3.1_Solicitud_Entrega.html" class="toc__link">3.1 Solicitud de Entrega a Rendir</a></li>
+              <li><a href="3.2_Desembolso_Fondos.html" class="toc__link">3.2 Desembolso de Fondos</a></li>
+              <li><a href="3.3_Liquidacion_Gastos.html" class="toc__link">3.3 Liquidación y Rendición de Cuentas</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. MÓDULO DE IMPORTACIONES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">4. Módulo de Importaciones</button>
+            <ul class="toc__sublist">
+              <li><a href="4.0_Conceptos_Generales.html" class="toc__link">4.0 Conceptos Generales</a></li>
+              <li><a href="4.1_Orden_Compra_Exterior.html" class="toc__link">4.1 Orden de Compra Exterior</a></li>
+              <li><a href="4.2_Gestion_DUA_Aduanas.html" class="toc__link">4.2 Gestión DUA y Despacho Aduanero</a></li>
+              <li><a href="4.3_Costeo_Liquidacion.html" class="toc__link">4.3 Costeo y Liquidación de Importación</a></li>
+            </ul>
+          </li>
+
+          <!-- 5. MÓDULO DE ALMACENES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">5. Módulo de Almacenes</button>
+            <ul class="toc__sublist">
+              <li><a href="5.0_Conceptos_Generales.html" class="toc__link">5.0 Conceptos Generales</a></li>
+              <li><a href="5.1_Proceso_Inventario.html" class="toc__link">5.1 Proceso de Inventario</a></li>
+              <li><a href="5.2_Guia_Entrada.html" class="toc__link">5.2 Guía de Entrada</a></li>
+              <li><a href="5.3_Guia_Salida.html" class="toc__link">5.3 Guía de Salida</a></li>
+              <li><a href="5.4_Guia_Remision.html" class="toc__link">5.4 Guía de Remisión</a></li>
+              <li><a href="5.5_Guia_Remision_Activos.html" class="toc__link">5.5 Guía de Remisión-Activos</a></li>
+              <li><a href="5.6_Mantenimiento_Ubicaciones.html" class="toc__link">5.6 Mantenimiento de Ubicaciones</a></li>
+            </ul>
+          </li>
+
+          <!-- 6. MÓDULO DE PICKING Y PACKING -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">6. Módulo de Picking y Packing</button>
+            <ul class="toc__sublist">
+              <li><a href="6.0_Conceptos_Generales.html" class="toc__link">6.0 Conceptos Generales</a></li>
+              <li><a href="6.1_Generacion_Picking.html" class="toc__link">6.1 Generación de Listas de Picking</a></li>
+              <li><a href="6.2_Verificacion_Packing.html" class="toc__link">6.2 Empaque y Rotulado (Packing)</a></li>
+              <li><a href="6.3_Control_Despacho.html" class="toc__link">6.3 Cierre y Derivación a Despacho</a></li>
+            </ul>
+          </li>
+
+          <!-- 7. MÓDULO DE DISTRIBUCIÓN -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">7. Módulo de Distribución</button>
+            <ul class="toc__sublist">
+              <li><a href="7.0_Conceptos_Generales.html" class="toc__link">7.0 Conceptos Generales</a></li>
+              <li><a href="7.1_Programacion_Rutas.html" class="toc__link">7.1 Programación de Rutas y Vehículos</a></li>
+              <li><a href="7.2_Guias_Remision.html" class="toc__link">7.2 Generación de Guías de Remisión</a></li>
+              <li><a href="7.3_Liquidacion_Reparto.html" class="toc__link">7.3 Liquidación y Conformidad de Entrega</a></li>
+            </ul>
+          </li>
+
+          <!-- ================= 8. MÓDULO DE PRE-VENTAS Y VENTAS (CERRADO EN REPOSO) ================= -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">8. Módulo de Pre-Ventas y Ventas</button>
+            <ul class="toc__sublist">
+              <li><a href="8.0_Modulo_Preventas_Ventas.html" class="toc__link">8.0 Conceptos Generales</a></li>
+
+              <!-- 8.1 ACORDEÓN HIJO -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">
+                  8.1 Nota de Pedido
+                </button>
+                <ul class="toc__sublist">
+                  <li><a href="8.1.0_Nota_Pedido.html" class="toc__link">8.1.0 Nota de Pedido</a></li>
+                  <li><a href="8.1.1_Estados_Ciclo_de_vida.html" class="toc__link">8.1.1 Estados y Ciclo de Vida</a></li>
+                </ul>
+              </li>
+
+              <li><a href="8.2_Venta_Directa.html" class="toc__link">8.2 Venta Directa y Facturación</a></li>
+
+              <!-- 8.3 ACORDEÓN HIJO -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">
+                  8.3 Panel de Descuentos
+                </button>
+                <ul class="toc__sublist">
+                  <li><a href="8.3.0_Descuentos_conceptos_generales.html" class="toc__link">8.3.0 Conceptos Generales</a></li>
+                  <li><a href="8.3.1_Campana_Oferta.html" class="toc__link">8.3.1 Campaña de Oferta</a></li>
+                  <li><a href="8.3.2_Liquidacion_Articulos.html" class="toc__link">8.3.2 Liquidación de Artículos</a></li>
+                  <li><a href="8.3.3_Promociones_Focalizadas.html" class="toc__link">8.3.3 Promociones Focalizadas</a></li>
+                </ul>
+              </li>
+
+              <li><a href="8.4_Operaciones_Especiales.html" class="toc__link">8.4 Operaciones Especiales</a></li>
+            </ul>
+          </li>
+
+          <!-- ================= 9. MÓDULO DE COBRANZAS (ACTIVO Y ABIERTO) ================= -->
+          <li class="toc__item toc__item--group is-open">
+            <button class="toc__toggle" type="button" aria-expanded="true">9. Módulo de Cobranzas</button>
+            <ul class="toc__sublist">
+              <li><a href="9.0_Conceptos_Generales.html" class="toc__link">9.0 Conceptos Generales</a></li>
+              
+              <!-- 9.1 ACORDEÓN HIJO (ABIERTO PORQUE CONTIENE LA PÁGINA ACTUAL) -->
+              <li class="toc__item toc__item--group is-open">
+                <button class="toc__toggle" type="button" aria-expanded="true">
+                  9.1 Tipos de cobranzas
+                </button>
+                <ul class="toc__sublist">
+                  <li>
+                    <a href="9.1.0_Cobranza_Individual_Masiva.html" class="toc__link toc__link--active" aria-current="page">
+                      9.1.0 Cobranza Individual y Masiva
+                    </a>
+                  </li>
+                  <li><a href="9.1.1_Documento_Anticipo.html" class="toc__link">9.1.1 Cobranza por Anticipo</a></li>
+                  <li><a href="9.1.2_Cobranza_Nota_Credito.html" class="toc__link">9.1.2 Cobranza por Nota de Crédito</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- 10. LÍNEAS DE CRÉDITO DE CLIENTES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">10. Líneas de Crédito de Clientes</button>
+            <ul class="toc__sublist">
+              <li><a href="10.0_Conceptos_Generales.html" class="toc__link">10.0 Conceptos Generales</a></li>
+              <li><a href="10.1_Asignacion_Lineas.html" class="toc__link">10.1 Evaluación y Asignación de Líneas</a></li>
+              <li><a href="10.2_Bloqueo_Desbloqueo.html" class="toc__link">10.2 Control de Riesgo y Bloqueo</a></li>
+              <li><a href="10.3_Auditoria_Creditos.html" class="toc__link">10.3 Auditoría y Variación de Líneas</a></li>
+            </ul>
+          </li>
+
+          <!-- 11. MÓDULO DE LETRAS DE CLIENTES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">11. Módulo de Letras de Clientes</button>
+            <ul class="toc__sublist">
+              <li><a href="11.0_Conceptos_Generales.html" class="toc__link">11.0 Conceptos Generales</a></li>
+              <li><a href="11.1_Canje_Letras.html" class="toc__link">11.1 Canje de Facturas por Letras</a></li>
+              <li><a href="11.2_Envio_Banco_Descuento.html" class="toc__link">11.2 Cobranza Libre y Descuento Bancario</a></li>
+              <li><a href="11.3_Cancelacion_Protesto.html" class="toc__link">11.3 Cancelación, Renovación y Protesto</a></li>
+            </ul>
+          </li>
+
+          <!-- 12. CTAS X PAGAR LETRAS PROVEEDORES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">12. Ctas x Pagar Letras Proveedores</button>
+            <ul class="toc__sublist">
+              <li><a href="12.0_Conceptos_Generales.html" class="toc__link">12.0 Conceptos Generales</a></li>
+              <li><a href="12.1_Registro_Aceptacion.html" class="toc__link">12.1 Registro y Aceptación de Letras</a></li>
+              <li><a href="12.2_Programacion_Vencimientos.html" class="toc__link">12.2 Cronograma y Vencimientos</a></li>
+              <li><a href="12.3_Pago_Amortizacion.html" class="toc__link">12.3 Pago y Cancelación de Letras</a></li>
+            </ul>
+          </li>
+
+          <!-- 13. MÓDULO DE BANCOS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">13. Módulo de Bancos</button>
+            <ul class="toc__sublist">
+              <li><a href="13.0_Conceptos_Generales.html" class="toc__link">13.0 Conceptos Generales</a></li>
+              <li><a href="13.1_Cuentas_Bancarias.html" class="toc__link">13.1 Mantenimiento de Cuentas</a></li>
+              <li><a href="13.2_Movimientos_Bancarios.html" class="toc__link">13.2 Emisión de Cheques y Transferencias</a></li>
+              <li><a href="13.3_Conciliacion_Bancaria.html" class="toc__link">13.3 Conciliación Bancaria Mensual</a></li>
+            </ul>
+          </li>
+
+          <!-- 14. MÓDULO DE GESTIÓN DE VENTAS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">14. Módulo de Gestión de Ventas</button>
+            <ul class="toc__sublist">
+              <li><a href="14.0_Conceptos_Generales.html" class="toc__link">14.0 Conceptos Generales</a></li>
+              <li><a href="14.1_Consola_Ventas.html" class="toc__link">14.1 Consola de Monitoreo Comercial</a></li>
+              <li><a href="14.2_Metas_Comisiones.html" class="toc__link">14.2 Cuotas de Venta y Comisiones</a></li>
+              <li><a href="14.3_Reportes_Estadisticos.html" class="toc__link">14.3 Análisis y Métricas Comerciales</a></li>
+            </ul>
+          </li>
+
+          <!-- 15. MÓDULO DE GESTIÓN DE COBRANZAS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">15. Módulo de Gestión de Cobranzas</button>
+            <ul class="toc__sublist">
+              <li><a href="15.0_Conceptos_Generales.html" class="toc__link">15.0 Conceptos Generales</a></li>
+              <li><a href="15.1_Cartera_Morosidad.html" class="toc__link">15.1 Cartera Vencida y Morosidad</a></li>
+              <li><a href="15.2_Asignacion_Cobradores.html" class="toc__link">15.2 Asignación y Rutas de Cobrador</a></li>
+              <li><a href="15.3_Seguimiento_Compromisos.html" class="toc__link">15.3 Compromisos y Acuerdos de Pago</a></li>
+            </ul>
+          </li>
+
+          <!-- 16. GESTIÓN DE DEVOLUCIONES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">16. Gestión de Devoluciones</button>
+            <ul class="toc__sublist">
+              <li><a href="16.0_Conceptos_Generales.html" class="toc__link">16.0 Conceptos Generales</a></li>
+              <li><a href="16.1_Devolucion_Clientes.html" class="toc__link">16.1 Solicitudes de Devolución Cliente</a></li>
+              <li><a href="16.2_Inspeccion_Garantias.html" class="toc__link">16.2 Inspección Técnica y Garantías</a></li>
+              <li><a href="16.3_Reingreso_Almacen.html" class="toc__link">16.3 Reingreso Físico y Regularización</a></li>
+            </ul>
+          </li>
+
+          <!-- 17. CPE Y GRE (SUNAT) -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">17. CPE y GRE (SUNAT)</button>
+            <ul class="toc__sublist">
+              <li><a href="17.0_Conceptos_Generales.html" class="toc__link">17.0 Conceptos Generales</a></li>
+              <li><a href="17.1_Bandeja_Envio_CPE.html" class="toc__link">17.1 Bandeja Electrónica CPE / OSE</a></li>
+              <li><a href="17.2_Emision_GRE.html" class="toc__link">17.2 Guías de Remisión Electrónica (GRE)</a></li>
+              <li><a href="17.3_Consulta_CDR_Tickets.html" class="toc__link">17.3 Estados CDR, Tickets y Bajas</a></li>
+            </ul>
+          </li>
+
+          <!-- 18. MÓDULO DE ENSAMBLAJE -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">18. Módulo de Ensamblaje</button>
+            <ul class="toc__sublist">
+              <li><a href="18.0_Conceptos_Generales.html" class="toc__link">18.0 Conceptos Generales</a></li>
+              <li><a href="18.1_Estructura_Kits.html" class="toc__link">18.1 Fórmulas y Estructuras (BOM)</a></li>
+              <li><a href="18.2_Orden_Produccion.html" class="toc__link">18.2 Órdenes de Ensamble y Despiece</a></li>
+              <li><a href="18.3_Liquidacion_Costos.html" class="toc__link">18.3 Liquidación y Costeo de Kits</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="sidebar__footer">DSI-NET Core v12.1</div>
+    </aside>
+    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+    <main class="content">
+
+      <div class="content__inner">
+
+        <!-- BREADCRUMBS -->
+        <p class="breadcrumb">
+          <a href="#">DSI-NET Docs</a>
+          <span aria-hidden="true">/</span>
+          <a href="9.0_Conceptos_Generales.html">9. Módulo de Cobranzas</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">9.1.0 Cobranzas: Registro Individual y Cobranza Masiva</span>
+        </p>
+
+        <!-- TÍTULO PRINCIPAL Y LEAD -->
+        <h1 class="content__title">9.1.0 Tipos de cobranzas: Registro Individual y Cobranza Masiva</h1>
+
+        <p class="content__lead">
+          Módulo transaccional para la amortización y cancelación de documentos comerciales pendientes de cobro (Facturas, Boletas). Permite liquidaciones directas por cliente único en múltiples modalidades de pago o recaudaciones agrupadas multi-cliente mediante la consola de Cobranza Masiva.
+        </p>
+
+        <!-- ACCESO A COBRANZA -->
+        <section class="doc-section" id="sec-acceso-cobranza">
+          <h2 class="doc-section__title">Acceso a Cobranza</h2>
+          <div class="img-placeholder" data-img-ref="9.1_Acceso_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 876.png" alt="Ruta de acceso al módulo de Cobranza en DSI-NET ERP" style="width: 80%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- VISUALIZADOR DE LA PANTALLA COBRANZA -->
+        <section class="doc-section" id="sec-visualizador-cobranza">
+          <h2 class="doc-section__title">Visualizador de la pantalla Cobranza</h2>
+          <div class="img-placeholder" data-img-ref="9.1_Visualizador_Pantalla_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 877.png" alt="Visualizador de la interfaz principal de Cobranza" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- 1. COBRANZA INDIVIDUAL: CABECERA Y MODALIDADES DE RECAUDO -->
+        <section class="doc-section" id="sec-1-cabecera">
+          <h2 class="doc-section__title">1. Cobranza Individual: Cabecera y Modalidades de Recaudo</h2>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>PARÁMETRO / CONTROL</th>
+                  <th>TIPO DE ENTRADA</th>
+                  <th>OBLIGATORIO</th>
+                  <th>PROPÓSITO OPERATIVO Y REGLA DE NEGOCIO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Caja: / Fecha: ›</td>
+                  <td>Desplegable / Fecha</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Caja asignada (CAJA CENTRAL) y fecha de registro de la transacción.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Num Cobranza: / [?] ›</td>
+                  <td>Alfanumérico / Ayuda [?]</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Serie (001), correlativo y botón [?] para consultar cobros guardados.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Cliente: ›</td>
+                  <td>Búsqueda Asistida</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Código RUC/DNI y razón social del cliente pagador titular de la deuda.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">T.C.: ›</td>
+                  <td>Numérico Decimal</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Tipo de cambio cambiario fijado para la liquidación (ej. 3.243).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Tipo Cobranza ›</td>
+                  <td>Menú Desplegable</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Modalidad de recaudo: EFECTIVO, DEP.BANC., NOTA DE CREDITO o LETRA.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Cuenta / Nro Op / [?] ›</td>
+                  <td>Desplegable / Texto / Ayuda</td>
+                  <td><span class="badge badge--auto">Condicional</span></td>
+                  <td>Se activa en DEP.BANC. (exige Cta Cte y Nro Operación) o en NOTA DE CREDITO (botón [?] para elegir NC).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Imp Bruto: / Moneda ›</td>
+                  <td>Decimal / Radios S/. US$</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Monto total entregado por el cliente y divisa de pago.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Ganan/Perd (+ -) ›</td>
+                  <td>Numérico Decimal</td>
+                  <td><span class="badge badge--auto">Sistema</span></td>
+                  <td>Diferencia de redondeo/cuadre asumida como gasto o ingreso según topes en parámetros.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Saldo x Apli. / Importe ›</td>
+                  <td>Numéricos Decimales</td>
+                  <td><span class="badge badge--auto">Sistema</span></td>
+                  <td>Remanente pendiente de asignar e importe total liquidado en la grilla.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Nota / Anulado / Auto ›</td>
+                  <td>Texto / Casillas Check</td>
+                  <td><span class="badge badge--auto">Auditoría</span></td>
+                  <td>Glosa descriptiva, control de anulación y marca si proviene de canje automático.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Caja, Fecha, Num Cobranza y Tipo de Cambio:</strong> Asignación de la caja recaudadora ('CAJA CENTRAL'), fecha contable de cobro, serie/correlativo oficial con botón (?) y tasa cambiaria oficial.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Cabecera_Caja_Fecha_Correlativo">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 878.png" alt="Parámetros de Caja, Fecha, Correlativo y Tipo de Cambio" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_Cliente_Tipo_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 879.png" alt="Búsqueda de cliente y selector de tipo de cobranza" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Cliente y Desplegable Tipo Cobranza:</strong> Búsqueda del cliente titular y selección de la modalidad de recaudo: EFECTIVO (ventanilla), DEP.BANC. (exige Cta Cte y Nro Operación), NOTA DE CREDITO (activa botón (?) para cruce de saldos a favor) o LETRA (generada automáticamente en canjes).</p>
+          <div class="img-placeholder" data-img-ref="9.1_Cliente_Tipo_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 880.png" alt="Búsqueda de cliente y selector de tipo de cobranza" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_Cliente_Tipo_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 881.png" alt="Búsqueda de cliente y selector de tipo de cobranza" style="width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- 2. GRILLA DE AMORTIZACIÓN DE DOCUMENTOS POR COBRAR -->
+        <section class="doc-section" id="sec-2-grilla-amortizacion">
+          <h2 class="doc-section__title">2. Grilla de Amortización de Documentos por Cobrar</h2>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>COLUMNA / BOTÓN</th>
+                  <th>TIPO DE DATO</th>
+                  <th>MODO</th>
+                  <th>ACCIÓN OPERATIVA Y CONTROL FINANCIERO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Doc / Num Doc ›</td>
+                  <td>Alfanumérico</td>
+                  <td>Lectura</td>
+                  <td>Tipo (FC, BC, LC) y numeración completa del documento exigible.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Fecha / F. Cobro / Vcto ›</td>
+                  <td>Fechas / Texto</td>
+                  <td>Maestro</td>
+                  <td>Fecha de emisión, término comercial pactado y fecha de vencimiento fiscal.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Mon / Monto ›</td>
+                  <td>Divisa / Decimal</td>
+                  <td>Consulta</td>
+                  <td>Moneda de origen del comprobante y monto total de la venta original.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Pago / Saldo ›</td>
+                  <td>Numéricos Decimales</td>
+                  <td>Histórico</td>
+                  <td>Amortizaciones acumuladas previas y saldo actual exigible por amortizar.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Importe ›</td>
+                  <td>Numérico Decimal</td>
+                  <td><span class="badge badge--yes">Editable</span></td>
+                  <td>Monto específico que se cancela o amortiza al documento con esta cobranza.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Recuperar Doc x Cobrar ›</td>
+                  <td>Botón de Acción</td>
+                  <td>Consulta</td>
+                  <td>Carga la cartera vencida y por vencer del cliente seleccionado.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Grabar / Anular ›</td>
+                  <td>Transaccional</td>
+                  <td>Acción</td>
+                  <td>Aplica el descargo en cuentas corrientes y caja o revierte la cobranza.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Botón Recuperar Doc x Cobrar y Cuadrícula de Deuda:</strong> Carga las facturas, boletas y letras pendientes del cliente. Permite digitar en la columna Importe el abono exacto a imputar por cada documento hasta cuadrar con el importe bruto.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Recuperar_Doc_Cuadricula">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 883.png" alt="Recuperación de documentos y edición de importe en grilla" style="width: 90%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Botonera Inferior (Cobranza Masiva, Imprimir, Anular, Nuevo, Grabar, Cancelar):</strong> Permite saltar a recaudación masiva, emitir el recibo de caja, anular la cobranza cancelada, blanquear la consola o asentar la amortización en cuentas corrientes.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Botonera_Inferior_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 884.png" alt="Botonera de acciones inferiores de cobranza" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- 3. MODALIDAD ESPECIAL: COBRANZA MASIVA MULTI-CLIENTE -->
+        <section class="doc-section" id="sec-3-modalidad-masiva">
+          <h2 class="doc-section__title">3. Modalidad Especial: Cobranza Masiva Multi-Cliente</h2>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ELEMENTO / COLUMNA</th>
+                  <th>TIPO DE ENTRADA</th>
+                  <th>MODO</th>
+                  <th>REGLA DIFERENCIAL Y CONTROL MULTI-CLIENTE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Cobranza Masiva ›</td>
+                  <td>Botón de Comando</td>
+                  <td>Acción</td>
+                  <td>Disparador en la ventana individual para conmutar a la consola masiva.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Obtener Doc x Cobrar ›</td>
+                  <td>Botón de Acción</td>
+                  <td>Carga</td>
+                  <td>Abre el buscador multi-cliente para cargar deudas de distintas razones sociales.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Columna Doc. Cliente ›</td>
+                  <td>Alfanumérico</td>
+                  <td>Identificación</td>
+                  <td>RUC o DNI del cliente asociado al documento de la fila.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Columna Cliente ›</td>
+                  <td>Texto</td>
+                  <td>Identificación</td>
+                  <td>Razón social específica del cliente titular de la deuda de la fila.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Saldo S/. / Saldo US$ ›</td>
+                  <td>Numéricos Decimales</td>
+                  <td>Consulta</td>
+                  <td>Exposición bimonetaria simultánea de la deuda pendiente por documento.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Importe (Total al pie) ›</td>
+                  <td>Numérico Decimal</td>
+                  <td><span class="badge badge--yes">Editable</span></td>
+                  <td>Monto aplicado por línea y sumatoria total consolidada de la recaudación masiva.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Consola Cobranzas Masiva y Botón Obtener Doc x Cobrar:</strong> Permite registrar un único abono bancario o liquidación agrupando facturas de distintos clientes. La grilla muestra obligatoriamente las columnas Doc. Cliente y Cliente por cada fila de deuda.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Consola_Cobranza_Masiva">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 885.png" alt="Consola de Cobranza Masiva multi-cliente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- PROCEDIMIENTO OPERATIVO Y VALIDACIONES -->
+        <section class="doc-section" id="sec-operacion-cobranza">
+          <h2 class="doc-section__title">Ventana Cobranza: Operación y Validaciones</h2>
+          
+          <div class="doc-subsection__title" style="font-weight: 600; margin: 12px 0 6px 0;">Botón Recuperar Doc x Cobrar</div>
+          <p>Si damos clic al botón <strong>Recuperar Doc x Cobrar</strong> sin haber señalado el cliente, nos aparecerá esta ventana de advertencia:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Aviso_Cliente_Requerido">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 886.png" alt="Ventana de aviso solicitando seleccionar cliente" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Seleccionamos al cliente y nos aparecerán los comprobantes que pertenecen a ese cliente en la cuadrícula.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Documentos_Cargados_Cliente">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 887.png" alt="Documentos cargados del cliente seleccionado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- PAGAR DEUDAS: AMORTIZACIÓN POR PARTES -->
+        <section class="doc-section" id="sec-pagar-deudas">
+          <h2 class="doc-section__title">Pagar Deudas</h2>
+          
+          <div class="doc-subsection__title" style="font-weight: 600; margin: 12px 0 6px 0;">Pagar deudas por partes</div>
+          <p>Se puede pagar las deudas con la cantidad exacta de la deuda o en partes. A continuación se detalla un ejemplo de una deuda pagada en partes: Pagaremos <strong>55.31 soles</strong> de la primera Boleta.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Pago_Deuda_Por_Partes">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 889.png" alt="Registro de pago parcial digitando 55.31 soles" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <div class="callout callout--warning" role="note" style="margin: 14px 0;">
+            <i data-lucide="info" class="callout__icon"></i>
+            <div>
+              <strong>Control de Cuadre Ganan/Perd (+ -):</strong>
+              <p style="margin: 4px 0 0 0;">
+                Al costado de la casilla de Importe hay una sección que dice <strong>Ganan/Perd(+-)</strong>. Esto significa que cuando digitamos una cantidad de dinero que no es igual al saldo: si aparece en negativo es porque el importe es menor, y si aparece en positivo es porque el importe es mayor. Esto ayuda a visualizar posibles errores por parte del usuario.
+              </p>
+            </div>
+          </div>
+
+          <p>Luego de esto grabamos. Si hay algún campo que falta completar de manera obligatoria, el sistema mandará un mensaje de validación. Luego de completar los campos podremos grabar la cobranza exitosamente.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Confirmacion_Grabacion_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 890.png" alt="Mensaje de validación y confirmación al grabar cobranza" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Luego de completar los campos podremos grabar la cobranza exitosamente.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Confirmacion_Grabacion_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 891.png" alt="Mensaje de validación y confirmación al grabar cobranza" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+        </section>
+
+        <!-- ESTADO DE CUENTA: VERIFICACIÓN -->
+        <section class="doc-section" id="sec-estado-cuenta">
+          <h2 class="doc-section__title">Estado de cuenta (verificar el monto pagado)</h2>
+          <p>Para ver el pago que se hizo, nos dirigimos a la ventana <strong>Estado de cuenta</strong>:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Acceso_Estado_Cuenta">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 892.png" alt="Acceso a la ventana de Estado de Cuenta" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Visualización de la Pantalla Estado de Cuenta:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Visualizador_EECC">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 893.png" alt="Visualización general de la pantalla Estado de Cuenta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <!-- TABLA 1: FILTROS Y PARÁMETROS -->
+          <h3 style="font-size: 1.05rem; margin: 18px 0 8px 0; font-weight: 600;">1. Barra de Filtros y Parámetros de Selección</h3>
+          <p class="doc-section__desc">Tabla 1: Diccionario Técnico de Filtros y Comandos</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>CONTROL / FILTRO</th>
+                  <th>TIPO DE ENTRADA</th>
+                  <th>MODO</th>
+                  <th>REGLA DE NEGOCIO Y PROPÓSITO OPERATIVO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Cliente / Corporación ›</td>
+                  <td>Checkbox + Búsqueda</td>
+                  <td>Filtro Principal</td>
+                  <td>Permite auditar la cuenta de un cliente específico o consolidar la deuda matriz.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Pto Vta: / Vendedor ›</td>
+                  <td>Menú Desplegable</td>
+                  <td>Multicriterio</td>
+                  <td>Segmenta la cartera por punto de venta emisor o por asesor comercial asignado.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Saldo x Cobrar / Doc. ›</td>
+                  <td>Menú Desplegable</td>
+                  <td>Estado</td>
+                  <td>'1. Con Saldo' muestra únicamente deuda viva; Doc. filtra por tipo de comprobante.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Cat.Pre. / Forma Cobro ›</td>
+                  <td>Menú Desplegable</td>
+                  <td>Comercial</td>
+                  <td>Filtra según la tarifa aplicada (Mayorista, etc.) o por la condición comercial pactada.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Ubigeo [?] / Resp Cobr ›</td>
+                  <td>Checkbox + Ayuda [?]</td>
+                  <td>Cobranzas</td>
+                  <td>Delimita por código geográfico y filtra por el gestor de cobranzas responsable.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Tipo Incob. / Emp.Relacionada ›</td>
+                  <td>Menú Desplegable</td>
+                  <td>Auditoría</td>
+                  <td>Clasificación de riesgo crediticio/cartera dudosa y control de empresas vinculadas.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Pago x Doc ›</td>
+                  <td>Botón de Comando</td>
+                  <td><span class="badge badge--auto">Trazabilidad</span></td>
+                  <td>Abre la ventana de detalle para ver cómo fue cancelado o amortizado el documento.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Enviar EECC por email ›</td>
+                  <td>Botón de Acción</td>
+                  <td><span class="badge badge--yes">Transmisión</span></td>
+                  <td>Dispara el envío automatizado del extracto digital a los correos del cliente.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Segmentación Cliente y Corporación:</strong> Casillas de verificación y buscador asistido para delimitar por cliente específico o empresa.</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Filtro_Cliente">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 894.png" alt="Filtro de cliente y corporación en Estado de Cuenta" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Filtros Comerciales (Pto Vta, Vendedor, Cat.Pre, Forma Cobro y Resp Cobr):</strong> Desplegables para acotar la cartera por sede operativa, asesor de ventas, categoría tarifaria, condición comercial y analista de cobranzas.</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Filtros_Comerciales">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 898.png" alt="Filtros comerciales en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Filtros_Comerciales">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 899.png" alt="Filtros comerciales en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Filtros_Comerciales">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 900.png" alt="Filtros comerciales en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Filtros_Comerciales">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 901.png" alt="Filtros comerciales en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Control_Cartera">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 902.png" alt="Controles de cartera y ubicación en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Control de Cartera (Saldo x Cobrar, Doc, Tipo Incob y Ubigeo):</strong> Selección de documentos vivos ('1. Con Saldo'), tipo de comprobante, clasificación de incobrabilidad y filtro territorial con botón (?).</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Control_Cartera">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 903.png" alt="Controles de cartera y ubicación en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Control_Cartera">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 904.png" alt="Controles de cartera y ubicación en Estado de Cuenta" style="width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Control_Cartera">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 905.png" alt="Controles de cartera y ubicación en Estado de Cuenta" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Control_Cartera">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 906.png" alt="Controles de cartera y ubicación en Estado de Cuenta" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <!-- TABLA 2: FORMATOS DE VISUALIZACIÓN Y GRILLA -->
+          <h3 style="font-size: 1.05rem; margin: 24px 0 8px 0; font-weight: 600;">2. Formatos de Visualización y Grilla del Estado de Cuenta</h3>
+          <p class="doc-section__desc">Tabla 2: Especificación Técnica de la Cuadrícula y Vistas</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ELEMENTO / COLUMNA</th>
+                  <th>TIPO DE DATO</th>
+                  <th>FORMATO</th>
+                  <th>COMPORTAMIENTO Y CONTROL DE MORA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">1. Estado de Cuenta ›</td>
+                  <td>Radio Button</td>
+                  <td>Estándar</td>
+                  <td>Presenta los comprobantes ordenados cronológicamente por su fecha de emisión.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">2. EECC fecha canj ›</td>
+                  <td>Radio Button</td>
+                  <td>Canjes</td>
+                  <td>Agrupa y ordena la cartera según la fecha de protocolización de canjes de letras.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">2. Estado de Cuenta Vcto ›</td>
+                  <td>Radio Button</td>
+                  <td>Vencimiento</td>
+                  <td>Ordena por fecha de caducidad para priorizar el cobro de la deuda vencida.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">3. Estado de Cuenta Resumen ›</td>
+                  <td>Radio Button</td>
+                  <td>Ejecutivo</td>
+                  <td>Muestra un balance consolidado por cliente sin apertura de documentos individuales.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Num Doc / Fecha / F. Pago ›</td>
+                  <td>Alfanumérico / Fecha / Texto</td>
+                  <td>Maestro</td>
+                  <td>Serie correlativo del comprobante (FC, BC, LC), fecha y forma de cobro.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Vcto / Dias Mor Vcto ›</td>
+                  <td>Fecha / Entero</td>
+                  <td><span class="badge badge--no">Control Mora</span></td>
+                  <td>Fecha límite y días de morosidad (días en negativo indican retraso exigible).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Total / Pago ›</td>
+                  <td>Decimal Bimonetario</td>
+                  <td>Histórico</td>
+                  <td>Importe total original del comprobante y sumatoria de amortizaciones recibidas.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Saldo S/. / Saldo US$ ›</td>
+                  <td>Decimales</td>
+                  <td><span class="badge badge--auto">Exigible</span></td>
+                  <td>Saldo neto pendiente liquidado en Soles y Dólares según la divisa del documento.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Doble Clic en Fila ›</td>
+                  <td>Evento Interactivo</td>
+                  <td>Drill Down</td>
+                  <td>Abre el detalle transaccional del comprobante o el historial de la letra de cambio.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Selector de Formato (1.Estado de Cuenta, 2.EECC canj, 2.EECC Vcto, 3 Resumen):</strong> Radio buttons que alternan la ordenación: cronológica general, por fecha de canje de letras, por estricto vencimiento para control moratorio, o consolidado por cliente.</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Selector_Formato">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 907.png" alt="Opciones de formato y ordenamiento del Estado de Cuenta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>DataWindow de Cuentas por Cobrar:</strong> Cuadrícula analítica con Num Doc, Fecha, F. Pago, Vcto, Dias Mor Vcto (indicador negativo para morosidad vencida), Total, Pago realizado y Saldos exigibles en S/. y US$.</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Grilla_DataWindow">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 908.png" alt="Grilla analítica del Estado de Cuenta con saldos y pagos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Ahora buscamos al cliente anterior que pagó una parte de su deuda en el filtro de clientes. Veremos que en la columna <strong>Pago</strong> está el valor de <strong>55.31</strong> que se digitó anteriormente y se le resta al valor de la columna <strong>Total</strong> para darnos un <strong>Saldo de 63 soles</strong>.</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Verificacion_Saldo_63">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 909.png" alt="Comprobación del abono parcial de 55.31 y saldo de 63 soles" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- CORRECCIÓN Y ANULACIÓN DE COBRANZA -->
+        <section class="doc-section" id="sec-correccion-error">
+          <h2 class="doc-section__title">¿Qué pasa si nos confundimos en digitar el monto?</h2>
+          <p>Si hay un error en la digitación del pago del cliente lo que se debe hacer es <strong>anular el documento</strong> que generamos antes, esta es la manera correcta de corregir los documentos.</p>
+          
+          <p>Buscamos el documento <strong>16915</strong> que creamos antes como se ve en la imagen:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Buscar_Doc_Para_Anular">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 910.png" alt="Búsqueda del recibo de cobranza 16915 para corregir" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Una vez seleccionado nuevamente el documento, procederemos a anularlo para su correcto cobro:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Anular_Documento_Cobranza">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 911.png" alt="Confirmación de anulación de cobranza en el sistema" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Ahora lo verificaremos nuevamente en la ventana <strong>Estado de Cuenta</strong>. Como se ve, el valor de 55.31 ya no aparece en el estado de cuenta y el valor del saldo total volvió a ser el mismo.</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Saldo_Restablecido">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 912.png" alt="Estado de cuenta con el saldo original restaurado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Lo que debemos hacer ahora es crear nuevamente el documento de cobro pero con los datos verdaderos.</p>
+        </section>
+
+        <!-- PAGAR DEUDA COMPLETA -->
+        <section class="doc-section" id="sec-deuda-completa">
+          <h2 class="doc-section__title">Pagar deuda completa</h2>
+          <p>Para pagar una deuda por completo el proceso es similar: solo se debe <strong>dar doble clic en la casilla de la columna donde dice Importe</strong> y automáticamente el valor del saldo se verá reflejado en la casilla.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Doble_Clic_Importe_Total">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 913.png" alt="Carga automática del saldo completo con doble clic en Importe" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Ahora solo grabamos y vamos otra vez al <strong>Estado de Cuenta</strong>. Como se aprecia en la ventana, no aparece el documento ya que ya no hay ninguna cuenta por cobrar viva. Entonces vamos al filtro <strong>Saldo x Cobrar</strong>:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Filtro_Sin_Saldo">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 914.png" alt="Selección de filtro 2. Sin Saldo en Estado de Cuenta" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Seleccionamos <strong>2. Sin Saldo</strong>.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Filtro_Sin_Saldo">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 915.png" alt="Selección de filtro 2. Sin Saldo en Estado de Cuenta" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Y nos debería aparecer el estado de cuenta que ya se cobró. Nos dirigimos hasta el final de la pantalla y ahí veremos que ya no hay saldo pendiente:</p>
+          <div class="img-placeholder" data-img-ref="9.1_EECC_Deuda_Cancelada_Total">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 916.png" alt="Comprobante liquidado al 100% con saldo cero" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- BOTÓN COBRANZA MASIVA Y FLUJO DETALLADO -->
+        <section class="doc-section" id="sec-boton-cobranza-masiva">
+          <h2 class="doc-section__title">Botón Cobranza Masiva</h2>
+          <p>Cuando damos clic en el botón <strong>Cobranza Masiva</strong> aparecerá esta ventana. Debemos señalar el cliente el cual pagará; si no escogemos el cliente nos aparecerá la siguiente ventana de aviso:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Masiva_Aviso_Cliente">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 917.png" alt="Aviso solicitando cliente en Cobranza Masiva" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Una vez escogemos al cliente, damos clic al botón <strong>Obtener Doc x Cobrar</strong> y aparecerá la siguiente ventana:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Masiva_Ventana_Obtener_Doc">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 918.png" alt="Ventana Obtener Doc x Cobrar" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Ahora filtramos al cliente en la nueva ventana para poder extraer sus deudas:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Masiva_Filtrar_Deudas_Cliente">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 919.png" alt="Filtro de deudas del cliente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Señalamos los documentos y damos clic al botón <strong>Obtener Documentos</strong> para enviarlos a la grilla de la ventana anterior:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Masiva_Boton_Obtener_Documentos">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 920.png" alt="Selección y envío de documentos a la grilla de cobranza masiva" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Como se puede ver en la imagen, los documentos ahora aparecen en la grilla de la ventana Cobranza Masiva. A diferencia de la ventana anterior (Cobranza), en esta ventana cuando seleccionamos los documentos el importe es igual al saldo pendiente, lo que permite un cobro más rápido.</p>
+          <div class="img-placeholder" data-img-ref="9.1_Masiva_Grilla_Con_Documentos">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 921.png" alt="Grilla de cobranza masiva con saldos asignados automáticamente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Solo digitamos el Importe y grabamos:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Masiva_Grabar_Confirmacion">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 922.png" alt="Grabación de la cobranza masiva exitosa" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Otra forma de revisar las acciones de cobranza es a través del siguiente flujo en el menú:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Flujo_Revision_Cobranzas">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 923.png" alt="Menú de consulta y auditoría de cobranzas realizadas" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>Nos aparecerán todas las cobranzas que se han realizado; buscaremos la que hicimos:</p>
+          <div class="img-placeholder" data-img-ref="9.1_Consulta_Cobranza_Realizada">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 924.png" alt="Visualización del comprobante de cobranza registrado en el historial" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="9.1_Consulta_Cobranza_Realizada">
+            <img src="../Imagenes/Modulo_Cobranzas/9.1_cobranza_inidividual_masiva/image 925.png" alt="Visualización del comprobante de cobranza registrado en el historial" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
+      <nav class="page-nav" aria-label="Navegación entre páginas">
+        <a class="page-nav__link page-nav__link--prev" href="9.0_Conceptos_Generales.html">
+          <span class="page-nav__label">Anterior</span>
+          <span class="page-nav__title">9.0 Conceptos Generales</span>
+          <span class="page-nav__sub">Registro de Cobranzas</span>
+        </a>
+        <a class="page-nav__link page-nav__link--next" href="9.1.1_Documento_Anticipo.html">
+          <span class="page-nav__label">Siguiente</span>
+          <span class="page-nav__title">9.1.1 Cobranza por Anticipo</span>
+          <span class="page-nav__sub">Amortizaciones Especiales</span>
+        </a>
+      </nav>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="site-footer">
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1 (SPEC ID: COB-ANT-911 | NODO PROD FE CLUSTER-04)</p>
+        <div class="site-footer__links">
+          <a href="#">Políticas de Privacidad</a>
+          <a href="#">Términos de Soporte</a>
+          <a href="#">Manuales PDF</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Inicialización de iconos Lucide -->
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+  <!-- Enlace relativo al script base institucional -->
+  <script src="../main.js"></script>
+</body>
+</html>

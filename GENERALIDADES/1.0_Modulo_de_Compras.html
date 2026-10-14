@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1. Módulo de Compras | DSI-NET Docs</title>
+  <!-- Ruta relativa al styles.css institucional (1 nivel superior desde GENERALIDADES/) -->
+  <link rel="stylesheet" href="../styles.css">
+  <!-- CDN oficial de Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ============ HEADER SUPERIOR ============ -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <button class="topbar__menu-toggle" id="sidebarToggle" aria-label="Abrir/cerrar menú lateral" aria-expanded="true">
+        <span></span><span></span><span></span>
+      </button>
+      <img src="../Imagenes/DSI_NET_Logo.png" alt="logo dsi" width="50px" height="50px">
+    </div>
+
+    <div class="topbar__search">
+      <i data-lucide="search" class="topbar__search-icon"></i>
+      <input type="search" id="topSearch" placeholder="Buscar en la documentación de DSI-NET..." aria-label="Buscar en la documentación">
+      <kbd class="topbar__kbd">Ctrl+K</kbd>
+    </div>
+
+    <nav class="topbar__links" aria-label="Enlaces de soporte">
+      <a href="#" class="topbar__link"><i data-lucide="book-open" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Glosario</a>
+      <a href="#" class="topbar__link"><i data-lucide="life-buoy" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Soporte Técnico</a>
+      <a href="#" class="topbar__link"><i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>DSI SAC</a>
+      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
+        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
+        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="layout">
+
+      <!-- ============ ASIDE: SIDEBAR / TOC ============ -->
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar__filter">
+            <input type="text" id="tocFilter" placeholder="Filtrar por título..." aria-label="Filtrar por título">
+          </div>
+
+          <nav class="toc" aria-label="Tabla de contenidos">
+            <ul class="toc__list" id="tocList">
+
+              <!-- GRUPO: 0. Generalidades y Arquitectura -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">0. Generalidades y Arquitectura</button>
+                <ul class="toc__sublist">
+                  <li><a href="0.0_Que_es_DSINET.html" class="toc__link">0.0 ¿Qué es DSI-NET? y Conceptos</a></li>
+                  <li><a href="0.1_Requisitos_del_Sistema.html" class="toc__link">0.1 Requisitos y Entorno de Ejecución</a></li>
+                  <li><a href="0.2_Autenticacion.html" class="toc__link">0.2 Autenticación y Selección de Empresa</a></li>
+
+                  <!-- SUBGRUPO: 0.3 Entorno de Trabajo y Barra Global (DENTRO DE LA SUBLISTA) -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">0.3 Entorno de Trabajo y Barra Global</button>
+                    <ul class="toc__sublist">
+                      <li><a href="0.3.0_Entorno_de_Trabajo.html" class="toc__link">0.3.0 Entorno de Trabajo</a></li>
+                      <li><a href="0.3.1_Menu_comun.html" class="toc__link">0.3.1 Menú Común</a></li>
+
+                      <!-- SUBGRUPO: 0.3.2 Menú Documentos -->
+                      <li class="toc__item toc__item--group">
+                        <button class="toc__toggle" type="button" aria-expanded="false">0.3.2 Menú Documentos</button>
+                        <ul class="toc__sublist">
+                          <li><a href="0.3.2.0_Concepto_General.html" class="toc__link">0.3.2.0 Concepto General</a></li>
+                          <li><a href="0.3.2.1_Gestion_Ventas.html" class="toc__link">0.3.2.1 Gestión de ventas</a></li>                 
+                          <li><a href="0.3.2.2_Gestion_Cobranza.html" class="toc__link">0.3.2.2 Gestión de cobranza</a></li>
+                          <li><a href="0.3.2.3_Gestion_Devoluciones.html" class="toc__link">0.3.2.3 Gestión de devoluciones</a></li>
+                          <li><a href="0.3.2.4_Gestion_Letras.html" class="toc__link">0.3.2.4 Gestión de Letras</a></li>
+
+
+                              <!-- SUBGRUPO IMPORTACIONES -->
+                              <li class="toc__item toc__item--group">
+                                <button class="toc__toggle" type="button" aria-expanded="false">0.3.2.5 Importaciones</button>
+                                <ul class="toc__sublist">
+                                  <li><a href="#" class="toc__link">0.3.2.5.1 Pedido de Producción</a></li>
+                                  <li><a href="0.3.2.5.2_Orden_de_Compra_Imp.html" class="toc__link">0.3.2.5.2 Orden de Compra - Imp.</a></li>
+                                  <li><a href="0.3.2.5.3_Importacion.html" class="toc__link">0.3.2.5.3 Importación</a></li>
+                                  <li><a href="#" class="toc__link">0.3.2.5.4 Comp. de pago ext.</a></li>
+                                  <li><a href="#" class="toc__link">0.3.2.5.5 Comp. descuento ext.</a></li>
+                                  <li><a href="#" class="toc__link">0.3.2.5.6 Declaración única Adua.</a></li>
+                                  <li><a href="#" class="toc__link">0.3.2.5.7 Comp. de pago Nacional</a></li>
+                                  <li><a href="#" class="toc__link">0.3.2.5.8 Calculo de Costo Almac.</a></li>
+                                </ul>
+                              </li>
+
+                              <li><a href="0.3.2.6_Almacen.html" class="toc__link">0.3.2.6 Almacén</a></li>
+                              <li><a href="0.3.2.7_Distribucion.html" class="toc__link">0.3.2.7 Distribución</a></li>
+                              <li><a href="0.3.2.8_Nota_pedido.html" class="toc__link">0.3.2.8 Nota de pedido</a></li>
+                              <li><a href="0.3.2.9_Facturacion.html" class="toc__link">0.3.2.9 Facturación</a></li>
+                              <li><a href="0.3.2.10_Cobranza.html" class="toc__link">0.3.2.10 Cobranza</a></li>
+                              <li><a href="0.3.2.11_Caja_Chica.html" class="toc__link">0.3.2.11 Caja Chica</a></li>
+                              <li><a href="0.3.2.12_Rend_Ctas.html" class="toc__link">0.3.2.12 Rend. Ctas</a></li>
+                              <li><a href="0.3.2.13_Bancos.html" class="toc__link">0.3.2.13 Bancos</a></li>
+                              <li><a href="0.3.2.14_Compras.html" class="toc__link">0.3.2.14 Compras</a></li>
+                              <li><a href="0.3.2.15_Letras_Cobrar.html" class="toc__link">0.3.2.15 Letras por Cobrar</a></li>
+                            </ul>
+                          </li>
+
+                          <li><a href="0.3.3_Menu_reportes.html" class="toc__link">0.3.3 Menú Reportes</a></li>
+                          <li><a href="0.3.4_Menu_financiero_contable.html" class="toc__link">0.3.4 Menú Financiero Contable</a></li>
+                          <li><a href="0.3.5_Menu_configuracion.html" class="toc__link">0.3.5 Menú Configuración</a></li>
+                          <li><a href="0.3.6_Menu_maestros.html" class="toc__link">0.3.6 Menú Maestros</a></li>
+                          <li><a href="0.3.7_Menu_procesos.html" class="toc__link">0.3.7 Menú Procesos</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                    <!-- GRUPO ACTIVO: 1. Módulo de Compras y Abastecimiento Local -->
+                          <li class="toc__item toc__item--group is-open">
+                            <button class="toc__toggle" type="button" aria-expanded="true">1. Módulo de Compras</button>
+                            <ul class="toc__sublist">
+                              <li>
+                                <a href="1.0_Modulo_de_Compras.html" class="toc__link toc__link--active" aria-current="page">
+                                  1.0 Conceptos Generales
+                                </a>
+                              </li>
+                              <li>
+                                <a href="1.1_Orden_de_Compra.html" class="toc__link">1.1 Orden de Compra</a>
+                              </li>
+                              <li>
+                                <a href="1.2_Provision_de_Compras.html" class="toc__link">1.2 Provisión de Compras</a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <!-- LISTA MODULAR COMPLETA -->
+                          <!-- ================= 2. MÓDULO DE CAJA CHICA ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">2. Módulo de Caja Chica</button>
+                    <ul class="toc__sublist">
+                      <li><a href="2.0_Conceptos_Generales.html" class="toc__link">2.0 Conceptos Generales</a></li>
+                      <li><a href="2.1_Apertura_Caja_Chica.html" class="toc__link">2.1 Apertura y Asignación de Fondo</a></li>
+                      <li><a href="2.2_Registro_Gastos.html" class="toc__link">2.2 Registro de Gastos y Vales</a></li>
+                      <li><a href="2.3_Rendicion_Reembolso.html" class="toc__link">2.3 Rendición y Reembolso</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 3. MÓDULO DE ENTREGA POR RENDIR ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">3. Módulo de Entrega por Rendir</button>
+                    <ul class="toc__sublist">
+                      <li><a href="3.0_Conceptos_Generales.html" class="toc__link">3.0 Conceptos Generales</a></li>
+                      <li><a href="3.1_Solicitud_Entrega.html" class="toc__link">3.1 Solicitud de Entrega a Rendir</a></li>
+                      <li><a href="3.2_Desembolso_Fondos.html" class="toc__link">3.2 Desembolso de Fondos</a></li>
+                      <li><a href="3.3_Liquidacion_Gastos.html" class="toc__link">3.3 Liquidación y Rendición de Cuentas</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 4. MÓDULO DE IMPORTACIONES ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">4. Módulo de Importaciones</button>
+                    <ul class="toc__sublist">
+                      <li><a href="4.0_Conceptos_Generales.html" class="toc__link">4.0 Conceptos Generales</a></li>
+                      <li><a href="4.1_Orden_Compra_Exterior.html" class="toc__link">4.1 Orden de Compra Exterior</a></li>
+                      <li><a href="4.2_Gestion_DUA_Aduanas.html" class="toc__link">4.2 Gestión DUA y Despacho Aduanero</a></li>
+                      <li><a href="4.3_Costeo_Liquidacion.html" class="toc__link">4.3 Costeo y Liquidación de Importación</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 5. MÓDULO DE ALMACENES ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">5. Módulo de Almacenes</button>
+                    <ul class="toc__sublist">
+                      <li><a href="5.0_Conceptos_Generales.html" class="toc__link">5.0 Conceptos Generales</a></li>
+                      <li><a href="5.1_Ingresos_Almacen.html" class="toc__link">5.1 Notas de Ingreso</a></li>
+                      <li><a href="5.2_Salidas_Almacen.html" class="toc__link">5.2 Notas de Salida y Transferencias</a></li>
+                      <li><a href="5.3_Kardex_Inventario.html" class="toc__link">5.3 Control de Stock y Kardex</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 6. MÓDULO DE PICKING Y PACKING ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">6. Módulo de Picking y Packing</button>
+                    <ul class="toc__sublist">
+                      <li><a href="6.0_Conceptos_Generales.html" class="toc__link">6.0 Conceptos Generales</a></li>
+                      <li><a href="6.1_Generacion_Picking.html" class="toc__link">6.1 Generación de Listas de Picking</a></li>
+                      <li><a href="6.2_Verificacion_Packing.html" class="toc__link">6.2 Empaque y Rotulado (Packing)</a></li>
+                      <li><a href="6.3_Control_Despacho.html" class="toc__link">6.3 Cierre y Derivación a Despacho</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 7. MÓDULO DE DISTRIBUCIÓN ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">7. Módulo de Distribución</button>
+                    <ul class="toc__sublist">
+                      <li><a href="7.0_Conceptos_Generales.html" class="toc__link">7.0 Conceptos Generales</a></li>
+                      <li><a href="7.1_Programacion_Rutas.html" class="toc__link">7.1 Programación de Rutas y Vehículos</a></li>
+                      <li><a href="7.2_Guias_Remision.html" class="toc__link">7.2 Generación de Guías de Remisión</a></li>
+                      <li><a href="7.3_Liquidacion_Reparto.html" class="toc__link">7.3 Liquidación y Conformidad de Entrega</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 8. MÓDULO DE PRE-VENTAS Y VENTAS (ACTIVO) ================= -->
+                  <li class="toc__item toc__item--group">
+                  <button class="toc__toggle" type="button" aria-expanded="true">8. Módulo de Pre-Ventas y Ventas</button>
+                  <ul class="toc__sublist">
+                      <!-- PANTALLA 8.0 ACTIVA -->
+                      <li>
+                      <a href="8.0_Modulo_Preventas_Ventas.html" class="toc__link" aria-current="page">
+                          8.0 Conceptos Generales
+                      </a>
+                      </li>
+
+                      <!-- 8.1 ACORDEÓN HIJO (SOLO DESPLIEGA) -->
+                      <li class="toc__item toc__item--group">
+                      <button class="toc__toggle" type="button" aria-expanded="false">
+                          8.1 Nota de Pedido
+                      </button>
+                      <ul class="toc__sublist">
+                          <!-- 8.1.0 ENLACE REAL NAVEGABLE -->
+                          <li><a href="8.1.0_Nota_Pedido.html" class="toc__link">8.1.0 Nota de Pedido</a></li>
+                          <li><a href="8.1.1_Estados_Ciclo_de_vida.html" class="toc__link">8.1.1 Estados y Ciclo de Vida</a></li>
+                      </ul>
+                      </li>
+
+                      <li><a href="8.2_Venta_Directa.html" class="toc__link">8.2 Venta Directa y Facturación</a></li>
+                      
+                      <!-- 8.3 BOTÓN ACORDEÓN HIJO (CERRADO EN REPOSO) -->
+                      <li class="toc__item toc__item--group">
+                      <button class="toc__toggle" type="button" aria-expanded="false">
+                          8.3 Panel de Descuentos
+                      </button>
+                      <ul class="toc__sublist">
+                          <li><a href="8.3.0_Descuentos_conceptos_generales.html" class="toc__link">8.3.0 Conceptos Generales</a></li>
+                          <li><a href="8.3.1_Campana_Oferta.html" class="toc__link">8.3.1 Campaña de Oferta</a></li>
+                          <li><a href="8.3.2_Liquidacion_Articulos.html" class="toc__link">8.3.2 Liquidación de Artículos</a></li>
+                          <li><a href="8.3.3_Promociones_Focalizadas.html" class="toc__link">8.3.3 Promociones Focalizadas</a></li>
+                      </ul>
+                      </li>
+
+                      <li><a href="8.4_Operaciones_Especiales.html" class="toc__link">8.4 Operaciones Especiales</a></li>
+                  </ul>
+                  </li>
+
+                  <!-- ================= 9. MÓDULO DE COBRANZAS (ACTIVO Y ABIERTO) ================= -->
+                    <li class="toc__item toc__item--group is-close">
+                      <button class="toc__toggle" type="button" aria-expanded="true">9. Módulo de Cobranzas</button>
+                      <ul class="toc__sublist">
+                        <li><a href="9.0_Conceptos_Generales.html" class="toc__link">9.0 Conceptos Generales</a></li>
+                        
+                        <!-- 9.1 ACORDEÓN HIJO (ABIERTO PORQUE CONTIENE LA PÁGINA ACTUAL) -->
+                        <li class="toc__item toc__item--group is-close">
+                          <button class="toc__toggle" type="button" aria-expanded="true">
+                            9.1 Tipos de cobranzas
+                          </button>
+                          <ul class="toc__sublist">
+                            <li>
+                              <a href="9.1.0_Cobranza_Individual_Masiva.html" class="toc__link">
+                                9.1.0 Cobranza Individual y Masiva
+                              </a>
+                            </li>
+                            <li><a href="9.1.1_Documento_Anticipo.html" class="toc__link">9.1.1 Cobranza por Anticipo</a></li>
+                            <li><a href="9.1.2_Cobranza_Nota_Credito.html" class="toc__link">9.1.2 Cobranza por Nota de Crédito</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                  <!-- ================= 10. LÍNEAS DE CRÉDITO DE CLIENTES ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">10. Líneas de Crédito de Clientes</button>
+                    <ul class="toc__sublist">
+                      <li><a href="10.0_Conceptos_Generales.html" class="toc__link">10.0 Conceptos Generales</a></li>
+                      <li><a href="10.1_Asignacion_Lineas.html" class="toc__link">10.1 Evaluación y Asignación de Líneas</a></li>
+                      <li><a href="10.2_Bloqueo_Desbloqueo.html" class="toc__link">10.2 Control de Riesgo y Bloqueo</a></li>
+                      <li><a href="10.3_Auditoria_Creditos.html" class="toc__link">10.3 Auditoría y Variación de Líneas</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 11. MÓDULO DE LETRAS DE CLIENTES ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">11. Módulo de Letras de Clientes</button>
+                    <ul class="toc__sublist">
+                      <li><a href="11.0_Conceptos_Generales.html" class="toc__link">11.0 Conceptos Generales</a></li>
+                      <li><a href="11.1_Canje_Letras.html" class="toc__link">11.1 Canje de Facturas por Letras</a></li>
+                      <li><a href="11.2_Envio_Banco_Descuento.html" class="toc__link">11.2 Cobranza Libre y Descuento Bancario</a></li>
+                      <li><a href="11.3_Cancelacion_Protesto.html" class="toc__link">11.3 Cancelación, Renovación y Protesto</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 12. CTAS X PAGAR LETRAS PROVEEDORES ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">12. Ctas x Pagar Letras Proveedores</button>
+                    <ul class="toc__sublist">
+                      <li><a href="12.0_Conceptos_Generales.html" class="toc__link">12.0 Conceptos Generales</a></li>
+                      <li><a href="12.1_Registro_Aceptacion.html" class="toc__link">12.1 Registro y Aceptación de Letras</a></li>
+                      <li><a href="12.2_Programacion_Vencimientos.html" class="toc__link">12.2 Cronograma y Vencimientos</a></li>
+                      <li><a href="12.3_Pago_Amortizacion.html" class="toc__link">12.3 Pago y Cancelación de Letras</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 13. MÓDULO DE BANCOS ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">13. Módulo de Bancos</button>
+                    <ul class="toc__sublist">
+                      <li><a href="13.0_Conceptos_Generales.html" class="toc__link">13.0 Conceptos Generales</a></li>
+                      <li><a href="13.1_Cuentas_Bancarias.html" class="toc__link">13.1 Mantenimiento de Cuentas</a></li>
+                      <li><a href="13.2_Movimientos_Bancarios.html" class="toc__link">13.2 Emisión de Cheques y Transferencias</a></li>
+                      <li><a href="13.3_Conciliacion_Bancaria.html" class="toc__link">13.3 Conciliación Bancaria Mensual</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 14. MÓDULO DE GESTIÓN DE VENTAS ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">14. Módulo de Gestión de Ventas</button>
+                    <ul class="toc__sublist">
+                      <li><a href="14.0_Conceptos_Generales.html" class="toc__link">14.0 Conceptos Generales</a></li>
+                      <li><a href="14.1_Consola_Ventas.html" class="toc__link">14.1 Consola de Monitoreo Comercial</a></li>
+                      <li><a href="14.2_Metas_Comisiones.html" class="toc__link">14.2 Cuotas de Venta y Comisiones</a></li>
+                      <li><a href="14.3_Reportes_Estadisticos.html" class="toc__link">14.3 Análisis y Métricas Comerciales</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 15. MÓDULO DE GESTIÓN DE COBRANZAS ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">15. Módulo de Gestión de Cobranzas</button>
+                    <ul class="toc__sublist">
+                      <li><a href="15.0_Conceptos_Generales.html" class="toc__link">15.0 Conceptos Generales</a></li>
+                      <li><a href="15.1_Cartera_Morosidad.html" class="toc__link">15.1 Cartera Vencida y Morosidad</a></li>
+                      <li><a href="15.2_Asignacion_Cobradores.html" class="toc__link">15.2 Asignación y Rutas de Cobrador</a></li>
+                      <li><a href="15.3_Seguimiento_Compromisos.html" class="toc__link">15.3 Compromisos y Acuerdos de Pago</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 16. GESTIÓN DE DEVOLUCIONES ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">16. Gestión de Devoluciones</button>
+                    <ul class="toc__sublist">
+                      <li><a href="16.0_Conceptos_Generales.html" class="toc__link">16.0 Conceptos Generales</a></li>
+                      <li><a href="16.1_Devolucion_Clientes.html" class="toc__link">16.1 Solicitudes de Devolución Cliente</a></li>
+                      <li><a href="16.2_Inspeccion_Garantias.html" class="toc__link">16.2 Inspección Técnica y Garantías</a></li>
+                      <li><a href="16.3_Reingreso_Almacen.html" class="toc__link">16.3 Reingreso Físico y Regularización</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 17. CPE Y GRE (SUNAT) ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">17. CPE y GRE (SUNAT)</button>
+                    <ul class="toc__sublist">
+                      <li><a href="17.0_Conceptos_Generales.html" class="toc__link">17.0 Conceptos Generales</a></li>
+                      <li><a href="17.1_Bandeja_Envio_CPE.html" class="toc__link">17.1 Bandeja Electrónica CPE / OSE</a></li>
+                      <li><a href="17.2_Emision_GRE.html" class="toc__link">17.2 Guías de Remisión Electrónica (GRE)</a></li>
+                      <li><a href="17.3_Consulta_CDR_Tickets.html" class="toc__link">17.3 Estados CDR, Tickets y Bajas</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- ================= 18. MÓDULO DE ENSAMBLAJE ================= -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">18. Módulo de Ensamblaje</button>
+                    <ul class="toc__sublist">
+                      <li><a href="18.0_Conceptos_Generales.html" class="toc__link">18.0 Conceptos Generales</a></li>
+                      <li><a href="18.1_Estructura_Kits.html" class="toc__link">18.1 Fórmulas y Estructuras (BOM)</a></li>
+                      <li><a href="18.2_Orden_Produccion.html" class="toc__link">18.2 Órdenes de Ensamble y Despiece</a></li>
+                      <li><a href="18.3_Liquidacion_Costos.html" class="toc__link">18.3 Liquidación y Costeo de Kits</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            <div class="sidebar__footer">DSI-NET Core v12.1</div>
+            </aside>
+
+    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+    <main class="content">
+
+      <div class="content__inner">
+
+        <!-- BREADCRUMBS -->
+        <p class="breadcrumb">
+          <a href="#">DSI-NET Core v12.1</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">1. Módulo de Compras</span>
+        </p>
+
+        <!-- TÍTULO PRINCIPAL Y LEAD -->
+        <h1 class="content__title">1.0 Conceptos Generales: Módulo de Compras</h1>
+
+        <p class="content__lead">
+          Centro operativo de gestión de adquisiciones nacionales. Centraliza la emisión formal de órdenes de compra a proveedores, recepción de comprobantes comerciales y registro de provisiones que alimentan las cuentas por pagar y el kardex de existencias.
+        </p>
+
+        <!-- CALLOUT: FLUJO DE ABASTECIMIENTO INTEGRAL -->
+        <div class="callout callout--info" role="note">
+          <i data-lucide="info" class="callout__icon"></i>
+          <div>
+            <strong>Flujo de Abastecimiento Integral:</strong>
+            <p style="margin-top: 4px;">
+              El ciclo comercial inicia con la Orden de Compra, donde se pactan cantidades y precios acordados. Posteriormente, al ingresar el documento formal (Factura física o electrónica), se realiza la Provisión de Compras, afectando contablemente el registro de compras, crédito fiscal (IGV) y la cuenta corriente con el proveedor.
+            </p>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 1: ACCESO AL MENÚ COMPRAS -->
+        <section class="doc-section" id="sec-acceso-compras">
+          <h2 class="doc-section__title">1. Acceso al Menú Compras</h2>
+          <p class="doc-section__desc">Ruta de acceso interactivo en la barra del menú principal hacia las opciones operativas del módulo:</p>
+
+          <div class="img-placeholder" data-img-ref="acceso-menu-compras">
+            <img src="../Imagenes/Modulo_Compras/1.0_conceptos_generales/image 244.png" 
+                 alt="Ruta de acceso: Documentos > Compras > Orden de Compra y Provisión de Compras - Mercadería" 
+                 style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- SECCIÓN 2: MAPA DE SUBMÓDULOS Y OPERACIONES PRINCIPALES -->
+        <section class="doc-section" id="sec-mapa-submodulos">
+          <h2 class="doc-section__title">2. Mapa de Submódulos y Operaciones Principales</h2>
+          <p class="doc-section__desc">A continuación se definen los submódulos directos, la naturaleza de cada registro y los comprobantes resultantes en el flujo contable y logístico:</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>SUBMÓDULO</th>
+                  <th>TIPO DE OPERACIÓN</th>
+                  <th>COMPROBANTE RESULTANTE</th>
+                  <th>ALCANCE Y REGLA DE NEGOCIO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">1.1 Orden de Compra</td>
+                  <td>Requerimiento Comercial</td>
+                  <td>Orden de Compra (OC)</td>
+                  <td>Registro y emisión del pedido oficial a proveedores locales, detallando artículos, cantidades pactadas y costos comerciales.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">1.2 Provisión de Compras</td>
+                  <td>Liquidación y Contabilización</td>
+                  <td>Registro de Compras (FP)</td>
+                  <td>Asiento contable de la factura o comprobante emitido por el proveedor, validación con la OC e integración con el módulo financiero.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 3: CONEXIÓN CON OTROS MÓDULOS DEL ERP -->
+        <section class="doc-section" id="sec-conexion-modulos">
+          <h2 class="doc-section__title">3. Conexión con Otros Módulos del ERP</h2>
+          <p class="doc-section__desc">El módulo de compras no opera como un silo aislado. Su ejecución desencadena actualizaciones automatizadas en los subsistemas tributarios, de almacén y tesorería:</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>MÓDULO INTEGRADO</th>
+                  <th>PUNTO DE CONEXIÓN</th>
+                  <th>TIPO DE IMPACTO</th>
+                  <th>OBJETIVO OPERATIVO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Almacenes</td>
+                  <td>Guía de Entrada (GE)</td>
+                  <td><span class="badge badge--yes">Físico / Kardex</span></td>
+                  <td>Cruce de unidades recepcionadas contra los items detallados en la Orden de Compra.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Cuentas por Pagar</td>
+                  <td>Obligaciones Proveedor</td>
+                  <td><span class="badge badge--auto">Financiero</span></td>
+                  <td>Generación de la deuda comercial en moneda nacional o extranjera según la condición pactada.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Contabilidad / SUNAT</td>
+                  <td>Registro de Compras</td>
+                  <td><span class="badge badge--no">Tributario</span></td>
+                  <td>Asignación de base imponible, control del crédito fiscal (IGV) y percepciones / detracciones.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
+      <nav class="page-nav" aria-label="Navegación entre páginas">
+        <a class="page-nav__link page-nav__link--prev" href="#">
+          <span class="page-nav__label">Anterior</span>
+          <span class="page-nav__title">0.3.2 Menú Documentos</span>
+          <span class="page-nav__sub">Registro Transaccional y Operativo</span>
+        </a>
+        <a class="page-nav__link page-nav__link--next" href="1.1_Orden_de_Compra.html">
+          <span class="page-nav__label">Siguiente</span>
+          <span class="page-nav__title">1.1 Orden de Compra</span>
+          <span class="page-nav__sub">Emisión y Gestión de Pedidos</span>
+        </a>
+      </nav>
+
+      <!-- ============ FOOTER INSTITUCIONAL ============ -->
+      <footer class="site-footer">
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
+        <div class="site-footer__links">
+          <a href="#">Políticas de Privacidad</a>
+          <a href="#">Términos de Soporte</a>
+          <a href="#">Manuales PDF</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Inicialización de iconos Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Ruta relativa al main.js (1 nivel superior) -->
+  <script src="../main.js"></script>
+</body>
+</html>

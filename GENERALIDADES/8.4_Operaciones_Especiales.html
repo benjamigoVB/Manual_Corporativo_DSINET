@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8.4 Facturación Especial: Documento de Anticipo y Comunicado de Baja | DSI-NET Docs</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ============ HEADER SUPERIOR ============ -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <button class="topbar__menu-toggle" id="sidebarToggle" aria-label="Abrir/cerrar menú lateral" aria-expanded="true">
+        <span></span><span></span><span></span>
+      </button>
+      <img src="../Imagenes/DSI_NET_Logo.png" alt="logo dsi" width="50px" height="50px">
+    </div>
+
+    <div class="topbar__search">
+      <i data-lucide="search" class="topbar__search-icon"></i>
+      <input type="search" id="topSearch" placeholder="Buscar en la documentación de DSI-NET..." aria-label="Buscar en la documentación">
+      <kbd class="topbar__kbd">Ctrl+K</kbd>
+    </div>
+
+    <nav class="topbar__links" aria-label="Enlaces de soporte">
+      <a href="#" class="topbar__link"><i data-lucide="book-open" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Glosario</a>
+      <a href="#" class="topbar__link"><i data-lucide="life-buoy" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Soporte Técnico</a>
+      <a href="#" class="topbar__link"><i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>DSI SAC</a>
+      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
+        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
+        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="layout">
+
+    <!-- ============ ASIDE: SIDEBAR / TOC ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__filter">
+        <input type="text" id="tocFilter" placeholder="Filtrar por título..." aria-label="Filtrar por título">
+      </div>
+
+      <nav class="toc" aria-label="Tabla de contenidos">
+        <ul class="toc__list" id="tocList">
+
+          <!-- GRUPO: 0. Generalidades y Arquitectura -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">0. Generalidades y Arquitectura</button>
+            <ul class="toc__sublist">
+              <li><a href="0.0_Que_es_DSINET.html" class="toc__link">0.0 ¿Qué es DSI-NET? y Conceptos</a></li>
+              <li><a href="0.1_Requisitos_del_Sistema.html" class="toc__link">0.1 Requisitos y Entorno de Ejecución</a></li>
+              <li><a href="0.2_Autenticacion.html" class="toc__link">0.2 Autenticación y Selección de Empresa</a></li>
+
+              <!-- SUBGRUPO: 0.3 Entorno de Trabajo y Barra Global -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">0.3 Entorno de Trabajo y Barra Global</button>
+                <ul class="toc__sublist">
+                  <li><a href="0.3.0_Entorno_de_Trabajo.html" class="toc__link">0.3.0 Entorno de Trabajo</a></li>
+                  <li><a href="0.3.1_Menu_comun.html" class="toc__link">0.3.1 Menú Común</a></li>
+
+                  <!-- SUBGRUPO: 0.3.2 Menú Documentos -->
+                  <li class="toc__item toc__item--group">
+                    <button class="toc__toggle" type="button" aria-expanded="false">0.3.2 Menú Documentos</button>
+                    <ul class="toc__sublist">
+                      <li><a href="0.3.2.0_Concepto_General.html" class="toc__link">0.3.2.0 Concepto General</a></li>
+                      <li><a href="0.3.2.1_Gestion_Ventas.html" class="toc__link">0.3.2.1 Gestión de ventas</a></li>
+                      <li><a href="0.3.2.2_Gestion_Cobranza.html" class="toc__link">0.3.2.2 Gestión de cobranza</a></li>
+                      <li><a href="0.3.2.3_Gestion_Devoluciones.html" class="toc__link">0.3.2.3 Gestión de devoluciones</a></li>
+                      <li><a href="0.3.2.4_Gestion_Letras.html" class="toc__link">0.3.2.4 Gestión de Letras</a></li>
+
+                      <!-- SUBGRUPO IMPORTACIONES -->
+                      <li class="toc__item toc__item--group">
+                        <button class="toc__toggle" type="button" aria-expanded="false">0.3.2.5 Importaciones</button>
+                        <ul class="toc__sublist">
+                          <li><a href="#" class="toc__link">0.3.2.5.1 Pedido de Producción</a></li>
+                          <li><a href="0.3.2.5.2_Orden_de_Compra_Imp.html" class="toc__link">0.3.2.5.2 Orden de Compra - Imp.</a></li>
+                          <li><a href="0.3.2.5.3_Importacion.html" class="toc__link">0.3.2.5.3 Importación</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.4 Comp. de pago ext.</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.5 Comp. descuento ext.</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.6 Declaración única Adua.</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.7 Comp. de pago Nacional</a></li>
+                          <li><a href="#" class="toc__link">0.3.2.5.8 Calculo de Costo Almac.</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="0.3.2.6_Almacen.html" class="toc__link">0.3.2.6 Almacén</a></li>
+                      <li><a href="0.3.2.7_Distribucion.html" class="toc__link">0.3.2.7 Distribución</a></li>
+                      <li><a href="0.3.2.8_Nota_pedido.html" class="toc__link">0.3.2.8 Nota de pedido</a></li>
+                      <li><a href="0.3.2.9_Facturacion.html" class="toc__link">0.3.2.9 Facturación</a></li>
+                      <li><a href="0.3.2.10_Cobranza.html" class="toc__link">0.3.2.10 Cobranza</a></li>
+                      <li><a href="0.3.2.11_Caja_Chica.html" class="toc__link">0.3.2.11 Caja Chica</a></li>
+                      <li><a href="0.3.2.12_Rend_Ctas.html" class="toc__link">0.3.2.12 Rend. Ctas</a></li>
+                      <li><a href="0.3.2.13_Bancos.html" class="toc__link">0.3.2.13 Bancos</a></li>
+                      <li><a href="0.3.2.14_Compras.html" class="toc__link">0.3.2.14 Compras</a></li>
+                      <li><a href="0.3.2.15_Letras_Cobrar.html" class="toc__link">0.3.2.15 Letras por Cobrar</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="0.3.3_Menu_reportes.html" class="toc__link">0.3.3 Menú Reportes</a></li>
+                  <li><a href="0.3.4_Menu_financiero_contable.html" class="toc__link">0.3.4 Menú Financiero Contable</a></li>
+                  <li><a href="0.3.5_Menu_configuracion.html" class="toc__link">0.3.5 Menú Configuración</a></li>
+                  <li><a href="0.3.6_Menu_maestros.html" class="toc__link">0.3.6 Menú Maestros</a></li>
+                  <li><a href="0.3.7_Menu_procesos.html" class="toc__link">0.3.7 Menú Procesos</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 1. MÓDULO DE COMPRAS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">1. Módulo de Compras </button>
+            <ul class="toc__sublist">
+              <li><a href="1.0_Modulo_de_Compras.html" class="toc__link">1.0 Módulo de Compras</a></li>
+              <li><a href="1.1_Orden_de_Compra.html" class="toc__link">1.1 Orden de Compra</a></li>
+              <li><a href="1.2_Provision_de_Compras.html" class="toc__link">1.2 Provisión de Compras</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. MÓDULO DE CAJA CHICA -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">2. Módulo de Caja Chica</button>
+            <ul class="toc__sublist">
+              <li><a href="2.0_Conceptos_Generales.html" class="toc__link">2.0 Conceptos Generales</a></li>
+              <li><a href="2.1_Apertura_Caja_Chica.html" class="toc__link">2.1 Apertura y Asignación de Fondo</a></li>
+              <li><a href="2.2_Registro_Gastos.html" class="toc__link">2.2 Registro de Gastos y Vales</a></li>
+              <li><a href="2.3_Rendicion_Reembolso.html" class="toc__link">2.3 Rendición y Reembolso</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MÓDULO DE ENTREGA POR RENDIR -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">3. Módulo de Entrega por Rendir</button>
+            <ul class="toc__sublist">
+              <li><a href="3.0_Conceptos_Generales.html" class="toc__link">3.0 Conceptos Generales</a></li>
+              <li><a href="3.1_Solicitud_Entrega.html" class="toc__link">3.1 Solicitud de Entrega a Rendir</a></li>
+              <li><a href="3.2_Desembolso_Fondos.html" class="toc__link">3.2 Desembolso de Fondos</a></li>
+              <li><a href="3.3_Liquidacion_Gastos.html" class="toc__link">3.3 Liquidación y Rendición de Cuentas</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. MÓDULO DE IMPORTACIONES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">4. Módulo de Importaciones</button>
+            <ul class="toc__sublist">
+              <li><a href="4.0_Conceptos_Generales.html" class="toc__link">4.0 Conceptos Generales</a></li>
+              <li><a href="4.1_Orden_Compra_Exterior.html" class="toc__link">4.1 Orden de Compra Exterior</a></li>
+              <li><a href="4.2_Gestion_DUA_Aduanas.html" class="toc__link">4.2 Gestión DUA y Despacho Aduanero</a></li>
+              <li><a href="4.3_Costeo_Liquidacion.html" class="toc__link">4.3 Costeo y Liquidación de Importación</a></li>
+            </ul>
+          </li>
+
+          <!-- 5. MÓDULO DE ALMACENES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">5. Módulo de Almacenes</button>
+            <ul class="toc__sublist">
+              <li><a href="5.0_Conceptos_Generales.html" class="toc__link">5.0 Conceptos Generales</a></li>
+              <li><a href="5.1_Proceso_Inventario.html" class="toc__link">5.1 Proceso de Inventario</a></li>
+              <li><a href="5.2_Guia_Entrada.html" class="toc__link">5.2 Guía de Entrada</a></li>
+              <li><a href="5.3_Guia_Salida.html" class="toc__link">5.3 Guía de Salida</a></li>
+              <li><a href="5.4_Guia_Remision.html" class="toc__link">5.4 Guía de Remisión</a></li>
+              <li><a href="5.5_Guia_Remision_Activos.html" class="toc__link">5.5 Guía de Remisión-Activos</a></li>
+              <li><a href="5.6_Mantenimiento_Ubicaciones.html" class="toc__link">5.6 Mantenimiento de Ubicaciones</a></li>
+            </ul>
+          </li>
+
+          <!-- 6. MÓDULO DE PICKING Y PACKING -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">6. Módulo de Picking y Packing</button>
+            <ul class="toc__sublist">
+              <li><a href="6.0_Conceptos_Generales.html" class="toc__link">6.0 Conceptos Generales</a></li>
+              <li><a href="6.1_Generacion_Picking.html" class="toc__link">6.1 Generación de Listas de Picking</a></li>
+              <li><a href="6.2_Verificacion_Packing.html" class="toc__link">6.2 Empaque y Rotulado (Packing)</a></li>
+              <li><a href="6.3_Control_Despacho.html" class="toc__link">6.3 Cierre y Derivación a Despacho</a></li>
+            </ul>
+          </li>
+
+          <!-- 7. MÓDULO DE DISTRIBUCIÓN -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">7. Módulo de Distribución</button>
+            <ul class="toc__sublist">
+              <li><a href="7.0_Conceptos_Generales.html" class="toc__link">7.0 Conceptos Generales</a></li>
+              <li><a href="7.1_Programacion_Rutas.html" class="toc__link">7.1 Programación de Rutas y Vehículos</a></li>
+              <li><a href="7.2_Guias_Remision.html" class="toc__link">7.2 Generación de Guías de Remisión</a></li>
+              <li><a href="7.3_Liquidacion_Reparto.html" class="toc__link">7.3 Liquidación y Conformidad de Entrega</a></li>
+            </ul>
+          </li>
+
+          <!-- ================= 8. MÓDULO DE PRE-VENTAS Y VENTAS (ACTIVO) ================= -->
+          <li class="toc__item toc__item--group is-open">
+            <button class="toc__toggle" type="button" aria-expanded="true">8. Módulo de Pre-Ventas y Ventas</button>
+            <ul class="toc__sublist">
+              <li><a href="8.0_Modulo_Preventas_Ventas.html" class="toc__link">8.0 Conceptos Generales</a></li>
+
+              <!-- 8.1 ACORDEÓN HIJO -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">
+                  8.1 Nota de Pedido
+                </button>
+                <ul class="toc__sublist">
+                  <li><a href="8.1.0_Nota_Pedido.html" class="toc__link">8.1.0 Nota de Pedido</a></li>
+                  <li><a href="8.1.1_Estados_Ciclo_de_vida.html" class="toc__link">8.1.1 Estados y Ciclo de Vida</a></li>
+                </ul>
+              </li>
+
+              <li><a href="8.2_Venta_Directa.html" class="toc__link">8.2 Venta Directa y Facturación</a></li>
+
+              <!-- 8.3 ACORDEÓN HIJO -->
+              <li class="toc__item toc__item--group">
+                <button class="toc__toggle" type="button" aria-expanded="false">
+                  8.3 Panel de Descuentos
+                </button>
+                <ul class="toc__sublist">
+                  <li><a href="8.3.0_Descuentos_conceptos_generales.html" class="toc__link">8.3.0 Conceptos Generales</a></li>
+                  <li><a href="8.3.1_Campana_Oferta.html" class="toc__link">8.3.1 Campaña de Oferta</a></li>
+                  <li><a href="8.3.2_Liquidacion_Articulos.html" class="toc__link">8.3.2 Liquidación de Artículos</a></li>
+                  <li><a href="8.3.3_Promociones_Focalizadas.html" class="toc__link">8.3.3 Promociones Focalizadas</a></li>
+                </ul>
+              </li>
+
+              <!-- 8.4 PANTALLA ACTIVA -->
+              <li>
+                <a href="8.4_Operaciones_Especiales.html" class="toc__link toc__link--active" aria-current="page">
+                  8.4 Operaciones Especiales
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ================= 9. MÓDULO DE COBRANZAS (ACTIVO Y ABIERTO) ================= -->
+          <li class="toc__item toc__item--group is-close">
+            <button class="toc__toggle" type="button" aria-expanded="true">9. Módulo de Cobranzas</button>
+            <ul class="toc__sublist">
+              <li><a href="9.0_Conceptos_Generales.html" class="toc__link">9.0 Conceptos Generales</a></li>
+              
+              <!-- 9.1 ACORDEÓN HIJO (ABIERTO PORQUE CONTIENE LA PÁGINA ACTUAL) -->
+              <li class="toc__item toc__item--group is-close">
+                <button class="toc__toggle" type="button" aria-expanded="true">
+                  9.1 Tipos de cobranzas
+                </button>
+                <ul class="toc__sublist">
+                  <li>
+                    <a href="9.1.0_Cobranza_Individual_Masiva.html" class="toc__link">
+                      9.1.0 Cobranza Individual y Masiva
+                    </a>
+                  </li>
+                  <li><a href="9.1.1_Documento_Anticipo.html" class="toc__link">9.1.1 Cobranza por Anticipo</a></li>
+                  <li><a href="9.1.2_Cobranza_Nota_Credito.html" class="toc__link">9.1.2 Cobranza por Nota de Crédito</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 10. LÍNEAS DE CRÉDITO DE CLIENTES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">10. Líneas de Crédito de Clientes</button>
+            <ul class="toc__sublist">
+              <li><a href="10.0_Conceptos_Generales.html" class="toc__link">10.0 Conceptos Generales</a></li>
+              <li><a href="10.1_Asignacion_Lineas.html" class="toc__link">10.1 Evaluación y Asignación de Líneas</a></li>
+              <li><a href="10.2_Bloqueo_Desbloqueo.html" class="toc__link">10.2 Control de Riesgo y Bloqueo</a></li>
+              <li><a href="10.3_Auditoria_Creditos.html" class="toc__link">10.3 Auditoría y Variación de Líneas</a></li>
+            </ul>
+          </li>
+
+          <!-- 11. MÓDULO DE LETRAS DE CLIENTES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">11. Módulo de Letras de Clientes</button>
+            <ul class="toc__sublist">
+              <li><a href="11.0_Conceptos_Generales.html" class="toc__link">11.0 Conceptos Generales</a></li>
+              <li><a href="11.1_Canje_Letras.html" class="toc__link">11.1 Canje de Facturas por Letras</a></li>
+              <li><a href="11.2_Envio_Banco_Descuento.html" class="toc__link">11.2 Cobranza Libre y Descuento Bancario</a></li>
+              <li><a href="11.3_Cancelacion_Protesto.html" class="toc__link">11.3 Cancelación, Renovación y Protesto</a></li>
+            </ul>
+          </li>
+
+          <!-- 12. CTAS X PAGAR LETRAS PROVEEDORES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">12. Ctas x Pagar Letras Proveedores</button>
+            <ul class="toc__sublist">
+              <li><a href="12.0_Conceptos_Generales.html" class="toc__link">12.0 Conceptos Generales</a></li>
+              <li><a href="12.1_Registro_Aceptacion.html" class="toc__link">12.1 Registro y Aceptación de Letras</a></li>
+              <li><a href="12.2_Programacion_Vencimientos.html" class="toc__link">12.2 Cronograma y Vencimientos</a></li>
+              <li><a href="12.3_Pago_Amortizacion.html" class="toc__link">12.3 Pago y Cancelación de Letras</a></li>
+            </ul>
+          </li>
+
+          <!-- 13. MÓDULO DE BANCOS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">13. Módulo de Bancos</button>
+            <ul class="toc__sublist">
+              <li><a href="13.0_Conceptos_Generales.html" class="toc__link">13.0 Conceptos Generales</a></li>
+              <li><a href="13.1_Cuentas_Bancarias.html" class="toc__link">13.1 Mantenimiento de Cuentas</a></li>
+              <li><a href="13.2_Movimientos_Bancarios.html" class="toc__link">13.2 Emisión de Cheques y Transferencias</a></li>
+              <li><a href="13.3_Conciliacion_Bancaria.html" class="toc__link">13.3 Conciliación Bancaria Mensual</a></li>
+            </ul>
+          </li>
+
+          <!-- 14. MÓDULO DE GESTIÓN DE VENTAS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">14. Módulo de Gestión de Ventas</button>
+            <ul class="toc__sublist">
+              <li><a href="14.0_Conceptos_Generales.html" class="toc__link">14.0 Conceptos Generales</a></li>
+              <li><a href="14.1_Consola_Ventas.html" class="toc__link">14.1 Consola de Monitoreo Comercial</a></li>
+              <li><a href="14.2_Metas_Comisiones.html" class="toc__link">14.2 Cuotas de Venta y Comisiones</a></li>
+              <li><a href="14.3_Reportes_Estadisticos.html" class="toc__link">14.3 Análisis y Métricas Comerciales</a></li>
+            </ul>
+          </li>
+
+          <!-- 15. MÓDULO DE GESTIÓN DE COBRANZAS -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">15. Módulo de Gestión de Cobranzas</button>
+            <ul class="toc__sublist">
+              <li><a href="15.0_Conceptos_Generales.html" class="toc__link">15.0 Conceptos Generales</a></li>
+              <li><a href="15.1_Cartera_Morosidad.html" class="toc__link">15.1 Cartera Vencida y Morosidad</a></li>
+              <li><a href="15.2_Asignacion_Cobradores.html" class="toc__link">15.2 Asignación y Rutas de Cobrador</a></li>
+              <li><a href="15.3_Seguimiento_Compromisos.html" class="toc__link">15.3 Compromisos y Acuerdos de Pago</a></li>
+            </ul>
+          </li>
+
+          <!-- 16. GESTIÓN DE DEVOLUCIONES -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">16. Gestión de Devoluciones</button>
+            <ul class="toc__sublist">
+              <li><a href="16.0_Conceptos_Generales.html" class="toc__link">16.0 Conceptos Generales</a></li>
+              <li><a href="16.1_Devolucion_Clientes.html" class="toc__link">16.1 Solicitudes de Devolución Cliente</a></li>
+              <li><a href="16.2_Inspeccion_Garantias.html" class="toc__link">16.2 Inspección Técnica y Garantías</a></li>
+              <li><a href="16.3_Reingreso_Almacen.html" class="toc__link">16.3 Reingreso Físico y Regularización</a></li>
+            </ul>
+          </li>
+
+          <!-- 17. CPE Y GRE (SUNAT) -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">17. CPE y GRE (SUNAT)</button>
+            <ul class="toc__sublist">
+              <li><a href="17.0_Conceptos_Generales.html" class="toc__link">17.0 Conceptos Generales</a></li>
+              <li><a href="17.1_Bandeja_Envio_CPE.html" class="toc__link">17.1 Bandeja Electrónica CPE / OSE</a></li>
+              <li><a href="17.2_Emision_GRE.html" class="toc__link">17.2 Guías de Remisión Electrónica (GRE)</a></li>
+              <li><a href="17.3_Consulta_CDR_Tickets.html" class="toc__link">17.3 Estados CDR, Tickets y Bajas</a></li>
+            </ul>
+          </li>
+
+          <!-- 18. MÓDULO DE ENSAMBLAJE -->
+          <li class="toc__item toc__item--group">
+            <button class="toc__toggle" type="button" aria-expanded="false">18. Módulo de Ensamblaje</button>
+            <ul class="toc__sublist">
+              <li><a href="18.0_Conceptos_Generales.html" class="toc__link">18.0 Conceptos Generales</a></li>
+              <li><a href="18.1_Estructura_Kits.html" class="toc__link">18.1 Fórmulas y Estructuras (BOM)</a></li>
+              <li><a href="18.2_Orden_Produccion.html" class="toc__link">18.2 Órdenes de Ensamble y Despiece</a></li>
+              <li><a href="18.3_Liquidacion_Costos.html" class="toc__link">18.3 Liquidación y Costeo de Kits</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="sidebar__footer">DSI-NET Core v12.1</div>
+    </aside>
+
+    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+    <main class="content">
+
+      <div class="content__inner">
+
+        <!-- BREADCRUMBS -->
+        <p class="breadcrumb">
+          <a href="#">DSI-NET Docs</a>
+          <span aria-hidden="true">/</span>
+          <a href="8.0_modu.html">Módulo de Pre-Ventas y Ventas</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">8.4 Facturación Especial: Documento de Anticipo y Comunicado de Baja</span>
+        </p>
+
+        <!-- TÍTULO PRINCIPAL Y LEAD -->
+        <h1 class="content__title">8.4 Facturación Especial: Documento de Anticipo y Comunicado de Baja</h1>
+
+        <p class="content__lead">
+          Módulo complementario para el tratamiento de operaciones financieras de venta que no descargan inventario de forma inmediata (Anticipos) y la gestión centralizada de anulación y bajas de comprobantes de pago electrónicos ante SUNAT (de Baja).
+        </p>
+
+        <!-- ACCESO A DOCUMENTO DE ANTICIPO -->
+        <section class="doc-section" id="sec-acceso-anticipo">
+          <h2 class="doc-section__title">Acceso a Documento de Anticipo</h2>
+          <div class="img-placeholder" data-img-ref="8.4_Acceso_Documento_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 830.png" alt="Acceso a Documento de Anticipo" style="width: 80%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- VISUALIZADOR DE LA PANTALLA DOCUMENTO DE ANTICIPO -->
+        <section class="doc-section" id="sec-visualizador-anticipo">
+          <h2 class="doc-section__title">Visualizador de la pantalla Documento de Anticipo</h2>
+          <div class="img-placeholder" data-img-ref="8.4_Visualizador_Pantalla_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 831.png" alt="Visualizador de la pantalla Documento de Anticipo" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- 1. DOCUMENTO DE VENTA - ANTICIPO DE CLIENTES -->
+        <section class="doc-section" id="sec-1">
+          <h2 class="doc-section__title">1. Documento de Venta - Anticipo de Clientes</h2>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>CAMPO / CONTROL</th>
+                  <th>TIPO DE ENTRADA</th>
+                  <th>MODO</th>
+                  <th>PROPÓSITO OPERATIVO Y REGLA TRIBUTARIA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Genera TXT / Historial CPE ›</td>
+                  <td>Botones</td>
+                  <td>Fiscal</td>
+                  <td>Genera la trama plana para el PSE/OSE (TCI) y consulta la bitácora de envío y CDR ante SUNAT.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Pto Vta: / Fecha: ›</td>
+                  <td>Desplegable / Fecha</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Sede comercial (ALLENDE) y fecha contable/tributaria de emisión del anticipo (02/10/2026).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Documento / Serie / Nro ›</td>
+                  <td>Desplegable / Ayuda [?]</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Tipo de comprobante (BC/FC), serie (B001), correlativo y botón [?] de búsqueda asistida.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Cliente Princ. / Cliente ›</td>
+                  <td>Búsqueda Asistida</td>
+                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Matriz comercial y razón social o nombre con RUC/DNI del cliente que realiza el anticipo.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Condi. Pago / Vcto / Anulado ›</td>
+                  <td>Desplegable / Fecha / Casilla</td>
+                  <td>Condición</td>
+                  <td>Término comercial (CONTADO), vencimiento y casilla para dar de baja el anticipo.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Vendedor / Nota.Ped. ›</td>
+                  <td>Texto / Alfanumérico</td>
+                  <td>Asignación</td>
+                  <td>Asesor comercial responsable (ALEX VELA) y correlativo de Nota de Pedido asociada si existiera.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Mon / Tc: ›</td>
+                  <td>Radios / Numérico</td>
+                  <td>Divisa</td>
+                  <td>Selección de moneda (S/. o US$) y tipo de cambio oficial del día (3.4540).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Liquidación (Gravado/IGV/Total) ›</td>
+                  <td>Numéricos Decimales</td>
+                  <td>Directo</td>
+                  <td>Importes monetarios del anticipo; al ser adelanto financiero no requiere grilla de ítems físicos.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Botonera Transaccional ›</td>
+                  <td>Botones de Comando</td>
+                  <td>Acción</td>
+                  <td>Imprimir, Nuevo, Grabar (asienta el ingreso contable y fiscal) y Cancelar.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Botones de Integración Fiscal (Genera TXT - TCI e Historial CPE):</strong> Comandos para transmitir el comprobante de anticipo al PSE/OSE y verificar la recepción del CDR.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Botones_Fiscal_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 832.png" alt="Botones Fiscal TXT TCI e Historial CPE" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Cabecera de Anticipo (Pto Vta, Fecha, Documento, Serie y Número con [?]):</strong> Parámetros fiscales de la sede (ALLENDE), serie oficial (B001) y correlativo del comprobante tipo anticipo.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Cabecera_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 833.png" alt="Cabecera de Anticipo" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="8.4_Datos_Cliente_Condicion_Pago">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 834 (2).png" alt="Datos del Cliente y Condición de Pago" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Datos del Cliente y Condición de Pago (Cliente Princ., Cliente, Condi. Pago CONTADO y Vcto):</strong> Identificación del pagador, plazo comercial asignado y casilla de control Anulado.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Datos_Cliente_Condicion_Pago">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 835 (2).png" alt="Datos del Cliente y Condición de Pago" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="8.4_Liquidacion_Monetaria_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 835.png" alt="Vendedor y Liquidación Monetaria" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Vendedor, Nota.Ped. y Liquidación Monetaria (Gravado, IGV y Total):</strong> Registro de comisiones, vinculación con pedidos de preventa y digitación directa de las bases imponibles sin grilla de artículos.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Liquidacion_Monetaria_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 836 (2).png" alt="Vendedor y Liquidación Monetaria" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="8.4_Liquidacion_Monetaria_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 837.png" alt="Vendedor y Liquidación Monetaria" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p><strong>Botonera Transaccional de Anticipo (Imprimir, Nuevo, Grabar, Cancelar):</strong> Persiste el cobro dinerario anticipado sin mover Kardex y emite la representación gráfica fiscal.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Botonera_Transaccional_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 839.png" alt="Botonera Transaccional de Anticipo" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- FUNCIONALIDAD DE LA VENTANA DE DOCUMENTO DE ANTICIPO -->
+        <section class="doc-section" id="sec-funcionalidad-anticipo">
+          <h2 class="doc-section__title">Funcionalidad de la Ventana de Documento de Anticipo</h2>
+          <p>
+            Esta ventana tiene la siguiente función: Si un cliente X quiere adelantar cierto dinero para poder comprar a futuro, esta ventana crea el documento que avale ese adelanto.
+          </p>
+          <p>
+            Procedemos a llenar los campos de la ventana para generar el documento para este ejemplo el cliente adelantará un monto de 1000 soles, el documento debe verse de la siguiente forma:
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Formulario_Anticipo_Lleno">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 840.png" alt="Formulario de anticipo completado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>
+            Luego grabamos y aparecerá una ventana de confirmación, en este caso es una Boleta, le damos clic al botón SI.
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Confirmacion_Boleta_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 841.png" alt="Ventana de confirmación de Boleta" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>
+            El sistema nos arrojará un documento detallado por la operación.
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Representacion_Impresa_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 842.png" alt="Documento detallado de anticipo emitido" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- ACCESO A COMUNICADO DE BAJA -->
+        <section class="doc-section" id="sec-acceso-baja">
+          <h2 class="doc-section__title">Acceso a Comunicado de Baja</h2>
+          <div class="img-placeholder" data-img-ref="8.4_Acceso_Comunicado_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 843 (2).png" alt="Acceso a Comunicado de Baja" style="width: 80%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- VISUALIZADOR DE LA PANTALLA COMUNICADO DE BAJA -->
+        <section class="doc-section" id="sec-visualizador-baja">
+          <h2 class="doc-section__title">Visualizador de la pantalla Comunicado de Baja</h2>
+          <div class="img-placeholder" data-img-ref="8.4_Visualizador_Pantalla_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 843 (3).png" alt="Visualizador de la pantalla Comunicado de Baja" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          </div>
+        </section>
+
+        <!-- 2. CONSOLA DE COMUNICADOS DE BAJA (ANULACIONES CPE) -->
+        <section class="doc-section" id="sec-2">
+          <h2 class="doc-section__title">2. Consola de Comunicados de Baja (Anulaciones CPE)</h2>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>COMPONENTE / FILTRO</th>
+                  <th>TIPO DE ENTRADA</th>
+                  <th>MODO</th>
+                  <th>PROPÓSITO TÉCNICO Y CONTROL TRIBUTARIO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Fechas (DD/MM/AAAA) ›</td>
+                  <td>Rango Fechas / Checkbox</td>
+                  <td>Filtro</td>
+                  <td>Intervalo cronológico de búsqueda con activación por casilla.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Cliente / Filtro Grupos ›</td>
+                  <td>Texto Libre / Casilla</td>
+                  <td>Filtro</td>
+                  <td>Acota la relación de anulaciones por cliente o por agrupación comercial.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Generar Comunicado de Baja ›</td>
+                  <td>Botón de Acción</td>
+                  <td>Fiscal</td>
+                  <td>Genera formalmente el paquete de anulación electrónica para remitir a SUNAT.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Genera TXT TCI / Historial ›</td>
+                  <td>Interfaz Fiscal</td>
+                  <td>Exportación</td>
+                  <td>Transmite la trama al PSE/OSE y verifica el estado de aceptación del ticket.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Recuperar ›</td>
+                  <td>Botón de Consulta</td>
+                  <td>Servidor</td>
+                  <td>Refresca la cuadrícula cargando todos los documentos anulados en el rango fijado.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top: 14px;"><strong>Barra de Filtros (Fechas, Cliente y Filtro Grupos):</strong> Criterios cronológicos y selectores para delimitar los comprobantes anulados a visualizar o comunicar.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Ventana_Generar_Comunicado_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 843.png" alt="Ventana de Generación de Comunicado de Baja" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <div class="img-placeholder" data-img-ref="8.4_Ventana_Generar_Comunicado_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 844.png" alt="Ventana de Generación de Comunicado de Baja" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <p><strong>Botonera de Gestión Fiscal (Generar Comunicado, Genera TXT, Historial CPE, Recuperar):</strong> Dispara la consolidación del paquete de baja, crea la trama para TCI y consulta las respuestas SUNAT.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Ventana_Generar_Comunicado_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 845.png" alt="Ventana de Generación de Comunicado de Baja" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+          <p><strong>Grilla de Bajas Emitidas:</strong> Registro detallado con Nro Interno, Fecha anulación, Motivo de Baja, estados TCI/Sun (Ok, Acep), Fec Creac, Usu Creac, Doc, Documento, Doc Cliente, Cliente, Importe y Vend.</p>
+          <div class="img-placeholder" data-img-ref="8.4_Ventana_Generar_Comunicado_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 848.png" alt="Ventana de Generación de Comunicado de Baja" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- ESPECIFICACIÓN DE LA GRILLA DE DOCUMENTOS DADOS DE BAJA -->
+        <section class="doc-section" id="sec-grilla-bajas">
+          <h2 class="doc-section__title">Especificación de la Grilla de Documentos Dados de Baja</h2>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>COLUMNA DE GRILLA</th>
+                  <th>TIPO DE DATO</th>
+                  <th>ESTADO</th>
+                  <th>DESCRIPCIÓN OPERATIVA Y CONTROL FISCAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="data-table__field">Nro Interno / Fecha anulación ›</td>
+                  <td>Entero / Fecha</td>
+                  <td>Sistema</td>
+                  <td>Correlativo de control interno y fecha en la que se gestionó la baja en el ERP.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Motivo de Baja ›</td>
+                  <td>Texto Libre</td>
+                  <td>Auditoría</td>
+                  <td>Justificación tributaria formal reportada a SUNAT (ANULACION, ERROR DE FACTURACION).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">TCI / Sun ›</td>
+                  <td>Códigos de Estado</td>
+                  <td>Fiscal</td>
+                  <td>Respuestas de transmisión: Ok (trama generada) y Acep (baja aceptada por SUNAT).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Fec Creac / Usu Creac ›</td>
+                  <td>Timestamp / Texto</td>
+                  <td>Trazabilidad</td>
+                  <td>Fecha y hora exacta de registro y usuario que procesó la baja (FCORDOVA, CCAJO).</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Doc / Documento / Fecha ›</td>
+                  <td>Tipo / Serie-Nro / Fecha</td>
+                  <td>CPE</td>
+                  <td>Tipo (BC, FC, NC), serie/correlativo oficial anulado y fecha original de emisión.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Doc Cliente / Cliente ›</td>
+                  <td>RUC/DNI / Razón Social</td>
+                  <td>Receptor</td>
+                  <td>Identificación tributaria y denominación del receptor del comprobante anulado.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Mon / Importe / Vend ›</td>
+                  <td>Divisa / Decimal / Texto</td>
+                  <td>Transacción</td>
+                  <td>Moneda (S/.), importe total anulado y código o iniciales del vendedor asignado.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- FUNCIONALIDAD DE LA VENTANA COMUNICADO DE BAJA -->
+        <section class="doc-section" id="sec-funcionalidad-baja">
+          <h2 class="doc-section__title">Funcionalidad de la Ventana Comunicado de Baja</h2>
+          <p>
+            Esta ventana tiene la siguiente función: Si hay una Factura, Boleta, etc, que se registró por error, esta ventana permite la anulación de este documento.
+          </p>
+          <p>
+            En la ventana de Comunicado de Baja, damos clic a la opción de <strong>Generar Comunicado de Baja</strong> y se abrirá la siguiente ventana.
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Ventana_Generar_Comunicado_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 849.png" alt="Ventana de Generación de Comunicado de Baja" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>
+            En el botón de ayuda damos clic para buscar el documento que queremos, en este caso buscaremos el documento que generamos en el paso anterior (documento de Anticipo).
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Ayuda_Buscar_Documento_Anticipo">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 851.png" alt="Búsqueda asistida de comprobante para anular" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>
+            Seleccionamos el documento, le damos aceptar y aparecerá en la ventana para generar el comunicado de baja, completamos el <strong>Motivo de Baja</strong> y generamos el comunicado.
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Completar_Motivo_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 852.png" alt="Ingreso del motivo de anulación tributaria" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>
+            Aparecerá una ventana de confirmación y le damos aceptar.
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Confirmacion_Generacion_Baja">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 853.png" alt="Ventana de confirmación de baja generada" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p>
+            Observamos que se generó correctamente el comunicado de Baja, en el caso de las columnas <strong>TCI</strong> y <strong>Sun</strong>, estas aparecerán completas cuando pasen por un proceso externo al sistema.
+          </p>
+          <div class="img-placeholder" data-img-ref="8.4_Grilla_Baja_Generada_Exito">
+            <img src="../Imagenes/Modulo_Ventas/8.4_operaciones_especiales/image 854.png" alt="Grilla con el comunicado de baja registrado con éxito" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
+      <nav class="page-nav" aria-label="Navegación entre páginas">
+        <a class="page-nav__link page-nav__link--prev" href="8.3.3_Promociones_Focalizadas.html">
+          <span class="page-nav__label">Anterior</span>
+          <span class="page-nav__title">8.3.3 Promociones Focalizadas</span>
+          <span class="page-nav__sub">Panel de Descuentos</span>
+        </a>
+        <a class="page-nav__link page-nav__link--next" href="9.0_Conceptos_Generales.html">
+          <span class="page-nav__label">Siguiente</span>
+          <span class="page-nav__title">9.0 Modulo de Cobranza</span>
+          <span class="page-nav__sub">Módulo de Cobranzas</span>
+        </a>
+      </nav>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="site-footer">
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
+        <div class="site-footer__links">
+          <a href="#">Políticas de Privacidad</a>
+          <a href="#">Términos de Soporte</a>
+          <a href="#">Manuales PDF</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ============ JAVASCRIPT DE ACORDEÓN, SIDEBAR Y FILTRO ============ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Inicializar iconos de Lucide
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // 2. Funcionalidad de los botones acordeón del Menú Lateral (TOC)
+      const toggles = document.querySelectorAll('.toc__toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          const parentItem = toggle.closest('.toc__item--group');
+          if (!parentItem) return;
+
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !isExpanded);
+          parentItem.classList.toggle('is-open');
+        });
+      });
+
+      // 3. Botón para abrir / colapsar el menú lateral en pantallas pequeñas
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('is-open');
+          const expanded = sidebarToggle.getAttribute('aria-expanded') === 'true';
+          sidebarToggle.setAttribute('aria-expanded', !expanded);
+        });
+      }
+
+      // 4. Filtro del buscador en la barra lateral
+      const filterInput = document.getElementById('tocFilter');
+      if (filterInput) {
+        filterInput.addEventListener('input', (e) => {
+          const val = e.target.value.toLowerCase().trim();
+          const items = document.querySelectorAll('.toc__list > li');
+
+          items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(val)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
