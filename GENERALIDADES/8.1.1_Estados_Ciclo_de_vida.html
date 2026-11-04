@@ -153,13 +153,15 @@
           </li>
 
           <!-- 5. MÓDULO DE ALMACENES -->
-          <li class="toc__item toc__item--group">
+          <li class="toc__item toc__item--group is-close">
             <button class="toc__toggle" type="button" aria-expanded="false">5. Módulo de Almacenes</button>
             <ul class="toc__sublist">
-              <li><a href="5.0_Conceptos_Generales.html" class="toc__link">5.0 Conceptos Generales</a></li>
-              <li><a href="5.1_Ingresos_Almacen.html" class="toc__link">5.1 Notas de Ingreso</a></li>
-              <li><a href="5.2_Salidas_Almacen.html" class="toc__link">5.2 Notas de Salida y Transferencias</a></li>
-              <li><a href="5.3_Kardex_Inventario.html" class="toc__link">5.3 Control de Stock y Kardex</a></li>
+              <li><a href="5.0_Modulo_Almacen.html" class="toc__link">5.0 Conceptos Generales</a></li>
+              <li><a href="5.1_Proceso_Inventario.html" class="toc__link">5.1 Proceso de Inventario</a></li>
+              <li><a href="5.2_Guia_Entrada.html" class="toc__link">5.2 Guía de Entrada</a></li>
+              <li><a href="5.3_Guia_Salida.html" class="toc__link">5.3 Guía de Salida</a></li>
+              <li><a href="5.4_Guia_Remision.html" class="toc__link">5.4 Guía de Remisión</a></li>
+              <li><a href="5.5_Mantenimiento_Ubicaciones.html" class="toc__link">5.5 Mantenimiento de Ubicaciones</a></li>
             </ul>
           </li>
 
@@ -379,14 +381,14 @@
         <h1 class="content__title">8.1.1 Estados y Ciclo de Vida de la Nota de Pedido</h1>
 
         <p class="content__lead">
-          Referencia técnica del ciclo de vida operativo de los pedidos comerciales en DSI-NET[cite: 5]. Detalla la máquina de 11 estados que gobierna la orden de venta desde su creación inicial hasta su facturación y liquidación definitiva, estableciendo permisos de modificación, reserva de inventario en Kardex y validaciones crediticias[cite: 5].
+          Referencia técnica del ciclo de vida operativo de los pedidos comerciales en DSI-NET. Detalla la máquina de 11 estados que gobierna la orden de venta desde su creación inicial hasta su facturación y liquidación definitiva, estableciendo permisos de modificación, reserva de inventario en Kardex y validaciones crediticias.
         </p>
 
         <!-- SECCIÓN 1: MATRIZ TÉCNICA DE ESTADOS DEL PEDIDO -->
         <section class="doc-section" id="sec-matriz-estados">
           <h2 class="doc-section__title">1. Matriz Técnica de Estados del Pedido</h2>
           <p class="doc-section__desc">
-            Definición normativa de los 11 estados del sistema, especificando el comportamiento del motor transaccional ante cada cambio de condición[cite: 5]:
+            Definición normativa de los 11 estados del sistema, especificando el comportamiento del motor transaccional ante cada cambio de condición:
           </p>
 
           <div class="table-wrap">
@@ -404,67 +406,67 @@
                   <td class="data-table__field">00 &rsaquo;</td>
                   <td>Nuevo</td>
                   <td>Creación</td>
-                  <td>Pedido recién formulado; edición completa de artículos, cantidades, tarifas y almacén permitida[cite: 5].</td>
+                  <td>Pedido recién formulado; edición completa de artículos, cantidades, tarifas y almacén permitida.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">01 &rsaquo;</td>
                   <td>Modif (Modificado)</td>
                   <td>Edición</td>
-                  <td>Pedido persistido que ha sufrido correcciones en ítems o condiciones antes de su aprobación[cite: 5].</td>
+                  <td>Pedido persistido que ha sufrido correcciones en ítems o condiciones antes de su aprobación.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">02 &rsaquo;</td>
                   <td>Abier (Abierto)</td>
                   <td>Comercial</td>
-                  <td>Pedido formalmente abierto y vigente, pendiente de validación de crédito o confirmación del cliente[cite: 5].</td>
+                  <td>Pedido formalmente abierto y vigente, pendiente de validación de crédito o confirmación del cliente.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">03 &rsaquo;</td>
                   <td>Apr.Vta (Aprobación Ventas)</td>
                   <td>Aprobación</td>
-                  <td>Pedido visado comercialmente; bloquea la edición directa de precios y confirma la reserva de stock[cite: 5].</td>
+                  <td>Pedido visado comercialmente; bloquea la edición directa de precios y confirma la reserva de stock.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">04 &rsaquo;</td>
                   <td>Liqu.Parc (Liquidación Parcial)</td>
                   <td>Cuentas / Caja</td>
-                  <td>Registra amortizaciones o cancelaciones parciales de cobro sobre el importe global de la nota[cite: 5].</td>
+                  <td>Registra amortizaciones o cancelaciones parciales de cobro sobre el importe global de la nota.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">05 &rsaquo;</td>
                   <td>Fact.Parc (Facturado Parcial)</td>
                   <td>Facturación</td>
-                  <td>Comprobantes electrónicos (Factura/Boleta) emitidos amparando solo una porción de las cantidades[cite: 5].</td>
+                  <td>Comprobantes electrónicos (Factura/Boleta) emitidos amparando solo una porción de las cantidades.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">06 &rsaquo;</td>
                   <td>Liqu.Total (Liquidación Total)</td>
                   <td>Cuentas / Caja</td>
-                  <td>El importe monetario completo del pedido ha sido cancelado o acreditado contablemente[cite: 5].</td>
+                  <td>El importe monetario completo del pedido ha sido cancelado o acreditado contablemente.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">07 &rsaquo;</td>
                   <td>Fact.Total (Facturado Total)</td>
                   <td>Facturación</td>
-                  <td>El 100% de los artículos y volúmenes solicitados se encuentran transformados en CPE definitivos[cite: 5].</td>
+                  <td>El 100% de los artículos y volúmenes solicitados se encuentran transformados en CPE definitivos.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">08 &rsaquo;</td>
                   <td>Cerrado</td>
                   <td>Finalizado</td>
-                  <td>Ciclo comercial y logístico completado; no admite nuevos despachos ni modificaciones[cite: 5].</td>
+                  <td>Ciclo comercial y logístico completado; no admite nuevos despachos ni modificaciones.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">09 &rsaquo;</td>
                   <td>Apr.Desp (Aprobación Despacho)</td>
                   <td>Almacén</td>
-                  <td>Autorización para que el depósito físico inicie el picking y reserve físicamente los bultos[cite: 5].</td>
+                  <td>Autorización para que el depósito físico inicie el picking y reserve físicamente los bultos.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">10 &rsaquo;</td>
                   <td>Reg.Bult (Registro de Bultos)</td>
                   <td>Embalaje</td>
-                  <td>Registro técnico de bultos, pesaje y cubicaje concluido para entrega a flota o agencia[cite: 5].</td>
+                  <td>Registro técnico de bultos, pesaje y cubicaje concluido para entrega a flota o agencia.</td>
                 </tr>
               </tbody>
             </table>
@@ -474,16 +476,16 @@
         <!-- SECCIÓN 2: EJEMPLO DE LOS ESTADOS DE LA NOTA DE PEDIDO -->
         <section class="doc-section" id="sec-ejemplo-estados">
           <p class="doc-section__desc">
-            En el punto anterior vimos cómo crear una nueva NP, ahora veremos los estados que tiene la NP dividida en 4 fases[cite: 5].
+            En el punto anterior vimos cómo crear una nueva NP, ahora veremos los estados que tiene la NP dividida en 4 fases.
           </p>
 
           <h2 class="doc-section__title">2. Ejemplo de los Estados de la Nota de Pedido</h2>
 
-          <!-- 3.1 ESTADO NUEVO -->
+          <!-- 2.1 ESTADO NUEVO -->
           <div class="doc-subsection" id="sub-2-1">
             <h3 class="doc-section__subtitle">2.1 Estado Nuevo</h3>
             <p>
-              Para poder visualizar una NP en estado nuevo, se debe crear una NP (ver el punto Módulo de Pre-Ventas y Ventas 8.1)[cite: 5]. Una vez creamos la NP y la grabamos damos clic al botón de ayuda (?) y aparecerá la siguiente ventana donde se puede visualizar el documento que se creó, además en la columna Estado aparece como <strong>NUEVO</strong>[cite: 5].
+              Para poder visualizar una NP en estado nuevo, se debe crear una NP (ver el punto Módulo de Pre-Ventas y Ventas 8.1). Una vez creamos la NP y la grabamos damos clic al botón de ayuda (?) y aparecerá la siguiente ventana donde se puede visualizar el documento que se creó, además en la columna Estado aparece como <strong>NUEVO</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Nuevo">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 765.png" alt="Estado Nuevo de la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
@@ -494,28 +496,28 @@
           <div class="doc-subsection" id="sub-2-2">
             <h3 class="doc-section__subtitle">2.2 Estado Modificado</h3>
             <p>
-              Para poder visualizar una NP en estado modificado, se debe editar la NP que se está creando, por ejemplo agregaremos dos artículos nuevos[cite: 5].
+              Para poder visualizar una NP en estado modificado, se debe editar la NP que se está creando, por ejemplo agregaremos dos artículos nuevos.
             </p>
             <p>
-              Para poder editar la NP una vez que ya se grabó la forma más sencilla es desde la misma NP dar clic en el botón ayuda (?) y seleccionamos el documento que creamos y se podrá editar[cite: 5].
+              Para poder editar la NP una vez que ya se grabó la forma más sencilla es desde la misma NP dar clic en el botón ayuda (?) y seleccionamos el documento que creamos y se podrá editar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Seleccion_NP_Edicion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 766.png" alt="Selección de NP para edición" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Damos doble clic en el documento y ahora sí los campos se podrán editar y agregar más artículos[cite: 5].
+              Damos doble clic en el documento y ahora sí los campos se podrán editar y agregar más artículos.
             </p>
             <p>
-              Agregaremos dos artículos más y cambiaremos de vendedor, así debería quedarnos y grabamos[cite: 5].
+              Agregaremos dos artículos más y cambiaremos de vendedor, así debería quedarnos y grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Edicion_Articulos_Vendedor">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 767.png" alt="Edición de artículos y cambio de vendedor" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez que se grabó damos clic al botón de ayuda (?) y el estado de la NP habrá cambiado a <strong>Modificado</strong>[cite: 5].
+              Una vez que se grabó damos clic al botón de ayuda (?) y el estado de la NP habrá cambiado a <strong>Modificado</strong>.
             </p>
             <p>
-              <em>Si en caso no aparece, en el filtro de vendedor debe señalar el nuevo vendedor que grabó[cite: 5].</em>
+              <em>Si en caso no aparece, en el filtro de vendedor debe señalar el nuevo vendedor que grabó.</em>
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Modificado">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 768.png" alt="Estado Modificado en consulta de NP" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
@@ -526,31 +528,31 @@
           <div class="doc-subsection" id="sub-3-3">
             <h3 class="doc-section__subtitle">3.3 Estado Abierto</h3>
             <p>
-              Para que la NP pase a estado Abierto primero debe estar Aprobado por Ventas (ver 3.4 Estado Aprobado por Ventas que está más adelante)[cite: 5].
+              Para que la NP pase a estado Abierto primero debe estar Aprobado por Ventas (ver 3.4 Estado Aprobado por Ventas que está más adelante).
             </p>
             <p>
-              Una vez esté aprobado por ventas se dirige a la parte superior izquierda de la ventana donde dice <strong>Eventos</strong> y debe dar clic a la opción <strong>1. Abrir Pedido</strong>[cite: 5].
+              Una vez esté aprobado por ventas se dirige a la parte superior izquierda de la ventana donde dice <strong>Eventos</strong> y debe dar clic a la opción <strong>1. Abrir Pedido</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Eventos_Abrir_Pedido">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (2).png" alt="Opción Abrir Pedido en menú Eventos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Cuando la NP pasa a estado Abierto automáticamente la casilla de Aprobación de Vtas se deshabilita, los campos vuelven a ser editables y los botones de edición también[cite: 5]. Como ejemplo quitaremos dos artículos y cambiaremos de Vendedor; antes de grabar vamos a la ventana Documento con el botón ayuda (?) para ver el estado de la NP[cite: 5].
+              Cuando la NP pasa a estado Abierto automáticamente la casilla de Aprobación de Vtas se deshabilita, los campos vuelven a ser editables y los botones de edición también. Como ejemplo quitaremos dos artículos y cambiaremos de Vendedor; antes de grabar vamos a la ventana Documento con el botón ayuda (?) para ver el estado de la NP.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Verificacion_Estado_Abierto">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 770 (2).png" alt="Verificación de estado Abierto" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (3).png" alt="Verificación de estado Abierto" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora sí grabamos y el estado volverá a cambiar a <strong>Modificado</strong>[cite: 5].
+              Ahora sí grabamos y el estado volverá a cambiar a <strong>Modificado</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Retorno_Estado_Modificado">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 771 (2).png" alt="Retorno al estado Modificado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (4).png" alt="Retorno al estado Modificado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Observamos el Histórico y vemos el flujo por el que pasó la NP[cite: 5].
+              Observamos el Histórico y vemos el flujo por el que pasó la NP.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Flujo_NP">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 772 (2).png" alt="Histórico del flujo de estados de la NP" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (5).png" alt="Histórico del flujo de estados de la NP" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -558,25 +560,25 @@
           <div class="doc-subsection" id="sub-3-4">
             <h3 class="doc-section__subtitle">3.4 Estado Aprobado por Ventas</h3>
             <p>
-              Para que la NP pase a un estado de Aprobado por ventas se debe dar clic en la casilla <strong>Aprobación Vtas.</strong> y luego grabamos[cite: 5].
+              Para que la NP pase a un estado de Aprobado por ventas se debe dar clic en la casilla <strong>Aprobación Vtas.</strong> y luego grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Check_Aprobacion_Ventas">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 773.png" alt="Casilla Aprobación Ventas seleccionada" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769.png" alt="Casilla Aprobación Ventas seleccionada" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez se grabó, el estado de la NP pasará a estado <strong>Aprobado Ventas</strong>[cite: 5].
+              Una vez se grabó, el estado de la NP pasará a estado <strong>Aprobado Ventas</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Aprobado_Ventas">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 774 (2).png" alt="Estado Aprobado Ventas en el sistema" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 770.png" alt="Estado Aprobado Ventas en el sistema" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Este estado bloquea los campos y los botones para editar la NP pero también habilita la funcionalidad de otros estados como por ejemplo: Abrir Pedido, Aprobación Despacho, etc[cite: 5].
+              Este estado bloquea los campos y los botones para editar la NP pero también habilita la funcionalidad de otros estados como por ejemplo: Abrir Pedido, Aprobación Despacho, etc.
             </p>
             <p>
-              La aprobación por ventas hace que también se habilite el <strong>Botón de Histórico</strong> que está en la parte inferior; con este botón podremos observar todo el flujo de estados y qué está ocurriendo en la NP[cite: 5].
+              La aprobación por ventas hace que también se habilite el <strong>Botón de Histórico</strong> que está en la parte inferior; con este botón podremos observar todo el flujo de estados y qué está ocurriendo en la NP.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Aprobado_Ventas">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 775.png" alt="Histórico tras Aprobación por Ventas" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 772.png" alt="Histórico tras Aprobación por Ventas" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -584,44 +586,44 @@
           <div class="doc-subsection" id="sub-3-5">
             <h3 class="doc-section__subtitle">3.5 Estado Liquidación Parcial</h3>
             <p>
-              La liquidación parcial consiste en liberar el stock de algunos artículos (NO TODOS) que estaban separados para cierto cliente X y pasarlo para otro cliente Y[cite: 5].
+              La liquidación parcial consiste en liberar el stock de algunos artículos (NO TODOS) que estaban separados para cierto cliente X y pasarlo para otro cliente Y.
             </p>
             <p>
-              Para poder liquidar parcialmente primero la casilla de Aprobación Vtas debe estar seleccionada y luego grabamos (ver 3.4 Estado Aprobado por Ventas)[cite: 5].
+              Para poder liquidar parcialmente primero la casilla de Aprobación Vtas debe estar seleccionada y luego grabamos (ver 3.4 Estado Aprobado por Ventas).
             </p>
             <p>
-              Después de eso nos dirigimos donde dice <strong>Eventos</strong> y buscamos <strong>3. Liquidar Pedido</strong>[cite: 5].
+              Después de eso nos dirigimos donde dice <strong>Eventos</strong> y buscamos <strong>3. Liquidar Pedido</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Eventos_Liquidar_Pedido">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 776.png" alt="Opción Liquidar Pedido en Eventos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos debe aparecer la siguiente ventana con los campos de la NP y los artículos[cite: 5].
+              Nos debe aparecer la siguiente ventana con los campos de la NP y los artículos.
             </p>
             <p>
-              En la columna <strong>Liquidar</strong> podremos señalar los artículos que se quieren liquidar parcialmente, por ejemplo liquidaremos dos artículos que se observan en la grilla, luego grabamos[cite: 5].
+              En la columna <strong>Liquidar</strong> podremos señalar los artículos que se quieren liquidar parcialmente, por ejemplo liquidaremos dos artículos que se observan en la grilla, luego grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Seleccion_Liquidar_Articulos">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 777.png" alt="Selección de artículos a liquidar parcialmente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Aparecerá una ventana de confirmación y le damos aceptar[cite: 5].
+              Aparecerá una ventana de confirmación y le damos aceptar.
             </p>
             <p>
-              En la grilla seguirán apareciendo los artículos pero si observamos en el botón ayuda (?) el estado habrá cambiado[cite: 5].
+              En la grilla seguirán apareciendo los artículos pero si observamos en el botón ayuda (?) el estado habrá cambiado.
             </p>
             
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Liquidacion_Parcial">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 778.png" alt="Estado Liquidación Parcial en consulta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora observemos el Histórico, ahí podremos ver que se hizo correctamente la liquidación parcial de los dos artículos[cite: 5].
+              Ahora observemos el Histórico, ahí podremos ver que se hizo correctamente la liquidación parcial de los dos artículos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Liquidacion_Parcial">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 779.png" alt="Histórico reflejando Liquidación Parcial" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              <em>Esos artículos vuelven al stock real del sistema para poder usarlos en otras ventas[cite: 5].</em>
+              <em>Esos artículos vuelven al stock real del sistema para poder usarlos en otras ventas.</em>
             </p>
           </div>
 
@@ -629,43 +631,43 @@
           <div class="doc-subsection" id="sub-3-6">
             <h3 class="doc-section__subtitle">3.6 Estado Facturación Parcial</h3>
             <p>
-              La facturación Parcial va de la mano con la Liquidación parcial, esto aplica para las NP que han liquidado artículos parcialmente[cite: 5]. Para poder facturar tenemos que ir a la ventana de <strong>Facturación de NP Administración</strong>, con el siguiente flujo[cite: 5].
+              La facturación Parcial va de la mano con la Liquidación parcial, esto aplica para las NP que han liquidado artículos parcialmente. Para poder facturar tenemos que ir a la ventana de <strong>Facturación de NP Administración</strong>, con el siguiente flujo.
             </p>
             <p>
-              Para el ejemplo crearemos una nueva NP donde tendremos tres artículos y liquidaremos uno[cite: 5].
+              Para el ejemplo crearemos una nueva NP donde tendremos tres artículos y liquidaremos uno.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Acceso_Facturacion_Administracion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 780.png" alt="Ruta a Facturación de NP Administración" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Aparecerá la siguiente ventana donde aparecerán todas las NP; filtre y busque su NP (la Nota de Pedido es 9052)[cite: 5].
+              Aparecerá la siguiente ventana donde aparecerán todas las NP; filtre y busque su NP (la Nota de Pedido es 9052).
+            </p>
+            <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Facturacion_NP_Admin">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 781 (2).png" alt="Ventana de Facturación de NP Administración con filtros" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            </div>
+            <p>
+              Para que una NP pueda ser facturada debe pasar por 3 estados: <strong>Aprobación de Ventas</strong>, <strong>Aprobación por Despacho</strong> (ver 3.10 Estado Aprobado por Despacho) y por <strong>Cobranzas</strong>. Este último no es un estado, sino una condicional para poder facturar la NP; aparece seleccionado por defecto en la ventana. Solo faltaría aprobarla por Despacho, y para proceder con la facturación debemos seleccionar la NP que se quiere facturar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Facturacion_NP_Admin">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 781.png" alt="Ventana de Facturación de NP Administración con filtros" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Para que una NP pueda ser facturada debe pasar por 3 estados: <strong>Aprobación de Ventas</strong>, <strong>Aprobación por Despacho</strong> (ver 3.10 Estado Aprobado por Despacho) y por <strong>Cobranzas</strong>[cite: 5]. Este último no es un estado, sino una condicional para poder facturar la NP; aparece seleccionado por defecto en la ventana[cite: 5]. Solo faltaría aprobarla por Despacho, y para proceder con la facturación debemos seleccionar la NP que se quiere facturar[cite: 5].
-            </p>
-            <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Facturacion_NP_Admin">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (2).png" alt="Ventana de Facturación de NP Administración con filtros" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-            </div>
-            <p>
-              Una vez seleccionada la NP damos clic en el botón <strong>Facturar</strong> y nos aparecerá esta ventana; los números de la boleta y factura aparecen por defecto ya que el sistema los otorga automáticamente (pueden editarse), damos clic en <strong>Generar Doc</strong>[cite: 5].
+              Una vez seleccionada la NP damos clic en el botón <strong>Facturar</strong> y nos aparecerá esta ventana; los números de la boleta y factura aparecen por defecto ya que el sistema los otorga automáticamente (pueden editarse), damos clic en <strong>Generar Doc</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Generar_Documento_Facturacion">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 783.png" alt="Ventana para Generar Documento Factura/Boleta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (2).png" alt="Ventana para Generar Documento Factura/Boleta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora aparecerá la ventana de <strong>Cobranza</strong> en la que debemos rellenar los campos[cite: 5]. Como ejemplo en Tipo de cobro seleccionamos <strong>YAPE</strong> y en importe la misma cantidad que Total CPE, debería quedar así y grabamos[cite: 5].
+              Ahora aparecerá la ventana de <strong>Cobranza</strong> en la que debemos rellenar los campos. Como ejemplo en Tipo de cobro seleccionamos <strong>YAPE</strong> y en importe la misma cantidad que Total CPE, debería quedar así y grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Cobranza_Yape">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 784.png" alt="Ventana de Cobranza con forma de pago YAPE" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (3).png" alt="Ventana de Cobranza con forma de pago YAPE" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Revisamos el Histórico y vemos que el Estado de la NP pasó a <strong>Facturación</strong>, junto con los estados de Aprobación de Ventas, Despacho y Cobranza[cite: 5].
+              Revisamos el Histórico y vemos que el Estado de la NP pasó a <strong>Facturación</strong>, junto con los estados de Aprobación de Ventas, Despacho y Cobranza.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Facturacion_Parcial">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 785.png" alt="Histórico con estado Facturación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (4).png" alt="Histórico con estado Facturación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -673,34 +675,34 @@
           <div class="doc-subsection" id="sub-3-7">
             <h3 class="doc-section__subtitle">3.7 Estado Liquidación Total</h3>
             <p>
-              El estado de Liquidación total es similar al parcial (ver 3.5 Estado Liquidación Parcial para ver las reglas de liquidación), solo que en este caso vamos a liquidar todos los artículos de la NP; para ello crearemos una nueva NP[cite: 5].
+              El estado de Liquidación total es similar al parcial (ver 3.5 Estado Liquidación Parcial para ver las reglas de liquidación), solo que en este caso vamos a liquidar todos los artículos de la NP; para ello crearemos una nueva NP.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Nueva_NP_Liquidacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 786.png" alt="Nueva NP formulada para Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (5).png" alt="Nueva NP formulada para Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              En Eventos seleccionamos la opción de <strong>Liquidar Pedido</strong> y abrirá una ventana que ya hemos visto en liquidación parcial; en este caso vamos a seleccionar la opción que está en la parte inferior <strong>Liquidar</strong>, la cual seleccionará todos los artículos para liquidar, debería quedarnos así, luego grabamos[cite: 5]:
+              En Eventos seleccionamos la opción de <strong>Liquidar Pedido</strong> y abrirá una ventana que ya hemos visto en liquidación parcial; en este caso vamos a seleccionar la opción que está en la parte inferior <strong>Liquidar</strong>, la cual seleccionará todos los artículos para liquidar, debería quedarnos así, luego grabamos:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Liquidar_Todo">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 787.png" alt="Opción Liquidar Todo en grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 801.png" alt="Opción Liquidar Todo en grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
               Le damos clic  en la casilla donde dice Liquidar y se seleccionarán todos los artículos como en la siguiente imagen, luego de eso grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Liquidar_Todo">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 788.png" alt="Opción Liquidar Todo en grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 802.png" alt="Opción Liquidar Todo en grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego de grabar nos saldrá una ventana de confirmación[cite: 5].
+              Luego de grabar nos saldrá una ventana de confirmación.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Confirmacion_Liquidar_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 789.png" alt="Confirmación de liquidación total" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 803.png" alt="Confirmación de liquidación total" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Aceptamos y veamos el Histórico; vemos que hubo una <strong>Liquidación Total</strong>[cite: 5].
+              Aceptamos y veamos el Histórico; vemos que hubo una <strong>Liquidación Total</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Liquidacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 790.png" alt="Histórico reflejando Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 804.png" alt="Histórico reflejando Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -708,34 +710,34 @@
           <div class="doc-subsection" id="sub-3-8">
             <h3 class="doc-section__subtitle">3.8 Estado Facturación Total</h3>
             <p>
-              El estado de Facturación total es similar al parcial (ver 3.5 Estado Liquidación Parcial para ver las reglas de liquidación), solo que en este caso vamos a facturar una NP tal cual el cliente solicitó; para ello crearemos una nueva NP (9055)[cite: 5].
+              El estado de Facturación total es similar al parcial (ver 3.5 Estado Liquidación Parcial para ver las reglas de liquidación), solo que en este caso vamos a facturar una NP tal cual el cliente solicitó; para ello crearemos una nueva NP (9055).
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Nueva_NP_Facturacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 791.png" alt="Nota de Pedido 9055 lista para Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 805.png" alt="Nota de Pedido 9055 lista para Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora vamos a la ventana de <strong>Facturación de NP Administración</strong> para comenzar con la facturación, buscamos nuestra NP y la seleccionamos[cite: 5].
+              Ahora vamos a la ventana de <strong>Facturación de NP Administración</strong> para comenzar con la facturación, buscamos nuestra NP y la seleccionamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Seleccion_NP_Facturacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 792 (2).png" alt="Selección de NP 9055 en Facturación Administración" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 806.png" alt="Selección de NP 9055 en Facturación Administración" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez seleccionamos la NP damos clic al botón <strong>Facturar</strong> y luego <strong>Generar Doc</strong>[cite: 5].
+              Una vez seleccionamos la NP damos clic al botón <strong>Facturar</strong> y luego <strong>Generar Doc</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Generar_Doc_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 793.png" alt="Generar comprobante definitivo total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 807.png" alt="Generar comprobante definitivo total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Completamos los campos de la ventana de Cobranza y grabamos[cite: 5].
+              Completamos los campos de la ventana de Cobranza y grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Cobranza_Total_Grabar">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 794 (2).png" alt="Asiento de cobranza total y persistencia" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 808.png" alt="Asiento de cobranza total y persistencia" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora revisamos el Histórico de la NP y observamos que la NP pasó a estado <strong>Facturación</strong> con la totalidad de los artículos[cite: 5].
+              Ahora revisamos el Histórico de la NP y observamos que la NP pasó a estado <strong>Facturación</strong> con la totalidad de los artículos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Facturacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 795.png" alt="Histórico con Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 809.png" alt="Histórico con Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -743,7 +745,7 @@
           <div class="doc-subsection" id="sub-3-9">
             <h3 class="doc-section__subtitle">3.9 Estado Cerrado</h3>
             <p>
-              Ciclo comercial y logístico completado; no admite nuevos despachos ni modificaciones en la orden de venta[cite: 5].
+              Ciclo comercial y logístico completado; no admite nuevos despachos ni modificaciones en la orden de venta.
             </p>
           </div>
 
@@ -751,19 +753,19 @@
           <div class="doc-subsection" id="sub-3-10">
             <h3 class="doc-section__subtitle">3.10 Estado Aprobación de Despacho</h3>
             <p>
-              Hay dos formas de aprobar un despacho[cite: 5]:
+              Hay dos formas de aprobar un despacho:
             </p>
             <p>
-              <strong>1. Primera forma:</strong> Desde la ventana de Nota de Pedido, solo damos clic a la opción <strong>Despacho</strong>[cite: 5].
+              <strong>1. Primera forma:</strong> Desde la ventana de Nota de Pedido, solo damos clic a la opción <strong>Despacho</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Aprobacion_Despacho_NP">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 800.png" alt="Aprobación de Despacho desde la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 810.png" alt="Aprobación de Despacho desde la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              <strong>2. Segunda forma:</strong> Desde el botón ayuda (?) y nos dirige a esta ventana donde podremos aprobar el despacho[cite: 5].
+              <strong>2. Segunda forma:</strong> Desde el botón ayuda (?) y nos dirige a esta ventana donde podremos aprobar el despacho.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Aprobacion_Despacho_Ayuda">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 802.png" alt="Aprobación de despacho desde ventana de ayuda (?)" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 811.png" alt="Aprobación de despacho desde ventana de ayuda (?)" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -771,91 +773,91 @@
           <div class="doc-subsection" id="sub-3-11">
             <h3 class="doc-section__subtitle">3.11 Registro de Bultos</h3>
             <p>
-              Este estado va de la mano con lo que viene a ser el Picking y Packing; este proceso se ejecuta con una NP sin facturar[cite: 5]. Para este caso usaremos una nueva NP (9056), nos dirigimos al DSI-NET de Despacho, iniciamos sesión y buscamos la NP[cite: 5].
+              Este estado va de la mano con lo que viene a ser el Picking y Packing; este proceso se ejecuta con una NP sin facturar. Para este caso usaremos una nueva NP (9056), nos dirigimos al DSI-NET de Despacho, iniciamos sesión y buscamos la NP.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_DSI_Despacho_Login">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 812.png" alt="Acceso al sistema DSI-NET Despacho" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Como se puede observar la NP se imprimió correctamente en el proceso de Picking[cite: 5].
+              Como se puede observar la NP se imprimió correctamente en el proceso de Picking.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Picking_Impresion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 814.png" alt="Impresión en proceso de Picking" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Para observar la NP vamos donde guardamos la NP y nos debería aparecer en formato PDF de esta forma[cite: 5]:
+              Para observar la NP vamos donde guardamos la NP y nos debería aparecer en formato PDF de esta forma:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_PDF_Picking">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 815 (2).png" alt="Formato PDF de Picking emitido" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Verificamos en el Histórico y se observa que se hizo correctamente el picking[cite: 5].
+              Verificamos en el Histórico y se observa que se hizo correctamente el picking.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Picking">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 816.png" alt="Histórico validando Picking realizado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 815.png" alt="Histórico validando Picking realizado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora nos dirigimos a la ventana de <strong>Despacho de NP</strong> donde realizaremos el proceso de Registrar Bulto y de Packing[cite: 5].
+              Ahora nos dirigimos a la ventana de <strong>Despacho de NP</strong> donde realizaremos el proceso de Registrar Bulto y de Packing.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Despacho_NP">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 817.png" alt="Ventana Despacho de NP" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos debe aparecer la siguiente ventana, donde aparecerá la NP que pasó por picking[cite: 5].
+              Nos debe aparecer la siguiente ventana, donde aparecerá la NP que pasó por picking.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Lista_NP_Para_Packing">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 818.png" alt="Lista de NP para proceso de empaque" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora procedemos con el Registro de Bultos o el Packing, se puede comenzar por cualquiera, en este caso primero ingresaremos los bultos[cite: 5].
+              Ahora procedemos con el Registro de Bultos o el Packing, se puede comenzar por cualquiera, en este caso primero ingresaremos los bultos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Registro_Bultos">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 819.png" alt="Botón de Registro de Bultos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Completamos los campos que nos pide la ventana y grabamos[cite: 5].
+              Completamos los campos que nos pide la ventana y grabamos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Formulario_Registro_Bultos">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 820.png" alt="Formulario de captura de bultos" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 820.png" alt="Formulario de captura de bultos" style="width: auto; max-width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos aparecerá esta ventana y le damos a <strong>Imprimir</strong> si en caso se desea imprimir al instante y nos permitirá guardarlo en nuestros archivos[cite: 5].
+              Nos aparecerá esta ventana y le damos a <strong>Imprimir</strong> si en caso se desea imprimir al instante y nos permitirá guardarlo en nuestros archivos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Dialogo_Imprimir_Rotulos">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 821.png" alt="Diálogo para imprimir rótulos de bulto" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 821.png" alt="Diálogo para imprimir rótulos de bulto" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              El sistema nos arrojará dos documentos para guardarlos, cada uno corresponde a la cantidad de bultos que hemos colocado (en este caso son dos)[cite: 5].
+              El sistema nos arrojará dos documentos para guardarlos, cada uno corresponde a la cantidad de bultos que hemos colocado (en este caso son dos).
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Archivos_Bultos_Generados">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 822.png" alt="Documentos de rótulo para cada bulto" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora veamos en el Histórico si se realizó el registro de Bultos correctamente[cite: 5].
+              Ahora veamos en el Histórico si se realizó el registro de Bultos correctamente.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Registro_Bultos">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 823.png" alt="Histórico validando registro de bultos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              En la misma ventana donde se realizó el registro de Bultos haremos el <strong>Packing</strong>; como se observa en la pantalla el formato de las palabras cambió y aparece la cantidad de bultos que se realizó en un inicio[cite: 5].
+              En la misma ventana donde se realizó el registro de Bultos haremos el <strong>Packing</strong>; como se observa en la pantalla el formato de las palabras cambió y aparece la cantidad de bultos que se realizó en un inicio.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Packing_Preparada">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 824.png" alt="Ventana preparada para iniciar Packing" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora solo damos clic en el botón <strong>Por Imprimir</strong> y nos aparecerá la siguiente ventana para confirmar la impresión[cite: 5].
+              Ahora solo damos clic en el botón <strong>Por Imprimir</strong> y nos aparecerá la siguiente ventana para confirmar la impresión.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Confirmar_Impresion_Packing">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 825.png" alt="Confirmación de impresión de lista de packing" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego de eso tendremos que guardar el documento de packing en los archivos; ahora el estado del botón cambiará a <strong>Impreso</strong>[cite: 5].
+              Luego de eso tendremos que guardar el documento de packing en los archivos; ahora el estado del botón cambiará a <strong>Impreso</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Estado_Impreso">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 826.png" alt="Botón en estado Impreso" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos debe entregar un archivo en formato PDF de esta forma[cite: 5]:
+              Nos debe entregar un archivo en formato PDF de esta forma:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_PDF_Packing_Final">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 827.png" alt="Reporte PDF de packing final" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
@@ -864,7 +866,7 @@
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 828.png" alt="Reporte PDF de packing final" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego verificamos en el Histórico el estado de la NP[cite: 5].
+              Luego verificamos en el Histórico el estado de la NP.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Packing_Final">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 829.png" alt="Histórico final con trazabilidad completa de bultos y packing" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">

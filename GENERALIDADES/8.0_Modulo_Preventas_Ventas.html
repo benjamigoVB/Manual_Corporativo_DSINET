@@ -375,14 +375,14 @@
         <h1 class="content__title">8.0 Conceptos Generales: Módulo de Pre-Ventas y Ventas</h1>
 
         <p class="content__lead">
-          Visión panorámica de la arquitectura comercial de DSI-NET ERP[cite: 1]. Consolida las reglas del circuito de venta: emisión de Nota de Pedido con máquina de estados, facturación directa de mostrador, motor de políticas promocionales (Ofertas, Liquidaciones y Promociones) y gestión de documentos especiales como anticipos financieros y comunicados de baja de CPE[cite: 1].
+          Visión panorámica de la arquitectura comercial de DSI-NET ERP. Consolida las reglas del circuito de venta: emisión de Nota de Pedido con máquina de estados, facturación directa de mostrador, motor de políticas promocionales (Ofertas, Liquidaciones y Promociones) y gestión de documentos especiales como anticipos financieros y comunicados de baja de CPE.
         </p>
 
         <!-- SECCIÓN: PILARES DEL CIRCUITO COMERCIAL -->
         <section class="doc-section" id="sec-pilares-comerciales">
           <h2 class="doc-section__title">Pilares del Circuito Comercial en DSI-NET</h2>
           <p class="doc-section__desc">
-            El sistema unifica: (1) Preventa y Cotización con control crediticio en línea y ciclo de 11 estados, (2) Venta Directa con timbrado fiscal inmediato, (3) Motor de Descuentos jerarquizado que diferencia liquidaciones por lote, ofertas con obsequios inafectos ('Compra / Regala') y promociones geolocalizadas, y (4) Operaciones Especiales que regulan anticipos dinerarios y anulaciones formales ante SUNAT[cite: 1].
+            El sistema unifica: (1) Preventa y Cotización con control crediticio en línea y ciclo de 11 estados, (2) Venta Directa con timbrado fiscal inmediato, (3) Motor de Descuentos jerarquizado que diferencia liquidaciones por lote, ofertas con obsequios inafectos ('Compra / Regala') y promociones geolocalizadas, y (4) Operaciones Especiales que regulan anticipos dinerarios y anulaciones formales ante SUNAT.
           </p>
 
           <!-- DIAGRAMA VISUAL DE LOS 4 PILARES -->
@@ -396,9 +396,9 @@
         <!-- SECCIÓN 1: FICHA TÉCNICA DE COMPONENTES -->
         <section class="doc-section" id="sec-ficha-tecnica">
           <h2 class="doc-section__title">1. Ficha Técnica de Componentes y Documentos del Módulo</h2>
-          <p class="doc-section__desc">Catálogo de herramientas, comprobantes y tipos de campaña que conforman el circuito de ventas[cite: 1]:</p>
+          <p class="doc-section__desc">Catálogo de herramientas, comprobantes y tipos de campaña que conforman el circuito de ventas:</p>
 
-          <p><strong>Tabla 1: Diccionario de Comprobantes Comerciales y Entidades[cite: 1].</strong></p>
+          <p><strong>Tabla 1: Diccionario de Comprobantes Comerciales y Entidades.</strong></p>
           <div class="table-wrap">
             <table class="data-table">
               <thead>
@@ -414,58 +414,58 @@
                 <tr>
                   <td class="data-table__field">Nota de Pedido (NP)</td>
                   <td>NP</td>
-                  <td>Cotización comercial, compromiso de stock y evaluación crediticia[cite: 1].</td>
-                  <td>Reserva física preventiva[cite: 1].</td>
-                  <td>No genera comprobante, evalúa Lin. Cred. Disp[cite: 1].</td>
+                  <td>Cotización comercial, compromiso de stock y evaluación crediticia.</td>
+                  <td>Reserva física preventiva.</td>
+                  <td>No genera comprobante, evalúa Lin. Cred. Disp.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Estados y Ciclo de Vida</td>
                   <td>00 Al 10</td>
-                  <td>Regula fases: captura (00-02), visación (03, 09), bultos (10) y facturación (05, 07)[cite: 1].</td>
-                  <td>Bloquea o autoriza reservas[cite: 1].</td>
-                  <td>Condiciona la habilitación para emitir CPE[cite: 1].</td>
+                  <td>Regula fases: captura (00-02), visación (03, 09), bultos (10) y facturación (05, 07).</td>
+                  <td>Bloquea o autoriza reservas.</td>
+                  <td>Condiciona la habilitación para emitir CPE.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Venta Directa (FC/BC)</td>
                   <td>FC / BC</td>
-                  <td>Emisión directa de facturas y boletas electrónicas en mostrador[cite: 1].</td>
-                  <td>Descargo físico definitivo[cite: 1].</td>
-                  <td>Envío de trama XML a PSE/OSE (TCI)[cite: 1].</td>
+                  <td>Emisión directa de facturas y boletas electrónicas en mostrador.</td>
+                  <td>Descargo físico definitivo.</td>
+                  <td>Envío de trama XML a PSE/OSE (TCI).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Campaña de Oferta</td>
                   <td>OFT</td>
-                  <td>Tarifas temporales con reglas de adquisición (Compra) y obsequio (Regala)[cite: 1].</td>
-                  <td>Reserva según cupo en grilla[cite: 1].</td>
-                  <td>Aplica afectación Inafecto - Retiro por Bonificación[cite: 1].</td>
+                  <td>Tarifas temporales con reglas de adquisición (Compra) y obsequio (Regala).</td>
+                  <td>Reserva según cupo en grilla.</td>
+                  <td>Aplica afectación Inafecto - Retiro por Bonificación.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Liquidación de Artículos</td>
                   <td>LIQ</td>
-                  <td>Remate de existencias estancadas fijando precio especial por lote mínimo[cite: 1].</td>
-                  <td>Valida stock real disponible[cite: 1].</td>
-                  <td>Conexión directa con botón Merch/Liqui en la NP[cite: 1].</td>
+                  <td>Remate de existencias estancadas fijando precio especial por lote mínimo.</td>
+                  <td>Valida stock real disponible.</td>
+                  <td>Conexión directa con botón Merch/Liqui en la NP.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Promociones Focalizadas</td>
                   <td>PRM</td>
-                  <td>Beneficios delimitados por cliente individual, departamento o ubigeo[cite: 1].</td>
-                  <td>Control según disponibilidad[cite: 1].</td>
-                  <td>Restricción por domicilio fiscal o cuenta cliente[cite: 1].</td>
+                  <td>Beneficios delimitados por cliente individual, departamento o ubigeo.</td>
+                  <td>Control según disponibilidad.</td>
+                  <td>Restricción por domicilio fiscal o cuenta cliente.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Documento de Anticipo</td>
                   <td>ANT</td>
-                  <td>Cobro adelantado monetario sin entrega inmediata de existencias[cite: 1].</td>
-                  <td>Sin afectación en Kardex[cite: 1].</td>
-                  <td>Emisión de comprobante de anticipo con IGV[cite: 1].</td>
+                  <td>Cobro adelantado monetario sin entrega inmediata de existencias.</td>
+                  <td>Sin afectación en Kardex.</td>
+                  <td>Emisión de comprobante de anticipo con IGV.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Comunicado de Baja</td>
                   <td>BAJ</td>
-                  <td>Anulación formal de comprobantes electrónicos emitidos con error[cite: 1].</td>
-                  <td>Revierte la salida de inventario[cite: 1].</td>
-                  <td>Remisión de paquete de baja y ticket a SUNAT[cite: 1].</td>
+                  <td>Anulación formal de comprobantes electrónicos emitidos con error.</td>
+                  <td>Revierte la salida de inventario.</td>
+                  <td>Remisión de paquete de baja y ticket a SUNAT.</td>
                 </tr>
               </tbody>
             </table>
@@ -475,9 +475,9 @@
         <!-- SECCIÓN 2: MATRIZ DE INTEGRACIÓN Y REGLAS DE PREVALENCIA -->
         <section class="doc-section" id="sec-matriz-integracion">
           <h2 class="doc-section__title">2. Matriz de Integración y Reglas de Prevalencia Comercial</h2>
-          <p class="doc-section__desc">Reglas de negocio y jerarquías que aplican de forma cruzada durante la atención de pedidos[cite: 1]:</p>
+          <p class="doc-section__desc">Reglas de negocio y jerarquías que aplican de forma cruzada durante la atención de pedidos:</p>
 
-          <p><strong>Tabla 2: Matriz de Integración y Jerarquías de Reglas[cite: 1].</strong></p>
+          <p><strong>Tabla 2: Matriz de Integración y Jerarquías de Reglas.</strong></p>
           <div class="table-wrap">
             <table class="data-table">
               <thead>
@@ -490,23 +490,23 @@
               <tbody>
                 <tr>
                   <td class="data-table__field">Jerarquía de Descuentos</td>
-                  <td>Inserción de ítem en venta[cite: 1]</td>
-                  <td>Prevalece: Liquidación &gt; Oferta bonificada (Compra/Regala) &gt; Promoción por Ubigeo &gt; Lista regular[cite: 1].</td>
+                  <td>Inserción de ítem en venta</td>
+                  <td>Prevalece: Liquidación &gt; Oferta bonificada (Compra/Regala) &gt; Promoción por Ubigeo &gt; Lista regular.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Control de Riesgo Crediticio</td>
-                  <td>Importe pedido &gt; Cupo disponible[cite: 1]</td>
-                  <td>El sistema pinta en rojo Lin. Cred. Disp. y exige el check "Aprobación Vtas" para avanzar[cite: 1].</td>
+                  <td>Importe pedido &gt; Cupo disponible</td>
+                  <td>El sistema pinta en rojo Lin. Cred. Disp. y exige el check "Aprobación Vtas" para avanzar.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Tratamiento de Anticipos</td>
-                  <td>Cobro previo sin despacho[cite: 1]</td>
-                  <td>Asienta el ingreso contable y fiscal; queda pendiente de amortización al facturar el pedido final[cite: 1].</td>
+                  <td>Cobro previo sin despacho</td>
+                  <td>Asienta el ingreso contable y fiscal; queda pendiente de amortización al facturar el pedido final.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Trazabilidad de Bajas</td>
-                  <td>Documento anulado[cite: 1]</td>
-                  <td>Requiere justificación tributaria formal (Motivo de Baja) y confirmación del OSE con estado Acep[cite: 1].</td>
+                  <td>Documento anulado</td>
+                  <td>Requiere justificación tributaria formal (Motivo de Baja) y confirmación del OSE con estado Acep.</td>
                 </tr>
               </tbody>
             </table>
@@ -516,14 +516,14 @@
         <!-- SECCIÓN 3: POLÍTICAS DE CONTROL Y SEGURIDAD -->
         <section class="doc-section" id="sec-politicas-control">
           <h2 class="doc-section__title">3. Políticas de Control y Seguridad Comercial</h2>
-          <p class="doc-section__desc">Disposiciones de control interno implementadas por el motor transaccional para garantizar la integridad operativa[cite: 1]:</p>
+          <p class="doc-section__desc">Disposiciones de control interno implementadas por el motor transaccional para garantizar la integridad operativa:</p>
 
           <div class="callout callout--warning" role="note">
             <i data-lucide="alert-triangle" class="callout__icon"></i>
             <div>
               <strong>Aprobación Obligatoria por Límite de Crédito:</strong>
               <p style="margin-top: 4px;">
-                Cuando el importe de un pedido excede el disponible comercial del cliente (Lin. Cred. Disp. en rojo), el documento queda bloqueado para facturación hasta la visación de la casilla "Aprobación Vtas" por un supervisor[cite: 1].
+                Cuando el importe de un pedido excede el disponible comercial del cliente (Lin. Cred. Disp. en rojo), el documento queda bloqueado para facturación hasta la visación de la casilla "Aprobación Vtas" por un supervisor.
               </p>
             </div>
           </div>
@@ -533,7 +533,7 @@
             <div>
               <strong>Protección de Margen y Descuentos Excesivos:</strong>
               <p style="margin-top: 4px;">
-                El sistema valida que ningún vendedor otorgue descuentos superiores al porcentaje asignado en la categoría de precio o por debajo del costo unitario del producto sin la debida visación en "Aprobación de Precios"[cite: 1].
+                El sistema valida que ningún vendedor otorgue descuentos superiores al porcentaje asignado en la categoría de precio o por debajo del costo unitario del producto sin la debida visación en "Aprobación de Precios".
               </p>
             </div>
           </div>
@@ -543,7 +543,7 @@
             <div>
               <strong>Trazabilidad Fiscal y Facturación Electrónica:</strong>
               <p style="margin-top: 4px;">
-                Todos los comprobantes generados son validados según catálogo SUNAT (afectación gravada, exonerada o inafecta por bonificación) antes de su exportación al PSE/OSE (TCI)[cite: 1].
+                Todos los comprobantes generados son validados según catálogo SUNAT (afectación gravada, exonerada o inafecta por bonificación) antes de su exportación al PSE/OSE (TCI).
               </p>
             </div>
           </div>
