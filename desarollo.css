@@ -1,0 +1,215 @@
+/* VARIABLES DE COLOR - Basadas en DSINET (image_0.png) */
+:root {
+    --azul-oscuro: #0A2E5C;      /* Azul marino corporativo y de bordes */
+    --azul-brillante: #0082FB;   /* Azul de acento y enlaces */
+    --azul-claro: #E6F3FF;       /* Fondos suaves */
+    --azul-medio: #1D63B8;       /* Para textos secundarios */
+    --blanco: #FFFFFF;
+    --texto-principal: #1A2536;  /* Casi negro, alta legibilidad */
+    --texto-secundario: #4A5B73; /* Gris azulado para descripciones */
+    --background-sitio: #F8FAFC; /* Color base del fondo */
+}
+
+/* RESET GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CUERPO DEL SITIO */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--background-sitio);
+    /* Degradado sutil para dar profesionalismo */
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(210,100%,96%,1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(205,100%,94%,1) 0px, transparent 50%);
+    color: var(--texto-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+/* CONTENEDOR PRINCIPAL CARD */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: var(--blanco);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(10, 46, 92, 0.05), 0 1px 3px rgba(10, 46, 92, 0.02);
+    text-align: center;
+    border: 1px solid rgba(10, 46, 92, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalle decorativo superior en azul DSINET */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--azul-oscuro) 0%, var(--azul-brillante) 100%);
+}
+
+/* LOGO */
+.logo-container {
+    margin-bottom: 35px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ETIQUETA EN DESARROLLO */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--azul-claro);
+    color: var(--azul-medio);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 130, 251, 0.15);
+}
+
+.status-badge .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--azul-brillante);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.8s infinite ease-in-out;
+}
+
+/* TEXTOS */
+h1 {
+    color: var(--azul-oscuro);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+p.description {
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BARRA Y ELEMENTOS DE PROGRESO */
+.progress-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #FAFCFF;
+    border-radius: 12px;
+    border: 1px dashed rgba(0, 130, 251, 0.2);
+    max-width: 320px;
+}
+
+.progress-icon {
+    font-size: 24px;
+    display: inline-block;
+    animation: rotateGear 6s linear infinite;
+}
+
+.progress-icon:last-child {
+    animation-delay: -3s; /* Desfase para que no roten igual */
+}
+
+.progress-line {
+    flex-grow: 1;
+    height: 6px;
+    background: #E2E8F0;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-line-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(90deg, var(--azul-oscuro) 0%, var(--azul-brillante) 100%);
+    border-radius: 3px;
+    animation: progressLoop 3s infinite ease-in-out;
+}
+
+/* PIE DE PÁGINA (Footer) */
+.footer {
+    border-top: 1px solid #EEF2F6;
+    padding-top: 25px;
+    margin-top: 15px;
+}
+
+.footer-text {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+}
+
+.contact-link {
+    color: var(--azul-brillante);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--azul-oscuro);
+    text-decoration: underline;
+}
+
+/* ANIMACIONES */
+@keyframes pulse {
+    0% { transform: scale(0.85); opacity: 0.5; }
+    50% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(0.85); opacity: 0.5; }
+}
+
+@keyframes rotateGear {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes progressLoop {
+    0% { width: 10%; left: 0%; }
+    50% { width: 40%; left: 30%; }
+    100% { width: 10%; left: 90%; }
+}
+
+/* RESPONSIVO (Dispositivos Móviles) */
+@media (max-width: 480px) {
+    .container {
+        padding: 35px 20px;
+    }
+    h1 {
+        font-size: 1.65rem;
+    }
+    p.description {
+        font-size: 0.95rem;
+    }
+}
