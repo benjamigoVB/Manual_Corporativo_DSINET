@@ -448,7 +448,7 @@
           <section class="doc-section" id="sec-clientes">
             <h2 class="doc-section__title">2. Clientes</h2>
             <p class="doc-section__desc">
-              Acceso: 
+              Acceso: Menú maestros > Personas > Clientes 
             </p>
             <div class="img-placeholder">
               <img 
@@ -532,7 +532,7 @@
               <img 
                 src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1074.png" 
                 alt="#" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                style="width: 80%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
               >
             </div>
 
@@ -556,7 +556,7 @@
           <section class="doc-section" id="sec-clientes-admin">
             <h2 class="doc-section__title">3. Clientes - Administración</h2>
             <p class="doc-section__desc">
-              Acceso:
+              Acceso: Menú maestros > Personas > Clientes - Administración
             </p>
             <!-- CONTENEDOR FIGMA: CLIENTES ADMINISTRACIÓN -->
             <div class="img-placeholder">
@@ -616,7 +616,7 @@
           <section class="doc-section" id="sec-nota-pedido">
             <h2 class="doc-section__title">4. Nota de Pedido</h2>
             <p class="doc-section__desc">
-              Acceso:
+              Acceso: Menú Documentos > Nota de pedido > Nota de pedido
             </p>
             <!-- CONTENEDOR FIGMA: CABECERA NOTA DE PEDIDO -->
             <div class="img-placeholder">
@@ -630,15 +630,7 @@
               La Nota de Pedido es el documento previo a una facturación, es decir se puede modificar n veces y cuando finalmente esté terminado se procederá a la facturación. Una Nota de Pedido tiene todos los datos necesarios para una facturación.
             </p>
 
-            <!-- CONTENEDOR FIGMA: ACCESO NOTA DE PEDIDO -->
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1078.png" 
-                alt="#" 
-                style="width: 80%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-
+            <!-- CABECERA DE LA NOTA DE PEDIDO -->
             <h3 style="margin-top: 18px;">Cabecera de la Nota de Pedido</h3>
             <div class="table-wrap">
               <table class="data-table">
@@ -652,49 +644,127 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="data-table__field">Cliente</td>
-                    <td>Búsqueda Asistida</td>
-                    <td>Obligatorio</td>
-                    <td>Permite seleccionar o crear un cliente, así mismo permitirá escoger el cliente que queremos facturar dentro de una corporación.</td>
+                    <td class="data-table__field">Pto Vta / Nro.Int.</td>
+                    <td>Menú Desplegable / Entero</td>
+                    <td>Solo Lectura</td>
+                    <td>Identifica el punto de venta emisor y el número interno correlativo de control en DSI-NET ERP.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Dirección de despacho</td>
-                    <td>Selector de Sedes</td>
+                    <td class="data-table__field">Fecha</td>
+                    <td>Selector de Fecha</td>
                     <td>Obligatorio</td>
-                    <td>Permite seleccionar la dirección de despacho de una Nota de Pedido, dicha dirección servirá como punto de llegada de la GR.</td>
+                    <td>Establece la fecha oficial de registro y emisión comercial de la Nota de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Documento (NP / Serie / Correlativo)</td>
+                    <td>Desplegable / Selector [?]</td>
+                    <td>Obligatorio</td>
+                    <td>Determina el tipo documental (Nota de Pedido), serie de facturación y número correlativo oficial asignado.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Almacén</td>
+                    <td>Menú Desplegable</td>
+                    <td>Obligatorio</td>
+                    <td>Selecciona el almacén físico de despacho desde donde se comprometerán y atenderán los repuestos.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Cliente Princ. / Cliente</td>
+                    <td>Búsqueda Asistida</td>
+                    <td>Obligatorio</td>
+                    <td>Permite seleccionar o crear un cliente, así como escoger la razón social que se desea facturar dentro de una corporación.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Casilla Cliente</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Acceso Directo</td>
+                    <td>Abre directamente la ventana de "Mantenimiento de clientes" para registrar un nuevo cliente sin necesidad de salir de la Nota de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Direcc Desp</td>
+                    <td>Selector de Sedes [...]</td>
+                    <td>Obligatorio</td>
+                    <td>Permite seleccionar la dirección de despacho de la Nota de Pedido; dicha dirección servirá como punto de llegada en la Guía de Remisión.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Destino</td>
-                    <td>Campo de Texto</td>
+                    <td>Campo de Texto [...]</td>
                     <td>Operativo</td>
-                    <td>Servirá para la impresión de la Etiqueta que será pegada en los bultos durante el despacho de los repuestos.</td>
+                    <td>Establece el destino final para la impresión de la etiqueta que se adhiere sobre los bultos durante el acondicionamiento y despacho de los repuestos.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Nota</td>
+                    <td>Campo de Texto</td>
+                    <td>Opcional</td>
+                    <td>Permite ingresar observaciones comerciales, especificaciones de rotulado o instrucciones especiales de entrega.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Transportista</td>
-                    <td>Selector Asistido</td>
+                    <td>Selector Asistido [...]</td>
                     <td>Obligatorio</td>
-                    <td>Permite seleccionar o crear un transportista, dicho transportista servirá para la GR.</td>
+                    <td>Permite seleccionar o registrar el transportista asignado que figurará en el traslado de la mercadería en la Guía de Remisión.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Saldo x Cobrar Cli</td>
+                    <td class="data-table__field">Modalidad de Entrega (Almacén / Local / Agencia)</td>
+                    <td>Opciones Radiales</td>
+                    <td>Obligatorio</td>
+                    <td>Fija la logística de retiro de los repuestos: recojo presencial en almacén, entrega directa en local del cliente o despacho vía agencia de transporte.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">F. de Cobro / Vencimiento</td>
+                    <td>Menú Desplegable / Fecha</td>
+                    <td>Obligatorio</td>
+                    <td>Establece la modalidad de pago pactada (Contado, Crédito, Letras) y fija la fecha límite de vencimiento para la cobranza.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Moneda / Tipo de Cambio (Tc)</td>
+                    <td>Opciones Radiales / Decimal</td>
+                    <td>Obligatorio</td>
+                    <td>Define la divisa comercial de la transacción (S/. o US$) y carga en tiempo real el tipo de cambio oficial del día.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Asesor comercial (Vend.)</td>
+                    <td>Menú Desplegable</td>
+                    <td>Obligatorio</td>
+                    <td>Asigna al asesor comercial responsable de la gestión de preventa, atención en campo y comisiones.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Tipo Afec. / Afec. Prom.</td>
+                    <td>Menús Desplegables</td>
+                    <td>Obligatorio</td>
+                    <td>Determina el tipo de afectación tributaria oficial ante SUNAT (ej. Gravado - Operación Onerosa) y el tratamiento fiscal para repuestos en bonificación comercial.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Saldo por cobrar / Saldo x Cobrar Cli</td>
                     <td>Indicador Numérico</td>
                     <td>Solo Lectura</td>
-                    <td>Saldo por cobrar del cliente exhibido en tiempo real en DSI-NET ERP.</td>
+                    <td>Exhibe en tiempo real el importe neto del pedido actual y el saldo por cobrar total acumulado en la cuenta del cliente.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Líneas de crédito asignada</td>
+                    <td class="data-table__field">Lin.Cred.Asig. (Línea de crédito asignada)</td>
                     <td>Indicador Financiero</td>
                     <td>Solo Lectura</td>
-                    <td>Es la línea de crédito asignada al cliente o corporación.</td>
+                    <td>Muestra el límite crediticio total aprobado y asignado a favor del cliente o grupo corporativo.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Líneas de crédito disponible</td>
+                    <td class="data-table__field">Lin.Cred.Disp. (Línea de crédito disponible)</td>
                     <td>Indicador Financiero</td>
                     <td>Solo Lectura</td>
-                    <td>Es la línea de crédito disponible para nuevas Notas de Pedido.</td>
+                    <td>Exhibe el saldo disponible de financiamiento para respaldar la emisión de nuevas Notas de Pedido antes de exigir cobro o visación manual.</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <p class="doc-section__desc">
+              Pantalla Nota de pedido.
+            </p>
+
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1078.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
             </div>
 
             <h3 style="margin-top: 18px;">Selección y Gestión de Repuestos</h3>
@@ -752,11 +822,6 @@
             <!-- 1. OPCIÓN ARTÍCULOS (INCLUYE IMAGEN TÉCNICA Y CAPTURA DE CANTIDADES) -->
             <div class="doc-subblock" style="margin-top: 28px;">
               <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">1. Opción Artículos</h4>
-              <p>
-                Permite la selección de repuestos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>Código</strong>, <strong>Nombre</strong> o <strong>Modelo</strong>; asimismo podemos filtrar los repuestos por <strong>Marca</strong>, <strong>Procedencia</strong> o toda una clasificación de repuestos (<strong>Clase / Familia / Subfamilia</strong>).
-              </p>
-
-               <!-- ESPACIO FIGMA 1: VENTANA DE BÚSQUEDA Y FILTROS -->
               <div class="img-placeholder">
               <img 
                 src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1079.png" 
@@ -764,9 +829,16 @@
                 style="width: 60%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
               >
               </div>
+              <p>
+                Permite la selección de repuestos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>Código</strong>, <strong>Nombre</strong> o <strong>Modelo</strong>; asimismo podemos filtrar los repuestos por <strong>Marca</strong>, <strong>Procedencia</strong> o toda una clasificación de repuestos (<strong>Clase / Familia / Subfamilia</strong>).
+              </p>
+
+               <!-- ESPACIO FIGMA 1: VENTANA DE BÚSQUEDA Y FILTROS -->
 
               <p>Tenemos ventanas de ayuda integradas para la gestión comercial:</p>
               <ul style="margin: 8px 0 14px 20px; line-height: 1.6;">
+                <li><strong>Grila superior:</strong> Permite ver todos los artículos que están en el sistema.</li>
+                <li><strong>Grilla inferior:</strong> Permite ver los artículos que el cliente compró anteriormente.</li>
                 <li><strong>Precios:</strong> Precios en sus diferentes categorías.</li>
                 <li><strong>Stock:</strong> Cantidad del repuesto que hay en almacen</li>
                 <li><strong>Tránsito importaciones:</strong> Listado de repuestos que están por llegar incluyendo cantidad y una fecha estimada de llegada.</li>
@@ -873,6 +945,19 @@
                 style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
               >
               </div>
+              <p>
+                <em>Una vez cargado los artículos en la grilla, nos tiene que quedar de la siguiente forma y grabamos.
+                  En este caso estamos creando una NP sin aprobación por ventas.</em>
+              </p>
+
+              <!-- ESPACIO FIGMA 2: MENSAJE DE ADVERTENCIA POR FORMATO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1093.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
             </div>
 
             <!-- 3. OPCIÓN RECUPERAR ARCHIVO TEMPORAL (C:\TMP_SIAF) -->
@@ -943,7 +1028,7 @@
 
             <h4 style="margin-top: 12px; color: #2c3e50;">Aprobación de Ventas</h4>
             <p>
-              La aprobación de ventas permite comprometer a los repuestos para que no estén disponibles para cualquier operación pero sin quitarlos del stock:
+              La aprobación de ventas permite comprometer a los repuestos para que no estén disponibles para cualquier operación pero sin quitarlos del stock[cite: 5]:
             </p>
 
             <div class="table-wrap">
@@ -961,35 +1046,78 @@
                     <td class="data-table__field">Stock Real (A)</td>
                     <td>Métrica de Almacén</td>
                     <td>Solo Lectura</td>
-                    <td>Existencia física consolidada en el almacén de despacho.</td>
+                    <td>Existencia física consolidada en el almacén de despacho[cite: 5].</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Stock Comprometido (B)</td>
                     <td>Métrica Transaccional</td>
                     <td>Solo Lectura</td>
-                    <td>Unidades reservadas mediante Notas de Pedido aprobadas por ventas.</td>
+                    <td>Unidades reservadas mediante Notas de Pedido aprobadas por ventas[cite: 5].</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Stock Disponible (A - B)</td>
                     <td>Métrica Operativa</td>
                     <td>Calculado</td>
-                    <td>Capacidad neta de existencias de repuestos habilitada para nuevas operaciones.</td>
+                    <td>Capacidad neta de existencias de repuestos habilitada para nuevas operaciones[cite: 5].</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Opción Aprobación de Ventas</td>
                     <td>Casilla de Verificación</td>
                     <td>Habilitado</td>
-                    <td>Activa la visación comercial y ejecuta el compromiso formal de stock en almacén.</td>
+                    <td>Activa la visación comercial y ejecuta el compromiso formal de stock en almacén[cite: 5].</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <p style="margin-top: 8px;">
-              <em>Ejemplo práctico: Para el código <strong>A001</strong> tenemos 100 unidades en Stock pero solo tenemos 90 disponibles para la venta, debido a que 10 unidades han sido comprometidas por una o varias Notas de Pedido.</em>
+              <em>Ejemplo práctico: Para el código <strong>A001</strong> tenemos 100 unidades en Stock pero solo tenemos 90 disponibles para la venta, debido a que 10 unidades han sido comprometidas por una o varias Notas de Pedido[cite: 5].</em>
             </p>
 
-            <h4 style="margin-top: 16px; color: #2c3e50;">Aprobación de Despacho y Aprobación de Cobranzas</h4>
+            <!-- FLUJO OPERATIVO: ESTADO APROBADO POR VENTAS -->
+            <div class="doc-subblock" style="margin-top: 20px;">
+              <h5 style="color: #1e293b; font-size: 1.05rem; margin-bottom: 6px;">Flujo para pasar a Estado Aprobado por Ventas</h5>
+              <p>
+                Usaremos como ejemplo la NP creada anteriormente (NP-001-00000182).
+              </p>
+              <p>
+                Para que la Nota de Pedido pase a estado <strong>Aprobado por ventas</strong>, se debe marcar la casilla <strong>Aprobación Vtas.</strong> en la cabecera y posteriormente hacer clic en la <strong>Opción Grabar</strong> en la botonera inferior[cite: 3].
+              </p>
+
+              <!-- ESPACIO FIGMA: CASILLA APROBACIÓN VTAS Y GRABAR -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1094.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+              <p style="margin-top: 14px;">
+                Una vez procesado el grabado, el estado de la Nota de Pedido pasará formalmente a <strong>Aprobado Ventas</strong> al ser una NP con forma de cobro "Contado" automaticamente se aprobó por cobranzas.
+              </p>
+
+              <!-- ESPACIO FIGMA: ESTADO APROBADO VENTAS EN BÚSQUEDA DE DOCUMENTOS -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1095.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+              <p style="margin-top: 14px;">
+                Este estado bloquea los campos de cabecera y las opciones de edición directa sobre los repuestos para resguardar la consistencia de la orden[cite: 4].
+              </p>
+
+            </div>
+
+            <!-- ================= SUBSECCIÓN: APROBACIÓN DE DESPACHO ================= -->
+            <h4 style="margin-top: 24px; color: #2c3e50;">Aprobación de Despacho</h4>
+            <p>
+              La aprobación determina si una Nota de Pedido estará disponible para la facturación y será enviada al almacén para las labores de picking y packing[cite: 7].
+            </p>
+
             <div class="table-wrap">
               <table class="data-table">
                 <thead>
@@ -1002,36 +1130,158 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="data-table__field">Despacho</td>
+                    <td class="data-table__field">Opción Despacho (Cabecera)</td>
                     <td>Casilla de Verificación</td>
                     <td>Habilitado</td>
-                    <td>La aprobación determina si una Nota de Pedido estará disponible para la facturación y será enviada la Nota de Pedido al almacén para el picking y packing.</td>
+                    <td>Permite aprobar el despacho directamente desde la cabecera de la Nota de Pedido[cite: 6].</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Cobranzas (Automática)</td>
-                    <td>Proceso del Sistema</td>
-                    <td>Sistémico</td>
-                    <td>Se aprueba de forma automática si cumple: forma de cobro al Contado, o si no es al Contado tener línea de crédito disponible y no tener documentos pendientes con más de n días de atraso configurable.</td>
+                    <td class="data-table__field">Opción Ayuda (?)</td>
+                    <td>Selector de Documentos</td>
+                    <td>Habilitado</td>
+                    <td>Abre la ventana auxiliar de administración para gestionar y visar despachos de pedidos pendientes[cite: 6].</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Cobranzas (Manual)</td>
-                    <td>Casilla de Verificación</td>
-                    <td>Restringido</td>
-                    <td>Si no se cumpliesen las condiciones automáticas se debe aprobar manualmente por cobranzas la Nota de Pedido.</td>
+                    <td class="data-table__field">Opción Aprobar (Modif. Despacho)</td>
+                    <td>Comando de Acción</td>
+                    <td>Condicional</td>
+                    <td>Ejecuta la aprobación manual de despacho sobre el documento filtrado en la grilla[cite: 6].</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            <p style="margin-top: 14px;">
+              Existen dos formas operativas de aprobar un despacho en DSI-NET ERP[cite: 6]:
+            </p>
+
+            <!-- FORMA 1: DESDE CABECERA -->
+            <div class="doc-subblock" style="margin-top: 16px;">
+              <h5 style="color: #1e293b; font-size: 1rem; margin-bottom: 6px;">1. Aprobación directa desde la Nota de Pedido</h5>
+              <p>
+                La primera modalidad se realiza en la misma ventana de la Nota de Pedido, debemos abrir la NP que fue aprobada por ventas.
+              </p>
+              <!-- ESPACIO FIGMA: APROBACIÓN DESDE CABECERA DE NOTA DE PEDIDO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1096.png" 
+                alt="#" 
+                style="width: 70%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+               <p>
+                Haciendo clic directamente en la casilla de la <strong>Opción Despacho</strong> ubicada en la cabecera del documento y procediendo a grabar.
+              </p>
+
+              <!-- ESPACIO FIGMA: APROBACIÓN DESDE CABECERA DE NOTA DE PEDIDO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1097.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- FORMA 2: DESDE VENTANA DE AYUDA (?) -->
+            <div class="doc-subblock" style="margin-top: 20px;">
+              <h5 style="color: #1e293b; font-size: 1rem; margin-bottom: 6px;">2. Aprobación desde la ventana de facturación</h5>
+              <p>
+                Otra forma de aprobar el despacho es dirigirnos a la pantalla "Facturación de NP - Administración".
+              </p>
+              <p>
+                Acceso: Documentos > Facturación > Facturación de NP - Administración
+              </p>
+
+              <!-- ESPACIO FIGMA: APROBACIÓN DESDE VENTANA ADMINISTRACIÓN DE PENDIENTES -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1098.png" 
+                alt="#" 
+                style="width: 60%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+              <p>
+                Buscamos el num. del documento y solo damos clic en la casilla "Aprobar" que esta en la columna Modif. Despacho. 
+              </p>
+              
+              <!-- ESPACIO FIGMA: APROBACIÓN DESDE VENTANA ADMINISTRACIÓN DE PENDIENTES -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1099.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+              <p>
+                Volvemos a abrir la pantalla de NP y se observará que se aprobó el despacho. 
+              </p>
+              
+              <!-- ESPACIO FIGMA: APROBACIÓN DESDE VENTANA ADMINISTRACIÓN DE PENDIENTES -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1100.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- ================= SUBSECCIÓN: APROBACIÓN DE COBRANZAS ================= -->
+            <h4 style="margin-top: 28px; color: #2c3e50;">Aprobación de Cobranzas</h4>
+            <p>
+              La aprobación de cobranzas se realiza de manera manual o automática según las condiciones del cliente y la forma de cobro pactada[cite: 7]:
+            </p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Opción Cobranzas (Automática)</td>
+                    <td>Proceso del Sistema</td>
+                    <td>Sistémico</td>
+                    <td>Aprueba automáticamente si la forma de cobro es Contado, o si manteniendo crédito dispone de saldo y no registra mora mayor a los días configurables[cite: 7].</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Cobranzas (Manual)</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Restringido</td>
+                    <td>Requiere visación manual por el área de finanzas o créditos cuando la orden excede las reglas automáticas del sistema[cite: 7].</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style="margin-top: 14px;">
+              Para que una Nota de Pedido se apruebe por cobranzas de forma automática se deben cumplir las siguientes condiciones operativas[cite: 7]:
+            </p>
+            <ul style="margin: 8px 0 14px 20px; line-height: 1.6;">
+              <li>Forma de cobro <strong>Al Contado</strong>[cite: 7].</li>
+              <li>Si la forma de cobro no es al contado, debe tener <strong>línea de crédito disponible</strong>[cite: 7].</li>
+              <li>No tener documentos pendientes de cobro con más de <strong>"n" días de atraso</strong> (parámetro configurable en el sistema)[cite: 7].</li>
+            </ul>
+            <p>
+              Si no se cumpliesen estas condiciones, la Nota de Pedido debe ser aprobada de forma manual por el área de cobranzas[cite: 7].
+            </p>
 
             <div class="callout callout--warning" role="note" style="margin-top: 16px;">
               <i data-lucide="mail" class="callout__icon"></i>
               <div>
                 <strong>Alerta por Correo Electrónico:</strong>
                 <p style="margin-top: 4px;">
-                  Cuando una Nota de Pedido está aprobada al 100% y de forma de cobro Depósito o Letras, el sistema enviará automáticamente un correo electrónico para que las áreas responsables estén enteradas antes de ser facturada.
+                  Cuando una Nota de Pedido está aprobada al 100% y su forma de cobro es <strong>Depósito</strong> o <strong>Letras</strong>, el sistema enviará automáticamente un correo electrónico para que las áreas responsables estén enteradas antes de proceder con la facturación[cite: 7].
                 </p>
               </div>
             </div>
+
 
             <!-- CONTENEDOR FIGMA: CONTROLES DE APROBACIÓN -->
             <div class="img-placeholder">
