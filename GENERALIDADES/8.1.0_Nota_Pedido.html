@@ -395,226 +395,9 @@
             </div>
           </div>
 
-          <!-- SECCIÓN 1: ACCESO AL SISTEMA -->
-          <section class="doc-section" id="sec-acceso-sistema">
-            <h2 class="doc-section__title">1. Acceso al Sistema</h2>
-            <p class="doc-section__desc">
-              El ingreso a DSI-NET ERP se realiza mediante el ingreso de usuario y password asignados al asesor comercial y personal operativo.
-            </p>
-
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>CONTROL / ELEMENTO</th>
-                    <th>TIPO</th>
-                    <th>ESTADO</th>
-                    <th>FUNCIÓN OPERATIVA</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="data-table__field">Usuario</td>
-                    <td>Campo de Texto</td>
-                    <td>Obligatorio</td>
-                    <td>Identificador del asesor comercial o usuario en DSI-NET ERP.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Password</td>
-                    <td>Campo de Contraseña</td>
-                    <td>Obligatorio</td>
-                    <td>Clave secreta personal de autenticación en DSI-NET ERP.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Opción Ingresar</td>
-                    <td>Comando de Acción</td>
-                    <td>Habilitado</td>
-                    <td>Valida las credenciales e inicia sesión en DSI-NET ERP.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1072.png" 
-                alt="Pantalla de inicio de sesión de DSI-NET ERP" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-          </section>
-
-          <!-- SECCIÓN 2: CLIENTES -->
-          <section class="doc-section" id="sec-clientes">
-            <h2 class="doc-section__title">2. Clientes</h2>
-            <p class="doc-section__desc">
-              Acceso: Menú maestros > Personas > Clientes 
-            </p>
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1073 (2).png" 
-                alt="#" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-            <p class="doc-section__desc">
-              Módulo para el registro, validación y consulta de clientes en Preventas y Ventas, con consulta en línea a SUNAT y parametrización de condiciones comerciales.
-            </p>
-            <p class="doc-section__desc">
-              Datos a mostrar:
-            </p>
-            <!-- CONTENEDOR FIGMA: ACCESO CLIENTES -->
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1073.png" 
-                alt="#" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-
-            <h3 style="margin-top: 18px;">Opción Nuevo</h3>
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1074 (2).png" 
-                alt="#" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-            <p>Permite registrar un nuevo cliente con autocompletado fiscal y sucursales de entrega:</p>
-
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>CONTROL / ELEMENTO</th>
-                    <th>TIPO</th>
-                    <th>ESTADO</th>
-                    <th>FUNCIÓN OPERATIVA</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="data-table__field">Num Doc</td>
-                    <td>Campo Alfanumérico</td>
-                    <td>Obligatorio</td>
-                    <td>Si el Tipo Doc es RUC cuando se digite el Num Doc el sistema buscará en www.sunat.gob.pe el número de RUC; si el RUC está activo se mostrarán los datos de nombre, dirección y código postal.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Ubigeo</td>
-                    <td>Búsqueda Asistida</td>
-                    <td>Obligatorio</td>
-                    <td>Los códigos postales se buscarán en la lista de ubigeo definidos por SUNAT.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Cat. Precios</td>
-                    <td>Menú Desplegable</td>
-                    <td>Obligatorio</td>
-                    <td>La categoría de precios está relacionada a la Lista de Precios que se utilizará cada vez que se toma una Nota de Pedido.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Opción Cliente</td>
-                    <td>Casilla de Verificación</td>
-                    <td>Habilitado</td>
-                    <td>Si esta opción está marcada significa que es un Cliente y se podrá realizar Notas de Pedido.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Direcc Despacho</td>
-                    <td>Campo de Texto con Selector</td>
-                    <td>Condicional</td>
-                    <td>Las direcciones de despacho se utilizarán para realizar las GR por ventas.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- CONTENEDOR FIGMA: FORMULARIO NUEVO CLIENTE -->
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1074.png" 
-                alt="#" 
-                style="width: 80%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-
-            <h3 style="margin-top: 18px;">Opción Modificar</h3>
-            <p class="doc-section__desc">
-              Modifica los campos de un cliente. Desde esta opción no es posible modificar 7 campos sensibles por motivos de seguridad fiscal:
-            </p>
-
-            <div class="callout callout--warning" role="note">
-              <i data-lucide="lock" class="callout__icon"></i>
-              <div>
-                <strong>Campos con restricción de edición en Opción Modificar:</strong>
-                <p style="margin-top: 4px;">
-                  1. Tipo Doc. &nbsp;|&nbsp; 2. Num Doc. &nbsp;|&nbsp; 3. Apellidos y Nombres &nbsp;|&nbsp; 4. Nombre &nbsp;|&nbsp; 5. Dirección &nbsp;|&nbsp; 6. Ubigeo &nbsp;|&nbsp; 7. Anulado.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <!-- SECCIÓN 3: CLIENTES - ADMINISTRACIÓN -->
-          <section class="doc-section" id="sec-clientes-admin">
-            <h2 class="doc-section__title">3. Clientes - Administración</h2>
-            <p class="doc-section__desc">
-              Acceso: Menú maestros > Personas > Clientes - Administración
-            </p>
-            <!-- CONTENEDOR FIGMA: CLIENTES ADMINISTRACIÓN -->
-            <div class="img-placeholder">
-              <img 
-                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1075.png" 
-                alt="#" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-              >
-            </div>
-            <p class="doc-section__desc">
-              Esta opción es muy similar a la opción anterior 2. Clientes con la diferencia que sí es posible modificar todos los campos sin restricciones operativas.
-            </p>
-
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>CONTROL / ELEMENTO</th>
-                    <th>TIPO</th>
-                    <th>ESTADO</th>
-                    <th>FUNCIÓN OPERATIVA</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="data-table__field">Datos de Identidad Fiscal</td>
-                    <td>Campos Editables</td>
-                    <td>Habilitado Total</td>
-                    <td>Permite la modificación irrestricta de Tipo Doc, Num Doc, Apellidos y Nombres, y Nombre.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Datos Domiciliarios y Ubigeo</td>
-                    <td>Campos Editables</td>
-                    <td>Habilitado Total</td>
-                    <td>Permite alterar directamente la Dirección fiscal y el código de Ubigeo oficial.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Estado Anulado</td>
-                    <td>Casilla de Verificación</td>
-                    <td>Habilitado Total</td>
-                    <td>Habilita o revoca el estado de anulación operativa del cliente en DSI-NET ERP.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Opción Grabar</td>
-                    <td>Comando de Acción</td>
-                    <td>Acción Principal</td>
-                    <td>Registra los cambios efectuados sobre el maestro central de clientes.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            
-          </section>
-
           <!-- SECCIÓN 4: NOTA DE PEDIDO -->
           <section class="doc-section" id="sec-nota-pedido">
-            <h2 class="doc-section__title">4. Nota de Pedido</h2>
+            <h2 class="doc-section__title">Nota de Pedido</h2>
             <p class="doc-section__desc">
               Acceso: Menú Documentos > Nota de pedido > Nota de pedido
             </p>
@@ -704,10 +487,22 @@
                     <td>Permite seleccionar o registrar el transportista asignado que figurará en el traslado de la mercadería en la Guía de Remisión.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Modalidad de Entrega (Almacén / Local / Agencia)</td>
-                    <td>Opciones Radiales</td>
-                    <td>Obligatorio</td>
-                    <td>Fija la logística de retiro de los repuestos: recojo presencial en almacén, entrega directa en local del cliente o despacho vía agencia de transporte.</td>
+                    <td class="data-table__field">Modalidad: Almacén</td>
+                    <td>Opción Radial</td>
+                    <td>Condicional</td>
+                    <td>Indica que el cliente retira los repuestos directamente en las instalaciones del almacén principal de la empresa a demanda.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Modalidad: Local</td>
+                    <td>Opción Radial</td>
+                    <td>Condicional</td>
+                    <td>Establece la entrega directa en el local o sucursal del cliente, tomando como punto de llegada obligatorio la información cargada en el campo <strong>Direcc Desp</strong> para la emisión de la Guía de Remisión.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Modalidad: Agencia</td>
+                    <td>Opción Radial</td>
+                    <td>Condicional</td>
+                    <td>Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. Si la agencia o transportista no se encuentra registrado en el sistema, la casilla desplegable en el campo <strong>Transportista</strong> permite abrir directamente la ventana de "Mantenimiento de proveedores" para registrarlo seleccionando el tipo de entidad Transportista sin salir de la Nota de Pedido.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">F. de Cobro / Vencimiento</td>
@@ -1136,16 +931,10 @@
                     <td>Permite aprobar el despacho directamente desde la cabecera de la Nota de Pedido.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Opción Ayuda (?)</td>
-                    <td>Selector de Documentos</td>
-                    <td>Habilitado</td>
-                    <td>Abre la ventana auxiliar de administración para gestionar y visar despachos de pedidos pendientes.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Opción Aprobar (Modif. Despacho)</td>
+                    <td class="data-table__field">Opción Aprobación desde la ventana de facturación</td>
                     <td>Comando de Acción</td>
                     <td>Condicional</td>
-                    <td>Ejecuta la aprobación manual de despacho sobre el documento filtrado en la grilla.</td>
+                    <td>Clic en la casilla "Aprobar" que esta en la columna Modif. Despacho.</td>
                   </tr>
                 </tbody>
               </table>
@@ -1325,7 +1114,7 @@
                     <td class="data-table__field">Liquidar Pedido</td>
                     <td>Comando Transaccional</td>
                     <td>Condicional</td>
-                    <td>Permite liquidar una Nota de Pedido comprometida por Ventas descomprometiendo el stock de forma individual por repuestos; los repuestos liquidados no pueden ser facturados.</td>
+                    <td>Permite liquidar una Nota de Pedido comprometida por Ventas descomprometiendo el stock de forma individual por repuestos o de forma masiva; los repuestos liquidados no pueden ser facturados.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Copiar NP</td>
