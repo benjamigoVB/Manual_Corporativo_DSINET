@@ -357,7 +357,7 @@
       <div class="sidebar__footer">DSI-NET Core v12.1 Build 4910</div>
     </aside>
 
-    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+        <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
     <main class="content">
 
       <div class="content__inner">
@@ -366,30 +366,30 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_Conceptos_Generales.html">8. Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page">8.0 Conceptos Generales</span>
         </p>
 
         <!-- TÍTULO PRINCIPAL Y LEAD -->
-        <h1 class="content__title">8.0 Conceptos Generales: Módulo de Pre-Ventas y Ventas</h1>
+        <h1 class="content__title">8.0 Conceptos Generales: Módulo de Preventas y Ventas</h1>
 
         <p class="content__lead">
-          Visión panorámica de la arquitectura comercial de DSI-NET ERP. Consolida las reglas del circuito de venta: emisión de Nota de Pedido con máquina de estados, facturación directa de mostrador, motor de políticas promocionales (Ofertas, Liquidaciones y Promociones) y gestión de documentos especiales como anticipos financieros y comunicados de baja de CPE.
+          Visión panorámica de la arquitectura comercial de DSI-NET ERP. Consolida las reglas operativas del circuito comercial: emisión de Nota de Pedido sujeta a máquina de estados, facturación directa de mostrador, motor de políticas promocionales (Ofertas, Liquidaciones y Promociones) y gestión de operaciones especiales como anticipos financieros y comunicados de baja de CPE ante SUNAT.
         </p>
 
         <!-- SECCIÓN: PILARES DEL CIRCUITO COMERCIAL -->
         <section class="doc-section" id="sec-pilares-comerciales">
-          <h2 class="doc-section__title">Pilares del Circuito Comercial en DSI-NET</h2>
+          <h2 class="doc-section__title">Pilares del Circuito Comercial en DSI-NET ERP</h2>
           <p class="doc-section__desc">
-            El sistema unifica: (1) Preventa y Cotización con control crediticio en línea y ciclo de 11 estados, (2) Venta Directa con timbrado fiscal inmediato, (3) Motor de Descuentos jerarquizado que diferencia liquidaciones por lote, ofertas con obsequios inafectos ('Compra / Regala') y promociones geolocalizadas, y (4) Operaciones Especiales que regulan anticipos dinerarios y anulaciones formales ante SUNAT.
+            DSI-NET ERP unifica: (1) Preventas y Cotización con evaluación del límite de crédito y saldo por cobrar en línea mediante un ciclo de 11 estados, (2) Venta Directa con timbrado fiscal inmediato, (3) Motor de Descuentos jerarquizado que diferencia liquidaciones de repuestos por lote, ofertas con obsequios inafectos ('Compra / Regala') y promociones focalizadas geolocalizadas, y (4) Operaciones Especiales que regulan anticipos dinerarios y anulaciones formales ante SUNAT.
           </p>
         </section>
 
         <!-- SECCIÓN 1: FICHA TÉCNICA DE COMPONENTES -->
         <section class="doc-section" id="sec-ficha-tecnica">
           <h2 class="doc-section__title">1. Ficha Técnica de Componentes y Documentos del Módulo</h2>
-          <p class="doc-section__desc">Catálogo de herramientas, comprobantes y tipos de campaña que conforman el circuito de ventas:</p>
+          <p class="doc-section__desc">Catálogo de comprobantes, herramientas transaccionales y modalidades comerciales que estructuran el circuito operativo en DSI-NET ERP:</p>
 
           <p><strong>Tabla 1: Diccionario de Comprobantes Comerciales y Entidades.</strong></p>
           <div class="table-wrap">
@@ -407,58 +407,58 @@
                 <tr>
                   <td class="data-table__field">Nota de Pedido (NP)</td>
                   <td>NP</td>
-                  <td>Cotización comercial, compromiso de stock y evaluación crediticia.</td>
-                  <td>Reserva física preventiva.</td>
-                  <td>No genera comprobante, evalúa Lin. Cred. Disp.</td>
+                  <td>Cotización comercial, reserva preventiva de repuestos en almacenes y evaluación de crédito.</td>
+                  <td>Reserva física preventiva en almacenes.</td>
+                  <td>No genera comprobante de pago; valida límite de crédito disponible y saldo por cobrar.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Estados y Ciclo de Vida</td>
                   <td>00 Al 10</td>
-                  <td>Regula fases: captura (00-02), visación (03, 09), bultos (10) y facturación (05, 07).</td>
-                  <td>Bloquea o autoriza reservas.</td>
-                  <td>Condiciona la habilitación para emitir CPE.</td>
+                  <td>Regula fases operativas: captura (00-02), visaciones de control (03, 09), control de bultos (10) y facturación (05, 07).</td>
+                  <td>Bloquea o autoriza reservas de repuestos en almacenes.</td>
+                  <td>Condiciona la habilitación operativa para emitir CPE.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Venta Directa (FC/BC)</td>
                   <td>FC / BC</td>
                   <td>Emisión directa de facturas y boletas electrónicas en mostrador.</td>
-                  <td>Descargo físico definitivo.</td>
-                  <td>Envío de trama XML a PSE/OSE (TCI).</td>
+                  <td>Descargo físico definitivo de existencias en almacen.</td>
+                  <td>Envío de trama XML al PSE/OSE (TCI).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Campaña de Oferta</td>
                   <td>OFT</td>
-                  <td>Tarifas temporales con reglas de adquisición (Compra) y obsequio (Regala).</td>
-                  <td>Reserva según cupo en grilla.</td>
-                  <td>Aplica afectación Inafecto - Retiro por Bonificación.</td>
+                  <td>Tarifas temporales con reglas de adquisición (Compra) y entrega de repuestos de obsequio (Regala).</td>
+                  <td>Reserva en almacenes sujeta a disponibilidad y cupo en grilla.</td>
+                  <td>Aplica tipo de afectación Inafecto - Retiro por Bonificación.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Liquidación de Artículos</td>
                   <td>LIQ</td>
-                  <td>Remate de existencias estancadas fijando precio especial por lote mínimo.</td>
-                  <td>Valida stock real disponible.</td>
-                  <td>Conexión directa con botón Merch/Liqui en la NP.</td>
+                  <td>Venta preferencial de repuestos de rotación estancada fijando precio especial por lote mínimo.</td>
+                  <td>Valida existencias físicas reales en almacenes.</td>
+                  <td>Conexión directa con la opción Merch/Liqui en la Nota de Pedido.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Promociones Focalizadas</td>
                   <td>PRM</td>
-                  <td>Beneficios delimitados por cliente individual, departamento o ubigeo.</td>
-                  <td>Control según disponibilidad.</td>
-                  <td>Restricción por domicilio fiscal o cuenta cliente.</td>
+                  <td>Beneficios comerciales delimitados por cliente individual, departamento o ubigeo.</td>
+                  <td>Control de existencias según disponibilidad en almacenes.</td>
+                  <td>Restricción vinculada al domicilio fiscal o a la cuenta comercial del cliente.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Documento de Anticipo</td>
                   <td>ANT</td>
-                  <td>Cobro adelantado monetario sin entrega inmediata de existencias.</td>
-                  <td>Sin afectación en Kardex.</td>
-                  <td>Emisión de comprobante de anticipo con IGV.</td>
+                  <td>Cobro adelantado monetario sin entrega inmediata de repuestos.</td>
+                  <td>Sin afectación de inventario en Kardex.</td>
+                  <td>Emisión formal de comprobante de pago por anticipo con afectación de IGV.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Comunicado de Baja</td>
                   <td>BAJ</td>
-                  <td>Anulación formal de comprobantes electrónicos emitidos con error.</td>
-                  <td>Revierte la salida de inventario.</td>
-                  <td>Remisión de paquete de baja y ticket a SUNAT.</td>
+                  <td>Anulación formal de comprobantes electrónicos emitidos con inconsistencias.</td>
+                  <td>Revierte el descargo de existencias en los almacenes correspondientes.</td>
+                  <td>Remisión del paquete de baja y ticket de respuesta a SUNAT.</td>
                 </tr>
               </tbody>
             </table>
@@ -468,7 +468,7 @@
         <!-- SECCIÓN 2: MATRIZ DE INTEGRACIÓN Y REGLAS DE PREVALENCIA -->
         <section class="doc-section" id="sec-matriz-integracion">
           <h2 class="doc-section__title">2. Matriz de Integración y Reglas de Prevalencia Comercial</h2>
-          <p class="doc-section__desc">Reglas de negocio y jerarquías que aplican de forma cruzada durante la atención de pedidos:</p>
+          <p class="doc-section__desc">Reglas operativas y jerarquías transaccionales que aplican de manera transversal durante la atención de la Nota de Pedido:</p>
 
           <p><strong>Tabla 2: Matriz de Integración y Jerarquías de Reglas.</strong></p>
           <div class="table-wrap">
@@ -483,23 +483,23 @@
               <tbody>
                 <tr>
                   <td class="data-table__field">Jerarquía de Descuentos</td>
-                  <td>Inserción de ítem en venta</td>
-                  <td>Prevalece: Liquidación &gt; Oferta bonificada (Compra/Regala) &gt; Promoción por Ubigeo &gt; Lista regular.</td>
+                  <td>Inserción de repuestos en el detalle de venta</td>
+                  <td>Prevalece el orden de aplicación: Liquidación &gt; Oferta bonificada (Compra/Regala) &gt; Promoción por Ubigeo &gt; Lista de precios regular.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Control de Riesgo Crediticio</td>
-                  <td>Importe pedido &gt; Cupo disponible</td>
-                  <td>El sistema pinta en rojo Lin. Cred. Disp. y exige el check "Aprobación Vtas" para avanzar.</td>
+                  <td>Importe de la Nota de Pedido &gt; Límite de crédito disponible</td>
+                  <td>DSI-NET ERP destaca en rojo el límite de crédito disponible y exige la casilla de verificación Aprobación de Ventas para continuar el flujo.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Tratamiento de Anticipos</td>
-                  <td>Cobro previo sin despacho</td>
-                  <td>Asienta el ingreso contable y fiscal; queda pendiente de amortización al facturar el pedido final.</td>
+                  <td>Cobro previo sin despacho de repuestos</td>
+                  <td>Asienta el movimiento financiero y fiscal; permanece como saldo a favor pendiente de compensación al facturar la Nota de Pedido definitiva.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Trazabilidad de Bajas</td>
-                  <td>Documento anulado</td>
-                  <td>Requiere justificación tributaria formal (Motivo de Baja) y confirmación del OSE con estado Acep.</td>
+                  <td>Comprobante de pago anulado</td>
+                  <td>Requiere justificación tributaria formal (Motivo de Baja) y confirmación de recepción del OSE en estado Aceptado.</td>
                 </tr>
               </tbody>
             </table>
@@ -509,14 +509,14 @@
         <!-- SECCIÓN 3: POLÍTICAS DE CONTROL Y SEGURIDAD -->
         <section class="doc-section" id="sec-politicas-control">
           <h2 class="doc-section__title">3. Políticas de Control y Seguridad Comercial</h2>
-          <p class="doc-section__desc">Disposiciones de control interno implementadas por el motor transaccional para garantizar la integridad operativa:</p>
+          <p class="doc-section__desc">Disposiciones de control interno implementadas en DSI-NET ERP para garantizar la integridad operativa y fiscal:</p>
 
           <div class="callout callout--warning" role="note">
             <i data-lucide="alert-triangle" class="callout__icon"></i>
             <div>
               <strong>Aprobación Obligatoria por Límite de Crédito:</strong>
               <p style="margin-top: 4px;">
-                Cuando el importe de un pedido excede el disponible comercial del cliente (Lin. Cred. Disp. en rojo), el documento queda bloqueado para facturación hasta la visación de la casilla "Aprobación Vtas" por un supervisor.
+                Cuando el importe de una Nota de Pedido supera el límite de crédito disponible del cliente (indicador visual en rojo o saldo por cobrar excedido), el documento queda bloqueado para facturación hasta registrar la visación en la casilla "Aprobación de Ventas" por parte de la supervisión autorizada.
               </p>
             </div>
           </div>
@@ -526,7 +526,7 @@
             <div>
               <strong>Protección de Margen y Descuentos Excesivos:</strong>
               <p style="margin-top: 4px;">
-                El sistema valida que ningún vendedor otorgue descuentos superiores al porcentaje asignado en la categoría de precio o por debajo del costo unitario del producto sin la debida visación en "Aprobación de Precios".
+                DSI-NET ERP valida que ningún asesor comercial asigne descuentos superiores a la tasa autorizada en su escala tarifaria o por debajo del costo unitario del repuesto sin la correspondiente visación en "Aprobación de Precios".
               </p>
             </div>
           </div>
@@ -536,7 +536,7 @@
             <div>
               <strong>Trazabilidad Fiscal y Facturación Electrónica:</strong>
               <p style="margin-top: 4px;">
-                Todos los comprobantes generados son validados según catálogo SUNAT (afectación gravada, exonerada o inafecta por bonificación) antes de su exportación al PSE/OSE (TCI).
+                Todos los comprobantes de pago generados son validados de acuerdo con los catálogos de SUNAT (afectación gravada, exonerada o inafecta por bonificación de repuestos) antes de la transmisión de la trama XML al PSE/OSE (TCI).
               </p>
             </div>
           </div>
@@ -560,9 +560,9 @@
 
       <!-- ============ FOOTER INSTITUCIONAL ============ -->
       <footer class="site-footer">
-        <p>SPEC-ID: UTA-ARCH-800-SERVIDOR: PROD-PERU(DSO cluster-lim-04-05) © 2025 ERP Enterprise. Todos los derechos reservados.</p>
+        <p>SPEC-ID: UTA-ARCH-800-SERVIDOR: PROD-PERU(DSO cluster-lim-04-05) © 2025 DSI SAC. Todos los derechos reservados.</p>
         <p style="font-size: 11px; color: var(--color-text-muted); margin-top: 4px;">
-          Nodo DSI-LIMA PRD-01 | Estado Operacional (v4.38.2)
+          Nodo DSI-LIMA PRD-01 | DSI-NET ERP Estado Operacional (v4.38.2)
         </p>
       </footer>
 

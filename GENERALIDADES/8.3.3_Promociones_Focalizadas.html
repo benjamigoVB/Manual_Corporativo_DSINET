@@ -366,31 +366,37 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_modu.html">Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">8.3.3 Promoción: Segmentación de Campañas</span>
+          <span aria-current="page">8.3.3 Promociones Focalizadas: Segmentación de Campañas</span>
         </p>
 
         <!-- TÍTULO PRINCIPAL Y LEAD -->
-        <h1 class="content__title">8.3.3 Promoción: Segmentación de Campañas</h1>
+        <h1 class="content__title">8.3.3 Promociones Focalizadas: Segmentación de Campañas</h1>
 
         <p class="content__lead">
-          Módulo para la parametrización de campañas promocionales focalizadas. Permite delimitar el alcance del beneficio comercial por cliente específico, departamento o código de ubigeo, aplicando precios especiales por cantidad mínima durante un período determinado.
+          Módulo técnico de DSI-NET ERP para la parametrización de campañas promocionales focalizadas. Permite segmentar el alcance del beneficio comercial por cuenta específica de cliente, departamento o código de ubigeo para despachos en campo, aplicando precios preferenciales por escala mínima de repuestos durante un intervalo cronológico determinado.
         </p>
 
         <!-- ACCESO A PROMOCIÓN DE ARTÍCULO -->
         <section class="doc-section" id="sec-acceso">
-          <h2 class="doc-section__title">Acceso a Promoción</h2>
+          <h2 class="doc-section__title">Acceso a Promociones Focalizadas</h2>
+          <p class="doc-section__desc">
+            Navegación jerárquica a través del menú principal de DSI-NET ERP:
+          </p>
           <div class="img-placeholder" data-img-ref="8.3.3_Acceso_Promocion">
-            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 745.png" alt="Acceso a Promoción" style="width: 80%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 745.png" alt="Acceso a Promociones Focalizadas en DSI-NET ERP" style="width: 80%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
         <!-- VISUALIZADOR DE LA PANTALLA PROMOCIÓN -->
         <section class="doc-section" id="sec-visualizador">
-          <h2 class="doc-section__title">Visualizador de la pantalla Promoción</h2>
+          <h2 class="doc-section__title">Visualizador de la Pantalla Promoción</h2>
+          <p class="doc-section__desc">
+            Consola de configuración comercial para la delimitación geográfica o por cliente, asignación de tarifas promocionales y control de existencias en almacenes.
+          </p>
           <div class="img-placeholder" data-img-ref="8.3.3_Visualizador_Pantalla_Promocion">
-            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 746.png" alt="Visualizador de la pantalla Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 746.png" alt="Visualizador de la pantalla Promoción en DSI-NET ERP" style="width: 100%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
@@ -402,84 +408,84 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>PARÁMETRO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>OBLIGATORIO</th>
-                  <th>DESCRIPCIÓN OPERATIVA Y REGLA DE NEGOCIO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Eventos: ›</td>
+                  <td class="data-table__field">Opción Eventos</td>
                   <td>Menú Desplegable</td>
-                  <td>No</td>
-                  <td>Vincula la promoción a eventos comerciales o campañas específicas.</td>
+                  <td>Opcional</td>
+                  <td>Vincula la campaña promocional con eventos comerciales o temporadas específicas del área de Preventas y Ventas.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Artículos / Importar ›</td>
-                  <td>Botones de Acción</td>
-                  <td>Catálogo</td>
-                  <td>Búsqueda asistida en catálogo o carga masiva de productos desde archivos Excel.</td>
+                  <td class="data-table__field">Opción Repuestos / Opción Importar</td>
+                  <td>Acciones de Catálogo</td>
+                  <td>Habilitado</td>
+                  <td>Búsqueda asistida en el maestro central o carga masiva de repuestos mediante hojas de cálculo estructuradas.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Pto.Vta / Promoción : / [?] ›</td>
+                  <td class="data-table__field">Pto.Vta / Promoción / Opción Ayuda [?]</td>
                   <td>Alfanumérico / Numérico / Ayuda [?]</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Sede comercial (PRINCIPAL), número correlativo (-1 al crear) y botón [?] para consultar promociones guardadas.</td>
+                  <td>Obligatorio</td>
+                  <td>Sede comercial emisora ('PRINCIPAL'), correlativo de la promoción (-1 durante el alta) y opción [?] para consultar campañas en estado Grabado.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Fecha Emisión / Rango ›</td>
+                  <td class="data-table__field">Fecha Emisión / Rango de Vigencia</td>
                   <td>Fechas (DD/MM/AAAA)</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Cronograma de vigencia oficial; fuera de la franja Fecha Inicio a Fecha Término la promoción expira automáticamente.</td>
+                  <td>Obligatorio</td>
+                  <td>Cronograma oficial de vigencia; fuera del intervalo entre Fecha Inicio y Fecha Término la tarifa promocional expira automáticamente.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nombre / Anulado ›</td>
-                  <td>Texto Libre / Checkbox</td>
-                  <td><span class="badge badge--yes">Sí</span> / Estado</td>
-                  <td>Denominación descriptiva de la promoción y casilla para dar de baja o anular la campaña.</td>
+                  <td class="data-table__field">Nombre / Casilla Anulado</td>
+                  <td>Texto Libre / Casilla de Verificación</td>
+                  <td>Obligatorio / Auditoría</td>
+                  <td>Denominación técnica de la promoción y casilla para dar de baja o anular operativamente la campaña en DSI-NET ERP.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Alcance: General ›</td>
-                  <td>Radio Button</td>
-                  <td>Opción</td>
-                  <td>Aplica la promoción indistintamente a todos los clientes del sistema.</td>
+                  <td class="data-table__field">Alcance: Opción General</td>
+                  <td>Opción Radial</td>
+                  <td>Habilitado</td>
+                  <td>Aplica el beneficio tarifario de forma irrestricta a toda la cartera de clientes registrada.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Alcance: Por Cliente ›</td>
-                  <td>Radio Button / Selector</td>
-                  <td>Opción</td>
-                  <td>Restringe la tarifa promocional a una única cuenta de cliente seleccionada en el campo contiguo.</td>
+                  <td class="data-table__field">Alcance: Opción Por Cliente</td>
+                  <td>Opción Radial / Selector Asistido</td>
+                  <td>Condicional</td>
+                  <td>Restringe la escala promocional a una cuenta específica de cliente seleccionada mediante búsqueda asistida.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Alcance: Departa / Ubigeo ›</td>
-                  <td>Radio Buttons / Selector</td>
-                  <td>Opción</td>
-                  <td>Delimita el beneficio según el departamento o código territorial de ubigeo.</td>
+                  <td class="data-table__field">Alcance: Opción Departa / Ubigeo</td>
+                  <td>Opciones Radiales / Selector Territorial</td>
+                  <td>Condicional</td>
+                  <td>Delimita el beneficio promocional según el departamento o código territorial de ubigeo para entregas en campo o agencias.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p style="margin-top: 14px;"><strong>Botones Artículos / Importar Excel:</strong> Seleccionar existencias del catálogo o importar listas de ítems promocionales desde hojas de cálculo.</p>
+          <p style="margin-top: 14px;"><strong>Opciones Repuestos e Importar Excel:</strong> Comandos para seleccionar existencias desde el catálogo maestro o procesar la inserción masiva de repuestos promocionales.</p>
           <div class="img-placeholder" data-img-ref="8.3.3_Botones_Articulos_Importar">
-            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 747.png" alt="Botones Artículos e Importar Excel" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 747.png" alt="Opciones Repuestos e Importar Excel" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Pto.Vta, Promoción con Botón (?) y Anulado:</strong> Sede comercial ('PRINCIPAL'), número correlativo de la promoción (inicia en -1) y botón (?) para buscar campañas guardadas.</p>
+          <p><strong>Pto.Vta, Promoción con Opción Ayuda [?] y Casilla Anulado:</strong> Sede comercial emisora ('PRINCIPAL'), correlativo de control (inicia en -1) y opción de consulta [?] para cargar promociones registradas.</p>
           <div class="img-placeholder" data-img-ref="8.3.3_PtoVta_Promocion_Anulado">
-            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 748.png" alt="Pto.Vta, Promoción con Botón (?) y Anulado" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 748.png" alt="Pto.Vta, Promoción con Opción Ayuda [?] y Casilla Anulado" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.3.3_Cronograma_Vigencia_Fechas">
             <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 749.png" alt="Cronograma de Vigencia de Fechas" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Cronograma de Vigencia (Fecha, Fecha Inicio y Fecha Término):</strong> Fechas oficiales de formulación e intervalo de validez cronológico en el cual la promoción es aplicable en ventas.</p>
+          <p><strong>Cronograma de Vigencia (Fecha, Fecha Inicio y Fecha Término):</strong> Fechas oficiales de emisión e intervalo cronológico normativo en el cual la promoción es exigible en la Nota de Pedido y en facturación.</p>
           <div class="img-placeholder" data-img-ref="8.3.3_Cronograma_Vigencia_Fechas">
             <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 750.png" alt="Cronograma de Vigencia de Fechas" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Nombre y Marcas de Auditoría (Creado / Modificado):</strong> Denominación descriptiva de la promoción y registro de usuarios responsables de la creación y último ajuste.</p>
+          <p><strong>Campo Nombre y Marcas de Auditoría (Creado / Modificado):</strong> Denominación de la campaña y registro automático de trazabilidad de los asesores comerciales responsables.</p>
           <div class="img-placeholder" data-img-ref="8.3.3_Campo_Nombre_Marcas_Auditoria">
             <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 751.png" alt="Campo Nombre y Marcas de Auditoría" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
@@ -487,7 +493,7 @@
             <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 752.png" alt="Segmentación de Alcance General, Por Cliente, Departa y Ubigeo" style="width: 15%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Segmentación de Alcance (General, Por Cliente, Departa, Ubigeo):</strong> Botones para delimitar el público objetivo. 'General' aplica a todos los clientes; 'Por Cliente' restringe a una cuenta individual; 'Departa' acota por región política y 'Ubigeo' filtra por distrito o provincia en el cuadro contiguo (el símbolo activa la ventana de búsqueda).</p>
+          <p><strong>Segmentación de Alcance (General, Por Cliente, Departa, Ubigeo):</strong> Opciones radiales para definir el segmento comercial. 'General' aplica a toda la cartera; 'Por Cliente' restringe el beneficio a una cuenta específica; 'Departa' acota por región geográfica y 'Ubigeo' filtra por distrito o provincia en campo mediante la opción de búsqueda asistida [%].</p>
           <div class="img-placeholder" data-img-ref="8.3.3_Segmentacion_Alcance_Opciones">
             <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 753.png" alt="Segmentación de Alcance General, Por Cliente, Departa y Ubigeo" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
@@ -502,131 +508,131 @@
           </div>
         </section>
 
-        <!-- 2. GRILLA DE ARTÍCULOS PROMOCIONADOS Y BOTONERA TRANSACCIONAL -->
+        <!-- 2. GRILLA DE REPUESTOS PROMOCIONADOS Y BARRA TRANSACCIONAL -->
         <section class="doc-section" id="sec-2">
-          <h2 class="doc-section__title">2. Grilla de Artículos Promocionados y Botonera Transaccional</h2>
+          <h2 class="doc-section__title">2. Grilla de Repuestos Promocionados y Barra Transaccional</h2>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>ELEMENTO / COLUMNA</th>
-                  <th>TIPO DE DATO</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO TÉCNICO Y ACCIÓN OPERATIVA</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Código / Articulo ›</td>
+                  <td class="data-table__field">Código / Repuesto</td>
                   <td>Alfanumérico / Texto</td>
                   <td>Maestro</td>
-                  <td>Código SKU oficial y denominación comercial o técnica del producto promovido.</td>
+                  <td>Código SKU oficial y denominación técnica del repuesto en catálogo.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">UM / Modelo / Marca ›</td>
-                  <td>Texto</td>
+                  <td class="data-table__field">UM / Modelo / Marca</td>
+                  <td>Texto Descriptivo</td>
                   <td>Maestro</td>
-                  <td>Atributos comerciales del catálogo que garantizan la coincidencia exacta del bien.</td>
+                  <td>Atributos técnicos del catálogo que garantizan la coincidencia exacta de la partida.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Stock ›</td>
+                  <td class="data-table__field">Stock</td>
                   <td>Numérico Decimal</td>
-                  <td>Consulta</td>
-                  <td>Existencia disponible en el depósito que valida el respaldo físico para la oferta.</td>
+                  <td>Solo Lectura</td>
+                  <td>Existencias físicas disponibles en los almacenes seleccionados para respaldo de la promoción.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Pre Mayorista ›</td>
+                  <td class="data-table__field">Pre Mayorista</td>
                   <td>Numérico Decimal</td>
-                  <td>Consulta</td>
-                  <td>Precio regular de catálogo tomado como referencia base comparativa.</td>
+                  <td>Solo Lectura</td>
+                  <td>Tarifa regular de lista tomada como base comparativa de cálculo.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Precio Promocional ›</td>
-                  <td>Numérico Decimal</td>
-                  <td>Editable</td>
-                  <td>Tarifa promocional especial concedida durante el período de vigencia de la campaña.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Cant Mínima ›</td>
+                  <td class="data-table__field">Precio Promocional</td>
                   <td>Numérico Decimal</td>
                   <td>Editable</td>
-                  <td>Volumen mínimo requerido en el pedido para acceder al beneficio del precio promocional.</td>
+                  <td>Tarifa especial convenida durante el período de vigencia de la campaña.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Insertar / Eliminar ›</td>
-                  <td>Botones de Grilla</td>
-                  <td>Disponible</td>
-                  <td>Añade una fila manual en blanco o retira un artículo previamente agregado.</td>
+                  <td class="data-table__field">Cant Mínima</td>
+                  <td>Numérico Decimal</td>
+                  <td>Editable</td>
+                  <td>Cantidad mínima obligatoria en la Nota de Pedido para acceder a la escala de precio promocional.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Imprimir / Anular ›</td>
-                  <td>Botones de Control</td>
-                  <td>Comando</td>
-                  <td>Emite el reporte formal de la promoción o inhabilita operativamente la campaña registrada.</td>
+                  <td class="data-table__field">Opción Insertar / Opción Eliminar</td>
+                  <td>Comandos de Grilla</td>
+                  <td>Habilitado</td>
+                  <td>Añade una fila en blanco a la grilla o remueve el repuesto seleccionado.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nuevo / Grabar / Cancelar ›</td>
-                  <td>Botones de Acción</td>
-                  <td>Transaccional</td>
-                  <td>Limpia la pantalla para un nuevo registro, guarda los cambios en la base de datos o cancela la captura.</td>
+                  <td class="data-table__field">Opción Imprimir / Opción Anular</td>
+                  <td>Acciones de Control</td>
+                  <td>Habilitado</td>
+                  <td>Emite el reporte técnico de la promoción o inhabilita administrativamente la campaña registrada.</td>
+                </tr>
+                <tr>
+                  <td class="data-table__field">Opción Nuevo / Opción Grabar / Opción Cancelar</td>
+                  <td>Acciones Transaccionales</td>
+                  <td>Acción Principal</td>
+                  <td>Prepara un nuevo registro, ejecuta la acción Grabar dejando la campaña en estado Grabado o descarta cambios.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p style="margin-top: 14px;">
-            El proceso es similar al anterior (Módulo de Pre-Ventas y Ventas 8.3.2), rellenamos los datos y luego añadimos artículos.
+            El proceso mantiene la lógica operativa del panel de descuentos: se completan los parámetros de cabecera y segmentación, y posteriormente se añaden los repuestos:
           </p>
           <div class="img-placeholder" data-img-ref="8.3.3_Formulario_Datos_Promocion">
             <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 757.png" alt="Formulario con datos de promoción" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- FUNCIONALIDAD DE LOS BOTONES -->
+        <!-- FUNCIONALIDAD DE LAS OPCIONES OPERATIVAS -->
         <section class="doc-section" id="sec-funcionalidad-botones">
-          <h2 class="doc-section__title">Funcionalidad de los botones</h2>
+          <h2 class="doc-section__title">Funcionalidad de las Opciones Operativas</h2>
 
-          <!-- BOTÓN ARTÍCULO -->
+          <!-- OPCIÓN REPUESTOS -->
           <div class="doc-subsection" id="sub-boton-articulo">
-            <h3 class="doc-section__subtitle">Botón Articulo:</h3>
+            <h3 class="doc-section__subtitle">Opción Repuestos</h3>
             <p>
-              El botón Articulo tiene un manejo parecido al punto anterior (Módulo de Pre-Ventas y Ventas 8.3.2) añadimos los artículos y nos deben aparecer en la grilla.
+              La opción Repuestos permite seleccionar del maestro central las partidas que integrarán la campaña; una vez confirmadas, se visualizarán en la grilla transaccional:
             </p>
             <div class="img-placeholder" data-img-ref="8.3.3_Grilla_Articulos_Promocion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 758.png" alt="Grilla de artículos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 758.png" alt="Grilla de repuestos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Como se observa las columnas <strong>Precio Promocional</strong> y <strong>Cant Mínima</strong> son editables en caso se necesita hacer alguna modificación, terminado ese paso grabamos.
+              Las columnas <strong>Precio Promocional</strong> y <strong>Cant Mínima</strong> son editables para definir el beneficio tarifario y el volumen mínimo requerido; concluido este ajuste, se ejecuta la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.3_Grilla_Articulos_Promocion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 759.png" alt="Grilla de artículos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 759.png" alt="Grilla de repuestos en Promoción con precios y cantidades" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Luego vamos a la ventana de Nota de Pedido (guiarse del punto <em>Módulo de Pre-Ventas y Ventas 8.1</em>) y añadimos los artículos que seleccionamos en promoción, de esta forma veremos un ejemplo de promoción en el sistema.
+              Posteriormente, acceda al módulo de Preventas y Ventas, genere una Nota de Pedido (siguiendo los lineamientos de la referencia técnica 8.1) e incorpore los repuestos configurados en la promoción para validar su activación en el sistema.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.3_Grilla_Articulos_Promocion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 760.png" alt="Grilla de artículos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 760.png" alt="Inserción de repuestos en Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Los artículos se añaden con el botón Artículos como en el paso anterior (punto <em>Módulo de Pre-Ventas y Ventas 8.3.1</em>).
+              Los repuestos se incorporan mediante la opción Repuestos disponible en la cabecera del documento comercial.
             </p>
             <p>
-              Para poder recibir artículos en promoción es necesario que se compre como mínimo la cantidad que se digitó en la ventana de Promoción.
+              Para acceder a la tarifa preferencial, el requerimiento debe cumplir o superar la cantidad mínima fijada en la campaña promocional y coincidir con el criterio de segmentación territorial o de cliente.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.3_Nota_Pedido_Promocion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 761.png" alt="Nota de Pedido con artículos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 761.png" alt="Nota de Pedido con repuestos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <div class="img-placeholder" data-img-ref="8.3.3_Nota_Pedido_Promocion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 762.png" alt="Nota de Pedido con artículos en Promoción" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 762.png" alt="Validación de cantidad mínima promocional" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Para ver la Promoción grabamos y automáticamente el sistema arrojará el monto correspondiente.
+              Al ejecutar la acción Grabar, DSI-NET ERP asienta el documento en estado Grabado y efectúa el cálculo automático del importe total aplicando la escala promocional correspondiente.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.3_Resultado_Promocion_Grabada">
-              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 763.png" alt="Resultado de promoción grabada con monto correspondiente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.3_promocion/image 763.png" alt="Resultado de promoción en estado Grabado con liquidación de importe" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
         </section>
@@ -637,19 +643,19 @@
       <nav class="page-nav" aria-label="Navegación entre páginas">
         <a class="page-nav__link page-nav__link--prev" href="8.3.2_Liquidacion_Articulos.html">
           <span class="page-nav__label">Anterior</span>
-          <span class="page-nav__title">8.3.2 Liquidación de Artículos</span>
+          <span class="page-nav__title">8.3.2 Liquidación de Repuestos</span>
           <span class="page-nav__sub">Panel de Descuentos</span>
         </a>
         <a class="page-nav__link page-nav__link--next" href="8.4_Operaciones_Especiales.html">
           <span class="page-nav__label">Siguiente</span>
           <span class="page-nav__title">8.4 Operaciones Especiales</span>
-          <span class="page-nav__sub">Módulo de Pre-Ventas y Ventas</span>
+          <span class="page-nav__sub">Módulo de Preventas y Ventas</span>
         </a>
       </nav>
 
       <!-- ============ FOOTER ============ -->
       <footer class="site-footer">
-        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1 Build 4910</p>
         <div class="site-footer__links">
           <a href="#">Políticas de Privacidad</a>
           <a href="#">Términos de Soporte</a>

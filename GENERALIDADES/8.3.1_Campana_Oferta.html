@@ -367,31 +367,37 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_Conceptos_Generales.html">Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">8.3.1 Oferta: Gestión de Campañas Temporales</span>
+          <span aria-current="page">8.3.1 Campaña de Oferta: Gestión de Campañas Temporales</span>
         </p>
 
         <!-- TÍTULO PRINCIPAL Y LEAD -->
-        <h1 class="content__title">8.3.1 Oferta: Gestión de Campañas Temporales</h1>
+        <h1 class="content__title">8.3.1 Campaña de Oferta: Gestión de Campañas Temporales</h1>
 
         <p class="content__lead">
-          Módulo para la parametrización de campañas de ofertas comerciales por vigencia cronológica. Permite programar rebajas sobre artículos específicos, acotar cupos de venta y controlar la activación automática de beneficios tarifarios en pedidos y facturación.
+          Módulo técnico de DSI-NET ERP para la parametrización de campañas de ofertas comerciales por vigencia cronológica. Permite programar beneficios tarifarios sobre repuestos específicos, delimitar cupos máximos de existencias en almacenes y controlar la activación automática de bonificaciones en la Nota de Pedido y en la facturación comercial.
         </p>
 
         <!-- ACCESO A OFERTA DE ARTÍCULO -->
         <section class="doc-section" id="sec-acceso">
-          <h2 class="doc-section__title">Acceso a Oferta de Articulo</h2>
+          <h2 class="doc-section__title">Acceso a Oferta de Repuestos</h2>
+          <p class="doc-section__desc">
+            Navegación jerárquica a través del menú principal de DSI-NET ERP:
+          </p>
           <div class="img-placeholder" data-img-ref="8.3.1_Acceso_Oferta_Articulo">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 710.png" alt="Acceso a Oferta de Artículo" style="width: 80%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 710.png" alt="Acceso a Oferta de Repuestos en DSI-NET ERP" style="width: 80%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
         <!-- VISUALIZADOR DE LA PANTALLA OFERTAS -->
         <section class="doc-section" id="sec-visualizador">
-          <h2 class="doc-section__title">Visualizador de la pantalla Ofertas</h2>
+          <h2 class="doc-section__title">Visualizador de la Pantalla Ofertas</h2>
+          <p class="doc-section__desc">
+            Interfaz de configuración de reglas promocionales estructurada en cabecera de vigencia cronológica, grilla de repuestos vinculados y comandos de persistencia.
+          </p>
           <div class="img-placeholder" data-img-ref="8.3.1_Visualizador_Pantalla_Oferta">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 711.png" alt="Visualizador de la pantalla Ofertas" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 711.png" alt="Visualizador de la pantalla Ofertas en DSI-NET ERP" style="width: 100%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
@@ -403,89 +409,89 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>CAMPO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>OBLIGATORIO</th>
-                  <th>DESCRIPCIÓN OPERATIVA Y REGLA DE NEGOCIO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Eventos: ›</td>
+                  <td class="data-table__field">Opción Eventos</td>
                   <td>Menú Desplegable</td>
-                  <td>No</td>
-                  <td>Asocia la campaña de oferta con un evento de marketing o temporada comercial.</td>
+                  <td>Opcional</td>
+                  <td>Asocia la campaña de oferta con un evento comercial de temporada en DSI-NET ERP.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Articulos ›</td>
+                  <td class="data-table__field">Opción Artículos</td>
                   <td>Búsqueda Asistida</td>
-                  <td>Catálogo</td>
-                  <td>Abre la ventana modal del catálogo para seleccionar e insertar productos en la grilla.</td>
+                  <td>Habilitado</td>
+                  <td>Abre la ventana modal del catálogo central para seleccionar e insertar repuestos en la grilla.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Ntio.Interno. / Sede ›</td>
+                  <td class="data-table__field">Nro. Interno / Sede</td>
                   <td>Numérico / Texto</td>
-                  <td>Sistema</td>
-                  <td>Correlativo de auditoría interna (-1 durante el alta) y sede comercial (PRINCIPAL).</td>
+                  <td>Solo Lectura / Asignado</td>
+                  <td>Correlativo de auditoría interna (-1 durante el registro inicial) y sede comercial emisora ('PRINCIPAL').</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Cod Doc: (PR) / [?] ›</td>
+                  <td class="data-table__field">Cod Doc: (PR) / Opción Ayuda [?]</td>
                   <td>Alfanumérico / Ayuda [?]</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Tipo de documento (PR), serie, número correlativo y botón [?] para buscar ofertas guardadas.</td>
+                  <td>Obligatorio</td>
+                  <td>Tipo documental ('PR'), serie oficial, número correlativo y opción de ayuda [?] para consultar ofertas en estado Grabado.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Fecha: ›</td>
+                  <td class="data-table__field">Fecha</td>
                   <td>Fecha (DD/MM/AAAA)</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Fecha de formulación o registro de la campaña en el ERP.</td>
+                  <td>Obligatorio</td>
+                  <td>Fecha oficial de registro de la campaña en DSI-NET ERP.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Fecha Inicio / Término ›</td>
+                  <td class="data-table__field">Fecha Inicio / Término</td>
                   <td>Fechas (DD/MM/AAAA)</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Intervalo de vigencia de la oferta; fuera de este rango el beneficio se desactiva.</td>
+                  <td>Obligatorio</td>
+                  <td>Intervalo estricto de vigencia de la oferta; fuera de este rango cronológico el beneficio tarifario expira automáticamente.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nombre ›</td>
+                  <td class="data-table__field">Nombre</td>
                   <td>Texto Libre</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Denominación comercial o nombre identificador de la promoción (ej. Campaña Primavera).</td>
+                  <td>Obligatorio</td>
+                  <td>Denominación descriptiva o nombre identificador de la campaña comercial.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Creado / Modificado ›</td>
-                  <td>Auditoría</td>
-                  <td>Sistema</td>
-                  <td>Registro de fecha, hora y usuario responsable del alta y última edición.</td>
+                  <td class="data-table__field">Creado / Modificado</td>
+                  <td>Campos de Auditoría</td>
+                  <td>Solo Lectura</td>
+                  <td>Registro automático de fecha, hora y usuario responsable del alta y última edición en el sistema.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p style="margin-top: 14px;"><strong>Desplegable Eventos y Botón Artículos:</strong> Selector para asociar la campaña a un evento comercial y botón 'Artículos' para abrir el catálogo e incorporar productos a la lista.</p>
+          <p style="margin-top: 14px;"><strong>Opción Eventos y Opción Artículos:</strong> Menú desplegable para conectar la campaña con eventos promocionales y Opción Artículos para abrir el maestro e incorporar partidas a la lista.</p>
           <div class="img-placeholder" data-img-ref="8.3.1_Desplegable_Eventos_Boton_Articulo">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 712.png" alt="Desplegable Eventos y Botón Artículos" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 712.png" alt="Opción Eventos y Opción Artículos" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Ntio.Interno. y Sede PRINCIPAL:</strong> Correlativo único de control interno (inicia en -1) y punto de venta sede donde se formula el registro.</p>
+          <p><strong>Nro. Interno y Sede PRINCIPAL:</strong> Identificador único correlativo de control interno y asignación de la sede operativa emisora.</p>
           <div class="img-placeholder" data-img-ref="8.3.1_Sede_Principal_Punto_Venta">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 713.png" alt="Ntio.Interno. y Sede PRINCIPAL" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 713.png" alt="Nro. Interno y Sede PRINCIPAL" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Cod Doc (PR), Serie, Número y Botón (?):</strong> Código oficial 'PR' con serie, correlativo libre y botón (?) para consultar y cargar documentos previamente creadas.</p>
+          <p><strong>Cod Doc (PR), Serie, Número y Opción Ayuda [?]:</strong> Identificador documental 'PR' con serie asignada, correlativo numérico y opción de consulta [?] para cargar campañas comerciales creadas previamente.</p>
           <div class="img-placeholder" data-img-ref="8.3.1_CodDoc_Serie_Numero">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 714.png" alt="Cod Doc (PR), Serie, Número y Botón (?)" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 714.png" alt="Cod Doc (PR), Serie, Número y Opción Ayuda [?]" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.3.1_CodDoc_Serie_Numero">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 715 (2).png" alt="Cod Doc (PR), Serie, Número y Botón (?)" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 715 (2).png" alt="Cod Doc (PR), Serie, Número y Opción Ayuda [?]" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Fecha, Fecha Inicio y Fecha Termino:</strong> Delimitación cronológica del período de vigencia (DD/MM/AAAA) fuera del cual la oferta expira automáticamente.</p>
+          <p><strong>Campos Fecha, Fecha Inicio y Fecha Término:</strong> Delimitación cronológica del ciclo de vida de la campaña comercial; superada la fecha de término, el sistema inhabilita la bonificación de forma automática.</p>
           <div class="img-placeholder" data-img-ref="8.3.1_Fechas_Vigencia_Oferta">
             <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 715.png" alt="Campo Fecha, Fecha Inicio y Fecha Término" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Nombre y Marcas de Auditoría (Creado / Modificado):</strong> Denominación descriptiva de la campaña comercial y etiquetas de auditoría de usuarios del sistema.</p>
+          <p><strong>Campo Nombre y Marcas de Auditoría (Creado / Modificado):</strong> Identificación de la campaña y trazabilidad de usuarios y marcas de tiempo registradas en DSI-NET ERP.</p>
           <div class="img-placeholder" data-img-ref="8.3.1_Nombre_Marcas_Auditoria">
             <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 716.png" alt="Campo Nombre y Marcas de Auditoría (Creado / Modificado)" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
@@ -494,156 +500,156 @@
           </div>
         </section>
 
-        <!-- 2. GRILLA DE ARTÍCULOS EN OFERTA Y BOTONERA TRANSACCIONAL -->
+        <!-- 2. GRILLA DE REPUESTOS EN OFERTA Y BARRA TRANSACCIONAL -->
         <section class="doc-section" id="sec-2">
-          <h2 class="doc-section__title">2. Grilla de Artículos en Oferta y Botonera Transaccional</h2>
+          <h2 class="doc-section__title">2. Grilla de Repuestos en Oferta y Barra Transaccional</h2>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>ELEMENTO / COLUMNA</th>
-                  <th>TIPO DE DATO</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO TÉCNICO Y ACCIÓN OPERATIVA</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Tipo ›</td>
-                  <td>Desplegable</td>
-                  <td>Maestro</td>
-                  <td>Clasificación o naturaleza del artículo que puede ser artículo de venta o de regalo.</td>
+                  <td class="data-table__field">Columna Tipo</td>
+                  <td>Menú Desplegable</td>
+                  <td>Obligatorio</td>
+                  <td>Define la condición comercial del repuesto dentro de la oferta (Compra condicionante o Regala bonificado).</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Codigo / Nom Art ›</td>
+                  <td class="data-table__field">Código / Nom Art</td>
                   <td>Alfanumérico / Texto</td>
                   <td>Maestro</td>
-                  <td>Código SKU oficial y denominación técnica del producto dentro del catálogo.</td>
+                  <td>Código SKU oficial y denominación técnica del repuesto en el catálogo.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">UM / Stock ›</td>
-                  <td>Texto / Decimal</td>
-                  <td>Consulta</td>
-                  <td>Unidad física de venta y saldo disponible actual en el almacén.</td>
+                  <td class="data-table__field">UM / Stock</td>
+                  <td>Texto / Numérico Decimal</td>
+                  <td>Solo Lectura</td>
+                  <td>Unidad de medida oficial y existencias físicas disponibles actuales en almacenes.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Cant ›</td>
+                  <td class="data-table__field">Cant</td>
                   <td>Numérico Decimal</td>
                   <td>Editable</td>
-                  <td>Cupo o cantidad máxima de unidades asignadas para ser vendidas bajo esta tarifa.</td>
+                  <td>Cupo o cantidad mínima para activar la compra, o unidades a otorgar en calidad de obsequio.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Modificado / Ult. Mod. ›</td>
+                  <td class="data-table__field">Modificado / Ult. Mod.</td>
                   <td>Auditoría / Fecha</td>
-                  <td>Sistema</td>
-                  <td>Indicador de edición de línea y marca de tiempo del último ajuste.</td>
+                  <td>Solo Lectura</td>
+                  <td>Indicador de edición de línea y marca temporal de la última actualización.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Insertar / Eliminar ›</td>
-                  <td>Botones de Grilla</td>
-                  <td>Disponible</td>
-                  <td>Agrega una fila vacía en la cuadrícula o retira el artículo seleccionado.</td>
+                  <td class="data-table__field">Opción Insertar / Opción Eliminar</td>
+                  <td>Comandos de Grilla</td>
+                  <td>Habilitado</td>
+                  <td>Agrega una nueva línea a la grilla o remueve el repuesto seleccionado.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Imprimir / Anular ›</td>
-                  <td>Botones de Control</td>
-                  <td>Disponible</td>
-                  <td>Emite la lista física de productos en oferta o cancela la vigencia de la campaña.</td>
+                  <td class="data-table__field">Opción Imprimir / Opción Anular</td>
+                  <td>Acciones de Control</td>
+                  <td>Habilitado</td>
+                  <td>Genera el reporte impreso de la oferta o anula administrativamente la vigencia de la campaña.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nuevo / Grabar / Cancelar ›</td>
-                  <td>Botones de Acción</td>
-                  <td>Transaccional</td>
-                  <td>Blanquea el formulario, guarda y activa la oferta, o cancela cambios.</td>
+                  <td class="data-table__field">Opción Nuevo / Opción Grabar / Opción Cancelar</td>
+                  <td>Acciones Transaccionales</td>
+                  <td>Acción Principal</td>
+                  <td>Limpia el formulario, ejecuta la acción Grabar dejando la oferta en estado Grabado o descarta cambios.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p style="margin-top: 14px;">
-            Completamos los campos, es necesario ponerle un nombre a la Oferta que se esta registrando y una fecha de Termino el cual indica la fecha en que acaba la oferta
+            Al registrar la oferta, es obligatorio consignar el campo Nombre y la Fecha Término que determina la expiración del beneficio comercial:
           </p>
           <div class="img-placeholder" data-img-ref="8.3.1_Completar_Campos_Oferta">
-            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (2).png" alt="Completamos los campos de la oferta" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (2).png" alt="Registro de campos obligatorios de la campaña de oferta" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- FUNCIONALIDAD DE LOS BOTONES -->
+        <!-- FUNCIONALIDAD DE LAS OPCIONES OPERATIVAS -->
         <section class="doc-section" id="sec-funcionalidad-botones">
-          <h2 class="doc-section__title">Funcionalidad de los botones</h2>
+          <h2 class="doc-section__title">Funcionalidad de las Opciones Operativas</h2>
 
-          <!-- BOTÓN ARTÍCULO -->
+          <!-- Opción Artículos -->
           <div class="doc-subsection" id="sub-boton-articulo">
-            <h3 class="doc-section__subtitle">Botón Articulo:</h3>
+            <h3 class="doc-section__subtitle">Opción Artículos</h3>
             <p>
-              El botón Articulo tiene un manejo parecido como en el punto Modulo compras 1.1
+              La Opción Artículos permite acceder al maestro central conforme a los criterios de búsqueda estandarizados en el sistema.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Boton_Articulo">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (3).png" alt="Botón Artículo" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (3).png" alt="Opción Artículos en barra de herramientas" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Seleccionamos un artículo y nos aparecera la siguiente ventana
+              Al seleccionar un repuesto del catálogo, DSI-NET ERP desplegará la ventana modal de captura de cantidades:
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Modal_Articulo_Detalle">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (4).png" alt="Ventana de búsqueda de artículo con cantidades" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (4).png" alt="Captura de cantidades para la oferta" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              El concepto que cambia en esta ventana es el siguiente: la cantidad que se esta digitando viene a ser la cantidad de Compra o la cantidad Regalada, dependiendo la etiqueta que le coloques mas adelante.
+              En esta interfaz, la cantidad digitada representará el volumen condicionante de compra o las unidades a bonificar como obsequio, de acuerdo con la clasificación asignada posteriormente.
             </p>
             <p>
-              Una vez se agregan los articulos en la grilla (tener en cuenta que la cantidad registrada debe ser menor o igual al stock) aparecerán de la siguiente forma.
+              Las líneas de repuestos agregadas se listarán en la grilla transaccional, validando que las existencias ingresadas no excedan el saldo físico disponible en almacenes:
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Grilla_Articulos_Agregados">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (5).png" alt="Grilla con artículos agregados" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720 (5).png" alt="Grilla con repuestos incorporados" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
           <!-- DESPLEGABLE TIPO (COMPRA / REGALA) -->
           <div class="doc-subsection" id="sub-tipo-compra-regala">
-            <h3 class="doc-section__subtitle">Desplegable Tipo (Compra / Regala):</h3>
+            <h3 class="doc-section__subtitle">Desplegable Tipo (Compra / Regala)</h3>
             <p>
-              Determina la condición comercial de cada línea dentro de la oferta:
+              Define la regla comercial y tributaria para cada partida de la oferta:
             </p>
             <ul style="padding-left: 20px; line-height: 1.8;">
-              <li><strong>Compra:</strong> Fija el artículo condicionante que el cliente debe pagar obligatoriamente; el valor digitado en Cant define la cantidad mínima necesaria para activar la promoción.</li>
-              <li><strong>Regala:</strong> Fija el artículo que se entrega como bonificación u obsequio sin costo comercial; el valor en Cant indica las unidades otorgadas bajo la condición tributaria de retiro inafecto por bonificación.</li>
+              <li><strong>Compra:</strong> Determina el repuesto condicionante que el cliente adquiere a título oneroso; el valor en Cant establece el volumen mínimo exigido para activar la promoción.</li>
+              <li><strong>Regala:</strong> Determina el repuesto entregado como bonificación comercial sin costo; el valor en Cant fija las unidades otorgadas bajo la condición de retiro inafecto por bonificación ante SUNAT.</li>
             </ul>
             <div class="img-placeholder" data-img-ref="8.3.1_Desplegable_Tipo_Compra_Regala">
               <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 720.png" alt="Desplegable Tipo Compra o Regala" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              El ejemplo es el siguiente: por cada 5 articulos de DEMO-74028 que se vendan a un cliente, el cliente recibirá de regalo 5 articulos de DEMO-74577 y 2 articulos de DEMO-48095.
+              Regla operativa de ejemplo: por cada 5 repuestos del código DEMO-74028 facturados, se otorgará de bonificación al cliente 5 repuestos de DEMO-74577 y 2 repuestos de DEMO-48095.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Ejemplo_Lineas_Oferta">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 721.png" alt="Ejemplo de líneas de compra y regalo configuradas" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 721.png" alt="Configuración de repuestos en modalidad Compra y Regala" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Ahora grabamos y nos tendría que quedar así.
+              Al ejecutar la opción Grabar, la campaña quedará formalmente en estado Grabado en el sistema:
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Oferta_Grabada_Final">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 726.png" alt="Oferta grabada en el sistema" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 726.png" alt="Campaña de Oferta en estado Grabado" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Para poder hacer uso de la oferta en el sistema vamos a la ventana Nota de pedido y buscamos el articulo que lo etiquetamos como Compra (DEMO-48095).
+              Para comprobar la activación del beneficio, acceda al módulo de Preventas y Ventas, cree una Nota de Pedido e inserte el repuesto configurado bajo la condición Compra (DEMO-48095).
             </p>
             <p>
-              Guiarse del punto <em>Módulo de Pre-Ventas y Ventas 8.1</em>
+              <em>Consulte los procedimientos de emisión detallados en la referencia técnica 8.1 Nota de Pedido.</em>
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Seleccion_Articulo_NP">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 727.png" alt="Selección de artículo en Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 727.png" alt="Selección de repuesto condicionante en Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Se observa que se está comprando 5 articulos, ahora damos aceptar y automaticamente en la NP despues de grabar deberian aparecer los articulos de regalo.
+              Al consignar las 5 unidades requeridas y procesar la acción Grabar, DSI-NET ERP insertará de manera automática en la Nota de Pedido las líneas de repuestos bonificados.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Aplicacion_NP_Oferta">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 728.png" alt="Aplicación de la oferta en la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 728.png" alt="Inserción automática de repuestos bonificados en Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
@@ -651,10 +657,10 @@
           <div class="doc-subsection" id="sub-columna-prom">
             <h3 class="doc-section__subtitle">Columna Prom. (Promociones)</h3>
             <p>
-              Como se observa en la columna Prom. las casillas se rellenaron automaticamente solo con los articulos que se están regalando ya que esos articulos pertenecen a una promoción.
+              En la grilla de la Nota de Pedido, las casillas correspondientes a la columna Prom. se activarán automáticamente en las partidas bonificadas, reflejando su vinculación a la regla promocional y su afectación tributaria inafecta.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.1_Columna_Promociones_Activada">
-              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 729.png" alt="Columna Promociones activada en grilla de pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.1_ofertas/image 729.png" alt="Indicador de promoción activo en la grilla transaccional" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
         </section>
@@ -670,14 +676,14 @@
         </a>
         <a class="page-nav__link page-nav__link--next" href="8.3.2_Liquidacion_Articulos.html">
           <span class="page-nav__label">Siguiente</span>
-          <span class="page-nav__title">8.3.2 Liquidación de Artículos</span>
+          <span class="page-nav__title">8.3.2 Liquidación de Repuestos</span>
           <span class="page-nav__sub">Saldos y Merchandising</span>
         </a>
       </nav>
 
       <!-- ============ FOOTER ============ -->
       <footer class="site-footer">
-        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1 Build 4910</p>
         <div class="site-footer__links">
           <a href="#">Políticas de Privacidad</a>
           <a href="#">Términos de Soporte</a>

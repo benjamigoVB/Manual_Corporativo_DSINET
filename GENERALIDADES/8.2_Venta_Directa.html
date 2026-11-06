@@ -357,7 +357,7 @@
       <div class="sidebar__footer">DSI-NET Core v12.1 Build 4910</div>
     </aside>
 
-    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+<!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
     <main class="content">
 
       <div class="content__inner">
@@ -366,7 +366,7 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_Conceptos_Generales.html">8. Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page">8.2 Venta Directa</span>
         </p>
@@ -375,7 +375,7 @@
         <h1 class="content__title">8.2 Venta Directa</h1>
 
         <p class="content__lead">
-          Módulo oficial para la emisión de comprobantes de pago electrónicos (Facturas, Boletas de Venta) a partir de pedidos aprobados o ventas directas. Gestiona la conexión tributaria con el OSE/SUNAT, calendarización de cuotas a crédito y rebaja definitiva de inventario.
+          Módulo oficial de DSI-NET ERP para la emisión de comprobantes de pago electrónicos (Facturas, Boletas de Venta) generados a partir de Notas de Pedido aprobadas o transacciones directas en mostrador.
         </p>
 
         <!-- CALLOUT DE NORMATIVA -->
@@ -384,7 +384,7 @@
           <div>
             <strong>Normativa de Facturación Electrónica y Validez Tributaria:</strong>
             <p style="margin-top: 4px;">
-              Al asentar el Documento de Venta (BC/FC), el sistema genera la trama XML firmada digitalmente hacia el OSE/SUNAT y efectúa la salida definitiva de mercadería en el Kardex valorizado.
+              Al procesar la acción de Grabar en el Documento de Venta (BC/FC), DSI-NET ERP genera la trama XML firmada digitalmente hacia el OSE/SUNAT y asienta la salida definitiva de repuestos en el Kardex valorizado de los almacenes.
             </p>
           </div>
         </div>
@@ -392,16 +392,22 @@
         <!-- ACCESO A FACTURA DE VENTA -->
         <section class="doc-section" id="sec-acceso">
           <h2 class="doc-section__title">Acceso a Factura de Venta</h2>
+          <p class="doc-section__desc">
+            Navegación jerárquica a través del menú principal de DSI-NET ERP:
+          </p>
           <div class="img-placeholder" data-img-ref="8.2_Acceso_Factura_Venta">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 654.png" alt="Acceso a Factura de Venta" style="width: 60%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 654.png" alt="Acceso a Factura de Venta en DSI-NET ERP" style="width: 60%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
         <!-- VISUALIZADOR DE LA PANTALLA NOTA DE PEDIDO / FACTURA DE VENTA -->
         <section class="doc-section" id="sec-visualizador">
-          <h2 class="doc-section__title">Visualizador de la pantalla Documento de Venta</h2>
+          <h2 class="doc-section__title">Visualizador de la Pantalla Documento de Venta</h2>
+          <p class="doc-section__desc">
+            Interfaz de captura fiscal y mostrador que integra la barra de herramientas tributarias, datos del comprobante y grilla de repuestos.
+          </p>
           <div class="img-placeholder" data-img-ref="8.2_Visualizador_Pantalla_Venta">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 655.png" alt="Visualizador de la pantalla Nota de Pedido / Documento de Venta" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 655.png" alt="Visualizador de la pantalla Documento de Venta en DSI-NET ERP" style="width: 100%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
@@ -413,75 +419,75 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>CONTROL / BOTÓN</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO OPERATIVO Y REGLA DE NEGOCIO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Eventos &rsaquo;</td>
+                  <td class="data-table__field">Opción Eventos</td>
                   <td>Menú Desplegable</td>
-                  <td>Consulta</td>
-                  <td>Permite asociar o filtrar el documento de venta con etapas de preventa o despachos.</td>
+                  <td>Habilitado</td>
+                  <td>Permite asociar o filtrar el comprobante con etapas de Preventas y Ventas o derivaciones a despacho.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Artículos / Servicios &rsaquo;</td>
+                  <td class="data-table__field">Opción Artículos / Servicios</td>
                   <td>Búsqueda Asistida</td>
-                  <td>Catálogo</td>
-                  <td>Abre el maestro para agregar manualmente productos del inventario o conceptos intangibles facturables.</td>
+                  <td>Habilitado</td>
+                  <td>Abre el maestro central para incorporar manualmente repuestos del catálogo o servicios facturables.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Series x Artículo &rsaquo;</td>
-                  <td>Modal Asistida</td>
-                  <td>Trazabilidad</td>
-                  <td>Asigna o valida los números de serie de fábrica que se darán de baja con la venta de ítems serializados.</td>
+                  <td class="data-table__field">Opción Series x Repuesto</td>
+                  <td>Ventana Modal</td>
+                  <td>Condicional</td>
+                  <td>Asigna o valida los números de serie de fábrica que se dan de baja con la venta de repuestos serializados.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Imprimir GR &rsaquo;</td>
+                  <td class="data-table__field">Opción Imprimir GR</td>
                   <td>Comando de Salida</td>
-                  <td>Impresión</td>
-                  <td>Emite la Guía de Remisión vinculada al comprobante para amparar el traslado de la mercadería.</td>
+                  <td>Habilitado</td>
+                  <td>Emite la Guía de Remisión vinculada al comprobante para amparar el traslado de repuestos hacia su destino o entrega en campo.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Cuotas &rsaquo;</td>
+                  <td class="data-table__field">Opción Cuotas</td>
                   <td>Ventana Emergente</td>
-                  <td>Financiero</td>
-                  <td>Configura el calendario de vencimientos y fraccionamiento de importes en operaciones al crédito.</td>
+                  <td>Habilitado</td>
+                  <td>Configura el cronograma de vencimientos y fraccionamiento de importes en operaciones pactadas a crédito o letra.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Genera TXT TCI &rsaquo;</td>
+                  <td class="data-table__field">Opción Genera TXT TCI</td>
                   <td>Interfaz Fiscal</td>
-                  <td>Exportación</td>
-                  <td>Genera las tramas de texto plano estructuradas requeridas por el PSE/OSE (TCI) para la firma electrónica.</td>
+                  <td>Habilitado</td>
+                  <td>Genera las tramas de texto plano estructuradas requeridas por el PSE/OSE (TCI) para la firma y timbrado digital.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Historial CPE &rsaquo;</td>
+                  <td class="data-table__field">Opción Historial CPE</td>
                   <td>Auditoría Fiscal</td>
-                  <td>Consulta</td>
-                  <td>Despliega la bitácora de estados de envío a SUNAT (Aceptado, Rechazado, Observado, CDR recibido).</td>
+                  <td>Habilitado</td>
+                  <td>Despliega la bitácora de estados de transmisión electrónica ante SUNAT (Aceptado, Rechazado, Observado y recepción de CDR).</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p style="margin-top: 14px;"><strong>Desplegable Eventos, Botones Artículos y Servicios:</strong> Permite vincular eventos comerciales e incorporar manualmente existencias o conceptos intangibles facturables.</p>
+          <p style="margin-top: 14px;"><strong>Opción Eventos, Opciones Artículos y Servicios:</strong> Permite vincular eventos transaccionales e incorporar manualmente repuestos o conceptos facturables de servicios.</p>
           <div class="img-placeholder" data-img-ref="8.2_Eventos_Articulos_Servicios">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 656.png" alt="Desplegable Eventos, Botones Artículos y Servicios" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 656.png" alt="Opción Eventos y opciones de Repuestos y Servicios" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.2_Eventos_Articulos_Servicios">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 657.png" alt="Desplegable Eventos, Botones Artículos y Servicios" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 657.png" alt="Opción Eventos y opciones de Repuestos y Servicios" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Botones Series x Artículo e Imprimir GR:</strong> Abre la modal de selección de series unitarias de almacén y dispara la impresión de la Guía de Remisión física complementaria.</p>
+          <p><strong>Opciones Series x Articulos e Imprimir GR:</strong> Abre el diálogo para seleccionar series individuales asignadas en almacenes y procesa la impresión física de la Guía de Remisión complementaria.</p>
           <div class="img-placeholder" data-img-ref="8.2_Series_Imprimir_GR">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 658.png" alt="Botones Series x Artículo e Imprimir GR" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 658.png" alt="Opciones Series x Repuesto e Imprimir GR" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Botones Cuotas, Genera TXT TCI e Historial CPE:</strong> Permite fraccionar pagos al crédito en cuotas, generar las tramas planas para el PSE/OSE y consultar la bitácora de CDR de SUNAT.</p>
+          <p><strong>Opciones Cuotas, Genera TXT TCI e Historial CPE:</strong> Permite estructurar cronogramas de amortización, generar archivos de integración para el PSE/OSE y verificar la recepción de constancias de recepción (CDR) emitidas por SUNAT.</p>
           <div class="img-placeholder" data-img-ref="8.2_Cuotas_TXT_Historial">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 659.png" alt="Botones Cuotas, Genera TXT TCI e Historial CPE" style="width: auto; max-width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 659.png" alt="Opciones Cuotas, Genera TXT TCI e Historial CPE" style="width: auto; max-width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
@@ -493,66 +499,66 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>CAMPO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>OBLIGATORIO</th>
-                  <th>DESCRIPCIÓN OPERATIVA Y CONTROL FISCAL</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Pto Vta: / Fecha: &rsaquo;</td>
-                  <td>Desplegable / Fecha</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Sede comercial de emisión (PRINCIPAL) y fecha fiscal del comprobante (29/09/2026).</td>
+                  <td class="data-table__field">Pto Vta / Fecha</td>
+                  <td>Desplegable / Selector Fecha</td>
+                  <td>Obligatorio</td>
+                  <td>Punto de venta emisor ('PRINCIPAL') y fecha de emisión fiscal y contable del comprobante.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Cliente Princ. / Casilla Cliente &rsaquo;</td>
-                  <td>Búsqueda / Casilla</td>
+                  <td class="data-table__field">Cliente Princ. / Casilla Cliente</td>
+                  <td>Búsqueda Asistida / Casilla</td>
                   <td>Condicional</td>
-                  <td>Grupo comercial o matriz del cliente, con casilla para alternar cliente final directo.</td>
+                  <td>Identifica la cuenta corporativa matriz del cliente, con casilla para alternar la razón social final directa.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Cliente: / Direcc Desp &rsaquo;</td>
+                  <td class="data-table__field">Cliente / Direcc Desp</td>
                   <td>Búsqueda Asistida / Texto</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Razón social/RUC del adquiriente y dirección física donde se realiza la entrega.</td>
+                  <td>Obligatorio</td>
+                  <td>Razón social y número tributario del adquirente, junto con la dirección física fijada para la entrega de repuestos.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">G.R. / Cat.Precio: / Nota: &rsaquo;</td>
-                  <td>Check / Texto / Glosa</td>
-                  <td><span class="badge badge--no">No</span></td>
-                  <td>Enlace a guía de remisión, código de tarifa aplicada y glosa de notas comerciales.</td>
+                  <td class="data-table__field">Casilla G.R. / Cat.Precio / Nota</td>
+                  <td>Casilla / Texto / Glosa</td>
+                  <td>Opcional</td>
+                  <td>Vinculación de Guía de Remisión, escala tarifaria aplicada y anotaciones u observaciones comerciales.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Documento / Serie / Nro &rsaquo;</td>
+                  <td class="data-table__field">Documento / Serie / Nro</td>
                   <td>Desplegable / Ayuda [?]</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Tipo de comprobante (BC/FC), serie electrónica (BB01) y correlativo libre con buscador asistido [?].</td>
+                  <td>Obligatorio</td>
+                  <td>Tipo de comprobante electrónico (Factura o Boleta), serie autorizada y número correlativo oficial.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Almacen: / Forma Cobro &rsaquo;</td>
+                  <td class="data-table__field">Almacenes / Forma Cobro</td>
                   <td>Menús Desplegables</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Depósito físico emisor (ALM. PRINCIPAL) y modalidad comercial (CONTADO / CREDITO).</td>
+                  <td>Obligatorio</td>
+                  <td>Almacenes físicos de origen para el descargo de repuestos y modalidad comercial (Contado, Crédito o Letra).</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Vcto / Casilla Anulado &rsaquo;</td>
+                  <td class="data-table__field">Vcto / Casilla Anulado</td>
                   <td>Fecha / Casilla</td>
-                  <td>Sistema / Estado</td>
-                  <td>Vencimiento del pago y casilla de control para dar de baja el comprobante electrónico.</td>
+                  <td>Solo Lectura / Auditoría</td>
+                  <td>Fecha de vencimiento comercial y casilla reservada para registrar la baja formal del comprobante ante SUNAT.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Transportista / Vendedor: &rsaquo;</td>
-                  <td>Desplegable / Numérico</td>
+                  <td class="data-table__field">Transportista / Asesor comercial</td>
+                  <td>Desplegable [...] / Numérico</td>
                   <td>Condicional</td>
-                  <td>Asignación de flota o chofer con botón [...] y código del vendedor responsable (0).</td>
+                  <td>Asignación de chofer o unidad de reparto en campo y código del asesor comercial responsable de la venta.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nota.Ped. / Saldos x Cobrar &rsaquo;</td>
-                  <td>Alfanumérico / Decimales</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Correlativo del pedido de origen vinculado y panel de saldos exigibles del cliente.</td>
+                  <td class="data-table__field">Nota.Ped. / Saldo por cobrar</td>
+                  <td>Alfanumérico / Indicador Numérico</td>
+                  <td>Solo Lectura</td>
+                  <td>Correlativo de la Nota de Pedido de origen vinculada y panel con el saldo por cobrar del cliente.</td>
                 </tr>
               </tbody>
             </table>
@@ -563,43 +569,43 @@
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 660.png" alt="Pto Vta y Fecha" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Cliente Princ., Cliente y Direcc Desp:</strong> Matriz comercial, razón social o nombres con RUC/DNI y dirección de entrega fiscal registrada.</p>
-          <p><em>La casilla cliente permite abrir la ventana de mantenimiento de clientes como en el punto Menú Maestros_Personas_0.3.6.3.1</em></p>
+          <p><strong>Cliente Princ., Cliente y Direcc Desp:</strong> Cuenta matriz comercial, razón social o nombres del cliente con su respectiva identificación y dirección de entrega registrada.</p>
+          <p><em>El control Cliente permite acceder directamente a la ventana de mantenimiento del maestro de clientes de DSI-NET ERP.</em></p>
           <div class="img-placeholder" data-img-ref="8.2_Cliente_DireccDesp">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 661.png" alt="Cliente Princ., Cliente y Direcc Desp" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Casilla G.R., Cat.Precio y Nota:</strong> Control de guía de remisión asociada, categoría tarifaria aplicada y caja de texto libre para observaciones comerciales.</p>
+          <p><strong>Casilla G.R., Cat.Precio y Nota:</strong> Control de vinculación para Guía de Remisión, categoría tarifaria aplicada y campo de texto libre para observaciones comerciales.</p>
           <div class="img-placeholder" data-img-ref="8.2_GR_CatPrecio_Nota">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 662.png" alt="Casilla G.R., Cat.Precio y Nota" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 662.png" alt="Casilla G.R., Cat.Precio y Nota" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
-          <p><em>Al dar clic en la casilla de G.R. se creará automáticamente el código de G.R. para ese documento.</em></p>
+          <p><em>Al activar la casilla G.R., el sistema generará automáticamente la correlación de la Guía de Remisión correspondiente al comprobante.</em></p>
           <div class="img-placeholder" data-img-ref="8.2_GR_CatPrecio_Nota">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 663.png" alt="Casilla G.R., Cat.Precio y Nota" style="width: auto; max-width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 663.png" alt="Casilla G.R., Cat.Precio y Nota" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Documento (BC/FC/PV), Serie, Número [?] y Almacén:</strong> Tipo de comprobante, serie electrónica ('BB01'), correlativo numérico con botón [?] (este botón permitirá dar un vistazo a todos los documentos que se crearon anteriormente) y almacén emisor ('ALM. PRINCIPAL').</p>
+          <p><strong>Documento (BC/FC/PV), Serie, Número [?] y Almacenes:</strong> Tipo de comprobante, serie electrónica oficial, correlativo numérico con opción de ayuda [?] para consultar documentos generados y almacenes designados para el descargo físico de repuestos.</p>
           <div class="img-placeholder" data-img-ref="8.2_Doc_Serie_Numero_Almacen">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 664.png" alt="Documento (BC/FC/PV), Serie, Número [?] y Almacén" style="width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 664.png" alt="Documento (BC/FC/PV), Serie, Número [?] y Almacenes" style="width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.2_FormaCobro_Vcto_Anulado">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 665.png" alt="Forma Cobro, Vcto y Casilla Anulado" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 665.png" alt="Forma Cobro, Vcto y Casilla Anulado" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.2_Transportista_Saldos">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 666.png" alt="Transportista con Selector [...], Vendedor, Nota.Ped. y Saldos x Cobrar" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 666.png" alt="Transportista con Selector [...], Asesor comercial, Nota.Ped. y Saldo por cobrar" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Forma Cobro, Vcto y Casilla Anulado:</strong> Condición de pago ('CONTADO'), fecha de vencimiento y casilla de verificación para anular el comprobante electrónico.</p>
+          <p><strong>Forma Cobro, Vcto y Casilla Anulado:</strong> Condición de pago comercial (Contado, Crédito, Letra), fecha de vencimiento y casilla de control para dar de baja el comprobante electrónico.</p>
           <div class="img-placeholder" data-img-ref="8.2_FormaCobro_Vcto_Anulado">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 667.png" alt="Forma Cobro, Vcto y Casilla Anulado" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 667.png" alt="Forma Cobro, Vcto y Casilla Anulado" style="width: auto; max-width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.2_Transportista_Saldos">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 668.png" alt="Transportista con Selector [...], Vendedor, Nota.Ped. y Saldos x Cobrar" style="width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 668.png" alt="Transportista con Selector [...], Asesor comercial, Nota.Ped. y Saldo por cobrar" style="width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Transportista con Selector [...], Vendedor, Nota.Ped. y Saldos x Cobrar:</strong> Fletero asignado, comisionista, correlativo del pedido jalado y panel de deudas pendientes del cliente.</p>
+          <p><strong>Transportista con Selector [...], Asesor comercial, Nota.Ped. y Saldo por cobrar:</strong> Asignación del transporte para traslados en campo, asesor comercial asignado, código de la Nota de Pedido asociada y visor del saldo por cobrar del cliente.</p>
           <div class="img-placeholder" data-img-ref="8.2_Transportista_Saldos">
-            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 669.png" alt="Transportista con Selector [...], Vendedor, Nota.Ped. y Saldos x Cobrar" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 669.png" alt="Transportista con Selector [...], Asesor comercial, Nota.Ped. y Saldo por cobrar" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
           <div class="img-placeholder" data-img-ref="8.2_Moneda_TC">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 670.png" alt="Moneda y Tipo de Cambio" style="width: auto; max-width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
@@ -614,47 +620,47 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>PARÁMETRO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO TÉCNICO Y CÁLCULO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Mon: / Tc: &rsaquo;</td>
-                  <td>Radios / Decimal</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Selección de divisa (S/. o US$) y tipo de cambio SUNAT oficial del día (3.4400).</td>
+                  <td class="data-table__field">Moneda / Tipo de Cambio</td>
+                  <td>Opciones Radiales / Numérico</td>
+                  <td>Obligatorio</td>
+                  <td>Selección de divisa (S/. o US$) y tipo de cambio oficial del día registrado en DSI-NET ERP.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Gravado / No Gravado &rsaquo;</td>
+                  <td class="data-table__field">Gravado / No Gravado</td>
                   <td>Numéricos Decimales</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Base imponible afecta al 18% del IGV y operaciones inafectas/exoneradas de la factura.</td>
+                  <td>Calculado por Sistema</td>
+                  <td>Base imponible gravada afecta al IGV (18%) y liquidación de operaciones inafectas o exoneradas.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">ISC / I.G.V. &rsaquo;</td>
+                  <td class="data-table__field">ISC / I.G.V.</td>
                   <td>Numéricos Decimales</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Importe acumulado de Impuesto Selectivo al Consumo y valor neto liquidado de IGV (18%).</td>
+                  <td>Calculado por Sistema</td>
+                  <td>Importe correspondiente al Impuesto Selectivo al Consumo y monto liquidado del Impuesto General a las Ventas.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Total: &rsaquo;</td>
+                  <td class="data-table__field">Total</td>
                   <td>Numérico Decimal</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Importe total general a cobrar por el comprobante electrónico emitido.</td>
+                  <td>Calculado por Sistema</td>
+                  <td>Importe total comercial exigible por el comprobante de pago electrónico emitido.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p style="margin-top: 14px;"><strong>Moneda y Tipo de Cambio:</strong> Radio buttons para fijar divisa en Soles ('S/.') o Dólares ('US$') y cotización oficial de cierre ('3.4400').</p>
+          <p style="margin-top: 14px;"><strong>Moneda y Tipo de Cambio:</strong> Opciones radiales para determinar la divisa en Soles ('S/.') o Dólares ('US$') y valor cambiario oficial registrado.</p>
           <div class="img-placeholder" data-img-ref="8.2_Moneda_TC">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 671.png" alt="Moneda y Tipo de Cambio" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Panel de Totales Fiscales (Gravado, No Gravado, ISC, I.G.V. y Total):</strong> Desglose numérico de las bases imponibles, montos inafectos, impuestos liquidados y saldo final del comprobante.</p>
+          <p><strong>Panel de Totales Fiscales (Gravado, No Gravado, ISC, I.G.V. y Total):</strong> Liquidación financiera automática que consolida bases imponibles, conceptos inafectos, recargos tributarios y la sumatoria neta final.</p>
           <div class="img-placeholder" data-img-ref="8.2_Totales_Fiscales">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 672.png" alt="Panel de Totales Fiscales (Gravado, No Gravado, ISC, I.G.V. y Total)" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
@@ -668,54 +674,54 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>ELEMENTO / COLUMNA</th>
-                  <th>TIPO DE DATO</th>
-                  <th>MODO</th>
-                  <th>ACCIÓN OPERATIVA Y CONTROL EN VENTAS</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Codigo / Nom Art &rsaquo;</td>
+                  <td class="data-table__field">Código / Nom Art</td>
                   <td>Alfanumérico / Texto</td>
                   <td>Maestro</td>
-                  <td>Código SKU del artículo en inventario y denominación técnica facturada en el CPE.</td>
+                  <td>Identificador SKU del repuesto en inventario y denominación comercial facturada en el comprobante.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Texto / UM / Marca &rsaquo;</td>
+                  <td class="data-table__field">Texto / UM / Marca</td>
                   <td>Texto Libre / Maestro</td>
                   <td>Descriptivo</td>
-                  <td>Glosa libre por ítem, unidad física fiscal (NIU, ZZ) y marca comercial.</td>
+                  <td>Glosa específica por partida, unidad de medida oficial (ej. NIU) y marca comercial del repuesto.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Stock / Cant &rsaquo;</td>
+                  <td class="data-table__field">Stock / Cant</td>
                   <td>Numéricos Decimales</td>
-                  <td>Consulta / Editable</td>
-                  <td>Existencia disponible en el depósito y cantidad despachada en la venta.</td>
+                  <td>Solo Lectura / Editable</td>
+                  <td>Existencias físicas disponibles en los almacenes seleccionados y cantidad despachada en la transacción.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Venta / Precio / Total &rsaquo;</td>
+                  <td class="data-table__field">Venta / Precio / Total</td>
                   <td>Numéricos Decimales</td>
-                  <td>Tarifario / Sistema</td>
-                  <td>Modalidad de venta, precio unitario pactado e importe total por línea (Cant × Precio).</td>
+                  <td>Calculado por Sistema</td>
+                  <td>Condición de precio, tarifa unitaria pactada e importe total resultante por línea (Cantidad × Precio).</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">1.Insertar / 2.Eliminar &rsaquo;</td>
-                  <td>Botones de Grilla</td>
-                  <td>Disponible</td>
-                  <td>Agrega una fila manual al comprobante o remueve el producto seleccionado.</td>
+                  <td class="data-table__field">Opción Insertar / Opción Eliminar</td>
+                  <td>Comandos de Grilla</td>
+                  <td>Habilitado</td>
+                  <td>Agrega una partida manual de repuesto a la grilla o remueve la línea seleccionada.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Anular / Imprimir &rsaquo;</td>
-                  <td>Botones de Control</td>
-                  <td>Disponible</td>
-                  <td>Genera la comunicación de baja SUNAT o imprime la representación en PDF/Ticket.</td>
+                  <td class="data-table__field">Opción Anular / Opción Imprimir</td>
+                  <td>Acciones de Control</td>
+                  <td>Habilitado</td>
+                  <td>Genera el comunicado de baja ante SUNAT o emite la representación impresa del comprobante en PDF o ticket.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nuevo / Grabar / Cancelar &rsaquo;</td>
-                  <td>Botones de Acción</td>
-                  <td>Transaccional</td>
-                  <td>Prepara un nuevo CPE, graba asumiendo el descargo en Kardex o descarta la ventana.</td>
+                  <td class="data-table__field">Opción Nuevo / Opción Grabar / Opción Cancelar</td>
+                  <td>Acciones Transaccionales</td>
+                  <td>Acción Principal</td>
+                  <td>Prepara un nuevo comprobante, ejecuta la acción Grabar registrando la salida en Kardex o cancela la operación en curso.</td>
                 </tr>
               </tbody>
             </table>
@@ -724,13 +730,13 @@
 
         <!-- PRIMERA FORMA DE ENTRAR A DOCUMENTO DE VENTA -->
         <section class="doc-section" id="sec-forma-1">
-          <h2 class="doc-section__title">Primera forma de entrar a Documento de Venta</h2>
-          <p>Se puede entrar a Documento de Venta de esta forma:</p>
+          <h2 class="doc-section__title">Primera forma de acceso al Documento de Venta</h2>
+          <p>Es posible ingresar directamente al formulario de facturación a través del menú Documentos:</p>
           <div class="img-placeholder" data-img-ref="8.2_Primera_Forma_Menu">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 673.png" alt="Ruta por el menú Documentos a Facturación" style="width: auto; max-width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Y se abrirá la siguiente ventana, sin datos completados.</p>
+          <p>El sistema presentará el formulario en blanco, habilitado para la captura directa de datos de mostrador y selección manual de repuestos.</p>
           <div class="img-placeholder" data-img-ref="8.2_Ventana_Venta_Vacia">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 674.png" alt="Ventana Documento de Venta vacía" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
@@ -738,108 +744,108 @@
 
         <!-- SEGUNDA FORMA DE ENTRAR A DOCUMENTO DE VENTA (RECOMENDADA) -->
         <section class="doc-section" id="sec-forma-2">
-          <h2 class="doc-section__title">Segunda forma de entrar a Documento de Venta (RECOMENDADA)</h2>
-          <p>Para poder entrar a Documento de Venta, tener en cuenta que es obligatorio que en la Nota de Pedido esté señalado <strong>Aprobación Vtas</strong> para poder generar el Documento.</p>
+          <h2 class="doc-section__title">Segunda forma de acceso al Documento de Venta (RECOMENDADA)</h2>
+          <p>Para emitir el comprobante a partir de una Nota de Pedido, es requisito indispensable que el documento cuente con la casilla <strong>Aprobación Vtas.</strong> activada y con estado Grabado.</p>
           <div class="img-placeholder" data-img-ref="8.2_Aprobacion_Ventas_Check">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 675.png" alt="Aprobación Vtas señalada en la Nota de Pedido" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Una vez esté señalado damos clic en el menú desplegable que dice <strong>Eventos</strong> y escogemos la opción <strong>Facturar Pedido</strong>.</p>
+          <p>Con la aprobación confirmada, despliegue el menú <strong>Eventos</strong> y seleccione la opción <strong>Facturar Pedido</strong>.</p>
           <div class="img-placeholder" data-img-ref="8.2_Eventos_Facturar_Pedido">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 676.png" alt="Menú Eventos opción Facturar Pedido" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Nos aparecerá la ventana Documento de Venta junto con los datos de la Nota de Pedido.</p>
+          <p>DSI-NET ERP cargará automáticamente en la pantalla de Documento de Venta la totalidad de las condiciones comerciales, cliente y repuestos consignados en la Nota de Pedido.</p>
           <div class="img-placeholder" data-img-ref="8.2_Ventana_Venta_Con_Datos">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 677.png" alt="Ventana Documento de Venta con datos cargados" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- FUNCIONALIDAD DE LOS BOTONES -->
+        <!-- FUNCIONALIDAD DE LAS OPCIONES SUPERIORES -->
         <section class="doc-section" id="sec-funcionalidad-botones">
-          <h2 class="doc-section__title">Funcionalidad de los botones</h2>
+          <h2 class="doc-section__title">Funcionalidad de las Opciones Superiores</h2>
           <ul style="padding-left: 20px; line-height: 1.8;">
-            <li><strong>Botón Artículos:</strong> se ve en el punto <em>Módulo compras 1.1</em>.</li>
-            <li><strong>Botón Servicios:</strong> se ve en el punto <em>Módulo de Pre Ventas y Ventas 8.1</em>.</li>
-            <li><strong>Botón Series x Artículo:</strong> se ve en el punto <em>Módulo compras 1.2</em>.</li>
+            <li><strong>Opción Artículos:</strong> Permite consultar e incorporar existencias desde el maestro central conforme a las especificaciones del módulo de Compras.</li>
+            <li><strong>Opción Servicios:</strong> Permite seleccionar prestaciones y conceptos auxiliares intangibles según lo detallado en la sección de Preventas y Ventas (referencia 8.1).</li>
+            <li><strong>Opción Series x Repuesto:</strong> Habilita la vinculación de números de serie unitarios para trazabilidad física de almacenes.</li>
           </ul>
         </section>
 
-        <!-- BOTÓN IMPRIMIR GR -->
+        <!-- OPCIÓN IMPRIMIR GR -->
         <section class="doc-section" id="sec-imprimir-gr">
-          <h2 class="doc-section__title">Botón Imprimir GR</h2>
-          <p>Para poder hacer uso del botón Imprimir GR se necesita primero señalar en el formulario de datos la opción de <strong>G.R.</strong>:</p>
+          <h2 class="doc-section__title">Opción Imprimir GR</h2>
+          <p>Para habilitar la emisión física de la Guía de Remisión vinculada, active previamente la casilla <strong>G.R.</strong> en la cabecera del comprobante:</p>
           <div class="img-placeholder" data-img-ref="8.2_Senalar_Opcion_GR">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 678.png" alt="Señalar opción G.R. en cabecera" style="width: auto; max-width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Lo señalamos y los campos que están a su costado se completarán automáticamente.</p>
+          <p>Al marcarla, los campos adyacentes de serie y correlativo logístico se completarán de forma automática por el sistema.</p>
           <div class="img-placeholder" data-img-ref="8.2_Campos_GR_Autocompletados">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 679.png" alt="Campos de G.R. autocompletados" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Para que el botón Imprimir GR funcione correctamente debemos grabar el documento.</p>
-          <p><em>Si no deja grabar es porque se deben completar los campos faltantes, en este caso el campo obligatorio era el número de serie del Documento.</em></p>
+          <p>Para consolidar la emisión y habilitar la opción Imprimir GR, procese la acción Grabar.</p>
+          <p><em>En caso de existir campos mandatorios pendientes (por ejemplo, el número de serie oficial del comprobante), el sistema solicitará completarlos antes de proseguir.</em></p>
           <div class="img-placeholder" data-img-ref="8.2_Completar_Serie_Doc">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 680.png" alt="Completar número de serie del comprobante" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Damos Aceptar y se habrá generado el documento, después nos aparecerá una ventana de <strong>Cobranza</strong>.</p>
+          <p>Al confirmar con la opción Aceptar, el comprobante quedará asentado y DSI-NET ERP desplegará la interfaz de <strong>Cobranza</strong>.</p>
           <div class="img-placeholder" data-img-ref="8.2_Ventana_Cobranza_Generada">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 681.png" alt="Ventana de Cobranza generada" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Tipo de cobranza:</strong> Aparecerá un menú desplegable con las opciones de cobranza.</p>
+          <p><strong>Tipo de cobranza:</strong> Menú desplegable para seleccionar el medio de pago financiero correspondiente.</p>
           <div class="img-placeholder" data-img-ref="8.2_Desplegable_Tipo_Cobranza">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 682.png" alt="Menú desplegable tipo de cobranza" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Nota:</strong> Campo de texto libre.</p>
+          <p><strong>Campo Nota:</strong> Campo de texto libre para detallar observaciones de caja o liquidación bancaria.</p>
           <div class="img-placeholder" data-img-ref="8.2_Importe_Y_Vuelto">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 683.png" alt="Cálculo de importe y vuelto en cobranza" style="width: auto; max-width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Importe:</strong> Digitar la cantidad de dinero que se va a cobrar, el monto se resta automáticamente con el número que aparece en vuelto.</p>
+          <p><strong>Importe:</strong> Consigne la cuantía dineraria percibida; el sistema calcula y exhibe automáticamente el vuelto correspondiente.</p>
           <div class="img-placeholder" data-img-ref="8.2_Importe_Y_Vuelto">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 684.png" alt="Cálculo de importe y vuelto en cobranza" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Una vez se graba la pantalla o se cierra aparecerá automáticamente el documento, en este caso una factura lista para su impresión.</p>
+          <p>Procesada la cobranza, el documento asumirá el estado Grabado y DSI-NET ERP generará la representación visual de la factura o boleta electrónica lista para su impresión.</p>
           <div class="img-placeholder" data-img-ref="8.2_Factura_Lista_Impresion">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 685.png" alt="Factura electrónica lista para impresión" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Si se vuelve a dar clic en Imprimir GR aparecerá esta ventana:</p>
+          <p>Al ejecutar la opción Imprimir GR, se presentará el cuadro de diálogo para la emisión física del documento de traslado:</p>
           <div class="img-placeholder" data-img-ref="8.2_Dialogo_Impresion_GR">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 686.png" alt="Diálogo para imprimir Guía de Remisión" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- GENERAR GR DE OTRA FORMA -->
+        <!-- PROCEDIMIENTO ALTERNATIVO PARA GENERAR GUÍA DE REMISIÓN -->
         <section class="doc-section" id="sec-gr-otra-forma">
-          <h2 class="doc-section__title">Generar GR de otra forma:</h2>
-          <p>Para generar una GR desde la ventana Documento de venta se hace lo siguiente:</p>
-          <p>Primero debemos generar el Documento de Venta, luego la casilla de G.R. debe estar desactivada y al final Grabarlo.</p>
+          <h2 class="doc-section__title">Procedimiento alternativo para generar Guía de Remisión</h2>
+          <p>Para emitir la Guía de Remisión de forma posterior desde el Documento de Venta:</p>
+          <p>Genere el comprobante manteniendo desmarcada la casilla G.R. y proceda a ejecutar la acción Grabar.</p>
           <div class="img-placeholder" data-img-ref="8.2_DocVenta_Sin_GR">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 687.png" alt="Documento de venta con casilla G.R. desactivada" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Una vez se grabó, ya no estará habilitada la casilla de GR ni el botón de Imprimir GR.</p>
+          <p>Una vez que el comprobante queda en estado Grabado, tanto la casilla G.R. como la opción Imprimir GR se deshabilitarán en el formulario principal.</p>
           <div class="img-placeholder" data-img-ref="8.2_Casilla_Boton_GR_Inhabilitados">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 688.png" alt="Casilla y botón de GR inhabilitados tras grabar" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Para generar una GR dar clic en el menú desplegable <strong>Eventos</strong> y aparecerá la opción <strong>1. GR</strong>.</p>
+          <p>Para derivar la Guía de Remisión, acceda al menú superior <strong>Eventos</strong> y elija la opción <strong>1. GR</strong>.</p>
           <div class="img-placeholder" data-img-ref="8.2_Eventos_Opcion_GR">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 689.png" alt="Opción 1. GR dentro de Eventos" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Damos clic en esa opción y nos saldrá la siguiente ventana:</p>
+          <p>DSI-NET ERP abrirá la consola de emisión correspondiente:</p>
           <div class="img-placeholder" data-img-ref="8.2_Ventana_Generacion_GR_Almacen">
             <img src="../Imagenes/Modulo_Ventas/8.2_venta_directa/image 690.png" alt="Ventana de generación de Guía de Remisión" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><em>Esta ventana se ve en el punto Módulo almacén 5.4 donde se generó una GR.</em></p>
+          <p><em>Este procedimiento de despacho se encuentra normado bajo los lineamientos detallados en la documentación técnica del módulo de Almacenes.</em></p>
         </section> 
 
       </div>
@@ -849,7 +855,7 @@
         <a class="page-nav__link page-nav__link--prev" href="8.1.1_Estados_Ciclo_de_vida.html">
           <span class="page-nav__label">Anterior</span>
           <span class="page-nav__title">8.1.1 Estados y Ciclo de Vida</span>
-          <span class="page-nav__sub">Máquina de Estados de la NP</span>
+          <span class="page-nav__sub">Máquina de Estados de la Nota de Pedido</span>
         </a>
         <a class="page-nav__link page-nav__link--next" href="8.3.0_Descuentos_conceptos_generales.html">
           <span class="page-nav__label">Siguiente</span>

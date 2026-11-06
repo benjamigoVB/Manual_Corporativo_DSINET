@@ -366,31 +366,37 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_modu.html">Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">8.3.2 Liquidación de Artículos: Remate de Saldos e Inventario</span>
+          <span aria-current="page">8.3.2 Liquidación de Repuestos: Remate de Saldos e Inventario</span>
         </p>
 
         <!-- TÍTULO PRINCIPAL Y LEAD -->
-        <h1 class="content__title">8.3.2 Liquidación de Artículos: Remate de Saldos e Inventario</h1>
+        <h1 class="content__title">8.3.2 Liquidación de Repuestos: Remate de Saldos e Inventario</h1>
 
         <p class="content__lead">
-          Módulo para la parametrización de campañas de remate y salida acelerada de existencias estancadas o con obsolescencia comercial. Configura precios de liquidación por lote mínimo y abastece de forma directa la opción Merch / Liqui de la Nota de Pedido.
+          Módulo de DSI-NET ERP para la parametrización de campañas de remate y rotación acelerada de existencias estancadas o con obsolescencia comercial en almacenes. Permite configurar precios especiales de liquidación condicionados a un lote mínimo de compra y abastece de forma directa la opción Merch / Liqui en la Nota de Pedido.
         </p>
 
         <!-- ACCESO A LIQUIDACIÓN DE ARTÍCULO -->
         <section class="doc-section" id="sec-acceso">
-          <h2 class="doc-section__title">Acceso a Liquidación de Articulo</h2>
+          <h2 class="doc-section__title">Acceso a Liquidación de Repuestos</h2>
+          <p class="doc-section__desc">
+            Navegación jerárquica a través del menú principal de DSI-NET ERP:
+          </p>
           <div class="img-placeholder" data-img-ref="8.3.2_Acceso_Liquidacion_Articulo">
-            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 732.png" alt="Acceso a Liquidación de Artículo" style="width: 80%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 732.png" alt="Acceso a Liquidación de Repuestos en DSI-NET ERP" style="width: 80%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
         <!-- VISUALIZADOR DE LA PANTALLA LIQUIDACIÓN -->
         <section class="doc-section" id="sec-visualizador">
-          <h2 class="doc-section__title">Visualizador de la pantalla Liquidación</h2>
+          <h2 class="doc-section__title">Visualizador de la Pantalla Liquidación</h2>
+          <p class="doc-section__desc">
+            Consola central de parametrización para la fijación de tarifas de remate, escalas por volumen mínimo y control de existencias en almacenes.
+          </p>
           <div class="img-placeholder" data-img-ref="8.3.2_Visualizador_Pantalla_Liquidacion">
-            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 733.png" alt="Visualizador de la pantalla Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 733.png" alt="Visualizador de la pantalla Liquidación en DSI-NET ERP" style="width: 100%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
@@ -402,196 +408,190 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>CAMPO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>OBLIGATORIO</th>
-                  <th>DESCRIPCIÓN OPERATIVA Y REGLA DE NEGOCIO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Eventos: ›</td>
+                  <td class="data-table__field">Opción Eventos</td>
                   <td>Menú Desplegable</td>
-                  <td>No</td>
-                  <td>Permite vincular la liquidación con campañas de cierre de año, ventas de bodega o temporadas.</td>
+                  <td>Opcional</td>
+                  <td>Permite vincular la liquidación con campañas comerciales de cierre de periodo o ventas especiales de almacenes.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Articulos ›</td>
+                  <td class="data-table__field">Opción Artículos</td>
                   <td>Búsqueda Asistida</td>
-                  <td>Catálogo</td>
-                  <td>Abre la ventana modal del catálogo para seleccionar e insertar productos en la lista.</td>
+                  <td>Habilitado</td>
+                  <td>Abre la ventana modal del catálogo maestro para seleccionar e incorporar repuestos a la lista de liquidación.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Sede (PRINCIPAL) ›</td>
+                  <td class="data-table__field">Sede (PRINCIPAL)</td>
                   <td>Alfanumérico / Texto</td>
-                  <td>Sistema</td>
-                  <td>Depósito o punto de venta donde se aplicará la campaña de liquidación.</td>
+                  <td>Solo Lectura / Asignado</td>
+                  <td>Identifica el punto de venta y los almacenes donde se aplicará la campaña de liquidación.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Liquidación : / [?] ›</td>
+                  <td class="data-table__field">Liquidación / Opción Ayuda [?]</td>
                   <td>Numérico / Ayuda [?]</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Número identificador de la liquidación (-1 al crear) y botón [?] para consultar expedientes guardados.</td>
+                  <td>Obligatorio</td>
+                  <td>Correlativo único de la liquidación (-1 durante el registro inicial) y opción [?] para consultar campañas en estado Grabado.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Fecha: ›</td>
+                  <td class="data-table__field">Fecha</td>
                   <td>Fecha (DD/MM/AAAA)</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Fecha de formulación o registro de la campaña en el ERP.</td>
+                  <td>Obligatorio</td>
+                  <td>Fecha oficial de formulación o registro de la campaña en DSI-NET ERP.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Fecha Inicio / Término ›</td>
+                  <td class="data-table__field">Fecha Inicio / Término</td>
                   <td>Fechas (DD/MM/AAAA)</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Rango de fechas de vigencia comercial; fuera de este intervalo no se aplica el precio liquidación.</td>
+                  <td>Obligatorio</td>
+                  <td>Rango cronológico estricto de vigencia comercial; fuera de este intervalo no se aplicará la tarifa de liquidación.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nombre ›</td>
+                  <td class="data-table__field">Nombre</td>
                   <td>Texto Libre</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Denominación comercial o nombre identificador del remate (ej. Liquidación Saldos Fin de Temporada).</td>
+                  <td>Obligatorio</td>
+                  <td>Denominación comercial o nombre identificador del expediente de remate (ej. Venta de Saldos Anuales).</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p style="margin-top: 14px;"><strong>Botón Artículos:</strong> Botón 'Artículos' para abrir el catálogo e insertar existencias en la grilla.</p>
+          <p style="margin-top: 14px;"><strong>Opción Artículos:</strong> Comando para desplegar el catálogo central e incorporar partidas de repuestos a la grilla de liquidación.</p>
           <div class="img-placeholder" data-img-ref="8.3.2_Boton_Articulos">
-            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 734.png" alt="Botón Artículos" style="width: auto; max-width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 734.png" alt="Opción Artículos" style="width: auto; max-width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Liquidación con Botón de Ayuda (?) y Sede:</strong> Correlativo identificador de la campaña (inicia en -1), sede comercial ('PRINCIPAL') y botón (?) para consultar liquidaciones registradas.</p>
+          <p><strong>Campo Liquidación con Opción de Ayuda [?] y Sede:</strong> Correlativo identificador de la campaña (inicia en -1), sede operativa emisora ('PRINCIPAL') y opción de consulta [?] para cargar liquidaciones registradas.</p>
           <div class="img-placeholder" data-img-ref="8.3.2_Campo_Liquidacion_Sede">
-            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 735.png" alt="Campo Liquidación con Botón de Ayuda (?) y Sede" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 735.png" alt="Campo Liquidación con Opción de Ayuda [?] y Sede" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Fecha, Fecha Inicio y Fecha Termino:</strong> Rango cronológico oficial (DD/MM/AAAA) que delimita el período en el cual las tarifas de remate son válidas para venta.</p>
+          <p><strong>Campos Fecha, Fecha Inicio y Fecha Término:</strong> Rango cronológico oficial (DD/MM/AAAA) que delimita el periodo en el cual las tarifas de remate son exigibles en la venta.</p>
           <div class="img-placeholder" data-img-ref="8.3.2_Fechas_Vigencia_Liquidacion">
-            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 736.png" alt="Campo Fecha, Fecha Inicio y Fecha Término" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+            <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 736.png" alt="Campos Fecha, Fecha Inicio y Fecha Término" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p><strong>Campo Nombre:</strong> Glosa alfanumérica amplia para ingresar el título o descripción de la campaña de remate (ej. Venta de Saldos Anuales).</p>
+          <p><strong>Campo Nombre:</strong> Glosa descriptiva amplia para ingresar el título identificador de la campaña de remate (ej. Venta de Saldos Anuales).</p>
           <div class="img-placeholder" data-img-ref="8.3.2_Campo_Nombre">
             <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 737.png" alt="Campo Nombre" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- 2. GRILLA DE ARTÍCULOS EN OFERTA Y BOTONERA TRANSACCIONAL -->
+        <!-- 2. GRILLA DE REPUESTOS EN LIQUIDACIÓN Y BARRA TRANSACCIONAL -->
         <section class="doc-section" id="sec-2">
-          <h2 class="doc-section__title">2. Grilla de Artículos en Oferta y Botonera Transaccional</h2>
+          <h2 class="doc-section__title">2. Grilla de Repuestos en Liquidación y Barra Transaccional</h2>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>ELEMENTO / COLUMNA</th>
-                  <th>TIPO DE DATO</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO TÉCNICO Y ACCIÓN OPERATIVA</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Tipo ›</td>
-                  <td>Desplegable</td>
-                  <td>Maestro</td>
-                  <td>Clasificación o naturaleza del artículo que puede ser artículo de venta o de regalo.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Codigo / Nom Art ›</td>
+                  <td class="data-table__field">Código / Nom Art</td>
                   <td>Alfanumérico / Texto</td>
                   <td>Maestro</td>
-                  <td>Código SKU oficial y denominación técnica del producto dentro del catálogo.</td>
+                  <td>Código SKU oficial y denominación técnica del repuesto en el catálogo.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">UM / Stock ›</td>
-                  <td>Texto / Decimal</td>
-                  <td>Consulta</td>
-                  <td>Unidad física de venta y saldo disponible actual en el almacén.</td>
+                  <td class="data-table__field">UM / Stock</td>
+                  <td>Texto / Numérico Decimal</td>
+                  <td>Solo Lectura</td>
+                  <td>Unidad de medida oficial y existencias físicas disponibles actuales en almacenes.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Cant ›</td>
+                  <td class="data-table__field">Precio Liquid</td>
                   <td>Numérico Decimal</td>
                   <td>Editable</td>
-                  <td>Cupo o cantidad máxima de unidades asignadas para ser vendidas bajo esta tarifa.</td>
+                  <td>Tarifa especial unitaria de remate asignada a la partida de repuesto.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Modificado / Ult. Mod. ›</td>
-                  <td>Auditoría / Fecha</td>
-                  <td>Sistema</td>
-                  <td>Indicador de edición de línea y marca de tiempo del último ajuste.</td>
+                  <td class="data-table__field">Cant Mínima</td>
+                  <td>Numérico Decimal</td>
+                  <td>Editable</td>
+                  <td>Volumen mínimo obligatorio de repuestos que el cliente debe solicitar para acceder al precio de liquidación.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Insertar / Eliminar ›</td>
-                  <td>Botones de Grilla</td>
-                  <td>Disponible</td>
-                  <td>Agrega una fila vacía en la cuadrícula o retira el artículo seleccionado.</td>
+                  <td class="data-table__field">Opción Insertar / Opción Eliminar</td>
+                  <td>Comandos de Grilla</td>
+                  <td>Habilitado</td>
+                  <td>Agrega una fila vacía a la cuadrícula o retira el repuesto seleccionado.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Imprimir / Anular ›</td>
-                  <td>Botones de Control</td>
-                  <td>Disponible</td>
-                  <td>Emite la lista física de productos en oferta o cancela la vigencia de la campaña.</td>
+                  <td class="data-table__field">Opción Imprimir / Opción Anular</td>
+                  <td>Acciones de Control</td>
+                  <td>Habilitado</td>
+                  <td>Emite el reporte de repuestos en liquidación o cancela administrativamente la vigencia de la campaña.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Nuevo / Grabar / Cancelar ›</td>
-                  <td>Botones de Acción</td>
-                  <td>Transaccional</td>
-                  <td>Blanquea el formulario, guarda y activa la oferta, o cancela cambios.</td>
+                  <td class="data-table__field">Opción Nuevo / Opción Grabar / Opción Cancelar</td>
+                  <td>Acciones Transaccionales</td>
+                  <td>Acción Principal</td>
+                  <td>Limpia el formulario, ejecuta la acción Grabar dejando la campaña en estado Grabado o descarta los cambios en curso.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p style="margin-top: 14px;">
-            El proceso es similar al anterior (Módulo de Pre-Ventas y Ventas 8.3.1), rellenamos los datos y luego añadimos articulos.
+            El procedimiento mantiene la consistencia operativa del módulo de Preventas y Ventas: se completan los parámetros de cabecera y posteriormente se incorporan los repuestos a la lista:
           </p>
           <div class="img-placeholder" data-img-ref="8.3.2_Formulario_Datos_Liquidacion">
             <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 738.png" alt="Formulario con datos de liquidación" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- FUNCIONALIDAD DE LOS BOTONES -->
+        <!-- FUNCIONALIDAD DE LAS OPCIONES OPERATIVAS -->
         <section class="doc-section" id="sec-funcionalidad-botones">
-          <h2 class="doc-section__title">Funcionalidad de los botones</h2>
+          <h2 class="doc-section__title">Funcionalidad de las Opciones Operativas</h2>
 
-          <!-- BOTÓN ARTÍCULO -->
+          <!-- Opción Artículos -->
           <div class="doc-subsection" id="sub-boton-articulo">
-            <h3 class="doc-section__subtitle">Botón Articulo:</h3>
+            <h3 class="doc-section__subtitle">Opción Artículos</h3>
             <p>
-              El botón Articulo tiene un manejo parecido al punto anterior (Módulo de Pre-Ventas y Ventas 8.3.1) añadimos los articulos y nos deben aparecere en la grilla.
+              La Opción Artículos permite seleccionar las partidas desde el maestro de inventarios; una vez confirmados, los repuestos quedarán listados en la grilla transaccional:
             </p>
             <div class="img-placeholder" data-img-ref="8.3.2_Grilla_Articulos_Liquidacion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 739.png" alt="Grilla de artículos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 739.png" alt="Grilla de repuestos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Como se observa las columnas <strong>Precio Liquid</strong> y <strong>Cant Minima</strong> son editables en caso se necesita hacer alguna modificación, terminado ese paso grabamos.
+              Las columnas <strong>Precio Liquid</strong> y <strong>Cant Minima</strong> son editables para establecer el valor unitario de salida y el volumen condicionante de compra; concluida la parametrización, se procesa la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.2_Nota_Pedido_Liquidacion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 740.png" alt="Nota de Pedido con artículos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 740.png" alt="Nota de Pedido con repuestos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego vamos a la ventana de Nota de Pedido (guiarse del punto <em>Módulo de Pre-Ventas y Ventas 8.1</em>) y añadimos los articulos que seleccionamos en liquidación, de esta forma veremos un ejemplo de liquidacion en el sistema.
+              Posteriormente, acceda a la ventana de Nota de Pedido (siguiendo las directrices técnicas del punto 8.1) e incorpore los repuestos asignados en la campaña de liquidación para comprobar la activación del beneficio tarifario en el sistema.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.2_Nota_Pedido_Liquidacion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 741.png" alt="Nota de Pedido con artículos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 741.png" alt="Nota de Pedido con repuestos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Los artículos se añaden con el botón Artículos como en el paso anterior (punto <em>Módulo de Pre-Ventas y Ventas 8.3.1</em>).
+              Los repuestos se seleccionan mediante la Opción Artículos disponible en la cabecera del documento comercial.
             </p>
             <p>
-              Para poder recibir articulos en liquidacion es necesario que se compre como minimo la cantidad que se digitó en en la ventana de Liquidacion.
+              Para acceder a la tarifa de remate en la Nota de Pedido, es requisito mandatorio solicitar una cantidad igual o superior al volumen consignado en el parámetro Cant Mínima de la liquidación.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.2_Nota_Pedido_Liquidacion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 742.png" alt="Nota de Pedido con artículos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 742.png" alt="Nota de Pedido con repuestos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <div class="img-placeholder" data-img-ref="8.3.2_Nota_Pedido_Liquidacion">
-              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 743.png" alt="Nota de Pedido con artículos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 743.png" alt="Nota de Pedido con repuestos en Liquidación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
 
             <p>
-              Para ver la Liquidación grabamos y automaticamente el sistema arrojará el monto correspondiente.
+              Al ejecutar la acción Grabar, DSI-NET ERP procesa la transacción dejando el documento en estado Grabado y liquida automáticamente los importes netos y bases imponibles correspondientes.
             </p>
             <div class="img-placeholder" data-img-ref="8.3.2_Resultado_Liquidacion_Grabada">
               <img src="../Imagenes/Modulo_Ventas/8.3.2_liquidacion/image 744.png" alt="Resultado de liquidación con monto correspondiente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
@@ -617,7 +617,7 @@
 
       <!-- ============ FOOTER ============ -->
       <footer class="site-footer">
-        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1 Build 4910</p>
         <div class="site-footer__links">
           <a href="#">Políticas de Privacidad</a>
           <a href="#">Términos de Soporte</a>

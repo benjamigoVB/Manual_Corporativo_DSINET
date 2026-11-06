@@ -357,7 +357,7 @@
       <div class="sidebar__footer">DSI-NET Core v12.1</div>
     </aside>
 
-    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+   <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
     <main class="content">
 
       <div class="content__inner">
@@ -366,7 +366,7 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_Conceptos_Generales.html">8. Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page">8.3 Descuentos: Arquitectura y Políticas Comerciales</span>
         </p>
@@ -375,14 +375,14 @@
         <h1 class="content__title">8.3 Descuentos: Arquitectura y Políticas Comerciales</h1>
 
         <p class="content__lead">
-          Marco de referencia para la gestión estratégica de precios y beneficios comerciales en DSI-NET ERP. Centraliza las reglas de aplicación para campañas promocionales, venta de saldos por liquidación de existencias y bonificaciones en especie, garantizando la preservación de los márgenes y la consistencia impositiva ante SUNAT.
+          Marco de referencia técnico para la gestión estratégica de precios y beneficios comerciales en DSI-NET ERP. Centraliza las reglas de aplicación para campañas de oferta, liquidación de repuestos y promociones focalizadas, garantizando la preservación de márgenes operativos, la validación física en almacenes y la consistencia impositiva ante SUNAT.
         </p>
 
         <!-- FLUJO DE EVALUACIÓN DE DESCUENTOS EN LA VENTA -->
         <section class="doc-section" id="sec-flujo-evaluacion">
-          <h2 class="doc-section__title">Flujo de Evaluación de Descuentos en la Venta</h2>
+          <h2 class="doc-section__title">Flujo de Evaluación de Descuentos en Preventas y Ventas</h2>
           <p class="doc-section__desc">
-            Cada vez que se ingresa una línea en la Nota de Pedido o Documento de Venta, el motor comercial procesa en milisegundos la siguiente secuencia: (1) Valida si el ítem pertenece a Liquidación de Artículos, (2) Comprueba si califica para una Oferta vigente por fecha/volumen, (3) Evalúa si el cliente tiene un porcentaje contractual asignado en su ficha, y (4) Verifica el cumplimiento de bonificaciones de catálogo (Promociones).
+            Al incorporar una línea de detalle en la Nota de Pedido o en el Documento de Venta, DSI-NET ERP ejecuta en tiempo real la siguiente secuencia de negocio: (1) Valida si el repuesto se encuentra catalogado bajo Liquidación de Repuestos, (2) Comprueba la vigencia de una Campaña de Oferta por rango de fechas o volumen, (3) Evalúa si la cuenta del cliente mantiene un porcentaje contractual preferencial, y (4) Verifica el cumplimiento de bonificaciones e incentivos de catálogo (Promociones Focalizadas).
           </p>
         </section>
 
@@ -390,29 +390,29 @@
         <section class="doc-section" id="sec-1">
           <h2 class="doc-section__title">1. Clasificación de Modalidades de Descuento</h2>
           <p class="doc-section__desc">
-            El sistema organiza las flexibilizaciones comerciales en tres módulos especializados accesibles desde el menú operativo:
+            DSI-NET ERP organiza las políticas comerciales en tres submódulos especializados accesibles desde la barra operativa:
           </p>
 
           <!-- TARJETAS DE MODALIDADES -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 16px 0 24px 0;">
             <div style="background: var(--color-surface, #fff); border: 1px solid var(--color-border, #e2e8f0); border-radius: 8px; padding: 16px;">
-              <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary, #0f172a);">8.3.1 Ofertas Comerciales</h3>
+              <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary, #0f172a);">8.3.1 Campaña de Oferta</h3>
               <p style="font-size: 13px; line-height: 1.5; color: var(--color-text-muted, #475569); margin: 0;">
-                Campañas de rebaja directa temporales sobre precios de lista. Aplican a productos específicos o categorías enteras durante un intervalo de tiempo definido.
+                Tarifas promocionales directas de vigencia temporal. Aplican a repuestos específicos o líneas completas durante un rango cronológico predeterminado.
               </p>
             </div>
 
             <div style="background: var(--color-surface, #fff); border: 1px solid var(--color-border, #e2e8f0); border-radius: 8px; padding: 16px;">
-              <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary, #0f172a);">8.3.2 Liquidación de Artículos</h3>
+              <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary, #0f172a);">8.3.2 Liquidación de Repuestos</h3>
               <p style="font-size: 13px; line-height: 1.5; color: var(--color-text-muted, #475569); margin: 0;">
-                Mecanismo de evacuación rápida de existencias de baja rotación o descontinuadas. Opera con tarifas de costo y se activa vía botón 'Merch / Liqui'.
+                Mecanismo de rotación acelerada para existencias de baja rotación en almacenes. Opera con precios especiales fijados y se gestiona mediante la opción 'Merch / Liqui'.
               </p>
             </div>
 
             <div style="background: var(--color-surface, #fff); border: 1px solid var(--color-border, #e2e8f0); border-radius: 8px; padding: 16px;">
-              <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary, #0f172a);">8.3.3 Promociones</h3>
+              <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary, #0f172a);">8.3.3 Promociones Focalizadas</h3>
               <p style="font-size: 13px; line-height: 1.5; color: var(--color-text-muted, #475569); margin: 0;">
-                Reglas de compensación por volumen (2x1, 3x2 o regalo de unidades). Registra la salida física con afectación tributaria inafecta por retiro justificado.
+                Reglas de incentivo y bonificación en especie por escala o volumen. Asienta la salida de repuestos en almacenes bajo tratamiento inafecto por retiro justificado.
               </p>
             </div>
           </div>
@@ -422,30 +422,30 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>MODALIDAD COMERCIAL</th>
-                  <th>CÓDIGO</th>
-                  <th>DISPARADOR OPERATIVO</th>
-                  <th>PROPÓSITO Y ALCANCE ESTRATÉGICO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Oferta &rsaquo;</td>
-                  <td>8.3.1</td>
-                  <td>Selección de ítem en pedido</td>
-                  <td>Rebajas directas porcentuales o de importe fijo sobre la tarifa de lista por cliente, volumen o vigencia.</td>
+                  <td class="data-table__field">Campaña de Oferta</td>
+                  <td>Parámetro Comercial</td>
+                  <td>Habilitado</td>
+                  <td>Aplica rebajas directas porcentuales o importes fijos sobre la tarifa de lista por cliente, volumen pactado o vigencia temporal en la Nota de Pedido.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Liquidación de artículos &rsaquo;</td>
-                  <td>8.3.2</td>
-                  <td>Botón Merch / Liqui</td>
-                  <td>Precios especiales de remate para acelerar la rotación de mercadería obsoleta o saldos de inventario.</td>
+                  <td class="data-table__field">Opción Merch / Liqui</td>
+                  <td>Catálogo / Filtro</td>
+                  <td>Habilitado</td>
+                  <td>Filtra precios especiales de remate para acelerar la rotación de existencias estancadas o saldos de inventario en almacenes.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Promoción &rsaquo;</td>
-                  <td>8.3.3</td>
-                  <td>Cumplimiento de metas/reglas</td>
-                  <td>Entrega de unidades adicionales en especie (muestras o bonificaciones) bajo afectación inafecta.</td>
+                  <td class="data-table__field">Promociones Focalizadas</td>
+                  <td>Regla de Bonificación</td>
+                  <td>Habilitado</td>
+                  <td>Entrega repuestos adicionales en especie amparados bajo afectación tributaria inafecta por bonificación comercial oficial.</td>
                 </tr>
               </tbody>
             </table>
@@ -456,7 +456,7 @@
         <section class="doc-section" id="sec-2">
           <h2 class="doc-section__title">2. Matriz de Jerarquía y Precedencia en Ventas</h2>
           <p class="doc-section__desc">
-            Para evitar la acumulación no autorizada de beneficios que comprometa la rentabilidad operativa, DSI-NET implementa un esquema estricto de precedencia:
+            Para impedir la superposición no autorizada de beneficios comerciales y resguardar el margen financiero, DSI-NET ERP implementa el siguiente esquema de precedencia:
           </p>
 
           <div class="table-wrap">
@@ -472,21 +472,21 @@
               <tbody>
                 <tr>
                   <td class="data-table__field">Prioridad 1 (Máxima) &rsaquo;</td>
-                  <td>Liquidación de Artículos</td>
-                  <td>Inhabilita cualquier descuento o bonificación adicional sobre el ítem rematado.</td>
-                  <td>Venta onerosa gravada con margen comercial mínimo.</td>
+                  <td>Liquidación de Repuestos</td>
+                  <td>Inhabilita cualquier descuento o bonificación complementaria sobre el repuesto liquidado.</td>
+                  <td>Operación onerosa gravada con margen comercial restringido.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Prioridad 2 (Media) &rsaquo;</td>
-                  <td>Oferta Temporal</td>
-                  <td>Prevalece sobre el descuento estándar asignado a la categoría del cliente.</td>
-                  <td>Descuento que rebaja directamente la base imponible del comprobante.</td>
+                  <td>Campaña de Oferta</td>
+                  <td>Prevalece sobre el descuento contractual estándar asignado a la categoría del cliente.</td>
+                  <td>Descuento comercial que deduce de forma directa la base imponible del comprobante.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Prioridad 3 (Base) &rsaquo;</td>
-                  <td>Promoción por Volumen</td>
-                  <td>Se liquida sobre el remanente de ítems tras aplicar ofertas directas.</td>
-                  <td>Inafecto Retiro por Bonificación (no incrementa el total a pagar).</td>
+                  <td>Promociones Focalizadas</td>
+                  <td>Se liquida sobre las partidas remanentes tras aplicar ofertas directas a demanda.</td>
+                  <td>Inafecto - Retiro por Bonificación (no incrementa el saldo por cobrar del cliente).</td>
                 </tr>
               </tbody>
             </table>
@@ -497,43 +497,43 @@
         <section class="doc-section" id="sec-3">
           <h2 class="doc-section__title">3. Parámetros de Seguridad y Controles Operativos</h2>
           <p class="doc-section__desc">
-            Controles automáticos aplicados en los puntos de venta y cotización para prevenir fugas de margen:
+            Disposiciones de seguridad transaccional implementadas en la formulación de la Nota de Pedido y en mostrador para asegurar la rentabilidad:
           </p>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>PARÁMETRO DE CONTROL</th>
-                  <th>TIPO DE REGLA</th>
-                  <th>MODO</th>
-                  <th>COMPORTAMIENTO Y CONTROL OPERATIVO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="data-table__field">Tope Máximo por Categoría &rsaquo;</td>
-                  <td>Porcentual</td>
-                  <td>Restrictivo</td>
-                  <td>Límite infranqueable configurado en la categoría de precio (% Máximo Dscto).</td>
+                  <td class="data-table__field">Tope Máximo por Categoría</td>
+                  <td>Restricción Paramétrica</td>
+                  <td>Obligatorio</td>
+                  <td>Límite infranqueable configurado en la lista tarifaria (% Máximo de Descuento por repuesto).</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Aprobación de Precios &rsaquo;</td>
-                  <td>Casilla / Permiso</td>
-                  <td>Supervisor</td>
-                  <td>Requiere activación de la casilla 'Aprobación de Precios' en el pedido si se supera el tope.</td>
+                  <td class="data-table__field">Opción Aprobación de Precios</td>
+                  <td>Casilla de Verificación</td>
+                  <td>Auditoría / Supervisor</td>
+                  <td>Requiere visación jerárquica cuando el asesor comercial aplica un descuento superior al tope permitido o cercano al costo de reposición.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Vigencia Cronológica &rsaquo;</td>
+                  <td class="data-table__field">Vigencia Cronológica</td>
                   <td>Rango de Fechas</td>
                   <td>Automático</td>
-                  <td>Activa o caduca el beneficio tarifario de forma desatendida al cumplirse el plazo.</td>
+                  <td>Activa o inhabilita el beneficio tarifario de forma desatendida al cumplirse el plazo establecido en la campaña.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Stock Mínimo Afecto &rsaquo;</td>
+                  <td class="data-table__field">Existencias Mínimas en Almacenes</td>
                   <td>Umbral Físico</td>
-                  <td>Inventario</td>
-                  <td>Suspende automáticamente la oferta si el stock real se aproxima al stock mínimo de seguridad.</td>
+                  <td>Control de Inventario</td>
+                  <td>Suspende la aplicación de ofertas si el saldo físico de repuestos en almacenes alcanza el umbral mínimo de seguridad.</td>
                 </tr>
               </tbody>
             </table>
@@ -544,10 +544,10 @@
 
       <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
       <nav class="page-nav" aria-label="Navegación entre páginas">
-        <a class="page-nav__link page-nav__link--prev" href="8.2_Venta_Directa_Facturacion.html">
+        <a class="page-nav__link page-nav__link--prev" href="8.2_Venta_Directa.html">
           <span class="page-nav__label">Anterior</span>
           <span class="page-nav__title">8.2 Venta Directa y Facturación</span>
-          <span class="page-nav__sub">Comprobantes de Venta</span>
+          <span class="page-nav__sub">Comprobantes de Pago Electrónicos</span>
         </a>
         <a class="page-nav__link page-nav__link--next" href="8.3.1_Campana_Oferta.html">
           <span class="page-nav__label">Siguiente</span>
@@ -558,7 +558,7 @@
 
       <!-- ============ FOOTER ============ -->
       <footer class="site-footer">
-        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
+        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1 Build 4910</p>
         <div class="site-footer__links">
           <a href="#">Políticas de Privacidad</a>
           <a href="#">Términos de Soporte</a>

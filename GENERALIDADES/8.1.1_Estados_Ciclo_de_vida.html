@@ -372,7 +372,7 @@
         <p class="breadcrumb">
           <a href="#">DSI-NET Docs</a>
           <span aria-hidden="true">/</span>
-          <a href="8.0_Conceptos_Generales.html">8. Módulo de Pre-Ventas y Ventas</a>
+          <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page">8.1.1 Estados y Ciclo de Vida de la Nota de Pedido</span>
         </p>
@@ -381,14 +381,14 @@
         <h1 class="content__title">8.1.1 Estados y Ciclo de Vida de la Nota de Pedido</h1>
 
         <p class="content__lead">
-          Referencia técnica del ciclo de vida operativo de los pedidos comerciales en DSI-NET. Detalla la máquina de 11 estados que gobierna la orden de venta desde su creación inicial hasta su facturación y liquidación definitiva, estableciendo permisos de modificación, reserva de inventario en Kardex y validaciones crediticias.
+          Referencia técnica del ciclo de vida operativo de las Notas de Pedido en DSI-NET ERP. Detalla la máquina de 11 estados que gobierna la Nota de Pedido desde su formulación inicial hasta su facturación y liquidación definitiva, estableciendo permisos de edición, reserva de existencias en almacenes y validaciones de límite de crédito y saldo por cobrar.
         </p>
 
         <!-- SECCIÓN 1: MATRIZ TÉCNICA DE ESTADOS DEL PEDIDO -->
         <section class="doc-section" id="sec-matriz-estados">
-          <h2 class="doc-section__title">1. Matriz Técnica de Estados del Pedido</h2>
+          <h2 class="doc-section__title">1. Matriz Técnica de Estados de la Nota de Pedido</h2>
           <p class="doc-section__desc">
-            Definición normativa de los 11 estados del sistema, especificando el comportamiento del motor transaccional ante cada cambio de condición:
+            Definición normativa de los 11 estados en DSI-NET ERP, especificando el comportamiento del motor transaccional ante cada cambio de condición operativa:
           </p>
 
           <div class="table-wrap">
@@ -398,7 +398,7 @@
                   <th>CÓDIGO</th>
                   <th>ESTADO TÉCNICO</th>
                   <th>ETAPA OPERATIVA</th>
-                  <th>CONDICIÓN Y REGLA DE NEGOCIO EN EL ERP</th>
+                  <th>CONDICIÓN Y REGLA DE NEGOCIO EN DSI-NET ERP</th>
                 </tr>
               </thead>
               <tbody>
@@ -406,67 +406,67 @@
                   <td class="data-table__field">00 &rsaquo;</td>
                   <td>Nuevo</td>
                   <td>Creación</td>
-                  <td>Pedido recién formulado; edición completa de artículos, cantidades, tarifas y almacén permitida.</td>
+                  <td>Nota de Pedido recién formulada; edición completa de repuestos, cantidades, tarifas y almacenes permitida. Precios no congelados y sin compromiso definitivo de existencias en almacenes.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">01 &rsaquo;</td>
                   <td>Modif (Modificado)</td>
                   <td>Edición</td>
-                  <td>Pedido persistido que ha sufrido correcciones en ítems o condiciones antes de su aprobación.</td>
+                  <td>Nota de Pedido con estado Grabado que ha registrado correcciones en repuestos o condiciones comerciales antes de su aprobación definitiva.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">02 &rsaquo;</td>
                   <td>Abier (Abierto)</td>
                   <td>Comercial</td>
-                  <td>Pedido formalmente abierto y vigente, pendiente de validación de crédito o confirmación del cliente.</td>
+                  <td>Nota de Pedido formalmente abierta y vigente tras reapertura operativa, pendiente de validación de límite de crédito o confirmación del cliente.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">03 &rsaquo;</td>
                   <td>Apr.Vta (Aprobación Ventas)</td>
                   <td>Aprobación</td>
-                  <td>Pedido visado comercialmente; bloquea la edición directa de precios y confirma la reserva de stock.</td>
+                  <td>Nota de Pedido visada comercialmente; congela precios de repuestos, restringe la edición directa y confirma la reserva preventiva de existencias en almacenes.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">04 &rsaquo;</td>
                   <td>Liqu.Parc (Liquidación Parcial)</td>
                   <td>Cuentas / Caja</td>
-                  <td>Registra amortizaciones o cancelaciones parciales de cobro sobre el importe global de la nota.</td>
+                  <td>Registra amortizaciones parciales de saldo por cobrar o la liberación selectiva de existencias de repuestos comprometidos.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">05 &rsaquo;</td>
                   <td>Fact.Parc (Facturado Parcial)</td>
                   <td>Facturación</td>
-                  <td>Comprobantes electrónicos (Factura/Boleta) emitidos amparando solo una porción de las cantidades.</td>
+                  <td>Comprobantes electrónicos (Factura/Boleta) emitidos amparando únicamente una porción de las cantidades de repuestos solicitadas.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">06 &rsaquo;</td>
                   <td>Liqu.Total (Liquidación Total)</td>
                   <td>Cuentas / Caja</td>
-                  <td>El importe monetario completo del pedido ha sido cancelado o acreditado contablemente.</td>
+                  <td>El saldo por cobrar total de la Nota de Pedido ha sido cancelado o se ha efectuado la liberación íntegra de existencias en almacenes.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">07 &rsaquo;</td>
                   <td>Fact.Total (Facturado Total)</td>
                   <td>Facturación</td>
-                  <td>El 100% de los artículos y volúmenes solicitados se encuentran transformados en CPE definitivos.</td>
+                  <td>El 100% de los repuestos y cantidades requeridas se encuentran vinculados a comprobantes de pago electrónicos definitivos.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">08 &rsaquo;</td>
                   <td>Cerrado</td>
                   <td>Finalizado</td>
-                  <td>Ciclo comercial y logístico completado; no admite nuevos despachos ni modificaciones.</td>
+                  <td>Ciclo comercial y logístico completado; no admite nuevos despachos desde almacenes ni modificaciones documentales.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">09 &rsaquo;</td>
                   <td>Apr.Desp (Aprobación Despacho)</td>
-                  <td>Almacén</td>
-                  <td>Autorización para que el depósito físico inicie el picking y reserve físicamente los bultos.</td>
+                  <td>Almacenes</td>
+                  <td>Autorización operativa para que los almacenes inicien las tareas de preparación física (picking) y segregación de bultos.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">10 &rsaquo;</td>
                   <td>Reg.Bult (Registro de Bultos)</td>
                   <td>Embalaje</td>
-                  <td>Registro técnico de bultos, pesaje y cubicaje concluido para entrega a flota o agencia.</td>
+                  <td>Control técnico de bultos, cubicaje y pesaje concluido para entrega al transporte en campo o agencia externa.</td>
                 </tr>
               </tbody>
             </table>
@@ -476,388 +476,388 @@
         <!-- SECCIÓN 2: EJEMPLO DE LOS ESTADOS DE LA NOTA DE PEDIDO -->
         <section class="doc-section" id="sec-ejemplo-estados">
           <p class="doc-section__desc">
-            En el punto anterior vimos cómo crear una nueva NP, ahora veremos los estados que tiene la NP dividida en 4 fases.
+            En la sección anterior se detalló el registro de una nueva Nota de Pedido; a continuación se presentan los estados operativos por los que transita el documento a lo largo de su ciclo de vida en DSI-NET ERP.
           </p>
 
-          <h2 class="doc-section__title">2. Ejemplo de los Estados de la Nota de Pedido</h2>
+          <h2 class="doc-section__title">2. Ciclo Operativo de los Estados de la Nota de Pedido</h2>
 
           <!-- 2.1 ESTADO NUEVO -->
           <div class="doc-subsection" id="sub-2-1">
             <h3 class="doc-section__subtitle">2.1 Estado Nuevo</h3>
             <p>
-              Para poder visualizar una NP en estado nuevo, se debe crear una NP (ver el punto Módulo de Pre-Ventas y Ventas 8.1). Una vez creamos la NP y la grabamos damos clic al botón de ayuda (?) y aparecerá la siguiente ventana donde se puede visualizar el documento que se creó, además en la columna Estado aparece como <strong>NUEVO</strong>.
+              Para generar una Nota de Pedido en estado Nuevo, formule el documento desde el módulo de Preventas y Ventas (referencia 8.1). Tras completar la captura inicial y ejecutar la acción Grabar, acceda a la opción de ayuda [?] para consultar la grilla transaccional, donde se verificará el documento emitido con el valor <strong>NUEVO</strong> en la columna Estado.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Nuevo">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 765.png" alt="Estado Nuevo de la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.2 ESTADO MODIFICADO -->
+          <!-- 2.2 ESTADO MODIFICADO -->
           <div class="doc-subsection" id="sub-2-2">
             <h3 class="doc-section__subtitle">2.2 Estado Modificado</h3>
             <p>
-              Para poder visualizar una NP en estado modificado, se debe editar la NP que se está creando, por ejemplo agregaremos dos artículos nuevos.
+              El estado Modificado se activa al editar una Nota de Pedido previamente registrada (por ejemplo, incorporando repuestos adicionales a la grilla).
             </p>
             <p>
-              Para poder editar la NP una vez que ya se grabó la forma más sencilla es desde la misma NP dar clic en el botón ayuda (?) y seleccionamos el documento que creamos y se podrá editar.
+              Para modificar una Nota de Pedido que ya ha sido procesada con la acción Grabar, acceda desde el mismo formulario mediante la opción de ayuda [?], seleccione el registro correspondiente y habilite el modo de edición.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Seleccion_NP_Edicion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 766.png" alt="Selección de NP para edición" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Damos doble clic en el documento y ahora sí los campos se podrán editar y agregar más artículos.
+              Haga doble clic sobre el registro documental para reactivar los controles de cabecera e incorporar nuevos repuestos en la grilla transaccional.
             </p>
             <p>
-              Agregaremos dos artículos más y cambiaremos de vendedor, así debería quedarnos y grabamos.
+              Para este flujo de prueba, se agregan dos repuestos adicionales y se asigna un nuevo asesor comercial responsable; posteriormente, se procesa la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Edicion_Articulos_Vendedor">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 767.png" alt="Edición de artículos y cambio de vendedor" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 767.png" alt="Edición de repuestos y asignación de asesor comercial" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez que se grabó damos clic al botón de ayuda (?) y el estado de la NP habrá cambiado a <strong>Modificado</strong>.
+              Concluido el proceso de Grabar, consulte la opción de ayuda [?]; el estado técnico de la Nota de Pedido se actualizará a <strong>Modificado</strong>.
             </p>
             <p>
-              <em>Si en caso no aparece, en el filtro de vendedor debe señalar el nuevo vendedor que grabó.</em>
+              <em>En caso de requerir un filtrado específico, configure en el selector de asesor comercial el usuario asignado durante el grabado.</em>
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Modificado">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 768.png" alt="Estado Modificado en consulta de NP" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.3 ESTADO ABIERTO -->
+          <!-- 2.3 ESTADO ABIERTO -->
           <div class="doc-subsection" id="sub-3-3">
-            <h3 class="doc-section__subtitle">3.3 Estado Abierto</h3>
+            <h3 class="doc-section__subtitle">2.3 Estado Abierto</h3>
             <p>
-              Para que la NP pase a estado Abierto primero debe estar Aprobado por Ventas (ver 3.4 Estado Aprobado por Ventas que está más adelante).
+              Para que la Nota de Pedido pase al estado Abierto, debe contar previamente con la Aprobación de Ventas (referencia técnica 2.4).
             </p>
             <p>
-              Una vez esté aprobado por ventas se dirige a la parte superior izquierda de la ventana donde dice <strong>Eventos</strong> y debe dar clic a la opción <strong>1. Abrir Pedido</strong>.
+              Una vez aprobada comercialmente, diríjase a la barra superior en la opción <strong>Eventos</strong> y ejecute la opción <strong>1. Abrir Pedido</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Eventos_Abrir_Pedido">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (2).png" alt="Opción Abrir Pedido en menú Eventos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Cuando la NP pasa a estado Abierto automáticamente la casilla de Aprobación de Vtas se deshabilita, los campos vuelven a ser editables y los botones de edición también. Como ejemplo quitaremos dos artículos y cambiaremos de Vendedor; antes de grabar vamos a la ventana Documento con el botón ayuda (?) para ver el estado de la NP.
+              Al establecer el estado Abierto, DSI-NET ERP desmarca automáticamente la casilla de Aprobación de Ventas y rehabilita la edición de campos y controles transaccionales. Como verificación operativa, se retiran dos repuestos y se modifica el asesor comercial; antes de Grabar, consulte la opción de ayuda [?] para corroborar el estado actual.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Verificacion_Estado_Abierto">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (3).png" alt="Verificación de estado Abierto" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora sí grabamos y el estado volverá a cambiar a <strong>Modificado</strong>.
+              Al ejecutar la opción Grabar, el registro transaccional pasará nuevamente al estado <strong>Modificado</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Retorno_Estado_Modificado">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (4).png" alt="Retorno al estado Modificado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Observamos el Histórico y vemos el flujo por el que pasó la NP.
+              Acceda a la opción Histórico para auditar la trazabilidad cronológica de estados aplicada a la Nota de Pedido.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Flujo_NP">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (5).png" alt="Histórico del flujo de estados de la NP" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769 (5).png" alt="Histórico del flujo de estados de la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.4 ESTADO APROBADO POR VENTAS -->
+          <!-- 2.4 ESTADO APROBADO POR VENTAS -->
           <div class="doc-subsection" id="sub-3-4">
-            <h3 class="doc-section__subtitle">3.4 Estado Aprobado por Ventas</h3>
+            <h3 class="doc-section__subtitle">2.4 Estado Aprobado por Ventas</h3>
             <p>
-              Para que la NP pase a un estado de Aprobado por ventas se debe dar clic en la casilla <strong>Aprobación Vtas.</strong> y luego grabamos.
+              Para validar comercialmente la Nota de Pedido, active la casilla <strong>Aprobación Vtas.</strong> y procese la opción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Check_Aprobacion_Ventas">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 769.png" alt="Casilla Aprobación Ventas seleccionada" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez se grabó, el estado de la NP pasará a estado <strong>Aprobado Ventas</strong>.
+              Confirmado el grabado, el documento asumirá formalmente el estado <strong>Aprobado Ventas</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Aprobado_Ventas">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 770.png" alt="Estado Aprobado Ventas en el sistema" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Este estado bloquea los campos y los botones para editar la NP pero también habilita la funcionalidad de otros estados como por ejemplo: Abrir Pedido, Aprobación Despacho, etc.
+              Este estado bloquea la modificación directa de tarifas y cantidades de repuestos en la Nota de Pedido, y habilita de forma controlada etapas subsecuentes como Abrir Pedido o Aprobación de Despacho en almacenes.
             </p>
             <p>
-              La aprobación por ventas hace que también se habilite el <strong>Botón de Histórico</strong> que está en la parte inferior; con este botón podremos observar todo el flujo de estados y qué está ocurriendo en la NP.
+              Asimismo, la Aprobación de Ventas activa la <strong>opción Histórico</strong> en la barra inferior, permitiendo auditar en tiempo real el registro de eventos y variaciones de la Nota de Pedido.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Aprobado_Ventas">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 772.png" alt="Histórico tras Aprobación por Ventas" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.5 ESTADO LIQUIDACIÓN PARCIAL -->
+          <!-- 2.5 ESTADO LIQUIDACIÓN PARCIAL -->
           <div class="doc-subsection" id="sub-3-5">
-            <h3 class="doc-section__subtitle">3.5 Estado Liquidación Parcial</h3>
+            <h3 class="doc-section__subtitle">2.5 Estado Liquidación Parcial</h3>
             <p>
-              La liquidación parcial consiste en liberar el stock de algunos artículos (NO TODOS) que estaban separados para cierto cliente X y pasarlo para otro cliente Y.
+              La liquidación parcial consiste en liberar de forma selectiva las existencias reservadas de repuestos específicos en almacenes para reasignarlos comercialmente.
             </p>
             <p>
-              Para poder liquidar parcialmente primero la casilla de Aprobación Vtas debe estar seleccionada y luego grabamos (ver 3.4 Estado Aprobado por Ventas).
+              Para ejecutar la liquidación parcial, la Nota de Pedido debe contar con la casilla Aprobación Vtas. activada y encontrarse con estado Grabado (ver punto 2.4).
             </p>
             <p>
-              Después de eso nos dirigimos donde dice <strong>Eventos</strong> y buscamos <strong>3. Liquidar Pedido</strong>.
+              Posteriormente, acceda al menú superior <strong>Eventos</strong> y seleccione la opción <strong>3. Liquidar Pedido</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Eventos_Liquidar_Pedido">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 776.png" alt="Opción Liquidar Pedido en Eventos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos debe aparecer la siguiente ventana con los campos de la NP y los artículos.
+              DSI-NET ERP desplegará el diálogo transaccional con la cabecera de la Nota de Pedido y la grilla de repuestos disponibles.
             </p>
             <p>
-              En la columna <strong>Liquidar</strong> podremos señalar los artículos que se quieren liquidar parcialmente, por ejemplo liquidaremos dos artículos que se observan en la grilla, luego grabamos.
+              En la columna <strong>Liquidar</strong>, marque puntualmente las líneas de repuestos cuya reserva se liberará en almacenes y ejecute la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Seleccion_Liquidar_Articulos">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 777.png" alt="Selección de artículos a liquidar parcialmente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 777.png" alt="Selección de repuestos a liquidar parcialmente" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Aparecerá una ventana de confirmación y le damos aceptar.
+              Confirme la operación en la ventana emergente seleccionando la opción Aceptar.
             </p>
             <p>
-              En la grilla seguirán apareciendo los artículos pero si observamos en el botón ayuda (?) el estado habrá cambiado.
+              Los repuestos continuarán listados en la grilla; al consultar la opción de ayuda [?], se constatará la transición del estado documental.
             </p>
             
             <div class="img-placeholder" data-img-ref="8.1.1_Estado_Liquidacion_Parcial">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 778.png" alt="Estado Liquidación Parcial en consulta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora observemos el Histórico, ahí podremos ver que se hizo correctamente la liquidación parcial de los dos artículos.
+              Al verificar el módulo de Histórico, se evidenciará el asiento de liquidación parcial ejecutado sobre las partidas seleccionadas.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Liquidacion_Parcial">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 779.png" alt="Histórico reflejando Liquidación Parcial" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              <em>Esos artículos vuelven al stock real del sistema para poder usarlos en otras ventas.</em>
+              <em>Las existencias liberadas retornan de inmediato al saldo físico disponible en almacenes para su asignación en nuevas operaciones.</em>
             </p>
           </div>
 
-          <!-- 3.6 ESTADO FACTURACIÓN PARCIAL -->
+          <!-- 2.6 ESTADO FACTURACIÓN PARCIAL -->
           <div class="doc-subsection" id="sub-3-6">
-            <h3 class="doc-section__subtitle">3.6 Estado Facturación Parcial</h3>
+            <h3 class="doc-section__subtitle">2.6 Estado Facturación Parcial</h3>
             <p>
-              La facturación Parcial va de la mano con la Liquidación parcial, esto aplica para las NP que han liquidado artículos parcialmente. Para poder facturar tenemos que ir a la ventana de <strong>Facturación de NP Administración</strong>, con el siguiente flujo.
+              La facturación parcial opera en estrecha vinculación con la liquidación selectiva de partidas, aplicando a aquellas Notas de Pedido donde solo se emite comprobante fiscal por una fracción de los repuestos. Para procesar este documento, acceda a la ventana de <strong>Facturación de NP Administración</strong> mediante la ruta del menú principal.
             </p>
             <p>
-              Para el ejemplo crearemos una nueva NP donde tendremos tres artículos y liquidaremos uno.
+              Para este procedimiento demostrativo, se formula una nueva Nota de Pedido con tres partidas de repuestos y se liquida una de ellas.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Acceso_Facturacion_Administracion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 780.png" alt="Ruta a Facturación de NP Administración" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Aparecerá la siguiente ventana donde aparecerán todas las NP; filtre y busque su NP (la Nota de Pedido es 9052).
+              En la bandeja de administración se listan las órdenes registradas; aplique los filtros a demanda por correlativo de Nota de Pedido o razón social del cliente para localizar el registro.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Facturacion_NP_Admin">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 781 (2).png" alt="Ventana de Facturación de NP Administración con filtros" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Para que una NP pueda ser facturada debe pasar por 3 estados: <strong>Aprobación de Ventas</strong>, <strong>Aprobación por Despacho</strong> (ver 3.10 Estado Aprobado por Despacho) y por <strong>Cobranzas</strong>. Este último no es un estado, sino una condicional para poder facturar la NP; aparece seleccionado por defecto en la ventana. Solo faltaría aprobarla por Despacho, y para proceder con la facturación debemos seleccionar la NP que se quiere facturar.
+              Para habilitar la emisión fiscal en mostrador o administración, la Nota de Pedido debe contar con las autorizaciones operativas correspondientes: <strong>Aprobación de Ventas</strong>, <strong>Aprobación de Despacho</strong> (referencia 2.10) y la visación de <strong>Cobranzas</strong>. Este último control actúa como una validación transversal de límite de crédito y saldo por cobrar, presentándose preseleccionado según las reglas de negocio asignadas al cliente.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Facturacion_NP_Admin">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 781.png" alt="Ventana de Facturación de NP Administración con filtros" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez seleccionada la NP damos clic en el botón <strong>Facturar</strong> y nos aparecerá esta ventana; los números de la boleta y factura aparecen por defecto ya que el sistema los otorga automáticamente (pueden editarse), damos clic en <strong>Generar Doc</strong>.
+              Seleccionada la Nota de Pedido, ejecute la opción <strong>Facturar</strong>; el sistema presentará el diálogo con las series y correlativos asignados automáticamente para boleta o factura electrónica. Confirme mediante la opción <strong>Generar Doc</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Generar_Documento_Facturacion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (2).png" alt="Ventana para Generar Documento Factura/Boleta" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora aparecerá la ventana de <strong>Cobranza</strong> en la que debemos rellenar los campos. Como ejemplo en Tipo de cobro seleccionamos <strong>YAPE</strong> y en importe la misma cantidad que Total CPE, debería quedar así y grabamos.
+              En el formulario de <strong>Cobranza</strong>, defina las condiciones financieras correspondientes (por ejemplo, Tipo de cobro digital o efectivo) y consigne en el importe la liquidación exacta del comprobante; posteriormente, ejecute la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Cobranza_Yape">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (3).png" alt="Ventana de Cobranza con forma de pago YAPE" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (3).png" alt="Ventana de Cobranza con forma de pago digital" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Revisamos el Histórico y vemos que el Estado de la NP pasó a <strong>Facturación</strong>, junto con los estados de Aprobación de Ventas, Despacho y Cobranza.
+              Al auditar el Histórico de la Nota de Pedido, se corroborará su tránsito al estado <strong>Facturación</strong>, consolidando las visaciones de Ventas, Despacho y Cobranzas.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Facturacion_Parcial">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (4).png" alt="Histórico con estado Facturación" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.7 ESTADO LIQUIDACIÓN TOTAL -->
+          <!-- 2.7 ESTADO LIQUIDACIÓN TOTAL -->
           <div class="doc-subsection" id="sub-3-7">
-            <h3 class="doc-section__subtitle">3.7 Estado Liquidación Total</h3>
+            <h3 class="doc-section__subtitle">2.7 Estado Liquidación Total</h3>
             <p>
-              El estado de Liquidación total es similar al parcial (ver 3.5 Estado Liquidación Parcial para ver las reglas de liquidación), solo que en este caso vamos a liquidar todos los artículos de la NP; para ello crearemos una nueva NP.
+              La Liquidación Total rige bajo los mismos principios normativos de la liberación de inventario (ver reglas operativas en 2.5), con la particularidad de aplicarse sobre la totalidad de los repuestos registrados en la Nota de Pedido.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Nueva_NP_Liquidacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (5).png" alt="Nueva NP formulada para Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 782 (5).png" alt="Nueva Nota de Pedido formulada para Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              En Eventos seleccionamos la opción de <strong>Liquidar Pedido</strong> y abrirá una ventana que ya hemos visto en liquidación parcial; en este caso vamos a seleccionar la opción que está en la parte inferior <strong>Liquidar</strong>, la cual seleccionará todos los artículos para liquidar, debería quedarnos así, luego grabamos:
+              Desde la barra de Eventos seleccione la opción <strong>Liquidar Pedido</strong>. En la grilla de detalle, active la opción inferior <strong>Liquidar</strong> para marcar automáticamente todos los repuestos y proceda con la acción Grabar:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Liquidar_Todo">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 801.png" alt="Opción Liquidar Todo en grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Le damos clic  en la casilla donde dice Liquidar y se seleccionarán todos los artículos como en la siguiente imagen, luego de eso grabamos.
+              La activación masiva de la casilla Liquidar marcará la totalidad de partidas en la grilla transaccional; confirme la operación ejecutando la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Liquidar_Todo">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 802.png" alt="Opción Liquidar Todo en grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego de grabar nos saldrá una ventana de confirmación.
+              El motor transaccional de DSI-NET ERP emitirá la solicitud de confirmación correspondiente:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Confirmacion_Liquidar_Total">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 803.png" alt="Confirmación de liquidación total" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Aceptamos y veamos el Histórico; vemos que hubo una <strong>Liquidación Total</strong>.
+              Confirme mediante la opción Aceptar. Al revisar el módulo de Histórico, se verificará el asentamiento formal de la <strong>Liquidación Total</strong> con reversión íntegra de existencias a los almacenes.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Liquidacion_Total">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 804.png" alt="Histórico reflejando Liquidación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.8 ESTADO FACTURACIÓN TOTAL -->
+          <!-- 2.8 ESTADO FACTURACIÓN TOTAL -->
           <div class="doc-subsection" id="sub-3-8">
-            <h3 class="doc-section__subtitle">3.8 Estado Facturación Total</h3>
+            <h3 class="doc-section__subtitle">2.8 Estado Facturación Total</h3>
             <p>
-              El estado de Facturación total es similar al parcial (ver 3.5 Estado Liquidación Parcial para ver las reglas de liquidación), solo que en este caso vamos a facturar una NP tal cual el cliente solicitó; para ello crearemos una nueva NP (9055).
+              La Facturación Total formaliza la emisión de comprobantes electrónicos sobre la totalidad de los repuestos pactados en la Nota de Pedido, sin reducciones ni liquidaciones previas de inventario.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Nueva_NP_Facturacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 805.png" alt="Nota de Pedido 9055 lista para Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 805.png" alt="Nota de Pedido lista para Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora vamos a la ventana de <strong>Facturación de NP Administración</strong> para comenzar con la facturación, buscamos nuestra NP y la seleccionamos.
+              Ingrese a la consola de <strong>Facturación de NP Administración (como en el punto 2.6 que esta mas arriba)</strong>, aplique el filtro a demanda para localizar el registro por correlativo o razón social y seleccione la Nota de Pedido correspondiente.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Seleccion_NP_Facturacion_Total">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 806.png" alt="Selección de NP 9055 en Facturación Administración" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 806.png" alt="Selección de Nota de Pedido en Facturación Administración" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Una vez seleccionamos la NP damos clic al botón <strong>Facturar</strong> y luego <strong>Generar Doc</strong>.
+              Seleccionada la transacción, ejecute la opción <strong>Facturar</strong> y confirme la generación del comprobante mediante la opción <strong>Generar Doc</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Generar_Doc_Total">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 807.png" alt="Generar comprobante definitivo total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Completamos los campos de la ventana de Cobranza y grabamos.
+              Consigne la información requerida en la ventana de Cobranza según la modalidad pactada (Contado, Crédito o Letra) y procese la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Cobranza_Total_Grabar">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 808.png" alt="Asiento de cobranza total y persistencia" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora revisamos el Histórico de la NP y observamos que la NP pasó a estado <strong>Facturación</strong> con la totalidad de los artículos.
+              Al auditar el Histórico de la Nota de Pedido, se corroborará que el documento alcanzó el estado <strong>Facturación</strong> amparando el 100% de los repuestos registrados.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Facturacion_Total">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 809.png" alt="Histórico con Facturación Total" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.9 ESTADO CERRADO -->
+          <!-- 2.9 ESTADO CERRADO -->
           <div class="doc-subsection" id="sub-3-9">
-            <h3 class="doc-section__subtitle">3.9 Estado Cerrado</h3>
+            <h3 class="doc-section__subtitle">2.9 Estado Cerrado</h3>
             <p>
-              Ciclo comercial y logístico completado; no admite nuevos despachos ni modificaciones en la orden de venta.
+              Representa la culminación integral del ciclo comercial, contable y logístico en DSI-NET ERP; una vez en estado Cerrado, el documento queda bloqueado en modo de solo lectura y no admite modificaciones ni nuevos despachos desde almacenes.
             </p>
           </div>
 
-          <!-- 3.10 ESTADO APROBACIÓN DE DESPACHO -->
+          <!-- 2.10 ESTADO APROBACIÓN DE DESPACHO -->
           <div class="doc-subsection" id="sub-3-10">
-            <h3 class="doc-section__subtitle">3.10 Estado Aprobación de Despacho</h3>
+            <h3 class="doc-section__subtitle">2.10 Estado Aprobación de Despacho</h3>
             <p>
-              Hay dos formas de aprobar un despacho:
+              DSI-NET ERP contempla dos procedimientos operativos para autorizar la preparación física de repuestos en almacenes:
             </p>
             <p>
-              <strong>1. Primera forma:</strong> Desde la ventana de Nota de Pedido, solo damos clic a la opción <strong>Despacho</strong>.
+              <strong>1. Procedimiento directo:</strong> Desde el formulario principal de la Nota de Pedido, active la opción <strong>Despacho</strong> ubicada en la sección de aprobaciones.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Aprobacion_Despacho_NP">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 810.png" alt="Aprobación de Despacho desde la Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              <strong>2. Segunda forma:</strong> Desde el botón ayuda (?) y nos dirige a esta ventana donde podremos aprobar el despacho.
+              <strong>2. Procedimiento mediante consulta:</strong> Acceda a través de la opción de ayuda [?] en el menú transaccional para autorizar el despacho desde la grilla de control de almacenes.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Aprobacion_Despacho_Ayuda">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 811.png" alt="Aprobación de despacho desde ventana de ayuda (?)" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
           </div>
 
-          <!-- 3.11 REGISTRO DE BULTOS -->
+          <!-- 2.11 REGISTRO DE BULTOS -->
           <div class="doc-subsection" id="sub-3-11">
-            <h3 class="doc-section__subtitle">3.11 Registro de Bultos</h3>
+            <h3 class="doc-section__subtitle">2.11 Registro de Bultos</h3>
             <p>
-              Este estado va de la mano con lo que viene a ser el Picking y Packing; este proceso se ejecuta con una NP sin facturar. Para este caso usaremos una nueva NP (9056), nos dirigimos al DSI-NET de Despacho, iniciamos sesión y buscamos la NP.
+              Este estado técnico opera articulado con los procesos de picking y packing en almacenes para Notas de Pedido aprobadas pendientes de comprobante fiscal. Para iniciar el flujo, acceda al módulo de Despacho de DSI-NET ERP y localice la Nota de Pedido mediante los filtros a demanda.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_DSI_Despacho_Login">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 812.png" alt="Acceso al sistema DSI-NET Despacho" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Como se puede observar la NP se imprimió correctamente en el proceso de Picking.
+              Se valida la emisión física de la orden de picking con el detalle de repuestos y ubicaciones en almacenes.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Picking_Impresion">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 814.png" alt="Impresión en proceso de Picking" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Para observar la NP vamos donde guardamos la NP y nos debería aparecer en formato PDF de esta forma:
+              El formato de picking emitido por el sistema se exporta de acuerdo con la plantilla oficial de almacenes:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_PDF_Picking">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 815 (2).png" alt="Formato PDF de Picking emitido" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Verificamos en el Histórico y se observa que se hizo correctamente el picking.
+              Al verificar el módulo de Histórico, se constatará el registro de la fase de picking concluida conforme a norma.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Picking">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 815.png" alt="Histórico validando Picking realizado" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora nos dirigimos a la ventana de <strong>Despacho de NP</strong> donde realizaremos el proceso de Registrar Bulto y de Packing.
+              Posteriormente, acceda a la consola de <strong>Despacho de NP</strong> para procesar el cubicaje de bultos y el embalaje formal (packing).
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Despacho_NP">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 817.png" alt="Ventana Despacho de NP" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos debe aparecer la siguiente ventana, donde aparecerá la NP que pasó por picking.
+              DSI-NET ERP presentará la bandeja de preparación de pedidos con las Notas de Pedido que completaron la fase de picking.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Lista_NP_Para_Packing">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 818.png" alt="Lista de NP para proceso de empaque" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora procedemos con el Registro de Bultos o el Packing, se puede comenzar por cualquiera, en este caso primero ingresaremos los bultos.
+              Seleccione la orden y ejecute la opción <strong>Registro de Bultos</strong> para asentar pesos, dimensiones y paquetes de despacho.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Registro_Bultos">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 819.png" alt="Botón de Registro de Bultos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 819.png" alt="Opción de Registro de Bultos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Completamos los campos que nos pide la ventana y grabamos.
+              Complete los campos técnicos de embalaje requeridos por el sistema y confirme mediante la acción Grabar.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Formulario_Registro_Bultos">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 820.png" alt="Formulario de captura de bultos" style="width: auto; max-width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos aparecerá esta ventana y le damos a <strong>Imprimir</strong> si en caso se desea imprimir al instante y nos permitirá guardarlo en nuestros archivos.
+              En el diálogo de confirmación, utilice la opción <strong>Imprimir</strong> para generar los rótulos identificadores de bulto correspondientes al envío en campo o agencia.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Dialogo_Imprimir_Rotulos">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 821.png" alt="Diálogo para imprimir rótulos de bulto" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              El sistema nos arrojará dos documentos para guardarlos, cada uno corresponde a la cantidad de bultos que hemos colocado (en este caso son dos).
+              DSI-NET ERP emitirá la documentación de rotulado individualizada por cada bulto registrado en almacenes.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Archivos_Bultos_Generados">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 822.png" alt="Documentos de rótulo para cada bulto" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora veamos en el Histórico si se realizó el registro de Bultos correctamente.
+              Compruebe en el Histórico la actualización del asiento correspondiente al registro de bultos.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Registro_Bultos">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 823.png" alt="Histórico validando registro de bultos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              En la misma ventana donde se realizó el registro de Bultos haremos el <strong>Packing</strong>; como se observa en la pantalla el formato de las palabras cambió y aparece la cantidad de bultos que se realizó en un inicio.
+              En la misma consola de almacenes se procede con el <strong>Packing</strong> definitivo; la interfaz actualizará los indicadores reflejando las cantidades y bultos procesados.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Ventana_Packing_Preparada">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 824.png" alt="Ventana preparada para iniciar Packing" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Ahora solo damos clic en el botón <strong>Por Imprimir</strong> y nos aparecerá la siguiente ventana para confirmar la impresión.
+              Ejecute la opción <strong>Por Imprimir</strong> y confirme en el diálogo emergente para validar la lista técnica de empaque.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Confirmar_Impresion_Packing">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 825.png" alt="Confirmación de impresión de lista de packing" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego de eso tendremos que guardar el documento de packing en los archivos; ahora el estado del botón cambiará a <strong>Impreso</strong>.
+              Al concluir la exportación documental, el indicador del control cambiará al estado <strong>Impreso</strong>.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Boton_Estado_Impreso">
-              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 826.png" alt="Botón en estado Impreso" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+              <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 826.png" alt="Opción en estado Impreso" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Nos debe entregar un archivo en formato PDF de esta forma:
+              El sistema generará el reporte oficial de packing detallando los repuestos acondicionados por bulto:
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_PDF_Packing_Final">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 827.png" alt="Reporte PDF de packing final" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
@@ -866,7 +866,7 @@
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 828.png" alt="Reporte PDF de packing final" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
             </div>
             <p>
-              Luego verificamos en el Histórico el estado de la NP.
+              Finalmente, verifique en el Histórico la trazabilidad completa del ciclo logístico de la Nota de Pedido.
             </p>
             <div class="img-placeholder" data-img-ref="8.1.1_Historico_Packing_Final">
               <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 829.png" alt="Histórico final con trazabilidad completa de bultos y packing" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">

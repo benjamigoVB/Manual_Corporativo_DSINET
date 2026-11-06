@@ -363,582 +363,879 @@
       <div class="sidebar__footer">DSI-NET Core v12.1 Build 4910</div>
     </aside>
 
-    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
-    <main class="content">
+            <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
+      <main class="content">
 
-      <div class="content__inner">
+        <div class="content__inner">
 
-        <!-- BREADCRUMBS -->
-        <p class="breadcrumb">
-          <a href="#">DSI-NET Docs</a>
-          <span aria-hidden="true">/</span>
-          <a href="8.0_Conceptos_Generales.html">8. Módulo de Pre-Ventas y Ventas</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">8.1 Nota de Pedido</span>
-        </p>
-
-        <!-- TÍTULO PRINCIPAL Y LEAD -->
-        <h1 class="content__title">8.1 Nota de Pedido</h1>
-
-        <p class="content__lead">
-          Formulario principal para la toma de requerimientos de venta y cotización de mercaderías. Permite comprometer existencias en Kardex, evaluar líneas de crédito en tiempo real, aplicar promociones comerciales y canalizar la orden hacia facturación y despacho.
-        </p>
-
-        <!-- CALLOUT DE ADVERTENCIA OPERATIVA -->
-        <div class="callout callout--warning" role="note">
-          <i data-lucide="alert-triangle" class="callout__icon"></i>
-          <div>
-            <strong>Control de Reserva de Existencias y Crédito:</strong>
-            <p style="margin-top: 4px;">
-              Al asentar la Nota de Pedido, el sistema bloquea preventivamente las existencias en Kardex para evitar quiebres por ventas concurrentes y verifica si la deuda total supera la línea crediticia autorizada.
-            </p>
-          </div>
-        </div>
-
-        <!-- ACCESO A NOTA DE PEDIDO -->
-        <section class="doc-section" id="sec-acceso">
-          <h2 class="doc-section__title">Acceso a Nota de Pedido</h2>
-          <div class="img-placeholder" data-img-ref="8.1_Acceso_Nota_Pedido">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 609.png" alt="Acceso a Nota de Pedido" style="width: 50%; height: auto; display: block; border-radius: 6px;">
-          </div>
-        </section>
-
-        <!-- VISUALIZADOR DE LA PANTALLA NOTA DE PEDIDO -->
-        <section class="doc-section" id="sec-visualizador">
-          <h2 class="doc-section__title">Visualizador de la pantalla Nota de Pedido</h2>
-          <div class="img-placeholder" data-img-ref="8.1_Visualizador_Pantalla_Nota_Pedido">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 610.png" alt="Visualizador de la pantalla Nota de Pedido" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-        </section>
-
-        <!-- 1. BARRA SUPERIOR DE HERRAMIENTAS Y ACCIONES MASIVAS -->
-        <section class="doc-section" id="sec-1">
-          <h2 class="doc-section__title">1. Barra Superior de Herramientas y Acciones Masivas</h2>
-
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>CONTROL / BOTÓN</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>ALCANCE</th>
-                  <th>COMPORTAMIENTO OPERATIVO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="data-table__field">Eventos &rsaquo;</td>
-                  <td>Menú Desplegable</td>
-                  <td>Trámite</td>
-                  <td>Vincula el pedido con secuencias de preventa, flujo logístico o aprobaciones comerciales.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Artículos / Servicios &rsaquo;</td>
-                  <td>Búsqueda Asistida</td>
-                  <td>Catálogo</td>
-                  <td>Abre el maestro central para seleccionar e incorporar productos físicos o servicios intangibles.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Importar Excel / TXT &rsaquo;</td>
-                  <td>Carga Masiva</td>
-                  <td>Comercial</td>
-                  <td>Vuelca masivamente códigos y cantidades desde hojas de cálculo o archivos planos estructurados.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Historial de Promociones &rsaquo;</td>
-                  <td>Consulta</td>
-                  <td>Histórico</td>
-                  <td>Despliega el histórico de bonificaciones y campañas aplicadas al cliente.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Despacho GR &rsaquo;</td>
-                  <td>Enlace Operativo</td>
-                  <td>Almacén</td>
-                  <td>Abre la consola de emisión o vinculación directa con la Guía de Remisión.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Merch / Liqui &rsaquo;</td>
-                  <td>Catálogo / Filtro</td>
-                  <td>Ofertas</td>
-                  <td>Muestra artículos catalogados bajo remate de inventario, merchandising o liquidación.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p style="margin-top: 14px;"><strong>Desplegable Eventos:</strong> Selector operativo para conectar el pedido con etapas del embudo comercial o trámites de despacho.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Desplegable_Eventos">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 611.png" alt="Desplegable Eventos" style="width: auto; max-width: 320px; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Botones Artículos y Servicios:</strong> Comandos para abrir el catálogo central e incorporar productos físicos o intangibles facturables (fletes, embalajes).</p>
-          <div class="img-placeholder" data-img-ref="8.1_Botones_Articulos_Servicios">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 612.png" alt="Botones Artículos y Servicios" style="width: auto; max-width: 320px; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Botones Importar Excel e Importar TXT:</strong> Disparadores para volcar listas masivas de ítems y cantidades desde plantillas externas o archivos planos.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Botones_Importar_Excel_TXT">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 613.png" alt="Botones Importar Excel e Importar TXT" style="width: auto; max-width: 320px; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Botones Historial de Promociones, Despacho GR y Merch / Liqui:</strong> Permiten revisar bonificaciones previas del cliente, vincular la guía de remisión de salida o explorar artículos en liquidación.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Botones_Promociones_Despacho_Merch">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 614.png" 
-                alt="Botones Historial de Promociones, Despacho GR y Merch / Liqui" 
-                style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0; transform: scale(1.3); transform-origin: center;">
-          </div>
-
-
-        <!-- 2. CAMPOS DE CABECERA: CLIENTE, FECHAS Y LOGÍSTICA DE ENTREGA -->
-        <section class="doc-section" id="sec-2">
-          <h2 class="doc-section__title">2. Campos de Cabecera: Cliente, Fechas y Logística de Entrega</h2>
-
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>CAMPO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>OBLIGATORIO</th>
-                  <th>DESCRIPCIÓN OPERATIVA Y REGLA DE NEGOCIO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="data-table__field">Pto Vta: / Nro.Int. &rsaquo;</td>
-                  <td>Desplegable / Entero</td>
-                  <td><span class="badge badge--yes">Sí</span> / Sistema</td>
-                  <td>Punto de venta emisor (PRINCIPAL) y correlativo de auditoría interna asignado.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Fecha: &rsaquo;</td>
-                  <td>Fecha (DD/MM/AAAA)</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Fecha oficial de emisión del pedido comercial (ej. 28/09/2026).</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Cliente Princ. / Cliente &rsaquo;</td>
-                  <td>Búsqueda Asistida</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Cuenta o grupo matriz y razón social/RUC del cliente que adquiere las existencias.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Direcc Desp / Destino &rsaquo;</td>
-                  <td>Texto con Selector [...]</td>
-                  <td>Condicional</td>
-                  <td>Dirección física de destino y terminal para despachos por agencia externa.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Nota: &rsaquo;</td>
-                  <td>Texto Libre</td>
-                  <td><span class="badge badge--no">No</span></td>
-                  <td>Observaciones comerciales o instrucciones logísticas de manipulación.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Documento / Serie / Nro &rsaquo;</td>
-                  <td>Desplegable / Ayuda [?]</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Tipo NP (Nota de Pedido), serie oficial (001) y número correlativo asignado.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Almacen: &rsaquo;</td>
-                  <td>Menú Desplegable</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Depósito físico desde donde se comprometerá y despachará el inventario.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p style="margin-top: 14px;"><strong>Desplegable Pto Vta, Nro.Int. y Fecha:</strong> Punto de venta emisor ('PRINCIPAL'), número de auditoría interna y fecha de emisión comercial (ej. 28/09/2026).</p>
-          <div class="img-placeholder" data-img-ref="8.1_Desplegable_PtoVta_NroInt_Fecha">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 615.png" alt="Desplegable Pto Vta, Nro.Int. y Fecha" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Campos Cliente Princ. y Cliente con Selector [...]:</strong> Define el grupo comercial matriz y la razón social del cliente directo con buscador asistido.</p>
-          <p><em>Para dar uso a algunos campos es obligatorio completar el campo Cliente Princ, escribiéndolo manualmente o con comandos de ayuda, dar doble clic al cliente deseado.</em></p>
-          
-          <div class="img-placeholder" data-img-ref="8.1_Campos_Cliente_Princ_Selector">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 616.png" alt="Campos Cliente Princ. y Cliente con Selector [...]" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><em>También se puede entrar al mantenimiento de clientes con la casilla que dice "Cliente".</em></p>
-          
-          <div class="img-placeholder" data-img-ref="8.1_Direcc_Desp_Destino">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 617 (2).png" alt="Direcc Desp y Destino con Selector [...]" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Direcc Desp y Destino con Selector [...]:</strong> Dirección de entrega con selector de sucursales del cliente y terminal geográfico para despachos a provincia.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Direcc_Desp_Destino">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 617.png" alt="Direcc Desp y Destino con Selector [...]" style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Campo Nota:</strong> Texto libre para detallar observaciones comerciales, restricciones de horario de entrega o instrucciones de embalaje.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Campo_Nota">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 618.png" alt="Campo Nota" style="width: auto; max-width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Documento (NP), Serie, Número [?] y Almacén:</strong> Comprobante 'NP', serie ('001'), correlativo oficial y almacén emisor donde se reserva el stock ('ALM. PRINCIPAL').</p>
-          <div class="img-placeholder" data-img-ref="8.1_Documento_Serie_Numero_Almacen">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 619.png" alt="Documento (NP), Serie, Número [?] y Almacén" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
-
-        <!-- 3. PARÁMETROS DE DESPACHO, APROBACIONES Y CONDICIONES FINANCIERAS -->
-        <section class="doc-section" id="sec-3">
-          <h2 class="doc-section__title">3. Parámetros de Despacho, Aprobaciones y Condiciones Financieras</h2>
-
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>PARÁMETRO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO Y REGLA DE NEGOCIO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="data-table__field">Aprobaciones (Vtas/Desp/Prec) &rsaquo;</td>
-                  <td>Casillas</td>
-                  <td>Control</td>
-                  <td>Validación de crédito, autorización de armado de bultos y aprobación de descuentos.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Transportista / Modalidad &rsaquo;</td>
-                  <td>Texto / Radio Buttons</td>
-                  <td>Logístico</td>
-                  <td>Transportista asignado y punto de retiro pactado (Almacen, Local o Agencia).</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">F. de Cobro / Vencimiento &rsaquo;</td>
-                  <td>Desplegable / Fecha</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Término comercial de pago y fecha límite exigible de cancelación.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Tipo Afec. / Afec. Prom. &rsaquo;</td>
-                  <td>Menús Desplegables</td>
-                  <td>Tributario</td>
-                  <td>Clasificación SUNAT de la venta y exoneración de bonificaciones de catálogo.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Saldo x Cobrar / Línea Crédito &rsaquo;</td>
-                  <td>Numéricos / Alertas</td>
-                  <td>Control</td>
-                  <td>Exigibilidad de cobro pendiente y bloqueo por superación de línea crediticia.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p style="margin-top: 14px;"><strong>Casillas de Aprobación (Ventas, Despacho y Precios):</strong> Banderas de control para validar el pedido por créditos, autorizar el armado en almacén y visar precios especiales.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Casillas_Aprobacion">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 620.png" alt="Casillas de Aprobación (Ventas, Despacho y Precios)" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Transportista y Modalidad de Entrega:</strong> Registro del transportista con selector [...] y radio buttons de entrega ('Almacen', 'Local', 'Agencia').</p>
-          <div class="img-placeholder" data-img-ref="8.1_Transportista_Modalidad_Entrega">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 621.png" alt="Transportista y Modalidad de Entrega" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Forma de Cobro y Fecha de Vencimiento:</strong> Desplegable de financiamiento comercial (Contado, Crédito, Letra) y cálculo automático de la fecha de vencimiento, esta opción se configura en la ventana de Mantenimiento de Cliente que se ve en el punto <em>Menú Maestros_Personas_0.3.6.3.1</em>.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Forma_Cobro_Vencimiento">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 622 (2).png" alt="Forma de Cobro y Fecha de Vencimiento" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <div class="img-placeholder" data-img-ref="8.1_Afectacion_Tributaria">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 622 (3).png" alt="Desplegables de Afectación Tributaria (Tipo Afec. y Afec. Prom.)" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">          
-          </div>
-
-          <p><strong>Desplegables de Afectación Tributaria (Tipo Afec. y Afec. Prom.):</strong> Define el régimen impositivo SUNAT (Gravado - Operación Onerosa) y el tratamiento de bonificaciones.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Afectacion_Tributaria">
-            <!-- Primera imagen con margen inferior de 20px -->
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 623.png" alt="Desplegables de Afectación Tributaria (Tipo Afec. y Afec. Prom.)" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px;">
-          </div>
-          <div class="img-placeholder" data-img-ref="8.1_Afectacion_Tributaria">
-            <!-- Segunda imagen con margen inferior de 20px -->
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 624.png" alt="Control de Deuda y Estado de Línea de Crédito" style="width: 60%; height: auto; display: block; border-radius: 6px;">
-          </div>
-          
-          
-          <p><strong>Control de Deuda y Estado de Línea de Crédito:</strong> Muestra saldos pendientes y el indicador de riesgo comercial ('Lin. Cred. NO activa'). Se puede ver un ejemplo donde el cliente tiene una línea de Crédito asignada de 2000 soles e hizo un consumo de su crédito de 1226 soles por lo tanto le queda Disponible un total de 774 soles.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Control_Deuda_Linea_Credito">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 625 (2).png" alt="Control de Deuda y Estado de Línea de Crédito" style="width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <p><em>Para verificar debemos entrar a la ventana de Clientes - Línea de Crédito como en el punto Menú Maestros_Personas__0.3.6.3.3, en esa ventana podremos ver el uso de su línea de crédito del cliente.</em></p>
-          <div class="img-placeholder" data-img-ref="8.1_Control_Deuda_Linea_Credito">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 625 (3).png" alt="Control de Deuda y Estado de Línea de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
-
-        <!-- 4. LIQUIDACIÓN TRIBUTARIA Y DESCUENTOS GLOBALES -->
-        <section class="doc-section" id="sec-4">
-          <h2 class="doc-section__title">4. Liquidación Tributaria y Descuentos Globales</h2>
-
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>CAMPO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO Y REGLA DE CÁLCULO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="data-table__field">Mon / Tc / Vend. &rsaquo;</td>
-                  <td>Radios / Decimal / Desplegable</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Moneda comercial (S/. o US$), tipo de cambio y código de vendedor comisionista.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Gravado / No Gravado / ISC &rsaquo;</td>
-                  <td>Numéricos Decimales</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Base imponible afecta al IGV, importes liberados e Impuesto Selectivo al Consumo.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">I.G.V. / Total: &rsaquo;</td>
-                  <td>Numéricos Decimales</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Cálculo del 18% del impuesto y sumatoria total neta de la cotización.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Verificar Stock &rsaquo;</td>
-                  <td>Botón de Acción</td>
-                  <td>Operativo</td>
-                  <td>Consulta en tiempo real si el Kardex cubre las cantidades digitadas.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">% Dscto / Aplica % Dscto &rsaquo;</td>
-                  <td>Decimal / Botón</td>
-                  <td>Comercial</td>
-                  <td>Aplica un factor de descuento proporcional sobre todas las líneas del pedido.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p style="margin-top: 14px;"><strong>Moneda, Tipo de Cambio y Vendedor:</strong> Radio buttons para divisa ('S/. o US$'), cotización cambiaria ('3.4250') y código de vendedor comisionista.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Moneda_TC_Vendedor">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 625.png" alt="Moneda, Tipo de Cambio y Vendedor" style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Panel de Totales (Gravado, No Gravado, ISC, IGV y Total):</strong> Desglose contable de bases imponibles e impuestos liquidados por el documento.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Panel_Totales">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 626.png" alt="Panel de Totales (Gravado, No Gravado, ISC, IGV y Total)" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
-
-        <!-- 5. GRILLA DE MERCADERÍAS Y BOTONERA INFERIOR -->
-        <section class="doc-section" id="sec-5">
-          <h2 class="doc-section__title">5. Grilla de Mercaderías y Botonera Inferior</h2>
-
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>ELEMENTO / COLUMNA</th>
-                  <th>TIPO DE DATO</th>
-                  <th>MODO</th>
-                  <th>PROPÓSITO Y ACCIÓN OPERATIVA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="data-table__field">Codigo / Nom Art / UM &rsaquo;</td>
-                  <td>Alfanumérico / Texto</td>
-                  <td>Maestro</td>
-                  <td>Identificador SKU, descripción comercial y unidad física de despacho.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Stock / Cant &rsaquo;</td>
-                  <td>Numéricos Decimales</td>
-                  <td>Consulta / Editable</td>
-                  <td>Disponibilidad física en el depósito y cantidad requerida por el comprador.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Precio / Precio con Dscto &rsaquo;</td>
-                  <td>Numéricos Decimales</td>
-                  <td>Editable / Sistema</td>
-                  <td>Tarifa unitaria pactada y valor resultante tras aplicar descuentos parciales.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Total &rsaquo;</td>
-                  <td>Numérico Decimal</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
-                  <td>Multiplicación automática de la cantidad por el precio final unitario.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Historico / Imprimir &rsaquo;</td>
-                  <td>Acciones de Venta</td>
-                  <td>Disponible</td>
-                  <td>Consulta el perfil de pedidos anteriores y genera la proforma formal del pedido.</td>
-                </tr>
-                <tr>
-                  <td class="data-table__field">Grabar / Cancelar &rsaquo;</td>
-                  <td>Transaccional</td>
-                  <td>Primario / Control</td>
-                  <td>Asienta el pedido comprometiendo existencias en Kardex o descarta los cambios.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- BOTÓN ARTÍCULOS -->
-        <section class="doc-section" id="sec-boton-articulos">
-          <h2 class="doc-section__title">Botón Artículos</h2>
-          <p>Para dar uso al botón Artículos es obligatorio completar el campo Cliente Princ, si no está completo el campo Cliente Princ. nos aparecerá esta ventana.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Aviso_Cliente_Princ_Obligatorio">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 627.png" alt="Aviso Cliente Princ obligatorio" style="width: auto; max-width: 60%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Agregamos al cliente, se puede agregar manualmente como tambien usando el simbolo % para abrir la ventana donde estan los clientes.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Aviso_Cliente_Princ_Obligatorio">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 628.png" alt="Aviso Cliente Princ obligatorio" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Cuando agregamos el cliente nos aparecerá luego la siguiente ventana.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Ventana_Busqueda_Articulos">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 629.png" alt="Ventana de Búsqueda de Artículos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <p><em>Esta ventana es similar a la del punto Modulo Compras 1.1 (revisarlo para entender los campos)</em></p>
-          <p>Al dar doble click en uno de los artículos aparecerá esta ventana.</p>          
-          <div class="img-placeholder" data-img-ref="8.1_Ventana_Busqueda_Articulos">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 635.png" alt="Ventana de Búsqueda de Artículos" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Se completa Cant x Caja, Cant y %Dscto, <strong>al dar click en la casilla Promoción?</strong> aparecerá esta ventana.
-            En esta ventana puedes colocar detalles de la nota de pedido relacionado con alguna promoción(texto libre).
+          <!-- BREADCRUMBS -->
+          <p class="breadcrumb">
+            <a href="#">DSI-NET Docs</a>
+            <span aria-hidden="true">/</span>
+            <a href="8.0_Modulo_Preventas_Ventas.html">8. Módulo de Preventas y Ventas</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Manual Operativo: Nota de Pedido</span>
           </p>
-          <div class="img-placeholder" data-img-ref="8.1_Ventana_Promocion">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 636.png" alt="Ventana de Promoción" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+
+          <!-- TÍTULO PRINCIPAL Y LEAD -->
+          <h1 class="content__title">Nota de Pedido (DSI-NET ERP)</h1>
+
+          <p class="content__lead">
+            Guía integral de uso y referencia técnica para la gestión comercial en DSI-NET ERP. Abarca desde la creación y administración de clientes con validación SUNAT, el registro y recuperación de Notas de Pedido, la mecánica de reserva de stock de repuestos, el circuito de aprobaciones múltiples, hasta la generación de reportes y auditoría comercial.
+          </p>
+
+          <!-- RESUMEN DIDÁCTICO PARA NUEVOS USUARIOS -->
+          <div class="callout callout--info" role="note">
+            <i data-lucide="info" class="callout__icon"></i>
+            <div>
+              <strong>¿Qué es una Nota de Pedido en palabras sencillas?</strong>
+              <p style="margin-top: 4px;">
+                Una <strong>Nota de Pedido</strong> es el documento comercial previo a la facturación. En ella se seleccionan los repuestos requeridos por el cliente a demanda o en campo. Este documento puede modificarse múltiples veces durante su emisión y, una vez culminado y autorizado por las áreas correspondientes, permite proceder con la facturación y despacho.
+              </p>
+            </div>
           </div>
 
-          <p>Luego de dar <strong>clic en aceptar</strong> en ambas ventanas, el artículo aparecerá en la grilla de la ventana inicial.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Articulo_En_Grilla">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 638.png" alt="Artículo agregado en la grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
+          <!-- SECCIÓN 1: ACCESO AL SISTEMA -->
+          <section class="doc-section" id="sec-acceso-sistema">
+            <h2 class="doc-section__title">1. Acceso al Sistema</h2>
+            <p class="doc-section__desc">
+              El ingreso a DSI-NET ERP se realiza mediante el ingreso de usuario y password asignados al asesor comercial y personal operativo.
+            </p>
 
-          <p>En la columna <strong>Prom.</strong> de la grilla hay una casilla que al dar clic aparecerá la ventana de texto libre que aparecio antes, esta columna se explicará mejor en el punto <em>Módulo de Pre-Ventas y Ventas 8.3.1</em>.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Articulo_En_Grilla">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 639.png" alt="Artículo agregado en la grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <p>En la columna <strong>%Dscto.</strong> de la grilla hay una casilla que al dar clic activará el descuento que se le agregó en el paso anterior..</p>
-          <div class="img-placeholder" data-img-ref="8.1_Articulo_En_Grilla">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 640.png" alt="Artículo agregado en la grilla" style="width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Usuario</td>
+                    <td>Campo de Texto</td>
+                    <td>Obligatorio</td>
+                    <td>Identificador del asesor comercial o usuario en DSI-NET ERP.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Password</td>
+                    <td>Campo de Contraseña</td>
+                    <td>Obligatorio</td>
+                    <td>Clave secreta personal de autenticación en DSI-NET ERP.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Ingresar</td>
+                    <td>Comando de Acción</td>
+                    <td>Habilitado</td>
+                    <td>Valida las credenciales e inicia sesión en DSI-NET ERP.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-          <p><strong>Otra forma de activar el descuento es de la siguiente manera:</strong></p>
-          <div class="img-placeholder" data-img-ref="8.1_Articulo_En_Grilla">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 642.png" alt="Artículo agregado en la grilla" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <p>Primero colocamos el Dscto donde dice %Dscto, luego al costado damos clic a la casilla donde dice Selecc % Dscto eso hará que en la grilla tambien se active.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Articulo_En_Grilla">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 643.png" alt="Artículo agregado en la grilla" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <p>Para que el Dscto se vea reflejado en la grilla se debe dar clic en el botón Aplica % Dscto.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Activar_Descuento_Metodo2">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 644.png" alt="Aplicar factor de descuento" style="width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-          <p>En la columna que esta al costado de <strong>Precio con Dscto.</strong> de la grilla hay una columna con casillas que al dar clic activará la ventana donde podremos ver los precios al público y al por mayor, en soles y dolares, se puede elegir uno dando doble clic a la fila.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Ventana_Lista_Precios">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 645 (2).png" alt="Ventana de Precios al público y al por mayor" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1072.png" 
+                alt="Pantalla de inicio de sesión de DSI-NET ERP" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+          </section>
 
-        <!-- BOTÓN SERVICIOS -->
-        <section class="doc-section" id="sec-boton-servicios">
-          <h2 class="doc-section__title">Botón Servicios</h2>
-          <p>Al dar clic en el botón servicios aparecerá una ventana con los servicios registrados en el sistema anteriormente.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Ventana_Servicios">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 645.png" alt="Ventana de Selección de Servicios" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          <!-- SECCIÓN 2: CLIENTES -->
+          <section class="doc-section" id="sec-clientes">
+            <h2 class="doc-section__title">2. Clientes</h2>
+            <p class="doc-section__desc">
+              Acceso: 
+            </p>
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1073 (2).png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+            <p class="doc-section__desc">
+              Módulo para el registro, validación y consulta de clientes en Preventas y Ventas, con consulta en línea a SUNAT y parametrización de condiciones comerciales.
+            </p>
+            <p class="doc-section__desc">
+              Datos a mostrar:
+            </p>
+            <!-- CONTENEDOR FIGMA: ACCESO CLIENTES -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1073.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+
+            <h3 style="margin-top: 18px;">Opción Nuevo</h3>
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1074 (2).png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+            <p>Permite registrar un nuevo cliente con autocompletado fiscal y sucursales de entrega:</p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Num Doc</td>
+                    <td>Campo Alfanumérico</td>
+                    <td>Obligatorio</td>
+                    <td>Si el Tipo Doc es RUC cuando se digite el Num Doc el sistema buscará en www.sunat.gob.pe el número de RUC; si el RUC está activo se mostrarán los datos de nombre, dirección y código postal.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Ubigeo</td>
+                    <td>Búsqueda Asistida</td>
+                    <td>Obligatorio</td>
+                    <td>Los códigos postales se buscarán en la lista de ubigeo definidos por SUNAT.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Cat. Precios</td>
+                    <td>Menú Desplegable</td>
+                    <td>Obligatorio</td>
+                    <td>La categoría de precios está relacionada a la Lista de Precios que se utilizará cada vez que se toma una Nota de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Cliente</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Habilitado</td>
+                    <td>Si esta opción está marcada significa que es un Cliente y se podrá realizar Notas de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Direcc Despacho</td>
+                    <td>Campo de Texto con Selector</td>
+                    <td>Condicional</td>
+                    <td>Las direcciones de despacho se utilizarán para realizar las GR por ventas.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- CONTENEDOR FIGMA: FORMULARIO NUEVO CLIENTE -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1074.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+
+            <h3 style="margin-top: 18px;">Opción Modificar</h3>
+            <p class="doc-section__desc">
+              Modifica los campos de un cliente. Desde esta opción no es posible modificar 7 campos sensibles por motivos de seguridad fiscal:
+            </p>
+
+            <div class="callout callout--warning" role="note">
+              <i data-lucide="lock" class="callout__icon"></i>
+              <div>
+                <strong>Campos con restricción de edición en Opción Modificar:</strong>
+                <p style="margin-top: 4px;">
+                  1. Tipo Doc. &nbsp;|&nbsp; 2. Num Doc. &nbsp;|&nbsp; 3. Apellidos y Nombres &nbsp;|&nbsp; 4. Nombre &nbsp;|&nbsp; 5. Dirección &nbsp;|&nbsp; 6. Ubigeo &nbsp;|&nbsp; 7. Anulado.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 3: CLIENTES - ADMINISTRACIÓN -->
+          <section class="doc-section" id="sec-clientes-admin">
+            <h2 class="doc-section__title">3. Clientes - Administración</h2>
+            <p class="doc-section__desc">
+              Acceso:
+            </p>
+            <!-- CONTENEDOR FIGMA: CLIENTES ADMINISTRACIÓN -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1075.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+            <p class="doc-section__desc">
+              Esta opción es muy similar a la opción anterior 2. Clientes con la diferencia que sí es posible modificar todos los campos sin restricciones operativas.
+            </p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Datos de Identidad Fiscal</td>
+                    <td>Campos Editables</td>
+                    <td>Habilitado Total</td>
+                    <td>Permite la modificación irrestricta de Tipo Doc, Num Doc, Apellidos y Nombres, y Nombre.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Datos Domiciliarios y Ubigeo</td>
+                    <td>Campos Editables</td>
+                    <td>Habilitado Total</td>
+                    <td>Permite alterar directamente la Dirección fiscal y el código de Ubigeo oficial.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Estado Anulado</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Habilitado Total</td>
+                    <td>Habilita o revoca el estado de anulación operativa del cliente en DSI-NET ERP.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Grabar</td>
+                    <td>Comando de Acción</td>
+                    <td>Acción Principal</td>
+                    <td>Registra los cambios efectuados sobre el maestro central de clientes.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            
+          </section>
+
+          <!-- SECCIÓN 4: NOTA DE PEDIDO -->
+          <section class="doc-section" id="sec-nota-pedido">
+            <h2 class="doc-section__title">4. Nota de Pedido</h2>
+            <p class="doc-section__desc">
+              Acceso:
+            </p>
+            <!-- CONTENEDOR FIGMA: CABECERA NOTA DE PEDIDO -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1077.png" 
+                alt="#" 
+                style="width: 80%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+            <p class="doc-section__desc">
+              La Nota de Pedido es el documento previo a una facturación, es decir se puede modificar n veces y cuando finalmente esté terminado se procederá a la facturación. Una Nota de Pedido tiene todos los datos necesarios para una facturación.
+            </p>
+
+            <!-- CONTENEDOR FIGMA: ACCESO NOTA DE PEDIDO -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1078.png" 
+                alt="#" 
+                style="width: 80%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+
+            <h3 style="margin-top: 18px;">Cabecera de la Nota de Pedido</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Cliente</td>
+                    <td>Búsqueda Asistida</td>
+                    <td>Obligatorio</td>
+                    <td>Permite seleccionar o crear un cliente, así mismo permitirá escoger el cliente que queremos facturar dentro de una corporación.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Dirección de despacho</td>
+                    <td>Selector de Sedes</td>
+                    <td>Obligatorio</td>
+                    <td>Permite seleccionar la dirección de despacho de una Nota de Pedido, dicha dirección servirá como punto de llegada de la GR.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Destino</td>
+                    <td>Campo de Texto</td>
+                    <td>Operativo</td>
+                    <td>Servirá para la impresión de la Etiqueta que será pegada en los bultos durante el despacho de los repuestos.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Transportista</td>
+                    <td>Selector Asistido</td>
+                    <td>Obligatorio</td>
+                    <td>Permite seleccionar o crear un transportista, dicho transportista servirá para la GR.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Saldo x Cobrar Cli</td>
+                    <td>Indicador Numérico</td>
+                    <td>Solo Lectura</td>
+                    <td>Saldo por cobrar del cliente exhibido en tiempo real en DSI-NET ERP.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Líneas de crédito asignada</td>
+                    <td>Indicador Financiero</td>
+                    <td>Solo Lectura</td>
+                    <td>Es la línea de crédito asignada al cliente o corporación.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Líneas de crédito disponible</td>
+                    <td>Indicador Financiero</td>
+                    <td>Solo Lectura</td>
+                    <td>Es la línea de crédito disponible para nuevas Notas de Pedido.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style="margin-top: 18px;">Selección y Gestión de Repuestos</h3>
+            <p class="doc-section__desc">
+              Comandos para búsqueda de repuestos, visualización gráfica, asignación comercial y recuperación de contingencias.
+            </p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Opción Artículos</td>
+                    <td>Búsqueda Asistida</td>
+                    <td>Habilitado</td>
+                    <td>Permite la selección de repuestos hacia la Nota de Pedido mediante búsqueda por Código, Nombre, Modelo, Marca o clasificación de repuestos.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Importar Excel</td>
+                    <td>Carga Masiva</td>
+                    <td>Habilitado</td>
+                    <td>Importa desde el Excel los repuestos a incluir en la Nota de Pedido mediante copiado en memoria.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Recuperar Archivo Temporal</td>
+                    <td>Recuperación de Datos</td>
+                    <td>Contingencia</td>
+                    <td>Permite importar desde el archivo de texto en <code>c:\tmp_siaf</code> el pedido digitado ante contingencias imprevistas.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Despacho GR</td>
+                    <td>Auditoría Digital</td>
+                    <td>Solo Lectura</td>
+                    <td>Permite visualizar la GR escaneada previamente como consecuencia de la facturación de esta Nota de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Buscar NP</td>
+                    <td>Búsqueda Transaccional</td>
+                    <td>Habilitado</td>
+                    <td>Permite la búsqueda y recuperación de una Nota de Pedido previamente en estado Grabado.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ================= DETALLE OPERATIVO DE OPCIONES DE GESTIÓN DE REPUESTOS ================= -->
+
+            <!-- 1. OPCIÓN ARTÍCULOS (INCLUYE IMAGEN TÉCNICA Y CAPTURA DE CANTIDADES) -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">1. Opción Artículos</h4>
+              <p>
+                Permite la selección de repuestos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>Código</strong>, <strong>Nombre</strong> o <strong>Modelo</strong>; asimismo podemos filtrar los repuestos por <strong>Marca</strong>, <strong>Procedencia</strong> o toda una clasificación de repuestos (<strong>Clase / Familia / Subfamilia</strong>).
+              </p>
+
+               <!-- ESPACIO FIGMA 1: VENTANA DE BÚSQUEDA Y FILTROS -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1079.png" 
+                alt="#" 
+                style="width: 60%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+              <p>Tenemos ventanas de ayuda integradas para la gestión comercial:</p>
+              <ul style="margin: 8px 0 14px 20px; line-height: 1.6;">
+                <li><strong>Precios:</strong> Precios en sus diferentes categorías.</li>
+                <li><strong>Stock:</strong> Cantidad del repuesto que hay en almacen</li>
+                <li><strong>Tránsito importaciones:</strong> Listado de repuestos que están por llegar incluyendo cantidad y una fecha estimada de llegada.</li>
+              </ul>
+
+              <!-- ESPACIO FIGMA 2: VENTANAS AUXILIARES DE CONSULTA -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1080.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+              <!-- INTEGRADO: VER IMAGEN DEL REPUESTO -->
+              <div style="background: #ffffff; border-left: 4px solid #0284c7; padding: 12px 16px; margin: 16px 0; border-radius: 0 4px 4px 0;">
+                <h5 style="color: #0f172a; margin-bottom: 4px; font-size: 1rem;">Visualización de Imagen del Repuesto</h5>
+                <div class="img-placeholder">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1082 (2).png" 
+                  alt="#" 
+                  style="width: 10%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+                </div>
+                <p style="margin: 0; font-size: 0.95rem;">
+                  La opción nos muestra la imagen del repuesto seleccionado para verificación visual del asesor comercial durante la toma de pedidos a demanda o en campo.
+                </p>
+              </div>
+
+              <!-- ESPACIO FIGMA: VISUALIZADOR DE IMAGEN TÉCNICA -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1081.png" 
+                alt="#" 
+                style="width: 40%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+              <!-- INTEGRADO: CAPTURA DE CANTIDAD, DESCUENTO Y COSTO 0 -->
+              <div style="background: #ffffff; border-left: 4px solid #0f766e; padding: 12px 16px; margin: 16px 0; border-radius: 0 4px 4px 0;">
+                <h5 style="color: #0f172a; margin-bottom: 4px; font-size: 1rem;">Ventana de Captura de Cantidades y Condiciones Comerciales</h5>
+                <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1081 (2).png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+                <p style="margin: 0; font-size: 0.95rem;">
+                  Al seleccionar un repuesto el sistema nos muestra la ventana de captura transaccional:
+                </p>
+                <ul style="margin: 8px 0 0 20px; line-height: 1.6; font-size: 0.95rem;">
+                  <li>Aquí ingresaremos la cantidad a seleccionar para nuestra Nota de Pedido.</li>
+                  <li>También podemos ingresar un % de descuento o quizás marcar al repuesto como promoción <strong>Costo 0</strong>.</li>
+                  <li>Según los permisos de los usuarios en DSI-NET ERP podremos mostrar el Costo del repuesto así como la utilidad comercial.</li>
+                </ul>
+              </div>
+
+              <!-- ESPACIO FIGMA: VENTANA PARA DIGITAR CANTIDADES -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1082.png" 
+                alt="#" 
+                style="width: 80%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 2. OPCIÓN IMPORTAR EXCEL -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">2. Opción Importar Excel</h4>
+              <p>
+                Importa desde el Excel los repuestos a incluir en la Nota de Pedido. Su secuencia operativa contempla los siguientes pasos:
+              </p>
+              <!-- ESPACIO FIGMA 1: ESTRUCTURA EXCEL -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1083 (2).png" 
+                alt="#" 
+                style="width: 20%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+              <ol style="margin: 8px 0 14px 20px; line-height: 1.6;">
+                <li>Se debe construir un Excel con el formato establecido por DSI-NET ERP.</li>
+                <li>En el Excel se sombrea la parte de los datos a importar y copiamos en memoria (<kbd>Ctrl+C</kbd>).</li>
+                <li>En el sistema hacemos clic en la opción en mención y los datos se copiarán automáticamente en la Nota de Pedido.</li>
+                <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1083 (3).png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+              </ol>
+              <p>
+                <em>Control de error:</em> Si estos pasos no se realizan en forma correcta el sistema mostrará el mensaje de error de formato correspondiente.
+              </p>
+
+              <!-- ESPACIO FIGMA 2: MENSAJE DE ADVERTENCIA POR FORMATO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1083.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 3. OPCIÓN RECUPERAR ARCHIVO TEMPORAL (C:\TMP_SIAF) -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">3. Opción Recuperar Archivo Temporal</h4>
+              <p>
+                Si una Nota de Pedido no ha sido puesta en estado Grabado por los siguientes motivos:
+              </p>
+              <ul style="margin: 8px 0 14px 20px; line-height: 1.6;">
+                <li>Cerrar la ventana de la Nota de Pedido sin grabar.</li>
+                <li>Cerrar el sistema sin grabar la Nota de Pedido.</li>
+                <li>Corte de fluido eléctrico.</li>
+                <li>Pérdida de conexión hacia la BD u otros.</li>
+              </ul>
+              <p>
+                Para cualquier caso la Nota de Pedido no se ha perdido, se mantiene grabada en un archivo de texto en la carpeta <code>c:\tmp_siaf</code>. Con esta opción podemos importar desde el archivo de texto el pedido digitado anteriormente: ubiquemos la última Nota de Pedido en estado Grabado temporal y hacemos clic en <strong>Abrir</strong> para recuperar todos los repuestos de la Nota de Pedido.
+              </p>
+
+              <!-- ESPACIO FIGMA: EXPLORADOR Y RECUPERACIÓN TMP_SIAF -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1084.png" 
+                alt="#" 
+                style="width: 60%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 4. OPCIÓN DESPACHO GR (VISOR DE GR) -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">4. Opción Despacho GR</h4>
+              <p>
+                Permite visualizar la GR escaneada previamente como consecuencia de la facturación de esta Nota de Pedido. Funciona como respaldo documental para constatar la recepción física de repuestos en campo.
+              </p>
+
+              <!-- ESPACIO FIGMA: VISOR DE GUÍA DE REMISIÓN ESCANEADA -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1088.png" 
+                alt="#" 
+                style="width: 20%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 5. OPCIÓN BUSCAR NP -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">5. Opción Buscar NP (?)</h4>
+              <p>
+                Permite buscar y recuperar una Nota de Pedido previamente en estado Grabado. Facilita visualizar sus datos, revisar los repuestos ingresados o dar seguimiento a su estado en el circuito comercial.
+              </p>
+
+              <!-- ESPACIO FIGMA 2: NOTA DE PEDIDO RECUPERADA EN PANTALLA -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1085.png" 
+                alt="#" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- SUBSECCIÓN: NIVEL DE APROBACIONES -->
+            <h3 style="margin-top: 28px;">Nivel de Aprobaciones</h3>
+            <p class="doc-section__desc">
+              Flujo de autorizaciones que valida el compromiso de stock, la viabilidad logística y la solvencia crediticia:
+            </p>
+
+            <h4 style="margin-top: 12px; color: #2c3e50;">Aprobación de Ventas</h4>
+            <p>
+              La aprobación de ventas permite comprometer a los repuestos para que no estén disponibles para cualquier operación pero sin quitarlos del stock:
+            </p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Stock Real (A)</td>
+                    <td>Métrica de Almacén</td>
+                    <td>Solo Lectura</td>
+                    <td>Existencia física consolidada en el almacén de despacho.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Stock Comprometido (B)</td>
+                    <td>Métrica Transaccional</td>
+                    <td>Solo Lectura</td>
+                    <td>Unidades reservadas mediante Notas de Pedido aprobadas por ventas.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Stock Disponible (A - B)</td>
+                    <td>Métrica Operativa</td>
+                    <td>Calculado</td>
+                    <td>Capacidad neta de existencias de repuestos habilitada para nuevas operaciones.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Opción Aprobación de Ventas</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Habilitado</td>
+                    <td>Activa la visación comercial y ejecuta el compromiso formal de stock en almacén.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style="margin-top: 8px;">
+              <em>Ejemplo práctico: Para el código <strong>A001</strong> tenemos 100 unidades en Stock pero solo tenemos 90 disponibles para la venta, debido a que 10 unidades han sido comprometidas por una o varias Notas de Pedido.</em>
+            </p>
+
+            <h4 style="margin-top: 16px; color: #2c3e50;">Aprobación de Despacho y Aprobación de Cobranzas</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Despacho</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Habilitado</td>
+                    <td>La aprobación determina si una Nota de Pedido estará disponible para la facturación y será enviada la Nota de Pedido al almacén para el picking y packing.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Cobranzas (Automática)</td>
+                    <td>Proceso del Sistema</td>
+                    <td>Sistémico</td>
+                    <td>Se aprueba de forma automática si cumple: forma de cobro al Contado, o si no es al Contado tener línea de crédito disponible y no tener documentos pendientes con más de n días de atraso configurable.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Cobranzas (Manual)</td>
+                    <td>Casilla de Verificación</td>
+                    <td>Restringido</td>
+                    <td>Si no se cumpliesen las condiciones automáticas se debe aprobar manualmente por cobranzas la Nota de Pedido.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--warning" role="note" style="margin-top: 16px;">
+              <i data-lucide="mail" class="callout__icon"></i>
+              <div>
+                <strong>Alerta por Correo Electrónico:</strong>
+                <p style="margin-top: 4px;">
+                  Cuando una Nota de Pedido está aprobada al 100% y de forma de cobro Depósito o Letras, el sistema enviará automáticamente un correo electrónico para que las áreas responsables estén enteradas antes de ser facturada.
+                </p>
+              </div>
+            </div>
+
+            <!-- CONTENEDOR FIGMA: CONTROLES DE APROBACIÓN -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+           <!-- SUBSECCIÓN: ESTADOS DE LA NOTA DE PEDIDO -->
+            <h3 style="margin-top: 18px;">Estados de la Nota de Pedido</h3>
+            <p class="doc-section__desc">
+              Son cambios que se pueden realizar en una Nota de Pedido:
+            </p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>CONTROL / ELEMENTO</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FUNCIÓN OPERATIVA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="data-table__field">Abrir Pedido</td>
+                    <td>Comando Transaccional</td>
+                    <td>Condicional</td>
+                    <td>Permite abrir una Nota de Pedido siempre y cuando se encuentre comprometida por Ventas, es decir descompromete el stock de todos los repuestos de la Nota de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Facturar Pedido</td>
+                    <td>Comando de Emisión</td>
+                    <td>Condicional</td>
+                    <td>Permite facturar una Nota de Pedido siempre y cuando esté aprobada por Ventas, Despacho y Cobranzas.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Liquidar Pedido</td>
+                    <td>Comando Transaccional</td>
+                    <td>Condicional</td>
+                    <td>Permite liquidar una Nota de Pedido comprometida por Ventas descomprometiendo el stock de forma individual por repuestos; los repuestos liquidados no pueden ser facturados.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Copiar NP</td>
+                    <td>Comando de Clonación</td>
+                    <td>Habilitado</td>
+                    <td>Permite copiar una Nota de Pedido anteriormente en estado Grabado en una nueva Nota de Pedido.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Copiar a GR</td>
+                    <td>Comando de Transferencia</td>
+                    <td>Habilitado</td>
+                    <td>Permite enviar los datos de una Nota de Pedido hacia una GR.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Histórico</td>
+                    <td>Consulta de Auditoría</td>
+                    <td>Solo Lectura</td>
+                    <td>Nos permite verificar la secuencia cronológica de una Nota de Pedido, desde que pasa por sus diferentes niveles de aprobación hasta su facturación.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- CONTENEDOR FIGMA: MENÚ PRINCIPAL DE ESTADOS -->
+            <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+            </div>
+
+            <!-- ================= DETALLE OPERATIVO DE CADA ESTADO ================= -->
+
+            <!-- 1. ESTADO ABRIR PEDIDO -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">1. Abrir Pedido</h4>
+              <p>
+                Permite abrir una Nota de Pedido siempre y cuando se encuentre comprometida por Ventas, es decir descompromete el stock de todos los repuestos de la Nota de Pedido.
+              </p>
+
+              <!-- ESPACIO FIGMA: ESTADO ABRIR PEDIDO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+
+            <!-- 2. ESTADO FACTURAR PEDIDO -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">2. Facturar Pedido</h4>
+              <p>
+                Permite facturar una Nota de Pedido siempre y cuando esté aprobada por Ventas, Despacho y Cobranzas.
+              </p>
+
+              <!-- ESPACIO FIGMA: ESTADO FACTURAR PEDIDO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 3. ESTADO LIQUIDAR PEDIDO -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">3. Liquidar Pedido</h4>
+              <p>
+                Permite liquidar una Nota de Pedido siempre y cuando se encuentre comprometida por Ventas, es decir descompromete el stock de forma individual por repuestos de una Nota de Pedido. Los repuestos liquidados no pueden ser facturados.
+              </p>
+
+              <!-- ESPACIO FIGMA: ESTADO LIQUIDAR PEDIDO -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 4. ESTADO COPIAR NP -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">4. Copiar NP</h4>
+              <p>
+                Permite copiar una Nota de Pedido anteriormente en estado Grabado en una nueva Nota de Pedido.
+              </p>
+
+              <!-- ESPACIO FIGMA: ESTADO COPIAR NP -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+            <!-- 5. ESTADO COPIAR A GR -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">5. Copiar a GR</h4>
+              <p>
+                Permite enviar los datos de una Nota de Pedido hacia una GR.
+              </p>
+
+              <!-- ESPACIO FIGMA: ESTADO COPIAR A GR -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>  
+            </div>
+
+            <!-- 6. ESTADO HISTÓRICO DE UNA NP -->
+            <div class="doc-subblock" style="margin-top: 28px;">
+              <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">6. Histórico de una NP</h4>
+              <p>
+                Nos permite verificar la secuencia cronológica de una Nota de Pedido, desde que pasa por sus diferentes niveles de aprobación hasta su facturación.
+              </p>
+
+              <!-- ESPACIO FIGMA: HISTÓRICO DE UNA NP -->
+              <div class="img-placeholder">
+              <img 
+                src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 108.png" 
+                alt="#" 
+                style="width: 50%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+              >
+              </div>
+            </div>
+
+        <!-- ============ NAVEGACIÓN ENTRE PÁGINAS ============ -->
+        <nav class="page-nav" aria-label="Navegación entre páginas">
+          <a class="page-nav__link page-nav__link--prev" href="8.0_Modulo_Preventas_Ventas.html">
+            <span class="page-nav__label">Anterior</span>
+            <span class="page-nav__title">8.0 Conceptos Generales</span>
+            <span class="page-nav__sub">Módulo de Preventas y Ventas</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="8.1.1_Estados_Ciclo_de_vida.html">
+            <span class="page-nav__label">Siguiente</span>
+            <span class="page-nav__title">8.1.1 Estados y Ciclo de Vida</span>
+            <span class="page-nav__sub">Máquina de estados de la Nota de Pedido</span>
+          </a>
+        </nav>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="site-footer">
+          <p>Manual Oficial DSI-NET ERP &mdash; Nota de Pedido</p>
+          <div class="site-footer__links">
+            <a href="#">Políticas de Privacidad</a>
+            <a href="#">Términos de Soporte</a>
+            <a href="#">Manuales PDF</a>
           </div>
+        </footer>
 
-          <p><strong>Casillas desplegable (1.Código, 2.Nombre, 3.Modelo):</strong> Permite escoger el tipo de filtro que se usará en la ventana.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Casillas_Desplegable_Filtro">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 646.png" alt="Casillas desplegable de filtro" style="width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p><strong>Barra de filtro:</strong> Permite escribir contenido alfanumerico para poder filtrar el servicio que se desea.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Barra_Filtro_Servicio">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 647.png" alt="Barra de filtro de servicios" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Dar clic al botón aceptar y el servicio se verá reflejado en la grilla de otro color.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Servicio_En_Grilla">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 648.png" alt="Servicio reflejado en la grilla" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
-
-        <!-- BOTÓN IMPORTAR -->
-        <section class="doc-section" id="sec-boton-importar">
-          <h2 class="doc-section__title">Botón Importar</h2>
-          <p>El botón Importar ya hemos visto su funcionalidad en puntos anteriores, por ejemplo en el punto <em>Menú Maestros_Personas_0.3.6.3.1</em>, en este caso nos pediran solo 2 columnas.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Ventana_Importar_Items">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 649.png" alt="Ventana de Importar Ítems" style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Asi debería quedar el excel, copiamos solo el contenido para importarlo.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Excel_Importar_Formato">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 650.png" alt="Formato de Excel para importar" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Lo importamos y los articulos deben aparecer en la grilla, si en caso los precios no aparecen ver el punto <em>Menú Maestros_Artículos_0.3.6.4.1</em>.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Excel_Importar_Formato">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 651.png" alt="Formato de Excel para importar" style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
-
-        <!-- GRABAR LA NOTA DE PEDIDO -->
-        <section class="doc-section" id="sec-grabar">
-          <h2 class="doc-section__title">Grabar la Nota de Pedido</h2>
-          <p>Una vez se tienen completo los campos requeridos se procede a grabar el documento, si un campo obligatorio falta, nos aparecerá un aviso como el siguiente:</p>
-          <div class="img-placeholder" data-img-ref="8.1_Aviso_Falta_Campo">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 652.png" alt="Aviso falta campo obligatorio" style="width: auto; max-width: 40%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Si hay un valor en los precios que no esta permitido como por ejemplo que el precio de venta es menor al precio de costo aparecerá el siguiente aviso.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Aviso_Precio_Menor_Costo">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 653.png" alt="Aviso precio de venta menor al precio de costo" style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-
-          <p>Solucionado todos esos problemas, procedemos a grabar, una vez se graba el botón Grabar quedará inhabilitado y los campos de arriba tambien.</p>
-          <div class="img-placeholder" data-img-ref="8.1_Nota_Pedido_Grabada">
-            <img src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 654.png" alt="Nota de Pedido grabada y bloqueada" style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
-          </div>
-        </section>
-
-      </div>
-
-      <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
-      <nav class="page-nav" aria-label="Navegación entre páginas">
-        <a class="page-nav__link page-nav__link--prev" href="8.0_Modulo_Preventas_Ventas.html">
-          <span class="page-nav__label">Anterior</span>
-          <span class="page-nav__title">8.0 Conceptos Generales</span>
-          <span class="page-nav__sub">Saberes previos</span>
-        </a>
-        <a class="page-nav__link page-nav__link--next" href="8.1.1_Estados_Ciclo_de_vida.html">
-          <span class="page-nav__label">Siguiente</span>
-          <span class="page-nav__title">8.1.1 Estados y ciclo de vida de una NP </span>
-          <span class="page-nav__sub">Los estados de una NP</span>
-        </a>
-      </nav>
-
-      <!-- ============ FOOTER ============ -->
-      <footer class="site-footer">
-        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
-        <div class="site-footer__links">
-          <a href="#">Políticas de Privacidad</a>
-          <a href="#">Términos de Soporte</a>
-          <a href="#">Manuales PDF</a>
-        </div>
-      </footer>
-
-    </main>
+      </main>
   </div>
 
   <script>
