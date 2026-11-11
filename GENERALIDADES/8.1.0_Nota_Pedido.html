@@ -25,12 +25,10 @@
     </div>
 
     <nav class="topbar__links" aria-label="Enlaces de soporte">
-      <a href="#" class="topbar__link"><i data-lucide="book-open" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Glosario</a>
-      <a href="#" class="topbar__link"><i data-lucide="life-buoy" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Soporte Técnico</a>
-      <a href="#" class="topbar__link"><i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>DSI SAC</a>
-      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
-        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
-        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      <!-- BOTÓN MODO OSCURO INTEGRADO -->
+      <button class="topbar__theme-toggle" id="themeToggleBtn" type="button" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+        <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+      </button>
       </div>
     </nav>
   </header>
@@ -383,10 +381,10 @@
           </p>
 
           <!-- TÍTULO PRINCIPAL Y LEAD -->
-          <h1 class="content__title">Nota de Pedido (DSI-NET ERP)</h1>
+          <h1 class="content__title">8.1.0 Nota de Pedido (DSI-NET ERP)</h1>
 
           <p class="content__lead">
-            Guía integral de uso y referencia técnica para la gestión comercial en DSI-NET ERP. Abarca desde la creación y administración de clientes con validación SUNAT, el registro y recuperación de Notas de Pedido, la mecánica de reserva de stock de repuestos, el circuito de aprobaciones múltiples, hasta la generación de reportes y auditoría comercial.
+            Documentación de referencia para la Nota de Pedido en DSI-NET ERP. Abarca todo el flujo del documento previo a la venta: ingreso de datos comerciales, selección y carga de repuestos, compromiso de existencias en almacén y el circuito de aprobaciones (Ventas, Cobranzas y Despacho) para su posterior facturación y entrega.
           </p>
 
           <!-- RESUMEN DIDÁCTICO PARA NUEVOS USUARIOS -->
@@ -507,7 +505,7 @@
                     <td class="data-table__field">Modalidad: Agencia</td>
                     <td>Opción Radial</td>
                     <td>Condicional</td>
-                    <td>Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. Si la agencia o transportista no se encuentra registrado en el sistema, la casilla desplegable en el campo <strong>Transportista</strong> permite abrir directamente la ventana de "Mantenimiento de proveedores" para registrarlo seleccionando el tipo de entidad Transportista sin salir de la Nota de Pedido.</td>
+                    <td>Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. Si la agencia o transportista no se encuentra registrado en el sistema, la casilla al costado del campo <strong>Transportista</strong> permite abrir directamente la ventana de "Mantenimiento de proveedores" para registrarlo seleccionando el tipo de entidad Transportista sin salir de la Nota de Pedido.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">F. de Cobro / Vencimiento</td>
@@ -556,7 +554,7 @@
             </div>
 
             <p class="doc-section__desc">
-              Pantalla Nota de pedido.
+              <strong>Nota de pedido.</strong> 
             </p>
 
             <div class="img-placeholder">
@@ -565,6 +563,84 @@
                 alt="#" 
                 style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
               >
+            </div>
+
+            <!-- CONDICIONES DE DESPACHO Y COBRANZA -->
+            <div class="doc-subsection" id="sub-condiciones-despacho-cobranza" style="margin-top: 24px; margin-bottom: 28px;">
+              <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Condiciones de Despacho y Cobranza</h3>
+              <p>
+                En esta sección de la cabecera se configuran las condiciones de entrega de los repuestos y los términos comerciales acordados con el cliente[cite: 16]:
+              </p>
+
+              <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1148.png" 
+                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
+                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+              </div>
+              
+              <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 16px;">
+                <li>
+                  <strong>Transportista:</strong> Es la casilla donde se elige la agencia de transporte.
+                </li>
+                <li>
+                  <strong>Modalidad de entrega (Almacén / Local / Agencia)</strong>
+                </li>
+                <li>
+                  <strong>Almacen:</strong> Indica que el cliente retira los repuestos directamente en las instalaciones del almacén principal de la empresa a demanda.
+                  Al seleccionar la opción de almacen, en la casilla "Transportista" aparecerá por defecto ALMACEN ...
+                </li>
+                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1149.png" 
+                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
+                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+                </div>
+                <li>
+                  <strong>Local:</strong> Establece la entrega directa en el local o sucursal del cliente, tomando como punto de llegada obligatorio la información cargada en el campo Direcc Desp para la emisión de la Guía de Remisión.
+                  Al seleccionar la opción de local, en la casilla de "Transportista" aparecerá por defecto LOCAL ... 
+                </li>
+                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1150.png" 
+                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
+                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+                </div>
+                <li>
+                  <strong>Agencia:</strong> Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. 
+                  Al seleccionar la opción de Agencia, en la casilla de "Transportista" ya no aparecerá nada y se tendrá que escribir la agencia que hará el traslado de mercaderia al cliente, en caso no esté registrado la agencia se le puede agregar mediante la casilla que esta al costado el cual abre el mantenimineto de proveedores, y nos aseguramos que esté marcada la casilla de color celeste "Transportista".
+                </li>
+                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1151.png" 
+                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
+                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+                </div>
+                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1152.png" 
+                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
+                  style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+                </div>
+                <li>
+                  <strong>F. de Cobro (Forma de Cobro):</strong> Desplegable en el cual se observa las formas de cobro que el cliente tiene disponible.
+                </li>
+                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+                <img 
+                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1153.png" 
+                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
+                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                >
+                </div>
+                <li>
+                  <strong>Vencimiento:</strong> Se actualiza de inmediato de acuerdo al método de cobro elegido, por ejemplo: para forma de cobro al contado la fecha se mantiene pero en caso sea al crédito con 30 días, el campo fecha se actualiza contando 30 días despues.
+                </li>
+              </ul>
             </div>
 
             <h3 style="margin-top: 18px;">Selección y Gestión de Repuestos</h3>
@@ -596,7 +672,7 @@
                     <td>Importa desde el Excel los repuestos a incluir en la Nota de Pedido mediante copiado en memoria.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Opción Recuperar Archivo Temporal</td>
+                    <td class="data-table__field">Opción Importar TXT</td>
                     <td>Recuperación de Datos</td>
                     <td>Contingencia</td>
                     <td>Permite importar desde el archivo de texto en <code>c:\tmp_siaf</code> el pedido digitado ante contingencias imprevistas.</td>

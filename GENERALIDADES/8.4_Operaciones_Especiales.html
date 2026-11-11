@@ -25,12 +25,10 @@
     </div>
 
     <nav class="topbar__links" aria-label="Enlaces de soporte">
-      <a href="#" class="topbar__link"><i data-lucide="book-open" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Glosario</a>
-      <a href="#" class="topbar__link"><i data-lucide="life-buoy" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Soporte Técnico</a>
-      <a href="#" class="topbar__link"><i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>DSI SAC</a>
-      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
-        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
-        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      <!-- BOTÓN MODO OSCURO INTEGRADO -->
+      <button class="topbar__theme-toggle" id="themeToggleBtn" type="button" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+        <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+      </button>
       </div>
     </nav>
   </header>
@@ -207,15 +205,20 @@
 
               <li><a href="8.2_Venta_Directa.html" class="toc__link">8.2 Venta Directa y Facturación</a></li>
 
-              <!-- 8.3 ACORDEÓN HIJO -->
-              <li class="toc__item toc__item--group">
-                <button class="toc__toggle" type="button" aria-expanded="false">
+              <!-- 8.3 ACORDEÓN HIJO (DESPLEGADO) -->
+              <li class="toc__item toc__item--group is-open">
+                <button class="toc__toggle" type="button" aria-expanded="true">
                   8.3 Panel de Descuentos
                 </button>
                 <ul class="toc__sublist">
                   <li><a href="8.3.0_Descuentos_conceptos_generales.html" class="toc__link">8.3.0 Conceptos Generales</a></li>
                   <li><a href="8.3.1_Campana_Oferta.html" class="toc__link">8.3.1 Campaña de Oferta</a></li>
-                  <li><a href="8.3.2_Liquidacion_Articulos.html" class="toc__link">8.3.2 Liquidación de Artículos</a></li>
+                  <!-- PANTALLA ACTIVA -->
+                  <li>
+                    <a href="8.3.2_Liquidacion_Articulos.html" class="toc__link">
+                      8.3.2 Liquidación de Artículos
+                    </a>
+                  </li>
                   <li><a href="8.3.3_Promociones_Focalizadas.html" class="toc__link">8.3.3 Promociones Focalizadas</a></li>
                 </ul>
               </li>
@@ -746,57 +749,12 @@
     </main>
   </div>
 
-  <!-- ============ JAVASCRIPT DE ACORDEÓN, SIDEBAR Y FILTRO ============ -->
+ <!-- Solo inicializar Lucide y cargar main.js -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Inicializar iconos de Lucide
-      if (window.lucide) {
-        lucide.createIcons();
-      }
-
-      // 2. Funcionalidad de los botones acordeón del Menú Lateral (TOC)
-      const toggles = document.querySelectorAll('.toc__toggle');
-      toggles.forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-          e.preventDefault();
-          const parentItem = toggle.closest('.toc__item--group');
-          if (!parentItem) return;
-
-          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', !isExpanded);
-          parentItem.classList.toggle('is-open');
-        });
-      });
-
-      // 3. Botón para abrir / colapsar el menú lateral en pantallas pequeñas
-      const sidebarToggle = document.getElementById('sidebarToggle');
-      const sidebar = document.getElementById('sidebar');
-      if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
-          sidebar.classList.toggle('is-open');
-          const expanded = sidebarToggle.getAttribute('aria-expanded') === 'true';
-          sidebarToggle.setAttribute('aria-expanded', !expanded);
-        });
-      }
-
-      // 4. Filtro del buscador en la barra lateral
-      const filterInput = document.getElementById('tocFilter');
-      if (filterInput) {
-        filterInput.addEventListener('input', (e) => {
-          const val = e.target.value.toLowerCase().trim();
-          const items = document.querySelectorAll('.toc__list > li');
-
-          items.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            if (text.includes(val)) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
-      }
-    });
+    if (window.lucide) {
+      lucide.createIcons();
+    }
   </script>
+  <script src="../main.js"></script>
 </body>
 </html>

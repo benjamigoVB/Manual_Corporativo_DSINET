@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- ============ HEADER SUPERIOR ============ -->
+ <!-- ============ HEADER SUPERIOR ============ -->
   <header class="topbar">
     <div class="topbar__brand">
       <button class="topbar__menu-toggle" id="sidebarToggle" aria-label="Abrir/cerrar menú lateral" aria-expanded="true">
@@ -18,21 +18,16 @@
     </div>
 
     <div class="topbar__search">
-      <svg class="topbar__search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="7"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
+      <i data-lucide="search" class="topbar__search-icon"></i>
       <input type="search" id="topSearch" placeholder="Buscar en la documentación de DSI-NET..." aria-label="Buscar en la documentación">
       <kbd class="topbar__kbd">Ctrl+K</kbd>
     </div>
 
     <nav class="topbar__links" aria-label="Enlaces de soporte">
-      <a href="#" class="topbar__link">Glosario</a>
-      <a href="#" class="topbar__link">Soporte Técnico</a>
-      <a href="#" class="topbar__link">DSI SAC</a>
-      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
-        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
-        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      <!-- BOTÓN MODO OSCURO INTEGRADO -->
+      <button class="topbar__theme-toggle" id="themeToggleBtn" type="button" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+        <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+      </button>
       </div>
     </nav>
   </header>

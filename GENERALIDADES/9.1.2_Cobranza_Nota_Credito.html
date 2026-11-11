@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- ============ HEADER SUPERIOR ============ -->
+ <!-- ============ HEADER SUPERIOR ============ -->
   <header class="topbar">
     <div class="topbar__brand">
       <button class="topbar__menu-toggle" id="sidebarToggle" aria-label="Abrir/cerrar menú lateral" aria-expanded="true">
@@ -25,12 +25,10 @@
     </div>
 
     <nav class="topbar__links" aria-label="Enlaces de soporte">
-      <a href="#" class="topbar__link"><i data-lucide="book-open" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Glosario</a>
-      <a href="#" class="topbar__link"><i data-lucide="life-buoy" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Soporte Técnico</a>
-      <a href="#" class="topbar__link"><i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>DSI SAC</a>
-      <div class="topbar__lang" id="langToggle" role="group" aria-label="Selector de idioma">
-        <button class="topbar__lang-btn is-active" data-lang="ES" type="button">ES</button>
-        <button class="topbar__lang-btn" data-lang="PE" type="button">PE</button>
+      <!-- BOTÓN MODO OSCURO INTEGRADO -->
+      <button class="topbar__theme-toggle" id="themeToggleBtn" type="button" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+        <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+      </button>
       </div>
     </nav>
   </header>
