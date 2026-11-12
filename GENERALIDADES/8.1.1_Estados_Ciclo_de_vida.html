@@ -386,7 +386,7 @@
           <h1 class="content__title">8.1.1 Estados y Ciclo de Vida de la Nota de Pedido</h1>
 
           <p class="content__lead">
-            Guía visual y práctica sobre los estados por los que pasa una Nota de Pedido en DSI-NET ERP. Conoce paso a paso cómo se comporta el sistema desde que creas el pedido, separas los repuestos en almacén, autorizas los despachos y pagos, hasta la entrega final al cliente.
+            Guía visual y práctica sobre los estados por los que pasa una Nota de Pedido en DSI-NET ERP. Conoce paso a paso cómo se comporta el sistema desde que creas el pedido, separas los artículos en almacén, autorizas los despachos y pagos, hasta la entrega final al cliente.
           </p>
 
           <!-- CALLOUT EXPLICATIVO -->
@@ -395,7 +395,7 @@
             <div>
               <strong>¿Cómo funcionan los estados de una Nota de Pedido?</strong>
               <p style="margin-top: 4px;">
-                Una Nota de Pedido es un documento previo a la venta definitiva. A medida que avanza el trámite, va cambiando de estado: el asesor comercial registra los repuestos, Ventas los separa en el almacén para que no se vendan a otro cliente, Cobranzas verifica que el cliente tenga crédito o pague al contado, y Despacho prepara los bultos para su entrega física.
+                Una Nota de Pedido es un documento previo a la venta definitiva. A medida que avanza el trámite, va cambiando de estado: el asesor comercial registra los artículos, Ventas los separa en el almacén para que no se vendan a otro cliente, Cobranzas verifica que el cliente tenga crédito o pague al contado, y Despacho prepara los bultos para su entrega física.
               </p>
             </div>
           </div>
@@ -422,13 +422,13 @@
                     <td class="data-table__field">00</td>
                     <td>Nuevo</td>
                     <td>Creación</td>
-                    <td>Nota de pedido recién creada; permite agregar, quitar o editar repuestos y cantidades libremente. El stock aún no está comprometido.</td>
+                    <td>Nota de pedido recién creada; permite agregar, quitar o editar artículos y cantidades libremente. El stock aún no está comprometido.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">01</td>
                     <td>Modificado</td>
                     <td>Edición</td>
-                    <td>Nota de pedido en estado Grabado al que se le han corregido repuestos, cantidades o asesor comercial antes de ser aprobado.</td>
+                    <td>Nota de pedido en estado Grabado al que se le han corregido artículos, cantidades o asesor comercial antes de ser aprobado.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">02</td>
@@ -440,19 +440,19 @@
                     <td class="data-table__field">03</td>
                     <td>Aprobado Ventas</td>
                     <td>Aprobación</td>
-                    <td>Visado comercial; congela precios, bloquea la edición directa y separa los repuestos en almacén sin darlos de baja contable.</td>
+                    <td>Visado comercial; congela precios, bloquea la edición directa y separa los artículos en almacén sin darlos de baja contable.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">04</td>
                     <td>Liquidación Parcial</td>
                     <td>Almacén / Caja</td>
-                    <td>Se liberan repuestos seleccionados de la orden para devolverlos al stock disponible; los repuestos liquidados ya no se pueden facturar.</td>
+                    <td>Se liberan artículos seleccionados de la orden para devolverlos al stock disponible; los artículos liquidados ya no se pueden facturar.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">05</td>
                     <td>Liquidación Total</td>
                     <td>Almacén / Caja</td>
-                    <td>Se liberan todos los repuestos del pedido, devolviendo el 100% de las unidades al almacén general.</td>
+                    <td>Se liberan todos los artículos del pedido, devolviendo el 100% de las unidades al almacén general.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">06</td>
@@ -488,7 +488,7 @@
             <div class="doc-subsection" id="sub-2-1">
               <h3 class="doc-section__subtitle">2.1 Estado Nuevo</h3>
               <p>
-                Al formular una Nota de Pedido por primera vez, selecciona el cliente y añade los repuestos requeridos. Al pulsar la <strong>Opción Grabar</strong> sin marcar casillas de aprobación, el pedido se guarda en estado inicial.
+                Al formular una Nota de Pedido por primera vez, selecciona el cliente y añade los artículos requeridos. Al pulsar la <strong>Opción Grabar</strong> sin marcar casillas de aprobación, el pedido se guarda en estado inicial.
               </p>
               <p>
                 Para comprobarlo, pulsa el botón de ayuda <strong>[?]</strong> junto al correlativo; verás el pedido registrado con el estado <strong>NUEVO,</strong> cabe recalcar que solo se esta grabando una NP mas no se está comprometiendo ningún artículo ya que no esta aprobado por ventas, eso lo veremos mas adelante.
@@ -502,7 +502,7 @@
             <div class="doc-subsection" id="sub-2-2">
               <h3 class="doc-section__subtitle">2.2 Estado Modificado</h3>
               <p>
-                Aparece cuando entras a editar un pedido que ya habías grabado antes (por ejemplo, agregar más repuestos, cambiar cantidades o reasignar el asesor comercial).
+                Aparece cuando entras a editar un pedido que ya habías grabado antes (por ejemplo, agregar más artículos, cambiar cantidades o reasignar el asesor comercial).
               </p>
               <p>
                 Pulsa el botón de ayuda <strong>[?]</strong>, ubica el documento en la lista y selecciónalo para editar:
@@ -540,10 +540,10 @@
                 </div>
 
                 <p>
-                  Cuando la Nota de Pedido pasa al estado Abierto, los artículos seleccionados se descomprometen y vuelven al stock total, la casilla de <strong>Aprobación Vtas.</strong> se desmarca automáticamente, los campos del formulario vuelven a ser editables y los controles para modificar repuestos se habilitan nuevamente. 
+                  Cuando la Nota de Pedido pasa al estado Abierto, los artículos seleccionados se descomprometen y vuelven al stock total, la casilla de <strong>Aprobación Vtas.</strong> se desmarca automáticamente, los campos del formulario vuelven a ser editables y los controles para modificar artículos se habilitan nuevamente. 
                 </p>
                 <p>
-                  Como ejemplo práctico para comprobar este paso, retiraremos dos repuestos de la grilla. Antes de grabar los cambios, hacemos clic en el botón de ayuda <strong>[?]</strong> ubicado junto al correlativo del documento; al abrirse la ventana de búsqueda, comprobamos que el pedido figura con el estado <strong>Abier</strong> (Abierto).
+                  Como ejemplo práctico para comprobar este paso, retiraremos dos artículos de la grilla. Antes de grabar los cambios, hacemos clic en el botón de ayuda <strong>[?]</strong> ubicado junto al correlativo del documento; al abrirse la ventana de búsqueda, comprobamos que el pedido figura con el estado <strong>Abier</strong> (Abierto).
                 </p>
 
                 <!-- IMAGEN 2: VERIFICACIÓN DEL ESTADO ABIER EN LA BÚSQUEDA DE DOCUMENTOS -->
@@ -552,7 +552,7 @@
                 </div>
 
                 <p>
-                  Una vez retirados los dos repuestos, la grilla del pedido queda actualizada con las partidas restantes. Con las modificaciones listas, hacemos clic en la <strong>Opción Grabar</strong> en la botonera inferior:
+                  Una vez retirados los dos artículos, la grilla del pedido queda actualizada con las partidas restantes. Con las modificaciones listas, hacemos clic en la <strong>Opción Grabar</strong> en la botonera inferior:
                 </p>
 
                 <!-- IMAGEN 3: GRILLA CON REPUESTOS RETIRADOS Y ACCIÓN GRABAR -->
@@ -583,7 +583,7 @@
             <div class="doc-subsection" id="sub-2-4">
               <h3 class="doc-section__subtitle">2.4 Estado Aprobado por Ventas</h3>
               <p>
-                Este paso es fundamental: al marcar la casilla <strong>Aprobación Vtas.</strong> en la cabecera y pulsar la <strong>Opción Grabar</strong>, los repuestos quedan formalmente comprometidos en almacén. Nadie más podrá vender esas unidades.
+                Este paso es fundamental: al marcar la casilla <strong>Aprobación Vtas.</strong> en la cabecera y pulsar la <strong>Opción Grabar</strong>, los artículos quedan formalmente comprometidos en almacén. Nadie más podrá vender esas unidades.
               </p>
               <div class="img-placeholder">
                 <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 1126.png" alt="Marcado de la casilla Aprobación Vtas en la cabecera de la Nota de Pedido" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;">
@@ -606,7 +606,7 @@
               <div class="doc-subsection" id="sub-2-5">
                 <h3 class="doc-section__subtitle">2.5 Estado Liquidación Parcial</h3>
                 <p>
-                  La liquidación parcial consiste en descomprometer el stock de algunos repuestos (no de todos) que estaban separados para un cliente determinado, permitiendo que esas unidades vuelvan a estar disponibles para atender a otros clientes.
+                  La liquidación parcial consiste en descomprometer el stock de algunos artículos (no de todos) que estaban separados para un cliente determinado, permitiendo que esas unidades vuelvan a estar disponibles para atender a otros clientes.
                 </p>
                 <p>
                   Para poder liquidar parcialmente, la Nota de Pedido debe tener previamente la casilla de <strong>Aprobación Vtas.</strong> seleccionada y encontrarse con estado Grabado (revisar el punto <em>2.4 Estado Aprobado por Ventas</em>). Luego, nos dirigimos a la parte superior izquierda donde se ubica el menú desplegable <strong>Eventos</strong> > <strong>3. Liquidar Pedido</strong>.
@@ -618,7 +618,7 @@
                 </div>
 
                 <p>
-                  A continuación, el sistema mostrará la ventana <strong>Liquidación de Nota de Pedido</strong> con los datos de cabecera y la lista de repuestos del documento. En la columna <strong>Liquidar</strong> marcamos las casillas de los repuestos que deseamos liberar (por ejemplo, seleccionamos el primer repuesto de la grilla) y hacemos clic en la <strong>Opción Grabar</strong>:
+                  A continuación, el sistema mostrará la ventana <strong>Liquidación de Nota de Pedido</strong> con los datos de cabecera y la lista de artículos del documento. En la columna <strong>Liquidar</strong> marcamos las casillas de los artículos que deseamos liberar (por ejemplo, seleccionamos el primer artículos de la grilla) y hacemos clic en la <strong>Opción Grabar</strong>:
                 </p>
 
                 <!-- IMAGEN 2: VENTANA LIQUIDACIÓN DE NOTA DE PEDIDO CON PARTIDAS MARCADAS Y BOTÓN GRABAR -->
@@ -636,7 +636,7 @@
                 </div>
 
                 <p>
-                  En la grilla del pedido seguirán apareciendo los repuestos listados; sin embargo, al consultar el documento mediante el botón de ayuda <strong>[?]</strong>, comprobamos que su estado habrá cambiado formalmente a <strong>Liqu.Parc</strong> (Liquidación Parcial):
+                  En la grilla del pedido seguirán apareciendo los artículos listados; sin embargo, al consultar el documento mediante el botón de ayuda <strong>[?]</strong>, comprobamos que su estado habrá cambiado formalmente a <strong>Liqu.Parc</strong> (Liquidación Parcial):
                 </p>
 
                 <!-- IMAGEN 4: BÚSQUEDA DE DOCUMENTOS CON EL ESTADO CAMBIADO A LIQU.PARC -->
@@ -645,7 +645,7 @@
                 </div>
 
                 <p>
-                  Por último, ingresamos a la <strong>Opción Histórico</strong> en la barra inferior para verificar que la liquidación parcial de los dos repuestos se registró de forma correcta. Esas unidades liberadas vuelven al stock real del sistema para poder ser utilizadas en otras ventas.
+                  Por último, ingresamos a la <strong>Opción Histórico</strong> en la barra inferior para verificar que la liquidación parcial de los dos artículos se registró de forma correcta. Esas unidades liberadas vuelven al stock real del sistema para poder ser utilizadas en otras ventas.
                 </p>
 
                 <!-- IMAGEN 5: VENTANA DE HISTÓRICO REFLEJANDO EL MOVIMIENTO DE LIQUIDACIÓN Y LAS CANTIDADES LIBERADAS -->
@@ -658,13 +658,13 @@
             <div class="doc-subsection" id="sub-2-6">
               <h3 class="doc-section__subtitle">2.6 Estado Liquidación Total</h3>
               <p>
-                Aplica cuando el cliente decide no comprar ningún repuesto de la orden. En lugar de borrar el pedido, se liquida totalmente para liberar el 100% del stock retenido y devolverlo al inventario general.
+                Aplica cuando el cliente decide no comprar ningún artículos de la orden. En lugar de borrar el pedido, se liquida totalmente para liberar el 100% del stock retenido y devolverlo al inventario general.
               </p>
               <div class="img-placeholder">
                 <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 1139.png" alt="Nota de Pedido con aprobación de ventas lista para liquidar" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;">
               </div>
               <p>
-                Entra a <strong>Eventos &gt; Liquidar Pedido</strong> y en la parte inferior pulsa el botón <strong>Liquidar</strong> para marcar automáticamente todos los repuestos a la vez:
+                Entra a <strong>Eventos &gt; Liquidar Pedido</strong> y en la parte inferior pulsa el botón <strong>Liquidar</strong> para marcar automáticamente todos los artículos a la vez:
               </p>
               <div class="img-placeholder">
                 <img src="../Imagenes/Modulo_Ventas/8.1.1_estados/image 1140.png" alt="Botón Liquidar en grilla marcando todos los repuestos a la vez" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;">
@@ -693,7 +693,7 @@
               <div class="doc-subsection" id="sub-2-7">
                 <h3 class="doc-section__subtitle">2.7 Estado Aprobación de Despacho</h3>
                 <p>
-                  Autoriza que el personal de almacén comience a preparar y empacar los repuestos del pedido. Existen dos formas de aprobar el despacho en DSI-NET ERP:
+                  Autoriza que el personal de almacén comience a preparar y empacar los artículos del pedido. Existen dos formas de aprobar el despacho en DSI-NET ERP:
                 </p>
 
                 <h4 style="margin-top: 16px; color: #1e293b; font-size: 1rem;">1. Desde la cabecera de la Nota de Pedido</h4>

@@ -384,7 +384,7 @@
           <h1 class="content__title">8.1.0 Nota de Pedido (DSI-NET ERP)</h1>
 
           <p class="content__lead">
-            Documentación de referencia para la Nota de Pedido en DSI-NET ERP. Abarca todo el flujo del documento previo a la venta: ingreso de datos comerciales, selección y carga de repuestos, compromiso de existencias en almacén y el circuito de aprobaciones (Ventas, Cobranzas y Despacho) para su posterior facturación y entrega.
+            Documentación de referencia para la Nota de Pedido en DSI-NET ERP. Abarca todo el flujo del documento previo a la venta: ingreso de datos comerciales, selección y carga de artículos, compromiso de existencias en almacén y el circuito de aprobaciones (Ventas, Cobranzas y Despacho) para su posterior facturación y entrega.
           </p>
 
           <!-- RESUMEN DIDÁCTICO PARA NUEVOS USUARIOS -->
@@ -451,7 +451,7 @@
                     <td class="data-table__field">Almacén</td>
                     <td>Menú Desplegable</td>
                     <td>Obligatorio</td>
-                    <td>Selecciona el almacén físico de despacho desde donde se comprometerán y atenderán los repuestos.</td>
+                    <td>Selecciona el almacén físico de despacho desde donde se comprometerán y atenderán los artículos.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Cliente Princ. / Cliente</td>
@@ -475,7 +475,7 @@
                     <td class="data-table__field">Destino</td>
                     <td>Campo de Texto [...]</td>
                     <td>Operativo</td>
-                    <td>Establece el destino final para la impresión de la etiqueta que se adhiere sobre los bultos durante el acondicionamiento y despacho de los repuestos.</td>
+                    <td>Establece el destino final para la impresión de la etiqueta que se adhiere sobre los bultos durante el acondicionamiento y despacho de los artículos.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Nota</td>
@@ -493,7 +493,7 @@
                     <td class="data-table__field">Modalidad: Almacén</td>
                     <td>Opción Radial</td>
                     <td>Condicional</td>
-                    <td>Indica que el cliente retira los repuestos directamente en las instalaciones del almacén principal de la empresa a demanda.</td>
+                    <td>Indica que el cliente retira los artículos directamente en las instalaciones del almacén principal de la empresa a demanda.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Modalidad: Local</td>
@@ -529,7 +529,7 @@
                     <td class="data-table__field">Tipo Afec. / Afec. Prom.</td>
                     <td>Menús Desplegables</td>
                     <td>Obligatorio</td>
-                    <td>Determina el tipo de afectación tributaria oficial ante SUNAT (ej. Gravado - Operación Onerosa) y el tratamiento fiscal para repuestos en bonificación comercial.</td>
+                    <td>Determina el tipo de afectación tributaria oficial ante SUNAT (ej. Gravado - Operación Onerosa) y el tratamiento fiscal para artículos en bonificación comercial.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Saldo por cobrar / Saldo x Cobrar Cli</td>
@@ -569,7 +569,7 @@
             <div class="doc-subsection" id="sub-condiciones-despacho-cobranza" style="margin-top: 24px; margin-bottom: 28px;">
               <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Condiciones de Despacho y Cobranza</h3>
               <p>
-                En esta sección de la cabecera se configuran las condiciones de entrega de los repuestos y los términos comerciales acordados con el cliente:
+                En esta sección de la cabecera se configuran las condiciones de entrega de los artículos y los términos comerciales acordados con el cliente:
               </p>
 
               <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
@@ -588,7 +588,7 @@
                   <strong>Modalidad de entrega (Almacén / Local / Agencia)</strong>
                 </li>
                 <li>
-                  <strong>Almacen:</strong> Indica que el cliente retira los repuestos directamente en las instalaciones del almacén principal de la empresa a demanda.
+                  <strong>Almacen:</strong> Indica que el cliente retira los artículos directamente en las instalaciones del almacén principal de la empresa a demanda.
                   Al seleccionar la opción de almacen, en la casilla "Transportista" aparecerá por defecto ALMACEN ...
                 </li>
                 <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
@@ -643,9 +643,9 @@
               </ul>
             </div>
 
-            <h3 style="margin-top: 18px;">Selección y Gestión de Repuestos</h3>
+            <h3 style="margin-top: 18px;">Selección y Gestión de artículos</h3>
             <p class="doc-section__desc">
-              Comandos para búsqueda de repuestos, visualización gráfica, asignación comercial y recuperación de contingencias.
+              Comandos para búsqueda de artículos, visualización gráfica, asignación comercial y recuperación de contingencias.
             </p>
 
             <div class="table-wrap">
@@ -663,13 +663,13 @@
                     <td class="data-table__field">Opción Artículos</td>
                     <td>Búsqueda Asistida</td>
                     <td>Habilitado</td>
-                    <td>Permite la selección de repuestos hacia la Nota de Pedido mediante búsqueda por Código, Nombre, Modelo, Marca o clasificación de repuestos.</td>
+                    <td>Permite la selección de artículos hacia la Nota de Pedido mediante búsqueda por Código, Nombre, Modelo, Marca o clasificación de artículos.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Opción Importar Excel</td>
                     <td>Carga Masiva</td>
                     <td>Habilitado</td>
-                    <td>Importa desde el Excel los repuestos a incluir en la Nota de Pedido mediante copiado en memoria.</td>
+                    <td>Importa desde el Excel los artículos a incluir en la Nota de Pedido mediante copiado en memoria.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Opción Importar TXT</td>
@@ -706,7 +706,7 @@
               >
               </div>
               <p>
-                Permite la selección de repuestos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>Código</strong>, <strong>Nombre</strong> o <strong>Modelo</strong>; asimismo podemos filtrar los repuestos por <strong>Marca</strong>, <strong>Procedencia</strong> o toda una clasificación de repuestos (<strong>Clase / Familia / Subfamilia</strong>).
+                Permite la selección de artículos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>Código</strong>, <strong>Nombre</strong> o <strong>Modelo</strong>; asimismo podemos filtrar los artículos por <strong>Marca</strong>, <strong>Procedencia</strong> o toda una clasificación de artículos (<strong>Clase / Familia / Subfamilia</strong>).
               </p>
 
                <!-- ESPACIO FIGMA 1: VENTANA DE BÚSQUEDA Y FILTROS -->
@@ -717,7 +717,7 @@
                 <li><strong>Grilla inferior:</strong> Permite ver los artículos que el cliente compró anteriormente.</li>
                 <li><strong>Precios:</strong> Precios en sus diferentes categorías.</li>
                 <li><strong>Stock:</strong> Cantidad del repuesto que hay en almacen</li>
-                <li><strong>Tránsito importaciones:</strong> Listado de repuestos que están por llegar incluyendo cantidad y una fecha estimada de llegada.</li>
+                <li><strong>Tránsito importaciones:</strong> Listado de artículos que están por llegar incluyendo cantidad y una fecha estimada de llegada.</li>
               </ul>
 
               <!-- ESPACIO FIGMA 2: VENTANAS AUXILIARES DE CONSULTA -->
@@ -787,7 +787,7 @@
             <div class="doc-subblock" style="margin-top: 28px;">
               <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">2. Opción Importar Excel</h4>
               <p>
-                Importa desde el Excel los repuestos a incluir en la Nota de Pedido. Su secuencia operativa contempla los siguientes pasos:
+                Importa desde el Excel los artículos a incluir en la Nota de Pedido. Su secuencia operativa contempla los siguientes pasos:
               </p>
               <!-- ESPACIO FIGMA 1: ESTRUCTURA EXCEL -->
               <div class="img-placeholder">
@@ -849,7 +849,7 @@
                 <li>Pérdida de conexión hacia la BD u otros.</li>
               </ul>
               <p>
-                Para cualquier caso la Nota de Pedido no se ha perdido, se mantiene grabada en un archivo de texto en la carpeta <code>c:\tmp_siaf</code>. Con esta opción podemos importar desde el archivo de texto el pedido digitado anteriormente: ubiquemos la última Nota de Pedido en estado Grabado temporal y hacemos clic en <strong>Abrir</strong> para recuperar todos los repuestos de la Nota de Pedido.
+                Para cualquier caso la Nota de Pedido no se ha perdido, se mantiene grabada en un archivo de texto en la carpeta <code>c:\tmp_siaf</code>. Con esta opción podemos importar desde el archivo de texto el pedido digitado anteriormente: ubiquemos la última Nota de Pedido en estado Grabado temporal y hacemos clic en <strong>Abrir</strong> para recuperar todos los artículos de la Nota de Pedido.
               </p>
 
               <!-- ESPACIO FIGMA: EXPLORADOR Y RECUPERACIÓN TMP_SIAF -->
@@ -866,7 +866,7 @@
             <div class="doc-subblock" style="margin-top: 28px;">
               <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">4. Opción Despacho GR</h4>
               <p>
-                Permite visualizar la GR escaneada previamente como consecuencia de la facturación de esta Nota de Pedido. Funciona como respaldo documental para constatar la recepción física de repuestos en campo.
+                Permite visualizar la GR escaneada previamente como consecuencia de la facturación de esta Nota de Pedido. Funciona como respaldo documental para constatar la recepción física de artículos en campo.
               </p>
 
               <!-- ESPACIO FIGMA: VISOR DE GUÍA DE REMISIÓN ESCANEADA -->
@@ -883,7 +883,7 @@
             <div class="doc-subblock" style="margin-top: 28px;">
               <h4 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">5. Opción Buscar NP (?)</h4>
               <p>
-                Permite buscar y recuperar una Nota de Pedido previamente en estado Grabado. Facilita visualizar sus datos, revisar los repuestos ingresados o dar seguimiento a su estado en el circuito comercial.
+                Permite buscar y recuperar una Nota de Pedido previamente en estado Grabado. Facilita visualizar sus datos, revisar los artículos ingresados o dar seguimiento a su estado en el circuito comercial.
               </p>
 
               <!-- ESPACIO FIGMA 2: NOTA DE PEDIDO RECUPERADA EN PANTALLA -->
@@ -904,7 +904,7 @@
 
             <h4 style="margin-top: 12px; color: #2c3e50;">Aprobación de Ventas</h4>
             <p>
-              La aprobación de ventas permite comprometer a los repuestos para que no estén disponibles para cualquier operación pero sin quitarlos del stock:
+              La aprobación de ventas permite comprometer a los artículos para que no estén disponibles para cualquier operación pero sin quitarlos del stock:
             </p>
 
             <div class="table-wrap">
@@ -934,7 +934,7 @@
                     <td class="data-table__field">Stock Disponible (A - B)</td>
                     <td>Métrica Operativa</td>
                     <td>Calculado</td>
-                    <td>Capacidad neta de existencias de repuestos habilitada para nuevas operaciones.</td>
+                    <td>Capacidad neta de existencias de artículos habilitada para nuevas operaciones.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Opción Aprobación de Ventas</td>
@@ -983,7 +983,7 @@
               </div>
 
               <p style="margin-top: 14px;">
-                Este estado bloquea los campos de cabecera y las opciones de edición directa sobre los repuestos para resguardar la consistencia de la orden.
+                Este estado bloquea los campos de cabecera y las opciones de edición directa sobre los artículos para resguardar la consistencia de la orden.
               </p>
 
             </div>
@@ -1183,7 +1183,7 @@
                     <td class="data-table__field">Abrir Pedido</td>
                     <td>Comando Transaccional</td>
                     <td>Condicional</td>
-                    <td>Permite abrir una Nota de Pedido siempre y cuando se encuentre comprometida por Ventas, es decir descompromete el stock de todos los repuestos de la Nota de Pedido.</td>
+                    <td>Permite abrir una Nota de Pedido siempre y cuando se encuentre comprometida por Ventas, es decir descompromete el stock de todos los artículos de la Nota de Pedido.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Facturar Pedido</td>
@@ -1195,7 +1195,7 @@
                     <td class="data-table__field">Liquidar Pedido</td>
                     <td>Comando Transaccional</td>
                     <td>Condicional</td>
-                    <td>Permite liquidar una Nota de Pedido comprometida por Ventas descomprometiendo el stock de forma individual por repuestos o de forma masiva; los repuestos liquidados no pueden ser facturados. Ademas para poder liquidar una NP solo debe estar aprobado por ventas mas no por despacho, caso contrario sería abrir la NP y quitar la aprobación de despacho.</td>
+                    <td>Permite liquidar una Nota de Pedido comprometida por Ventas descomprometiendo el stock de forma individual por artículos o de forma masiva; los artículos liquidados no pueden ser facturados. Ademas para poder liquidar una NP solo debe estar aprobado por ventas mas no por despacho, caso contrario sería abrir la NP y quitar la aprobación de despacho.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Copiar NP</td>

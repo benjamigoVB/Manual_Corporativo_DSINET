@@ -226,7 +226,7 @@
                 <ul class="toc__sublist">
                     <li><a href="8.3.0_Descuentos_conceptos_generales.html" class="toc__link">8.3.0 Conceptos Generales</a></li>
                     <li><a href="8.3.1_Campana_Oferta.html" class="toc__link">8.3.1 Campaña de Oferta</a></li>
-                    <li><a href="8.3.2_Liquidacion_Articulos.html" class="toc__link">8.3.2 Liquidación de Artículos</a></li>
+                    <li><a href="8.3.2_Liquidacion_artículos.html" class="toc__link">8.3.2 Liquidación de Artículos</a></li>
                     <li><a href="8.3.3_Promociones_Focalizadas.html" class="toc__link">8.3.3 Promociones Focalizadas</a></li>
                 </ul>
                 </li>
@@ -384,7 +384,7 @@
         <h1 class="content__title">8.1.2 NP Pendientes de Regularizar (DSI-NET ERP)</h1>
 
         <p class="content__lead">
-          Esta pantalla sirve para revisar las Notas de Pedido que ya fueron aprobadas pero que todavía no se han facturado. Te ayuda a saber qué repuestos están separados en el almacén y qué clientes tienen pedidos pendientes antes de hacer la entrega final.
+          Esta pantalla sirve para revisar las Notas de Pedido que ya fueron aprobadas pero que todavía no se han facturado. Te ayuda a saber qué artículos están separados en el almacén y qué clientes tienen pedidos pendientes antes de hacer la entrega final.
         </p>
 
         <!-- CALLOUT DE ADVERTENCIA OPERATIVA -->
@@ -393,7 +393,7 @@
           <div>
             <strong>¿Por qué es importante revisar esta pantalla?</strong>
             <p style="margin-top: 4px;">
-              Cuando una Nota de Pedido se aprueba por ventas, los repuestos quedan apartados. Si el pedido se queda guardado y nadie lo factura ni lo anula, esos repuestos no se pueden vender a otros clientes y el cliente sigue ocupando su crédito disponible sin haber pagado.
+              Cuando una Nota de Pedido se aprueba por ventas, los artículos quedan apartados. Si el pedido se queda guardado y nadie lo factura ni lo anula, esos artículos no se pueden vender a otros clientes y el cliente sigue ocupando su crédito disponible sin haber pagado.
             </p>
           </div>
         </div>
@@ -440,15 +440,15 @@
                 </tr>
                 <tr>
                   <td class="data-table__field">Modalidad Artículo</td>
-                  <td>Vista por Repuesto</td>
+                  <td>Vista por Artículo</td>
                   <td>Consultivo</td>
-                  <td>Muestra los pedidos ordenados por repuesto para saber cuánto stock está separado en almacén.</td>
+                  <td>Muestra los pedidos ordenados por artículo para saber cuánto stock está separado en almacén.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Despliegue de Partidas</td>
                   <td>Clic de Selección</td>
                   <td>Solo Lectura</td>
-                  <td>Al hacer clic sobre una fila, abre la Nota de Pedido con la lista completa de repuestos y precios.</td>
+                  <td>Al hacer clic sobre una fila, abre la Nota de Pedido con la lista completa de artículos y precios.</td>
                 </tr>
               </tbody>
             </table>
@@ -480,10 +480,10 @@
                   <td>Escribe el nombre o número del cliente para encontrar rápido sus pedidos pendientes.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Filtro por Código de Repuesto (SKU)</td>
-                  <td>Buscador de Repuesto</td>
+                  <td class="data-table__field">Filtro por Código de Artículo (SKU)</td>
+                  <td>Buscador de Artículo</td>
                   <td>Habilitado</td>
-                  <td>Escribe el código del repuesto para saber en qué pedidos está separado.</td>
+                  <td>Escribe el código del artículo para saber en qué pedidos está separado.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Columna Documento (NP)</td>
@@ -495,7 +495,7 @@
                   <td class="data-table__field">Columna Almacén</td>
                   <td>Lugar de Despacho</td>
                   <td>Solo Lectura</td>
-                  <td>Indica el almacén donde están guardados físicamente los repuestos separados.</td>
+                  <td>Indica el almacén donde están guardados físicamente los artículos separados.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Columna Estado</td>
@@ -505,15 +505,15 @@
                 </tr>
                 <tr>
                   <td class="data-table__field">Columna Cantidad Comprometida</td>
-                  <td>Repuestos Separados</td>
+                  <td>Artículos Separados</td>
                   <td>Solo Lectura</td>
-                  <td>Indica cuántas unidades del repuesto están apartadas y no se pueden vender a nadie más.</td>
+                  <td>Indica cuántas unidades del artículo están apartadas y no se pueden vender a nadie más.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Columna Importe Total (S/.)</td>
                   <td>Monto en Dinero</td>
                   <td>Solo Lectura</td>
-                  <td>Muestra la suma en dinero de los repuestos del pedido que faltan facturar.</td>
+                  <td>Muestra la suma en dinero de los artículos del pedido que faltan facturar.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Columna Asesor comercial</td>
@@ -550,7 +550,7 @@
           <div class="doc-subblock" style="margin-top: 28px;">
             <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Paso 3.2: Modalidad de Consulta por Cliente</h3>
             <p>
-              Esta vista agrupa los pedidos por el nombre del cliente. Te sirve para revisar qué clientes tienen repuestos guardados y comprobar si tienen crédito disponible antes de emitir la factura.
+              Esta vista agrupa los pedidos por el nombre del cliente. Te sirve para revisar qué clientes tienen artículos guardados y comprobar si tienen crédito disponible antes de emitir la factura.
             </p>
             <p>
               Si la lista es muy larga, escribe el nombre del cliente en el buscador para encontrarlo al instante.
@@ -567,9 +567,9 @@
 
           <!-- PASO 3.3: CONSULTA POR ARTÍCULO (REPUESTO) -->
           <div class="doc-subblock" style="margin-top: 28px;">
-            <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Paso 3.3: Modalidad de Consulta por Artículo (Repuesto)</h3>
+            <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Paso 3.3: Modalidad de Consulta por Artículo (artículo)</h3>
             <p>
-              Esta vista agrupa los pedidos por código de repuesto. Es ideal para el personal de almacén, ya que permite saber exactamente cuántas piezas de cada repuesto están retenidas y no se pueden entregar a otras ventas.
+              Esta vista agrupa los pedidos por código de artículo. Es ideal para el personal de almacén, ya que permite saber exactamente cuántas piezas de cada artículo están retenidas y no se pueden entregar a otras ventas.
             </p>
 
             <div class="img-placeholder">
@@ -585,7 +585,7 @@
           <div class="doc-subblock" style="margin-top: 28px;">
             <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Paso 3.4: Despliegue de Partidas del Pedido</h3>
             <p>
-              Haz clic sobre cualquier pedido de la lista para abrir su detalle completo. En esta ventana podrás ver la lista de repuestos, cantidades, precios unitarios, fecha de emisión y el asesor comercial que registró el pedido.
+              Haz clic sobre cualquier pedido de la lista para abrir su detalle completo. En esta ventana podrás ver la lista de artículos, cantidades, precios unitarios, fecha de emisión y el asesor comercial que registró el pedido.
             </p>
 
             <div class="img-placeholder">
