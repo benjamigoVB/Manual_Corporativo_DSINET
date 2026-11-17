@@ -401,20 +401,25 @@
           <!-- SECCIÓN 4: NOTA DE PEDIDO -->
           <section class="doc-section" id="sec-nota-pedido">
             <h2 class="doc-section__title">Nota de Pedido</h2>
-            <p class="doc-section__desc">
-              Acceso: Menú Documentos > Nota de pedido > Nota de pedido
-            </p>
-            <!-- CONTENEDOR FIGMA: CABECERA NOTA DE PEDIDO -->
-            <div class="img-placeholder">
+            <!-- NÚMERO Y TÍTULO DE LA FIGURA (Alineado a la izquierda forzado) -->
+            <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155;">
+              <p style="margin: 0; font-weight: bold;">Figura 1</p>
+              <p style="margin: 0; font-style: italic;">Acceso a la ventana nota de pedido (Menú documentos > Nota de pedido > Nota de pedido)</p>
+            </div>
+
+            <!-- CONTENEDOR DE LA IMAGEN (Este sí se queda centrado) -->
+            <div class="img-placeholder" style="display: flex; justify-content: center; width: 100%; margin: 0 0 12px 0;">
               <img 
                 src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1077.png" 
-                alt="#" 
-                style="width: 65%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                alt="Vista del acceso a la ventana de la Nota de Pedido" 
+                style="width: 65%; max-width: 650px; height: auto; border-radius: 6px; border: 1px solid #E2E8F0;"
               >
             </div>
-            <p class="doc-section__desc">
-              La Nota de Pedido es el documento previo a una facturación, es decir se puede modificar n veces y cuando finalmente esté terminado se procederá a la facturación. Una Nota de Pedido tiene todos los datos necesarios para una facturación.
-            </p>
+
+            <!-- NOTA DE LA FIGURA (Alineado a la izquierda forzado) -->
+            <div style="width: 100%; text-align: left !important; align-self: flex-start; font-size: 0.9em; color: #475569; line-height: 1.5;">
+              <em>Nota.</em> Ruta para entrar a la ventana de Nota de Pedido.
+            </div>
 
             <!-- CABECERA DE LA NOTA DE PEDIDO -->
             <h3 style="margin-top: 18px;">Cabecera de la Nota de Pedido</h3>
@@ -553,17 +558,25 @@
               </table>
             </div>
 
-            <p class="doc-section__desc">
-              <strong>Vista previa a la ventana Nota de pedido.</strong> 
+            <!-- NÚMERO Y TÍTULO DE LA FIGURA (Alineado a la izquierda forzado) -->
+            <p class="doc-section__desc" style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155;">
+              <strong>Figura 2</strong><br>
+              <span style="font-style: italic;">Vista previa a la ventana Nota de pedido.</span> 
             </p>
 
-            <div class="img-placeholder">
+            <!-- CONTENEDOR DE LA IMAGEN (Centrado) -->
+            <div class="img-placeholder" style="display: flex; justify-content: center; width: 100%; margin: 0 0 16px 0;">
               <img 
                 src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1103.png" 
-                alt="#" 
-                style="width: 100%; max-width: 650px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                alt="Vista previa a la ventana Nota de pedido" 
+                style="width: 100%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
               >
             </div>
+
+            <!-- NOTA DE LA FIGURA (Alineado a la izquierda forzado) -->
+            <p class="doc-section__desc" style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 0;">
+              <em>Nota.</em> La Nota de Pedido es el documento previo a una facturación, es decir se puede modificar n veces y cuando finalmente esté terminado se procederá a la facturación. Una Nota de Pedido tiene todos los datos necesarios para una facturación.
+            </p>
 
             <!-- CONDICIONES DE DESPACHO Y COBRANZA -->
             <div class="doc-subsection" id="sub-condiciones-despacho-cobranza" style="margin-top: 24px; margin-bottom: 28px;">
@@ -572,12 +585,22 @@
                 En esta sección de la cabecera se configuran las condiciones de entrega de los artículos y los términos comerciales acordados con el cliente:
               </p>
 
-              <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
+              <!-- FIGURA 3: NÚMERO Y TÍTULO (APA 7) -->
+              <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
+                <strong>Figura 3</strong><br>
+                <span style="font-style: italic;">Sección de Condiciones de Despacho y Cobranza.</span>
+              </div>
+              <!-- IMAGEN 1 (Centrada) -->
+              <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza" style="display: flex; justify-content: center; width: 100%; margin: 0 0 12px 0;">
                 <img 
                   src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1148.png" 
                   alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
-                  style="width: 50%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
+                  style="width: 50%; max-width: 500px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
                 >
+              </div>
+              <!-- FIGURA 3: NOTA (APA 7) -->
+              <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 20px; font-size: 0.9em; color: #475569; line-height: 1.5;">
+                <em>Nota.</em> Vista general de los controles en la cabecera de la Nota de Pedido.
               </div>
               
               <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 16px;">
@@ -587,39 +610,74 @@
                 <li>
                   <strong>Modalidad de entrega (Almacén / Local / Agencia)</strong>
                 </li>
-                <li>
-                  <strong>Almacen:</strong> Indica que el cliente retira los artículos directamente en las instalaciones del almacén principal de la empresa a demanda.
-                  Al seleccionar la opción de almacen, en la casilla "Transportista" aparecerá por defecto ALMACEN ...
+                
+                <!-- ITEM ALMACÉN -->
+                <li style="margin-bottom: 24px;">
+                  <strong>Almacen:</strong> Indica que el cliente retira los artículos directamente en las instalaciones del almacén principal de la empresa a demanda. Al seleccionar la opción de almacen, en la casilla "Transportista" aparecerá por defecto ALMACEN ...
+                  
+                  <!-- FIGURA 4: NÚMERO Y TÍTULO (APA 7) -->
+                  <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
+                    <strong>Figura 4</strong><br>
+                    <span style="font-style: italic;">Modalidad de entrega configurada en Almacén.</span>
+                  </div>
+                  <!-- IMAGEN 2 (Centrada) -->
+                  <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza" style="display: flex; justify-content: center; width: 100%; margin: 0 0 12px 0;">
+                    <img 
+                      src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1149.png" 
+                      alt="Modalidad de despacho Almacén" 
+                      style="width: 40%; max-width: 500px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
+                    >
+                  </div>
+                  <!-- FIGURA 4: NOTA (APA 7) -->
+                  <div style="width: 100%; text-align: left !important; align-self: flex-start; font-size: 0.9em; color: #475569; line-height: 1.5;">
+                    <em>Nota.</em> El transportista se asigna por defecto a ALMACEN.
+                  </div>
                 </li>
-                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
-                <img 
-                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1149.png" 
-                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
-                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-                >
-                </div>
-                <li>
-                  <strong>Local:</strong> Establece la entrega directa en el local o sucursal del cliente, tomando como punto de llegada obligatorio la información cargada en el campo Direcc Desp para la emisión de la Guía de Remisión.
-                  Al seleccionar la opción de local, en la casilla de "Transportista" aparecerá por defecto LOCAL ... 
+                
+                <!-- ITEM LOCAL -->
+                <li style="margin-bottom: 24px;">
+                  <strong>Local:</strong> Establece la entrega directa en el local o sucursal del cliente, tomando como punto de llegada obligatorio la información cargada en el campo Direcc Desp para la emisión de la Guía de Remisión. Al seleccionar la opción de local, en la casilla de "Transportista" aparecerá por defecto LOCAL ... 
+                  
+                  <!-- FIGURA 5: NÚMERO Y TÍTULO (APA 7) -->
+                  <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
+                    <strong>Figura 5</strong><br>
+                    <span style="font-style: italic;">Modalidad de entrega configurada en Local.</span>
+                  </div>
+                  <!-- IMAGEN 3 (Centrada) -->
+                  <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza" style="display: flex; justify-content: center; width: 100%; margin: 0 0 12px 0;">
+                    <img 
+                      src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1150.png" 
+                      alt="Modalidad de despacho Local" 
+                      style="width: 40%; max-width: 500px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
+                    >
+                  </div>
+                  <!-- FIGURA 5: NOTA (APA 7) -->
+                  <div style="width: 100%; text-align: left !important; align-self: flex-start; font-size: 0.9em; color: #475569; line-height: 1.5;">
+                    <em>Nota.</em> El transportista se asigna por defecto a LOCAL.
+                  </div>
                 </li>
-                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
-                <img 
-                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1150.png" 
-                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
-                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-                >
-                </div>
-                <li>
-                  <strong>Agencia:</strong> Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. 
-                  Al seleccionar la opción de Agencia, en la casilla de "Transportista" ya no aparecerá nada y se tendrá que escribir la agencia que hará el traslado de mercaderia al cliente, en caso no esté registrado la agencia se le puede agregar mediante la casilla que esta al costado el cual abre el mantenimiento de proveedores, y nos aseguramos que esté marcada la casilla de color celeste "Transportista".
-                </li>
-                <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
-                <img 
-                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1151.png" 
-                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
-                  style="width: 40%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px; border: 1px solid #E2E8F0;"
-                >
-                </div>
+                
+                <!-- ITEM AGENCIA -->
+                <li style="margin-bottom: 24px;">
+                  <strong>Agencia:</strong> Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. Al seleccionar la opción de Agencia, en la casilla de "Transportista" ya no aparecerá nada y se tendrá que escribir la agencia que hará el traslado de mercaderia al cliente, en caso no esté registrado la agencia se le puede agregar mediante la casilla que esta al costado el cual abre el mantenimiento de proveedores, y nos aseguramos que esté marcada la casilla de color celeste "Transportista".
+                  
+                  <!-- FIGURA 6: NÚMERO Y TÍTULO (APA 7) -->
+                  <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
+                    <strong>Figura 6</strong><br>
+                    <span style="font-style: italic;">Modalidad de entrega configurada en Agencia.</span>
+                  </div>
+                  <!-- IMAGEN 4 (Centrada) -->
+                  <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza" style="display: flex; justify-content: center; width: 100%; margin: 0 0 12px 0;">
+                    <img 
+                      src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1151.png" 
+                      alt="Modalidad de despacho Agencia" 
+                      style="width: 40%; max-width: 500px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
+                    >
+                  </div>
+                  <!-- FIGURA 6: NOTA (APA 7) -->
+                  <div style="width: 100%; text-align: left !important; align-self: flex-start; font-size: 0.9em; color: #475569; line-height: 1.5;">
+                    <em>Nota.</em> Se requiere ingresar manualmente o registrar la agencia de transporte.
+                  </div>
                 <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza">
                 <img 
                   src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1152.png" 
