@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.3 Provisión de Compras | DSI-NET Docs</title>
+  <title>1.2 Provisión de Compras | DSI-NET Docs</title>
   <!-- Ruta relativa al styles.css institucional (1 nivel superior desde GENERALIDADES/) -->
   <link rel="stylesheet" href="../styles.css">
   <!-- CDN oficial de Lucide Icons -->
@@ -369,46 +369,46 @@
       <div class="sidebar__footer">DSI-NET Core v12.1 Build 4910</div>
     </aside>
 
-    <!-- ============ CONTENIDO PRINCIPAL (MAIN) ============ -->
     <main class="content">
 
       <div class="content__inner">
 
         <!-- TÍTULO PRINCIPAL Y LEAD -->
-        <h1 class="content__title">1.2 Provisión de Compras - Mercaderia</h1>
+        <h1 class="content__title">1.2 Provisión de Compras - Artículos</h1>
 
         <p class="content__lead">
           Registro contable y fiscal de facturas emitidas por proveedores nacionales. Permite imputar los costos al inventario, calcular el crédito fiscal de IGV y generar las cuentas por pagar comerciales con control de vencimientos.
         </p>
 
         <!-- CALLOUT: IMPACTO FISCAL Y KARDEX -->
-        <div class="callout callout--warning" role="note">
-          <i data-lucide="alert-triangle" class="callout__icon"></i>
+        <div class="callout callout--info" role="note">
+          <i data-lucide="info" class="callout__icon"></i>
           <div>
             <strong>Impacto Fiscal y Kardex:</strong>
             <p style="margin-top: 4px;">
-              La grabación de la provisión alimenta directamente el Registro de Compras tributario de SUNAT y liquida la cuenta corriente del proveedor. Si la mercadería ingresa directamente sin orden previa, el documento actualiza el costo promedio y las existencias en el depósito seleccionado.
+              El grabado de la provisión alimenta directamente el Registro de Compras tributario de SUNAT y liquida la cuenta corriente del proveedor. Si los artículos ingresan directamente sin nota de pedido previa, el documento actualiza el costo promedio y las existencias en los almacenes seleccionados.
             </p>
           </div>
         </div>
 
-        <!-- ACCESO A PROVISIÓN DE COMPRAS - MERCADERIA -->
+        <!-- ACCESO A PROVISIÓN DE COMPRAS - ARTÍCULOS -->
         <section class="doc-section" id="sec-acceso">
-          <h2 class="doc-section__title">Acceso a Provisión de Compras - Mercaderia</h2>
-          <div class="img-placeholder" data-img-ref="img-01-acceso-menu">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 1.png" 
-            alt="Acceso a Provisión de Compras - Mercaderia" 
-            style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <h2 class="doc-section__title">Acceso a Provisión de Compras - Artículos</h2>
+          <p class="doc-section__desc">Acceso: Documentos > Compras > Provisión de Compras - Artículos</p>
+          <div class="img-placeholder" data-img-ref="acceso-provision">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1192.png" 
+            alt="Ruta de acceso a Provisión de Compras de Artículos" 
+            style="width: 60%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
         <!-- VISUALIZADOR DE PANTALLA DE PROVISION DE COMPRAS -->
         <section class="doc-section" id="sec-visualizador">
-          <h2 class="doc-section__title">Visualizador de Pantalla de Provision de compras</h2>
-          <p class="doc-section__desc">Entorno para la emisión de Guías de Entrada con cabecera de imputación contable, grilla de reglones y barra superior de herramientas auxiliares.</p>
-
-          <div class="img-placeholder" data-img-ref="img-02-pantalla-principal">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 2.png" alt="Visualizador de Pantalla de Provision de compras" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <h2 class="doc-section__title">Visualizador de Pantalla de Provisión de Compras</h2>
+          <div class="img-placeholder" data-img-ref="pantalla-principal-provision">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1193.png"
+            alt="Pantalla principal de Provisión de Compras en DSI-NET ERP" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px;">
           </div>
         </section>
 
@@ -421,59 +421,59 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>CAMPO / CONTROL</th>
-                  <th>TIPO DE ENTRADA</th>
-                  <th>OBLIGATORIO</th>
-                  <th>DESCRIPCIÓN OPERATIVA Y REGLA DE NEGOCIO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="data-table__field">Nro Interno / Pto Vta ›</td>
                   <td>Correlativo / Desplegable</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Número interno de auditoría del sistema y punto de venta/sede de la empresa (ej. PRINCIPAL).</td>
+                  <td>Obligatorio</td>
+                  <td>Número interno de auditoría de DSI-NET ERP y punto de venta/sede de la empresa (ej. PRINCIPAL).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Proveedor ›</td>
                   <td>Selector con Ayuda [...]</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>RUC y razón social del emisor de la factura. El botón [...] busca en el maestro de personas.</td>
+                  <td>Obligatorio</td>
+                  <td>RUC y razón social del emisor de la factura. La opción [...] habilita el mantenimiento de proveedores para el registro de un nuevo proveedor que no esté en DSI-NET ERP.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Doc / Serie y Nro ›</td>
                   <td>Tipo (FP) / Alfanumérico</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Tipo de comprobante 'FP (Factura Proveedor) con su numeración física/electrónica y ayuda [?].</td>
+                  <td>Obligatorio</td>
+                  <td>Tipo de comprobante 'FP' (Factura Proveedor) con su numeración física/electrónica y ayuda [?].</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Fechas (Registro, Doc, Vcto) ›</td>
                   <td>Selectores Fecha</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Obligatorio</td>
                   <td>Fechas de contabilización, emisión real del proveedor y vencimiento límite de la obligación comercial.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Moneda / Tipo de Cambio ›</td>
                   <td>Radios (S/. o US$) / Decimal</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
+                  <td>Obligatorio</td>
                   <td>Moneda pactada del comprobante y tasa de cambio oficial de la transacción (ej. 3.362).</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Almacen / Forma Pago ›</td>
+                  <td class="data-table__field">Almacenes / Forma Pago ›</td>
                   <td>Menús Desplegables</td>
-                  <td><span class="badge badge--yes">Sí</span></td>
-                  <td>Depósito receptor de mercadería (ej. ALM. PRINCIPAL) y condición acordada (CONTADO o Crédito).</td>
+                  <td>Obligatorio</td>
+                  <td>Depósito receptor de artículos (ej. ALM. PRINCIPAL) y condición acordada (CONTADO o Crédito).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Desglose IGV / ISC ›</td>
                   <td>Numéricos y Checkbox</td>
-                  <td><span class="badge badge--auto">Condicional</span></td>
-                  <td>Base imponible afecta, tasa del 18.00%, ISC, casilla Gravado al IGV y botones de cálculo 'IGV / + IGV'.</td>
+                  <td>Condicional</td>
+                  <td>Base imponible afecta, tasa del 18.00%, ISC, casilla 'Gravado al IGV' y opciones de cálculo '- IGV' / '+ IGV'.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Saldos y Liquidación ›</td>
                   <td>Campos Numéricos</td>
-                  <td><span class="badge badge--auto">Sistema</span></td>
+                  <td>Sistema</td>
                   <td>Muestra el Total bruto, Pago inicial amortizado y Saldo neto por Pagar al proveedor.</td>
                 </tr>
               </tbody>
@@ -484,47 +484,47 @@
         <!-- 2. BARRA DE ACCIONES SUPERIORES E INTEGRACIONES -->
         <section class="doc-section" id="sec-acciones-superiores">
           <h2 class="doc-section__title">2. Barra de Acciones Superiores e Integraciones</h2>
-          <p class="doc-section__desc">Herramientas complementarias accesibles desde la botonera superior de la ventana para alimentar masiva o puntualmente los ítems auditados.</p>
+          <p class="doc-section__desc">Herramientas complementarias accesibles desde la botonera superior de la ventana para alimentar masiva o puntualmente los artículos auditados.</p>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>CONTROL / BOTÓN</th>
-                  <th>UBICACIÓN</th>
-                  <th>TIPO DE ACCIÓN</th>
-                  <th>PROPÓSITO OPERATIVO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="data-table__field">Importar -> Excel ›</td>
-                  <td>Barra superior</td>
                   <td>Carga Masiva</td>
-                  <td>Permite importar en lote la relación de artículos, cantidades y costos desde un archivo Excel externo.</td>
+                  <td>Activo</td>
+                  <td>Permite importar en lote la relación de artículos (código), cantidades y costos desde un archivo Excel externo.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Articulos / Servicios ›</td>
-                  <td>Barra superior</td>
+                  <td class="data-table__field">Artículos / Servicios ›</td>
                   <td>Catálogo</td>
-                  <td>Abre el buscador del maestro general de productos o añade líneas de servicios complementarios.</td>
+                  <td>Activo</td>
+                  <td>Abre el buscador del maestro general de artículos o añade líneas de servicios complementarios.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Relacionar con Fact mercaderia ›</td>
-                  <td>Barra superior</td>
+                  <td class="data-table__field">Relacionar con Fact artículos ›</td>
                   <td>Trazabilidad</td>
-                  <td>Vincula este comprobante con facturaciones previas o liquidaciones de mercadería en tránsito.</td>
+                  <td>Activo</td>
+                  <td>Vincula este comprobante con facturaciones previas o liquidaciones de artículos en tránsito.</td>
                 </tr>
                 <tr>
-                  <td class="data-table__field">Series x Articulo ›</td>
-                  <td>Barra superior</td>
+                  <td class="data-table__field">Series x Artículo ›</td>
                   <td>Control Unitario</td>
+                  <td>Activo</td>
                   <td>Abre el subformulario de captura obligatoria de series para artículos con control unitario.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Nota de Credito ›</td>
-                  <td>Barra superior</td>
                   <td>Ajuste Fiscal</td>
+                  <td>Activo</td>
                   <td>Enlaza y deduce notas de crédito emitidas por el proveedor por descuentos o devoluciones.</td>
                 </tr>
               </tbody>
@@ -532,7 +532,7 @@
           </div>
         </section>
 
-        <!-- ESPECIFICACIÓN DE GRILLA Y BOTONERA INFERIOR -->
+        <!-- 3. ESPECIFICACIÓN DE GRILLA Y BOTONERA INFERIOR -->
         <section class="doc-section" id="sec-grilla-botonera-inferior">
           <h2 class="doc-section__title">3. Especificación de Grilla y Botonera Inferior</h2>
           <p class="doc-section__desc">Operaciones transaccionales para validar las líneas, actualizar las existencias en tiempo real y emitir el reporte físico de soporte.</p>
@@ -541,255 +541,289 @@
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>ELEMENTO / BOTÓN</th>
-                  <th>UBICACIÓN</th>
-                  <th>TIPO DE ACCIÓN</th>
-                  <th>REGLA OPERATIVA Y DE NEGOCIO</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="data-table__field">Columnas de Grilla ›</td>
-                  <td>Grilla de Detalle</td>
                   <td>Inventario y Precios</td>
+                  <td>Informativo</td>
                   <td>Muestra Codigo, Nombre, U.M., Marca, Saldo, Cant, Costo, Costo Inc IGV, Total, Costo 2, Total 2 y Precio 1.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Insertar / Eliminar ›</td>
-                  <td>Grilla inferior izq.</td>
                   <td>Edición</td>
-                  <td>Añade una línea en blanco para digitación o remueve el ítem seleccionado antes de guardar.</td>
+                  <td>Activo</td>
+                  <td>Añade una línea en blanco para digitación o remueve el artículo seleccionado antes de ejecutar la opción Grabar.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Grabar ›</td>
-                  <td>Barra inferior</td>
                   <td>Transaccional</td>
-                  <td>Asienta el comprobante, contabiliza las cuentas por pagar, descuenta o incrementa stock y fija el crédito fiscal.</td>
+                  <td>Activo</td>
+                  <td>Opción para la finalización del proceso de la provisión de compras.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Imprimir / Anular ›</td>
-                  <td>Barra inferior</td>
                   <td>Mantenimiento</td>
+                  <td>Activo</td>
                   <td>Emite el reporte de provisión con asiento contable o anula el registro revirtiendo los efectos.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Nuevo / Cancelar ›</td>
-                  <td>Barra inferior</td>
                   <td>Control</td>
-                  <td>Prepara el formulario para un nuevo documento o descarta las modificaciones no guardadas.</td>
+                  <td>Activo</td>
+                  <td>Prepara el formulario para un nuevo documento o descarta las modificaciones no grabadas.</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <!-- PRIMERA FORMA DE ENTRAR A PROVISION DE COMPRA - MERCADERIA -->
-        <section class="doc-section" id="sec-primera-forma">
-          <h2 class="doc-section__title">4. Primera forma de entrar a Provision de compra - Mercaderia</h2>
-          <p>Se puede entrar a Provision de compra de esta forma:</p>
-
-          <div class="img-placeholder" data-img-ref="img-03-primera-forma-menu">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 3.png" alt="Primera forma de entrar a Provision de compra - Menú" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Aparecerá la siguiente ventana:</p>
-
-          <div class="img-placeholder" data-img-ref="img-04-primera-forma-ventana">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 4.png" alt="Ventana resultante de la primera forma" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-        </section>
-
-        <!-- SEGUNDA FORMA DE ENTRAR A PROVISION DE COMPRA - MERCADERIA -->
-        <section class="doc-section" id="sec-segunda-forma">
-          <h2 class="doc-section__title">5. Segunda forma de entrar a Provision de compra - Mercaderia</h2>
-          <p>Se puede entrar a Provision de compra de otra forma tambien, desde la GE anterior:</p>
-
-          <div class="img-placeholder" data-img-ref="img-05-segunda-forma-ge">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 5.png" alt="Segunda forma de entrar a Provision de compra desde la GE anterior" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Nos aparecerá esta pantalla:</p>
-
-          <div class="img-placeholder" data-img-ref="img-06-segunda-forma-pantalla">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 6.png" alt="Pantalla resultante desde la GE anterior" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-        </section>
-
         <!-- IDENTIFICACIÓN DEL COMPROBANTE Y PROVEEDOR -->
         <section class="doc-section" id="sec-identificacion">
-          <h2 class="doc-section__title">5.1 Identificación del Comprobante y Proveedor</h2>
-          <p><strong>Nro Interno:</strong> Campo numérico de solo lectura generado automáticamente por el sistema (inicia en 0 para nuevos registros) que asigna el correlativo de auditoría interna.</p>
-          <p><strong>Pto Vta:</strong> Menú desplegable para seleccionar la sede operativa o establecimiento comercial desde donde se realiza la provisión (por defecto 'PRINCIPAL').</p>
-          <p><strong>Proveedor:</strong> Caja de texto para ingresar el número de RUC o razón social del proveedor. Dispone de un botón de búsqueda asistida con puntos suspensivos [...] y una casilla de verificación contigua para validar el padrón fiscal.</p>
-          <p><strong>Doc (Tipo, Serie y Número):</strong> Define el tipo de comprobante tributario (configurado como 'FP' para Factura Proveedor) acompañado de la casilla para digitar la serie y correlativo físico/electrónico de la factura, además del botón de ayuda con signo de interrogación (?) para consultar registros previos.</p>
-          <div class="img-placeholder" data-img-ref="img-07-identificacion-proveedor">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 7.png" alt="Identificación del Comprobante y Proveedor" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <h2 class="doc-section__title">Identificación del Comprobante y Proveedor</h2>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li><strong>Nro Interno:</strong> Campo numérico de solo lectura generado automáticamente por DSI-NET ERP (inicia en 0 para nuevos registros) que asigna el correlativo de auditoría interna.</li>
+            <li><strong>Pto Vta:</strong> Menú desplegable para seleccionar la sede operativa o establecimiento comercial desde donde se realiza la provisión (por defecto 'PRINCIPAL').</li>
+            <li><strong>Proveedor:</strong> Caja de texto para ingresar el número de RUC o razón social del proveedor. Dispone de una opción de búsqueda asistida con puntos suspensivos [...] y una casilla de verificación contigua para validar el padrón fiscal.</li>
+            <li><strong>Doc (Tipo, Serie y Número):</strong> Define el tipo de comprobante tributario (configurado como 'FP' para Factura Proveedor) acompañado de la casilla para digitar la serie y correlativo físico/electrónico de la factura, además de la opción de ayuda con signo de interrogación (?) para consultar registros previos.</li>
+          </ul>
+          
+          <div class="img-placeholder" data-img-ref="identificacion-comprobante">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1195.png" 
+            alt="Identificación del Comprobante y Proveedor en DSI-NET ERP" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
-          <p><strong>Proveedor:</strong> Caja de texto para ingresar el número de RUC o razón social del proveedor. Dispone de un botón de búsqueda asistida con puntos suspensivos [...] y una casilla en la cual podremos abrir el Mantenimiento de Proveedores que se explico en el punto 0.3.6.3.4 Proveedores.</p>
+          
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li><strong>Proveedor:</strong> Caja de texto para ingresar el número de RUC o razón social del proveedor. Dispone de una opción para abrir el mantenimiento de proveedores con puntos suspensivos [...].</li>
+          </ul>
 
-          <div class="img-placeholder" data-img-ref="img-07-identificacion-proveedor">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 8.png" alt="Identificación del Comprobante y Proveedor" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="mantenimiento-proveedores">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1196.png" 
+            alt="Ventana de Mantenimiento de Proveedores" 
+            style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
         <!-- CRONOLOGÍA, CONDICIONES COMERCIALES Y DIVISA -->
         <section class="doc-section" id="sec-cronologia">
-          <h2 class="doc-section__title">5.2 Cronología, Condiciones Comerciales y Divisa</h2>
-          <p><strong>Registro:</strong> Fecha de asiento y contabilización del comprobante en el sistema (por ejemplo, 22/09/2026).</p>
-          <p><strong>Fecha Doc:</strong> Fecha real de emisión impresa en la factura del proveedor (por ejemplo, 22/09/2026).</p>
-          <p><strong>Fecha Vcto:</strong> Fecha límite pactada para la cancelación del saldo, fundamental para la gestión de cuentas por pagar comerciales.</p>
-          <p><strong>Forma Pago:</strong> Menú desplegable para establecer los términos financieros (por ejemplo, CONTADO o Crédito a días).</p>
-          <p><strong>Moneda:</strong> Selector de opciones excluyentes mediante radio buttons para fijar la divisa del documento entre Soles (S/.) o Dólares americanos (US$).</p>
-          <p><strong>Tipo de Cambio:</strong> Tipo de cambio oficial vigente recuperado automáticamente para la conversión bimonetaria de la transacción (por ejemplo, 3.362).</p>
-          <p><strong>Almacen:</strong> Menú desplegable que indica la bodega física donde ingresará la mercadería amparada en la factura (por ejemplo, ALM. PRINCIPAL).</p>
-          <p><strong>Doc Ref:</strong> Campo alfanumérico para asociar la guía de remisión del remitente, orden de compra previa o documento de sustento logístico.</p>
+          <h2 class="doc-section__title">Cronología, Condiciones Comerciales y Divisa</h2>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li><strong>Registro:</strong> Fecha de asiento y contabilización del comprobante en DSI-NET ERP (por ejemplo, 22/09/2026).</li>
+            <li><strong>Fecha Doc:</strong> Fecha real de emisión impresa en la factura del proveedor (por ejemplo, 22/09/2026).</li>
+            <li><strong>Fecha Vcto:</strong> Fecha límite pactada para la cancelación del saldo, fundamental para la gestión de cuentas por pagar comerciales.</li>
+            <li><strong>Forma Pago:</strong> Menú desplegable para establecer los términos financieros (por ejemplo, CONTADO o Crédito a días).</li>
+            <li><strong>Moneda:</strong> Selector de opciones excluyentes mediante radio buttons para fijar la divisa del documento entre Soles (S/.) o Dólares americanos (US$).</li>
+            <li><strong>Tipo de Cambio:</strong> Tipo de cambio oficial vigente recuperado automáticamente para la conversión bimonetaria de la transacción (por ejemplo, 3.362).</li>
+            <li><strong>Almacenes:</strong> Menú desplegable que indica los almacenes físicos donde ingresarán los artículos amparados en la factura (por ejemplo, ALM. PRINCIPAL).</li>
+            <li><strong>Doc Ref:</strong> Campo alfanumérico para asociar la guía de remisión del remitente, nota de pedido previa o documento de sustento logístico.</li>
+          </ul>
 
-          <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 9.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="mantenimiento-proveedores">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1197.png" 
+            alt="Ventana de Mantenimiento de Proveedores" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
-          <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 10.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 30%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="mantenimiento-proveedores">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1198.png" 
+            alt="Ventana de Mantenimiento de Proveedores" 
+            style="width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
+          <div class="img-placeholder" data-img-ref="mantenimiento-proveedores">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1199.png" 
+            alt="Ventana de Mantenimiento de Proveedores" 
+            style="width: 30%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
         </section>
 
         <!-- DESGLOSE DE BASES IMPONIBLES Y TRIBUTOS -->
         <section class="doc-section" id="sec-desglose">
-          <h2 class="doc-section__title">5.3 Desglose de Bases Imponibles y Tributos</h2>
-          <ul>
+          <h2 class="doc-section__title">Desglose de Bases Imponibles y Tributos</h2>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
             <li><strong>Afecto Ded. (Base Gravada):</strong> Importe neto afecto que da derecho a deducción de crédito fiscal para el cálculo del Impuesto General a las Ventas.</li>
             <li><strong>Exonerado:</strong> Casilla numérica para asentar montos netos que se encuentran liberados o inafectos del gravamen del IGV según catálogo de bienes.</li>
             <li><strong>% Impuesto:</strong> Campo porcentual bloqueado por parámetro contable (configurado en 18.00% para el régimen fiscal general).</li>
             <li><strong>I.S.C.:</strong> Importe liquidado por concepto de Impuesto Selectivo al Consumo cuando el tipo de artículo adquirido está afecto a dicha sobretasa.</li>
             <li><strong>Impuesto:</strong> Monto monetario resultante del cálculo impositivo de la factura comercial.</li>
-            <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 11.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
           </ul>
+          
+          <div class="img-placeholder" data-img-ref="desglose-impuestos">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1200.png" 
+            alt="Desglose de Bases Imponibles y Tributos" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
         </section>
 
         <!-- CONMUTADORES Y BOTONES DE CÁLCULO DE IGV (- IGV / + IGV) -->
-        <section class="doc-section" id="sec-conmutadores">
-          <h2 class="doc-section__title">5.4 Conmutadores y Botones de Cálculo de IGV (- IGV / + IGV)</h2>
-          <p>La barra central dispone de dos botones de ajuste aritmético rápido para discriminar o adicionar el impuesto sin recalcular manualmente en grilla:</p>
-          <ul>
-            <li><strong>Botón IGV:</strong> Deduce el 18% del costo bruto ingresado en las filas de artículos para obtener la base neta imponible.</li>
-            <li><strong>Botón + IGV:</strong> Adiciona directamente la alícuota del 18% a las bases unitarias registradas en la grilla de detalle.</li>
-            <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-              <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 344.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 30%; height: auto; display: block; border-radius: 6px;">
-            </div>
+        <section class="doc-section" id="sec-conmutadores-igv">
+          <h2 class="doc-section__title">Conmutadores y Opciones de Cálculo de IGV (- IGV / + IGV)</h2>
+          <p class="doc-section__desc">La barra central dispone de dos opciones de ajuste aritmético rápido para discriminar o adicionar el impuesto sin recalcular manualmente en la grilla:</p>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li><strong>Opción - IGV:</strong> Deduce el 18% del costo bruto ingresado en las filas de artículos para obtener la base neta imponible.</li>
+            <li><strong>Opción + IGV:</strong> Adiciona directamente la alícuota del 18% a las bases unitarias registradas en la grilla de detalle.</li>
           </ul>
+          
+          <div class="img-placeholder" data-img-ref="opciones-igv">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1201.png"
+            alt="Opciones de cálculo de IGV" 
+            style="width: auto; max-width: 20%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
         </section>
 
         <!-- ESTADO DE AFECTACIÓN Y LIQUIDACIÓN DEL COMPROBANTE -->
-        <section class="doc-section" id="sec-afectacion">
-          <h2 class="doc-section__title">5.5 Estado de Afectación y Liquidación del Comprobante</h2>
-          <ul>
+        <section class="doc-section" id="sec-estado-afectacion">
+          <h2 class="doc-section__title">Estado de Afectación y Liquidación del Comprobante</h2>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
             <li><strong>Casilla Gravado al IGV:</strong> Checkbox de control tributario. Al permanecer activo, valida que el comprobante alimenta el registro de compras para crédito fiscal.</li>
-            <li><strong>Control de Estado 'Pendiente':</strong> Botón de estado operativo que define si el comprobante se encuentra en condición de provisión abierta o si pasa a liquidación cancelada.</li>
-            <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-              <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 345.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-            </div>
+            <li><strong>Control de Estado 'Pendiente':</strong> Opción de estado operativo que define si el comprobante se encuentra en condición de provisión abierta o si pasa a liquidación cancelada.</li>
           </ul>
+          <div class="img-placeholder" data-img-ref="totales-saldos">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1202.png" 
+            alt="Totales, amortización y saldos por pagar" 
+            style="width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
         </section>
 
         <!-- TOTALES, AMORTIZACIÓN Y SALDOS POR PAGAR -->
         <section class="doc-section" id="sec-totales">
-          <h2 class="doc-section__title">5.6 Totales, Amortización y Saldos por Pagar</h2>
-          <ul>
+          <h2 class="doc-section__title">Totales, Amortización y Saldos por Pagar</h2>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
             <li><strong>Total:</strong> Sumatoria global consolidada de la factura comercial (base imponible + IGV + ISC + cargos).</li>
             <li><strong>Pago:</strong> Importe abonado de forma inicial o al contado en la fecha del comprobante.</li>
             <li><strong>Saldo x Pagar:</strong> Diferencia comercial líquida pendiente de abono que se trasladará como obligación al módulo de Cuentas por Pagar.</li>
             <li><strong>Nota:</strong> Línea inferior para la digitación de glosas o instrucciones de pago comercial.</li>
-            <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-              <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 346.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-            </div>  
           </ul>
+
+          <div class="img-placeholder" data-img-ref="totales-saldos">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1203.png" 
+            alt="Totales, amortización y saldos por pagar" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
         </section>
 
         <!-- PANEL DE AUDITORÍA DEL SISTEMA -->
-        <section class="doc-section" id="sec-auditoria">
-          <h2 class="doc-section__title">5.7 Panel de Auditoría del Sistema</h2>
-          <p>Bloque lateral derecho compuesto por dos celdas bloqueadas de seguridad para control interno:</p>
-          <ul>
+        <section class="doc-section" id="sec-panel-auditoria">
+          <h2 class="doc-section__title">Panel de Auditoría de DSI-NET ERP</h2>
+          <p class="doc-section__desc">Bloque lateral derecho compuesto por dos celdas bloqueadas de seguridad para control interno:</p>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
             <li><strong>Creación:</strong> Muestra el usuario operativo que digitó el comprobante y la marca temporal exacta (fecha y hora).</li>
             <li><strong>Modific.:</strong> Registra al último operador y la fecha en que se efectuó cualquier corrección o ajuste en el documento.</li>
-            <div class="img-placeholder" data-img-ref="img-08-cronologia-condiciones">
-              <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 347.png" alt="Cronología, Condiciones Comerciales y Divisa" style="width: 70%; height: auto; display: block; border-radius: 6px;">
-            </div>
           </ul>
+
+          <div class="img-placeholder" data-img-ref="panel-auditoria">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1204.png"
+            alt="Panel de auditoría de DSI-NET ERP" 
+            style="width: auto; max-width: 50%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
         </section>
 
-        <!-- VISUALIZADOR DE LA GRILLA DE MERCADERÍA -->
-        <section class="doc-section" id="sec-visualizador-grilla">
-          <h2 class="doc-section__title">6. Visualizador de la Grilla de Mercadería</h2>
-          <div class="img-placeholder" data-img-ref="img-09-visualizador-grilla">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 348.png" alt="Visualizador de la Grilla de Mercadería" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+        <!-- VISUALIZADOR DE LA GRILLA DE ARTÍCULOS -->
+        <section class="doc-section" id="sec-grilla-articulos">
+          <h2 class="doc-section__title">Visualizador de la Grilla de Artículos</h2>
+          <div class="img-placeholder" data-img-ref="grilla-articulos-vacia">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1205.png" 
+            alt="Grilla de artículos" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
         <!-- ESPECIFICACIÓN TÉCNICA DE COLUMNAS DE LA GRILLA -->
-        <section class="doc-section" id="sec-columnas-grilla">
-          <h2 class="doc-section__title">6.1 Especificación Técnica de Columnas de la Grilla</h2>
+        <section class="doc-section" id="sec-columnas-grilla-detalle">
+          <h2 class="doc-section__title">Especificación Técnica de Columnas de la Grilla</h2>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>COLUMNA / CAMPO</th>
-                  <th>DESCRIPCIÓN Y REGLA OPERATIVA</th>
+                  <th>CONTROL / ELEMENTO</th>
+                  <th>TIPO</th>
+                  <th>ESTADO</th>
+                  <th>FUNCIÓN OPERATIVA</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="data-table__field">Codigo ›</td>
-                  <td>Código SKU o identificador maestro del artículo registrado en el catálogo del sistema.</td>
+                  <td>Alfanumérico</td>
+                  <td>Informativo</td>
+                  <td>Código SKU o identificador maestro del artículo registrado en el catálogo de DSI-NET ERP.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Nombre ›</td>
-                  <td>Descripción técnica y comercial detallada del producto.</td>
+                  <td>Texto</td>
+                  <td>Informativo</td>
+                  <td>Descripción técnica y comercial detallada del artículo.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">U.M. ›</td>
-                  <td>Unidad de medida de control y almacenamiento del artículo (ej. UNID , SET , PAR , KGM ).</td>
+                  <td>Texto</td>
+                  <td>Informativo</td>
+                  <td>Unidad de medida de control y almacenamiento del artículo (ej. UNID, SET, PAR, KGM).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Marca ›</td>
+                  <td>Texto</td>
+                  <td>Informativo</td>
                   <td>Marca comercial o fabricante del artículo asignado en su ficha técnica.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Saldo ›</td>
-                  <td>Existencia o saldo físico/contable previo disponible en el almacén de destino antes de ingresar la compra.</td>
+                  <td>Numérico</td>
+                  <td>Informativo</td>
+                  <td>Existencia o saldo físico/contable previo disponible en los almacenes de destino antes de ingresar la compra.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Cant ›</td>
+                  <td>Numérico</td>
+                  <td>Activo</td>
                   <td>Cantidad de unidades físicas adquiridas que ingresan según el comprobante del proveedor.</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Costo ›</td>
+                  <td>Numérico</td>
+                  <td>Activo</td>
                   <td>Costo unitario neto de compra pactado, antes de la aplicación de tributos (sin IGV).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Costo Inc IGV ›</td>
-                  <td>Costo unitario bruto con el 18% del IGV incluido (calculado automáticamente según los botones + IGV / IGV ).</td>
+                  <td>Numérico</td>
+                  <td>Activo</td>
+                  <td>Costo unitario bruto con el 18% del IGV incluido (calculado automáticamente según las opciones + IGV / - IGV).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Total ›</td>
-                  <td>Importe total neto o bruto resultante de multiplicar la cantidad ingresada ( Cant ) por el costo unitario ( Costo ).</td>
+                  <td>Sistema</td>
+                  <td>Informativo</td>
+                  <td>Importe total neto o bruto resultante de multiplicar la cantidad ingresada (Cant) por el costo unitario (Costo).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Costo 2 ›</td>
+                  <td>Sistema</td>
+                  <td>Informativo</td>
                   <td>Costo unitario convertido a la segunda moneda contable de comparación (Soles o Dólares según el Tipo de Cambio).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Total 2 ›</td>
-                  <td>Importe total consolidado en la segunda moneda de control ( Cant × Costo 2 ).</td>
+                  <td>Sistema</td>
+                  <td>Informativo</td>
+                  <td>Importe total consolidado en la segunda moneda de control (Cant × Costo 2).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Precio 1 ›</td>
+                  <td>Numérico</td>
+                  <td>Activo</td>
                   <td>Tarifa de venta base o sugerida asignada al artículo para la lista de precios principal (Público general / Mostrador).</td>
                 </tr>
                 <tr>
                   <td class="data-table__field">Precio 2 ›</td>
+                  <td>Numérico</td>
+                  <td>Activo</td>
                   <td>Tarifa comercial secundaria asignada al artículo (Mayorista / Distribuidor) para actualización en caliente.</td>
                 </tr>
               </tbody>
@@ -797,281 +831,295 @@
           </div>
         </section>
 
-        <!-- BOTÓN IMPORTAR -->
-        <section class="doc-section" id="sec-boton-importar">
-          <h2 class="doc-section__title">7. Botón Importar</h2>
-          <p>Usaremos el botón Importar, para mandar articulos desde excel a la grilla, si no hay nada para importar aparecerá esta ventana.</p>
+        <!-- OPCIÓN IMPORTAR -->
+        <section class="doc-section" id="sec-opcion-importar">
+          <h2 class="doc-section__title">Opción Importar</h2>
+          <p class="doc-section__desc">Se utiliza la opción Importar para trasladar artículos desde Excel a la grilla; si no existen registros previos para importar, se despliega la siguiente ventana. DSI-NET ERP exige que el formato en Excel disponga de 3 columnas: Código del artículo, Cantidad y Costo.</p>
 
-          <div class="img-placeholder" data-img-ref="img-19-importar-ayuda">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 349.png" alt="Ventana de ayuda de importación vacía" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="error-importar">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1209.png" 
+            alt="Ventana de advertencia al importar Excel vacío" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Asi debe quedar el excel y copiar solo el contenido:</p>
+          <p class="doc-section__desc">La estructura en Excel debe mantener el siguiente formato, copiando únicamente el contenido:</p>
 
-          <div class="img-placeholder" data-img-ref="img-20-excel-articulos">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 350.png" alt="Estructura de Excel de artículos sin cabeceras" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="formato-excel">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1210.png"
+            alt="Formato requerido en Excel para importar artículos" 
+            style="width: auto; max-width: 70%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Volvemos a dar clic al botón Importar y tendria que quedar así:</p>
+          <p class="doc-section__desc">Se ejecuta nuevamente la opción Importar y los artículos seleccionados quedarán reflejados en la grilla.</p>
 
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 351.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="grilla-importada">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1211.png" 
+            alt="Grilla con artículos importados correctamente" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Luego de eso se puede grabar y nos aparecera esta ventana.</p>
-          
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 352.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <p class="doc-section__desc">Si un campo de carácter obligatorio no está completo, DSI-NET ERP enviará un mensaje de alerta.</p>
+
+          <div class="img-placeholder" data-img-ref="error-campo-nota">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1212.png" 
+            alt="Alerta de campo obligatorio faltante" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Luego de grabar nos aparecerá esta ventana, esto pasa cuando se registran artículos que estan en SERIE como se mostró en el <strong>punto 0.3.6.4 Articulos</strong> </p>
-          <p>En la imagen se ven dos articulos en la nueva ventana, esos articulos estan por ser seriados.</p>
+          <p class="doc-section__desc">Tras completar los campos obligatorios se procede a ejecutar la opción Grabar y se visualiza la siguiente ventana de confirmación.</p>
 
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 353.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="confirmacion-grabar">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1213.png" 
+            alt="Ventana de confirmación de comprobante" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>En la grilla de la ventana Serie-Ingreso apareceran los articulos y en la grilla de abajo una cantidad de filas igual a la cantidad de articulos que se registro.</p>
-          
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 354.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <p class="doc-section__desc">Al confirmar el proceso, se despliega la siguiente interfaz cuando se registran artículos que exigen un control por número de serie (ej. Motos, autos, motores, etc.).</p>
+          <p class="doc-section__desc">En la sección superior de la ventana Serie-Ingreso se muestran los artículos, mientras que en la grilla inferior se autogenera una cantidad de filas equivalente al número de unidades registradas. En este caso, se observa que el único artículo sujeto a colocación de series es el DEMO-50782, catalogado como Motor.</p>
+
+          <div class="img-placeholder" data-img-ref="ventana-series-vacia">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1214.png" 
+            alt="Ventana de ingreso de series inicial" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>La grilla de abajo se completa de manera manual todos los campos y al final dar al botón aceptar.</p>
-          
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 355.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <p class="doc-section__desc">La grilla inferior se completa de manera manual o importando desde Excel de forma masiva; finalmente se debe ejecutar la opción Aceptar.</p>
+          <div class="img-placeholder" data-img-ref="ventana-series-llena">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1215.png" 
+            alt="Ventana de ingreso de series con datos" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Se completa OBLIGATORIAMENTE el Nro Serie en todas las casilla si no el sistema no permitirá aceptar.</p>
-          
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 356.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <p class="doc-section__desc">Se requiere completar OBLIGATORIAMENTE el Nro Serie en todas las casillas; de lo contrario, DSI-NET ERP restringe la ejecución de la opción Grabar.</p>
+
+          <div class="img-placeholder" data-img-ref="error-serie-obligatoria">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1215.png" 
+            alt="Alerta de número de serie obligatorio" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Completamos el campo Nro Serie de todas las filas para poder dar Aceptar y se grabará.</p>
-
-          <div class="img-placeholder" data-img-ref="img-21-grilla-importada">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 357.png" alt="Grilla con artículos importados desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <p class="doc-section__desc">Se completan los campos Nro Serie en todas las filas para proceder a ejecutar la opción Aceptar y completar el proceso.</p>
+        </section>
+        <div class="img-placeholder" data-img-ref="error-serie-obligatoria">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1216.png" 
+            alt="Alerta de número de serie obligatorio" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-        <!-- BOTÓN IMPORTAR SERIES DE EXCEL -->
+        <!-- OPCIÓN IMPORTAR SERIES DE EXCEL -->
         <section class="doc-section" id="sec-importar-series">
-          <h2 class="doc-section__title">8. Botón Importar series de Excel</h2>
-          <p>Si tenemos las series en Excel podemos importarlas al sistema, si no las tenemos nos aparecerá esta ventana de ayuda.</p>
+          <h2 class="doc-section__title">Opción Importar series de Excel</h2>
+          <p class="doc-section__desc">Si se cuenta con las series en Excel, pueden importarse directamente a DSI-NET ERP; si el formato no cumple con los requisitos, se despliega la siguiente ventana de ayuda.</p>
 
-          <div class="img-placeholder" data-img-ref="img-23-series-ayuda">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 358.png" alt="Ventana de ayuda para importar series desde Excel" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="error-columnas-series">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1217.png"  
+            alt="Ventana de ayuda de 6 columnas requeridas" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Asi debe quedar el excel, solo señalando el contenido mas no las cabeceras.</p>
+          <p class="doc-section__desc">La estructura en Excel debe mantener el formato estricto copiando únicamente el contenido, excluyendo cabeceras. El campo correspondiente al número de Chasis permanece vacío si el artículo (ej. un motor) no cuenta con dicha codificación.</p>
 
-          <div class="img-placeholder" data-img-ref="img-24-excel-series">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 359.png" alt="Estructura de Excel de series sin cabeceras" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="formato-excel-series">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1218.png"  
+            alt="Formato Excel de 6 columnas para importación de series" 
+            style="width: 80%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Eso lo importamos al sistema, la cantidad de filas que se deben importar esta en la columna Cant en la grilla superior, debemos completar todos los articulos que se registraron y luego aceptamos para que se grabe.</p>
+          <p class="doc-section__desc">Se importa a DSI-NET ERP; la cantidad de filas requeridas dependerá del valor asignado en la columna Cant ubicada en la grilla superior. Es imprescindible completar todos los artículos registrados y ejecutar la opción Aceptar para que los datos queden grabados.</p>
 
-          <div class="img-placeholder" data-img-ref="img-25-series-cargadas">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 360.png" alt="Series cargadas en la grilla del sistema" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-        </section>
-
-        <!-- BOTÓN ARTICULOS -->
-        <section class="doc-section" id="sec-boton-articulos">
-          <h2 class="doc-section__title">9. Botón Articulos</h2>
-          <p>El botón Articulos abrirá la una ventana con todos los articulos que esten en el sistema.</p>
-
-          <div class="img-placeholder" data-img-ref="img-26-catalogo-articulos">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 361.png" alt="Ventana del catálogo de artículos del sistema" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Para dirigir un artículo hacia la grilla de la ventana Proviciones de Compra, se da doble clic en la fila del artículo a elegir, y se debe completar los campos que aparecen.</p>
-
-          <div class="img-placeholder" data-img-ref="img-27-campos-articulo">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 420.png" alt="Completar campos del artículo seleccionado" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Ahora el artículo aparecerá en la grilla y se podrá grabar.</p>
-
-          <div class="img-placeholder" data-img-ref="img-28-articulo-en-grilla">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 421.png" alt="Artículo cargado en la grilla de provisión" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Y al añadr un artículo en SERIE aparecerá esta ventana:</p>
-
-          <div class="img-placeholder" data-img-ref="img-29-ventana-serie-al-anadir">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 422.png" alt="Ventana de serie al añadir artículo seriado" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Completamos el campo Nro Serie de todas las filas para poder dar Aceptar y se grabará.</p>
-
-          <div class="img-placeholder" data-img-ref="img-30-series-completadas">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 423.png" alt="Campos de Nro Serie completados" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Aparecerá esta ventana de confirmación.</p>
-
-          <div class="img-placeholder" data-img-ref="img-31-confirmacion-grabado">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 424.png" alt="Ventana de confirmación de grabado" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Así quedará la ventana una vez se grabó.</p>
-
-          <div class="img-placeholder" data-img-ref="img-32-ventana-post-grabado">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 425.png" alt="Ventana una vez grabado el documento" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="importacion-series-exitosa">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1219.png"  
+            alt="Series importadas y reflejadas en grilla" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- BOTÓN SERIES X ARTÍCULO -->
-        <section class="doc-section" id="sec-boton-series-articulo">
-          <h2 class="doc-section__title">10. Botón Series x Artículo</h2>
-          <p>Este botón funciona despues de grabar artículos seriados, cuando se graba aparece esta ventana.</p>
+        <!-- OPCIÓN ARTÍCULOS -->
+        <section class="doc-section" id="sec-opcion-articulos">
+          <h2 class="doc-section__title">Opción Artículos</h2>
+          <p class="doc-section__desc">La opción Artículos despliega una interfaz con el catálogo general de todos los artículos registrados en DSI-NET ERP.</p>
+          <p class="doc-section__desc">En la franja superior se ubican las herramientas de filtrado; en la sección central se visualiza la grilla con los artículos y sus especificaciones técnicas; y en la sección lateral derecha se dispone de tres paneles informativos: el tarifario del artículo seleccionado, las existencias por almacenes y el estado del tránsito de importaciones.</p>
 
-          <div class="img-placeholder" data-img-ref="img-33-ventana-serie-grabar">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 426.png" alt="Ventana de serie mostrada tras grabar" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="busqueda-articulos">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1220.png"  
+            alt="Ventana de búsqueda y catálogo de artículos" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Ahora cerraremos esta ventana sin colocar los Nro Serie en la grilla.</p>
-          <p>Se cierra la ventana y el botón Series x Artículo se habilitará.</p>
+          <p class="doc-section__desc">Para incorporar un artículo a la grilla de la ventana de Provisión de Compras, se realiza doble clic sobre la fila correspondiente, lo cual habilita un cuadro de diálogo. En él se visualiza el código, el nombre y la unidad de medida, requiriendo completar los campos de cantidad y costo; en la zona inferior se presentan como referencia los distintos precios preasignados al artículo.</p>
 
-          <div class="img-placeholder" data-img-ref="img-34-boton-series-habilitado">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 427.png" alt="Botón Series x Artículo habilitado en la barra superior" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="ingreso-articulos-precios">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1221.png"  
+            alt="Cuadro de ingreso manual de artículos" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Se abrirá nuevamente la ventana anterior para poder colocar las series a los articulos en caso se le olvida registrar las series.</p>
+          <p class="doc-section__desc">El artículo se reflejará en la grilla, quedando habilitado el registro para ejecutar la opción Grabar.</p>
 
-          <div class="img-placeholder" data-img-ref="img-35-reapertura-series">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 428.png" alt="Reapertura de la ventana para colocar series" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-        </section>
-
-        <!-- BOTÓN NOTA DE CREDITO -->
-        <section class="doc-section" id="sec-boton-nota-credito">
-          <h2 class="doc-section__title">11. Botón Nota de Credito</h2>
-          <p>Este botón habilita una nueva ventana, en la cual se podrá registrar una Nota de Crédito.</p>
-
-          <div class="img-placeholder" data-img-ref="img-36-pantalla-nota-credito">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 429.png" alt="Ventana para registrar Nota de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="confirmacion-grabar-articulo">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1222.png"  
+            alt="Confirmación de guardado de artículo" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
         </section>
 
-        <!-- CABECERA Y REFERENCIA DEL DOCUMENTO (NC) -->
-        <section class="doc-section" id="sec-cabecera-nc">
-          <h2 class="doc-section__title">11.1 Cabecera y Referencia del Documento</h2>
+        <!-- OPCIÓN SERIES X ARTÍCULO -->
+        <section class="doc-section" id="sec-opcion-series">
+          <h2 class="doc-section__title">Opción Series x Artículo</h2>
+          <p class="doc-section__desc">Esta funcionalidad opera de forma idéntica a lo detallado previamente.</p>
+          <p class="doc-section__desc">Por ejemplo: Al generar una Provisión de Compras que incorpora artículos controlados mediante número de serie, DSI-NET ERP despliega de manera automática la interfaz de "Series - Ingresos".</p>
+
+          <div class="img-placeholder" data-img-ref="series-ingresos-vacia">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1225.png" 
+            alt="Ventana automática de Series Ingresos" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p class="doc-section__desc">Al optar por cerrar esta ventana sin registrar los campos correspondientes a Nro Serie en la grilla:</p>
+          <p class="doc-section__desc">La ventana se cierra, dejando activa y habilitada la opción Series x Artículo en la barra superior.</p>
+          <div class="img-placeholder" data-img-ref="series-ingresos-abierta-boton">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1226.png" 
+            alt="Reapertura de ventana mediante opción Series x Artículo" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+     
+          <p class="doc-section__desc">Se despliega nuevamente la ventana Series - Ingresos al ejecutar la opción Series x Artículo, permitiendo asentar la información omitida.</p>
+
+          <div class="img-placeholder" data-img-ref="series-ingresos-abierta-boton">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1227.png" 
+            alt="Reapertura de ventana mediante opción Series x Artículo" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+        </section>
+
+        <!-- OPCIÓN NOTA DE CREDITO -->
+        <section class="doc-section" id="sec-opcion-nota-credito">
+          <h2 class="doc-section__title">Opción Nota de Crédito</h2>
+          <p class="doc-section__desc">Esta opción habilita una interfaz dedicada, desde la cual se permite asentar una Nota de Crédito vinculada a la operación comercial.</p>
+
+          <div class="img-placeholder" data-img-ref="ventana-nota-credito">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1237.png" 
+            alt="Pantalla de registro de Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <h3 class="doc-section__title" style="margin-top: 24px;">Cabecera y Referencia del Documento</h3>
           <p class="doc-section__desc">Parámetros formales de identificación del emisor, serie fiscal del comprobante y direccionamiento logístico del depósito contable:</p>
-          <p><strong>Nro Interno / Pto Vta:</strong> Correlativo numérico asignado por el sistema y establecimiento comercial emisor (por defecto 'PRINCIPAL').</p>
-          <p><strong>Proveedor:</strong> RUC y razón social del proveedor nacional con botón [...] para búsqueda rápida en el padrón de contribuyentes. Se explico en el punto Identificación del Comprobante y Proveedor de esta pantalla.</p>
-          <p><strong>Doc (NC):</strong> Tipo de documento tributario 'NC con su respectiva serie, número correlativo y botón de ayuda asistida [?]</p>
-          <p><strong>Fechas (Registro, Fecha Doc, Fecha Vcto):</strong> Cronología secuencial de contabilización contable, fecha efectiva de emisión por el proveedor y fecha acordada de vencimiento financiero.</p>
-          <p><strong>Forma Pago:</strong> Condición comercial pactada (CONTADO o Crédito comercial programado).</p>
-          <p><strong>Moneda y Tipo de Cambio:</strong> Selección excluyente entre Soles (S/.) o Dólares (US$) y la cotización oficial de venta de la fecha de emisión.</p>
-          <p><strong>Almacén:</strong> Depósito físico de custodia donde se asienta la salida física o el reingreso contable del producto devuelto.</p>
-          <p><strong>Doc Ref:</strong> Comprobante de origen referenciado (Factura de Compra) con botón modal de selección de documento previo [?].</p>
-          
-          <div class="img-placeholder" data-img-ref="img-36-pantalla-nota-credito">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 430.png" alt="Ventana para registrar Nota de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li><strong>Nro Interno / Pto Vta:</strong> Correlativo numérico asignado por DSI-NET ERP y establecimiento comercial emisor (por defecto 'PRINCIPAL').</li>
+            <li><strong>Proveedor:</strong> RUC y razón social del proveedor nacional con la opción [...] para búsqueda rápida en el padrón de contribuyentes.</li>
+            <li><strong>Doc (NC):</strong> Tipo de documento tributario 'NC' con su respectiva serie, número correlativo y opción de ayuda asistida [?].</li>
+            <li><strong>Fechas (Registro, Fecha Doc, Fecha Vcto):</strong> Cronología secuencial de contabilización contable, fecha efectiva de emisión por el proveedor y fecha acordada de vencimiento financiero.</li>
+            <li><strong>Forma Pago:</strong> Condición comercial pactada (CONTADO o Crédito comercial programado).</li>
+            <li><strong>Moneda y Tipo de Cambio:</strong> Selección excluyente entre Soles (S/.) o Dólares (US$) y la cotización oficial de venta de la fecha de emisión.</li>
+            <li><strong>Doc Ref:</strong> Comprobante de origen referenciado (Factura de Compra) con opción modal de selección de documento previo [?].</li>
+            <li><strong>Almacenes:</strong> Depósito físico de custodia donde se asienta la salida física o el reingreso contable del artículo devuelto.</li>
+          </ul>
+
+          <div class="img-placeholder" data-img-ref="cabecera-nota-credito">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1233.png" 
+            alt="Detalle de cabecera de Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
+          <p class="doc-section__desc">Existen campos que se completan automáticamente según los parámetros predefinidos.</p>
 
-          <p>Hay campos que se completan automaticamente.</p>
-        </section>
-
-        <!-- LIQUIDACIÓN TRIBUTARIA E IMPUESTOS (NC) -->
-        <section class="doc-section" id="sec-liquidacion-nc">
-          <h2 class="doc-section__title">11.2 Liquidación Tributaria e Impuestos</h2>
+          <h3 class="doc-section__title" style="margin-top: 24px;">Liquidación Tributaria e Impuestos</h3>
           <p class="doc-section__desc">Totalizadores aritméticos, desgloses del Impuesto General a las Ventas (IGV) y cuadraturas fiscales aplicadas al saldo pendiente con el proveedor:</p>
-          <p><strong>Afecto Ded. / Exonerado:</strong> Base imponible gravada sujeta a restitución de crédito fiscal e importes liberados de IGV.</p>
-          <p><strong>% Impuesto / I.S.C. / Impuesto:</strong> Alícuota impositiva del comprobante, sobretasa por selectivo al consumo y monto total de tributos.</p>
-          <p><strong>Botones IGV / + IGV:</strong> Conmutadores de acción rápida para deducir o sumar el 18% del valor ingresado en las filas.</p>
-          <p><strong>Gravado al IGV / Pendiente:</strong> Casilla de control tributario y botón de conmutación de estado de liquidación comercial.</p>
-          <p><strong>Total / Pago / Saldo x Pagar:</strong> Sumatoria líquida de la nota de crédito, abonos aplicados y saldo neto por regularizar.</p>
-          <p><strong>Nota:</strong> Glosa explicativa sobre el motivo de la emisión (descuento comercial, anulación de operación o devolución material).</p>
-          
-          <div class="img-placeholder" data-img-ref="img-36-pantalla-nota-credito">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 431.png" alt="Ventana para registrar Nota de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li><strong>Afecto Ded. / Exonerado:</strong> Base imponible gravada sujeta a restitución de crédito fiscal e importes liberados de IGV.</li>
+            <li><strong>% Impuesto / I.S.C. / Impuesto:</strong> Alícuota impositiva del comprobante, sobretasa por selectivo al consumo y monto total de tributos.</li>
+            <li><strong>Opciones - IGV / + IGV:</strong> Conmutadores de acción rápida para deducir o sumar el 18% del valor ingresado en las filas.</li>
+            <li><strong>Gravado al IGV / Pendiente:</strong> Casilla de control tributario y opción de conmutación de estado de liquidación comercial.</li>
+            <li><strong>Total / Pago / Saldo x Pagar:</strong> Sumatoria líquida de la nota de crédito, abonos aplicados y saldo neto por regularizar.</li>
+            <li><strong>Nota:</strong> Glosa explicativa sobre el motivo de la emisión (descuento comercial, anulación de operación o devolución material).</li>
+          </ul>
+
+          <div class="img-placeholder" data-img-ref="liquidacion-tributaria-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1234.png" 
+            alt="Liquidación de impuestos en Nota de Crédito" 
+            style="width: auto; max-width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-        </section>
-
-        <!-- BARRA SUPERIOR DE INTEGRACIÓN Y GRILLA DE DETALLE (NC) -->
-        <section class="doc-section" id="sec-integracion-nc">
-          <h2 class="doc-section__title">11.3 Barra Superior de Integración y Grilla de Detalle</h2>
+          <h3 class="doc-section__title" style="margin-top: 24px;">Barra Superior de Integración y Grilla de Detalle</h3>
           <p class="doc-section__desc">Funcionalidades de descarga por unidades seriadas, conciliación de cantidades físicas y herramientas de depuración de registros en cero:</p>
-          <p><strong>Eventos / Artículos / Servicios:</strong> Menú de derivación de movimientos e incorporación de ítems físicos o conceptos comerciales.</p>
-          <p><strong>Series x Artículo:</strong> Abre la ventana donde se puede observar los articulos en serie y además se le puede añadir la serie que se requiere. Se explico en el punto Botón Serie x Artículo que esta arriba.</p>
-          <p><strong>Estructura de la Grilla:</strong> Detalla Código, Nombre, U.M., Marca, Stock actual en almacén, Cant Dev (cantidad devuelta antes), Cant x Dev (saldo pendiente por devolver), Cant (unidades devueltas en este acto), Costo unitario, Costo Inc IGV y Total.</p>
-          <p><strong>Comando Eliminar cant en 0':</strong> Función que purga automáticamente de la grilla todas aquellas filas que no tengan unidades en la columna Cant , agilizando el registro cuando la nota de crédito solo afecta a un producto de una factura amplia.</p>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li><strong>Eventos / Artículos / Servicios:</strong> Menú de derivación de movimientos e incorporación de ítems físicos o conceptos comerciales.</li>
+            <li><strong>Series x Artículo:</strong> Despliega la ventana que detalla los artículos en serie y habilita la funcionalidad para registrar la numeración requerida.</li>
+            <li><strong>Estructura de la Grilla:</strong> Detalla Código, Nombre, U.M., Marca, Stock actual en almacenes, Cant Dev (cantidad devuelta antes), Cant x Dev (saldo pendiente por devolver), Cant (unidades devueltas en este acto), Costo unitario, Costo Inc IGV y Total.</li>
+            <li><strong>Opción 'Eliminar cant en 0':</strong> Función que purga automáticamente de la grilla todas aquellas filas que no presenten unidades en la columna Cant, agilizando el registro cuando la nota de crédito afecta únicamente a artículos específicos dentro de una factura extensa.</li>
+          </ul>
 
-          <div class="img-placeholder" data-img-ref="img-36-pantalla-nota-credito">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 432.png" alt="Ventana para registrar Nota de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="barra-superior-grilla-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1235.png" 
+            alt="Barra de herramientas y grilla en Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
-          <div class="img-placeholder" data-img-ref="img-36-pantalla-nota-credito">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 433.png" alt="Ventana para registrar Nota de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-          <p>Clic en el botón nuevo para habilitar los campos, un detalle en esta ventana es que no se puede buscar el Doc Ref sin antes escribir el PROVEEDOR.</p>
-
-          <div class="img-placeholder" data-img-ref="img-37-nc-boton-nuevo">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 434.png" alt="Habilitar campos con el botón nuevo en Nota de Crédito" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-          </div>
-
-          <p>Como se aprecia en la segunda ventana no aparecen los documentos previos, por eso debemos colocar el Proveedor primero.</p>
-
-          <p>Colocamos un Proveedor y nuevamente activamos el botón de ayuda.</p>
-          
-          <div class="img-placeholder" data-img-ref="img-39-nc-documentos-previos">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 435.png" alt="Documentos previos mostrados tras colocar el proveedor" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="barra-superior-grilla-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1236.png" 
+            alt="Barra de herramientas y grilla en Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Ahora si aparece el documento que anteriormente se habian registrado.</p>
+          <h3 class="doc-section__title" style="margin-top: 24px;">Inicio del procedimiento de Nota de crédito</h3>
+          <p class="doc-section__desc">Se ejecuta la opción Nuevo para habilitar los campos; como consideración operativa en esta interfaz, no se permite utilizar la opción de búsqueda del Doc Ref sin haber consignado previamente el PROVEEDOR.</p>
 
-          <div class="img-placeholder" data-img-ref="img-39-nc-documentos-previos">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 436.png" alt="Documentos previos mostrados tras colocar el proveedor" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="boton-nuevo-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1228.png" 
+            alt="Ejecución de opción nuevo para Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Escogemos uno de los documentos y algunos campos se completará, automaticamente y los articulos que estuvieron relacionados con el documento aparecerán en la grilla.</p>
-          <p>Se debe completar el campo Nota, Doc NC y completar la columna Cant (esta cantidad debe ser menor o igual al stock en la columna Stock) en la grilla.</p>
-          
-          <div class="img-placeholder" data-img-ref="img-39-nc-documentos-previos">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 437.png" alt="Documentos previos mostrados tras colocar el proveedor" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <p class="doc-section__desc">Si se omite el proveedor, la interfaz de consulta de documentos previos no arrojará resultados.</p>
+          <p class="doc-section__desc">Tras ingresar el Proveedor correspondiente, se ejecuta nuevamente la opción de ayuda (?).</p>
+
+          <div class="img-placeholder" data-img-ref="busqueda-docs-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1229.png" 
+            alt="Búsqueda de documentos en base al proveedor" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Despues de completar estos campos debemos grabar y nos aparecerá una ventana de confirmación.</p>
+          <p class="doc-section__desc">Se visualizan los comprobantes que han sido registrados con anterioridad en DSI-NET ERP.</p>
+          <p class="doc-section__desc">Al seleccionar uno de los documentos, DSI-NET ERP completa automáticamente los campos de cabecera y refleja en la grilla los artículos vinculados a dicho comprobante de origen.</p>
+          <p class="doc-section__desc">A continuación, se requiere asentar la justificación en el campo Nota, el Doc NC y registrar la cantidad en la columna Cant de la grilla (garantizando que la cifra ingresada sea menor o igual a las existencias reflejadas en la columna Stock).</p>
 
-          <div class="img-placeholder" data-img-ref="img-40-nc-completar-grabar">
-            <img src="../Imagenes/Modulo_Compras/1.3_provision_compras/image 438.png" alt="Completar datos de Nota de Crédito y confirmación de grabado" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+          <div class="img-placeholder" data-img-ref="grilla-nc-llena">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1230.png" 
+            alt="Nota de Crédito con artículos cargados en grilla" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
           </div>
 
-          <p>Al igual que en la Ventana Provision de Compras nos aparecerá una ventana para ingresar el Nro de Serie para poder generar la NC de la cantidad requerida.</p>
-          <p>Se completa como se explico en la parte del <strong>Botón Importar</strong> que está un poco mas arriba. </p>
+          <p class="doc-section__desc">Una vez completados los parámetros obligatorios, se procede a ejecutar la opción Grabar y DSI-NET ERP despliega una ventana de confirmación.</p>
 
+          <div class="img-placeholder" data-img-ref="confirmacion-grabar-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1231.png" 
+            alt="Confirmación final de grabación de Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
+
+          <p class="doc-section__desc">Concluida esta etapa, el documento de Nota de Crédito queda asimilado y grabado de manera definitiva en el flujo operativo y contable.</p>
+          <div class="img-placeholder" data-img-ref="confirmacion-grabar-nc">
+            <img src="../Imagenes/Modulo_Compras/1.2_provision_compras/image 1232.png" 
+            alt="Confirmación final de grabación de Nota de Crédito" 
+            style="width: 100%; height: auto; display: block; border-radius: 6px; margin: 12px 0;">
+          </div>
         </section>
 
-      </div>
-
-      <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
+          <!-- ============ NAVEGACIÓN PREV / SIGUIENTE ============ -->
       <nav class="page-nav" aria-label="Navegación entre páginas">
         <a class="page-nav__link page-nav__link--prev" href="1.1_Orden_de_Compra.html">
-          <span class="page-nav__label">ANTERIOR</span>
-          <span class="page-nav__title"> 1.1 Orden de Compra</span>
-          <span class="page-nav__sub">Reporte de Diferencias</span>
+          <span class="page-nav__label">Anterior</span>
+          <span class="page-nav__title">1.1 Orden de Compra</span>
+          <span class="page-nav__sub">Crear una orden de compra</span>
         </a>
-        <a class="page-nav__link page-nav__link--next" href="2.0_Conceptos_Generales">
-          <span class="page-nav__label">SIGUIENTE</span>
-          <span class="page-nav__title">2. Modulo de Caja Chica</span>
-          <span class="page-nav__sub">Traslado de Mercadería</span>
+        <a class="page-nav__link page-nav__link--next" href="2.0_Conceptos_Generales.html">
+          <span class="page-nav__label">Siguiente</span>
+          <span class="page-nav__title">2.0 Conceptos generales</span>
+          <span class="page-nav__sub">Modulo de caja chica</span>
         </a>
       </nav>
 
-      <!-- ============ FOOTER INSTITUCIONAL ============ -->
-      <footer class="site-footer">
-        <p>Referencia Técnica Oficial: DSI-NET ERP v12.1</p>
-        <div class="site-footer__links">
-          <a href="#">Políticas de Privacidad</a>
-          <a href="#">Términos de Soporte</a>
-          <a href="#">Manuales PDF</a>
-        </div>
-      </footer>
 
+      </div>
     </main>
   </div>
 
