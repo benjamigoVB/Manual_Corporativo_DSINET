@@ -421,7 +421,6 @@
               <em>Nota.</em> Ruta para entrar a la ventana de Nota de Pedido.
             </div>
 
-            <!-- CABECERA DE LA NOTA DE PEDIDO -->
             <h3 style="margin-top: 18px;">Cabecera de la Nota de Pedido</h3>
             <div class="table-wrap">
               <table class="data-table">
@@ -435,10 +434,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="data-table__field">Pto Vta / Nro.Int.</td>
-                    <td>Menú Desplegable / Entero</td>
+                    <td class="data-table__field">Pto Vta</td>
+                    <td>Por defecto</td>
+                    <td>Automatico</td>
+                    <td>Identifica el punto de venta emisor.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Nro.Int.</td>
+                    <td>Entero</td>
                     <td>Solo Lectura</td>
-                    <td>Identifica el punto de venta emisor y el número interno correlativo de control en DSI-NET ERP.</td>
+                    <td>El número interno correlativo de control en DSI-NET ERP.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Fecha</td>
@@ -448,21 +453,27 @@
                   </tr>
                   <tr>
                     <td class="data-table__field">Documento (NP / Serie / Correlativo)</td>
-                    <td>Desplegable / Selector [?]</td>
-                    <td>Obligatorio</td>
-                    <td>Determina el tipo documental (Nota de Pedido), serie de facturación y número correlativo oficial asignado.</td>
+                    <td>Menú desplegable</td>
+                    <td>Automatico al grabar</td>
+                    <td>Determina el tipo documental (Nota de Pedido), serie interna y número correlativo asignado.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Almacén</td>
-                    <td>Menú Desplegable</td>
+                    <td>Menú desplegable</td>
                     <td>Obligatorio</td>
-                    <td>Selecciona el almacén físico de despacho desde donde se comprometerán y atenderán los artículos.</td>
+                    <td>Muestra el almacen de despacho desde donde se comprometerán y atenderán los artículos.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Cliente Princ. / Cliente</td>
+                    <td class="data-table__field">Cliente Princ.</td>
+                    <td>Busqueda asistida</td>
+                    <td>Obligatorio</td>
+                    <td>Carga la entidad principal. Si se trata de una corporación con múltiples registros, el sistema selecciona automáticamente al que tiene el check de principal ("Princ"). Si no es corporación y posee un registro único, asigna por defecto el único cliente que aparece en la lista.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Cliente</td>
                     <td>Búsqueda Asistida</td>
                     <td>Obligatorio</td>
-                    <td>Permite seleccionar o crear un cliente, así como escoger la razón social que se desea facturar dentro de una corporación.</td>
+                    <td>Permite escoger la razón social específica a la que se desea facturar. De forma inmediata al paso anterior, si la entidad es una corporación, despliega todos los clientes asociados para permitir elegir uno de ellos.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Casilla Cliente</td>
@@ -472,9 +483,15 @@
                   </tr>
                   <tr>
                     <td class="data-table__field">Direcc Desp</td>
-                    <td>Selector de Sedes [...]</td>
+                    <td>Selector de Sedes</td>
                     <td>Obligatorio</td>
-                    <td>Permite seleccionar la dirección de despacho de la Nota de Pedido; dicha dirección servirá como punto de llegada en la Guía de Remisión.</td>
+                    <td>Permite seleccionar la dirección de despacho de la Nota de Pedido; dicha dirección servirá como punto de llegada en la Guía de Remisión. Se pueden crear nuevas direcciones en el mantenimiento de clientes, en la parte inferior encima de la grilla hay cuatro opciones, una de ellas dice dirección despacho, en esa opción se podrán agregar más direcciones o anularlas.</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Casilla dirección de despacho</td>
+                    <td>Selector de sedes</td>
+                    <td>Acceso opcional</td>
+                    <td>Al dar clic en esa casilla se mostrarán las direcciones que están vinculadas a ese cliente.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Destino</td>
@@ -486,41 +503,41 @@
                     <td class="data-table__field">Nota</td>
                     <td>Campo de Texto</td>
                     <td>Opcional</td>
-                    <td>Permite ingresar observaciones comerciales, especificaciones de rotulado o instrucciones especiales de entrega.</td>
+                    <td>Nota donde se detalla a almacen las condiciones de la NP</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Tipo de despacho:</td>
+                    <td>Opción radial</td>
+                    <td>Condicional/Obligatorio</td>
+                    <td>Define la modalidad de entrega de los artículos a través de tres opciones:<br><br>- Almacén: El cliente retira los artículos directamente en el almacén principal a demanda.<br><br>- Local: Entrega en la sucursal del cliente tomando como destino el campo "Direcc Desp" y la ciudad para emitir la Guía de Remisión.<br><br>- Agencia: Envío por empresa de transportes externa según dirección de despacho, con la opción de registrar un transportista nuevo sin salir del formulario.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Transportista</td>
                     <td>Selector Asistido [...]</td>
+                    <td>convencional</td>
+                    <td>Permite seleccionar o registrar el transportista asignado que figurará en el traslado de la mercadería en la Guía de Remisión. Solo en tipo de despocho agencia</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">F. de Cobro</td>
+                    <td>Menú desplegable</td>
                     <td>Obligatorio</td>
-                    <td>Permite seleccionar o registrar el transportista asignado que figurará en el traslado de la mercadería en la Guía de Remisión.</td>
+                    <td>Permite seleccionar el método de cobro para esa NP, puede ser al contado, crédito o letra.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Modalidad: Almacén</td>
-                    <td>Opción Radial</td>
-                    <td>Condicional</td>
-                    <td>Indica que el cliente retira los artículos directamente en las instalaciones del almacén principal de la empresa a demanda.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Modalidad: Local</td>
-                    <td>Opción Radial</td>
-                    <td>Condicional</td>
-                    <td>Establece la entrega directa en el local o sucursal del cliente, tomando como punto de llegada obligatorio la información cargada en el campo <strong>Direcc Desp</strong> para la emisión de la Guía de Remisión.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">Modalidad: Agencia</td>
-                    <td>Opción Radial</td>
-                    <td>Condicional</td>
-                    <td>Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. Si la agencia o transportista no se encuentra registrado en el sistema, la casilla al costado del campo <strong>Transportista</strong> permite abrir directamente la ventana de "Mantenimiento de proveedores" para registrarlo seleccionando el tipo de entidad Transportista sin salir de la Nota de Pedido.</td>
-                  </tr>
-                  <tr>
-                    <td class="data-table__field">F. de Cobro / Vencimiento</td>
-                    <td>Menú Desplegable / Fecha</td>
-                    <td>Obligatorio</td>
+                    <td class="data-table__field">Vencimiento</td>
+                    <td>Fecha</td>
+                    <td>Automático</td>
                     <td>Establece la modalidad de pago pactada (Contado, Crédito, Letras) y fija la fecha límite de vencimiento para la cobranza.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Moneda / Tipo de Cambio (Tc)</td>
-                    <td>Opciones Radiales / Decimal</td>
+                    <td class="data-table__field">Moneda</td>
+                    <td>Opciones Radiales /</td>
+                    <td>Obligatorio</td>
+                    <td>Permite ecoger el tipo de monea con el que se hará el cobro del cliente</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Tipo de Cambio (Tc)</td>
+                    <td>Automatico</td>
                     <td>Obligatorio</td>
                     <td>Define la divisa comercial de la transacción (S/. o US$) y carga en tiempo real el tipo de cambio oficial del día.</td>
                   </tr>
@@ -528,19 +545,25 @@
                     <td class="data-table__field">Asesor comercial (Vend.)</td>
                     <td>Menú Desplegable</td>
                     <td>Obligatorio</td>
-                    <td>Asigna al asesor comercial responsable de la gestión de preventa, atención en campo y comisiones.</td>
+                    <td>es el asesor del usuario que se ha logeado responsable de la gestión de preventa, atención en campo y comisiones.</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Tipo Afec. / Afec. Prom.</td>
+                    <td class="data-table__field">Tipo Afec.</td>
+                    <td>Menú desplegable</td>
+                    <td>Obligatorio</td>
+                    <td>Por lo general debería aparecer la opción 10 Gravado- Operación Onerosa</td>
+                  </tr>
+                  <tr>
+                    <td class="data-table__field">Afec. Prom.</td>
                     <td>Menús Desplegables</td>
                     <td>Obligatorio</td>
-                    <td>Determina el tipo de afectación tributaria oficial ante SUNAT (ej. Gravado - Operación Onerosa) y el tratamiento fiscal para artículos en bonificación comercial.</td>
+                    <td>Si toda la NP es gratuita se escoge el tipo de afect. Diferente al 31, en caso de artículos gratuitos y no gratuitos se escogerá el tipo de afect 31</td>
                   </tr>
                   <tr>
-                    <td class="data-table__field">Saldo por cobrar / Saldo x Cobrar Cli</td>
+                    <td class="data-table__field">Saldo x Cobrar Cli</td>
                     <td>Indicador Numérico</td>
                     <td>Solo Lectura</td>
-                    <td>Exhibe en tiempo real el importe neto del pedido actual y el saldo por cobrar total acumulado en la cuenta del cliente.</td>
+                    <td>el saldo por cobrar total acumulado en la cuenta del cliente.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Lin.Cred.Asig. (Línea de crédito asignada)</td>
@@ -552,7 +575,7 @@
                     <td class="data-table__field">Lin.Cred.Disp. (Línea de crédito disponible)</td>
                     <td>Indicador Financiero</td>
                     <td>Solo Lectura</td>
-                    <td>Exhibe el saldo disponible de financiamiento para respaldar la emisión de nuevas Notas de Pedido antes de exigir cobro o visación manual.</td>
+                    <td>Diferencia entre la línea de crédito asignado menos la línea de crédito que ya utilizo</td>
                   </tr>
                 </tbody>
               </table>
@@ -580,33 +603,12 @@
 
             <!-- CONDICIONES DE DESPACHO Y COBRANZA -->
             <div class="doc-subsection" id="sub-condiciones-despacho-cobranza" style="margin-top: 24px; margin-bottom: 28px;">
-              <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Condiciones de Despacho y Cobranza</h3>
+              <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Condiciones de Despacho</h3>
               <p>
                 En esta sección de la cabecera se configuran las condiciones de entrega de los artículos y los términos comerciales acordados con el cliente:
               </p>
-
-              <!-- FIGURA 3: NÚMERO Y TÍTULO (APA 7) -->
-              <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 3</strong><br>
-                <span style="font-style: italic;">Sección de Condiciones de Despacho y Cobranza.</span>
-              </div>
-              <!-- IMAGEN 1 (Centrada) -->
-              <div class="img-placeholder" data-img-ref="8.1.0_Despacho_Cobranza" style="display: flex; justify-content: center; width: 100%; margin: 0 0 12px 0;">
-                <img 
-                  src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1148.png" 
-                  alt="Controles de transportista, modalidad de despacho local y forma de cobro en la Nota de Pedido" 
-                  style="width: 50%; max-width: 500px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
-                >
-              </div>
-              <!-- FIGURA 3: NOTA (APA 7) -->
-              <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 20px; font-size: 0.9em; color: #475569; line-height: 1.5;">
-                <em>Nota.</em> Vista general de los controles en la cabecera de la Nota de Pedido.
-              </div>
               
               <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 16px;">
-                <li>
-                  <strong>Transportista:</strong> Es la casilla donde se elige la agencia de transporte.
-                </li>
                 <li>
                   <strong>Modalidad de entrega (Almacén / Local / Agencia)</strong>
                 </li>
@@ -617,7 +619,7 @@
                   
                   <!-- FIGURA 4: NÚMERO Y TÍTULO (APA 7) -->
                   <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                    <strong>Figura 4</strong><br>
+                    <strong>Figura 3</strong><br>
                     <span style="font-style: italic;">Modalidad de entrega configurada en Almacén.</span>
                   </div>
                   <!-- IMAGEN 2 (Centrada) -->
@@ -640,7 +642,7 @@
                   
                   <!-- FIGURA 5: NÚMERO Y TÍTULO (APA 7) -->
                   <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                    <strong>Figura 5</strong><br>
+                    <strong>Figura 4</strong><br>
                     <span style="font-style: italic;">Modalidad de entrega configurada en Local.</span>
                   </div>
                   <!-- IMAGEN 3 (Centrada) -->
@@ -660,10 +662,13 @@
                 <!-- ITEM AGENCIA -->
                 <li style="margin-bottom: 24px;">
                   <strong>Agencia:</strong> Aplica cuando el destino final en campo requiere contratación de una empresa de transportes externa; toma como referencia la dirección de despacho. Al seleccionar la opción de Agencia, en la casilla de "Transportista" ya no aparecerá nada y se tendrá que escribir la agencia que hará el traslado de mercaderia al cliente, en caso no esté registrado la agencia se le puede agregar mediante la casilla que esta al costado el cual abre el mantenimiento de proveedores, y nos aseguramos que esté marcada la casilla de color celeste "Transportista".
+                  <li>
+                  <strong>Transportista:</strong> Es la casilla donde se elige la agencia de transporte.
+                  </li>
                   
                   <!-- FIGURA 6: NÚMERO Y TÍTULO (APA 7) -->
                   <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                    <strong>Figura 6</strong><br>
+                    <strong>Figura 5</strong><br>
                     <span style="font-style: italic;">Modalidad de entrega configurada en Agencia.</span>
                   </div>
                   <!-- IMAGEN 4 (Centrada) -->
@@ -680,7 +685,7 @@
                   </div>
                 <!-- FIGURA 7: NÚMERO Y TÍTULO (APA 7) -->
                 <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                  <strong>Figura 7</strong><br>
+                  <strong>Figura 6</strong><br>
                   <span style="font-style: italic;">Ventana de Mantenimiento de Proveedores.</span>
                 </div>
                 <!-- IMAGEN 1 (Centrada) -->
@@ -698,11 +703,12 @@
 
                 <!-- ITEM: FORMA DE COBRO -->
                 <li style="margin-bottom: 24px;">
+                  <h3 style="color: #1e293b; font-size: 1.15rem; margin-bottom: 8px;">Condiciones de Cobranza</h3>
                   <strong>F. de Cobro (Forma de Cobro):</strong> Desplegable en el cual se observa las formas de cobro que el cliente tiene disponible.
                   
                   <!-- FIGURA 8: NÚMERO Y TÍTULO (APA 7) -->
                   <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 12px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                    <strong>Figura 8</strong><br>
+                    <strong>Figura 7</strong><br>
                     <span style="font-style: italic;">Desplegable de Formas de Cobro.</span>
                   </div>
                   <!-- IMAGEN 2 (Centrada) -->
@@ -746,7 +752,7 @@
                     <td class="data-table__field">Opción Artículos</td>
                     <td>Búsqueda Asistida</td>
                     <td>Habilitado</td>
-                    <td>Permite la selección de artículos hacia la Nota de Pedido mediante búsqueda por Código, Nombre, Modelo, Marca o clasificación de artículos.</td>
+                    <td>Permite la selección de artículos hacia la Nota de Pedido. Habilita búsquedas por Código, Nombre o Modelo, y filtros por Marca, Procedencia o clasificación jerárquica (Clase / Familia / Subfamilia). La interfaz presenta paneles integrados: una grilla superior para visualizar los artículos con stock disponible en el almacén de la nota de pedido, una grilla inferior con el historial de compras del cliente, un panel de precios por categorías, un panel de stock en todos los almacenes, y un panel de tránsito logístico que lista artículos en tránsito de importaciones con cantidad y fecha estimada de llegada.</td>
                   </tr>
                   <tr>
                     <td class="data-table__field">Opción Importar Excel</td>
@@ -784,7 +790,7 @@
             
             <!-- FIGURA 9: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 9</strong><br>
+              <strong>Figura 8</strong><br>
               <span style="font-style: italic;">Ubicación de la Opción Artículos en la Nota de Pedido.</span>
             </div>
             
@@ -803,21 +809,21 @@
             </div>
 
             <p>
-              Permite la selección de artículos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>Código</strong>, <strong>Nombre</strong> o <strong>Modelo</strong>; asimismo podemos filtrar los artículos por <strong>Marca</strong>, <strong>Procedencia</strong> o toda una clasificación de artículos (<strong>Clase / Familia / Subfamilia</strong>).
+              Permite la selección de artículos hacia la Nota de Pedido. Podemos hacer búsquedas por <strong>código</strong>, <strong>nombre</strong> o <strong>modelo</strong>; asimismo podemos filtrar los artículos por <strong>marca</strong>, <strong>procedencia</strong> o toda una clasificación de artículos (<strong>clase / familia / subfamilia</strong>).
             </p>
 
             <p>Tenemos ventanas de ayuda integradas para la gestión comercial:</p>
             <ul style="margin: 8px 0 24px 20px; line-height: 1.6;">
-              <li><strong>Grila superior:</strong> Permite ver todos los artículos que están en el sistema.</li>
+              <li><strong>Grila superior:</strong> Permite ver todos los artículos que tienen stock disponible en el almacen de la nota de pedido.</li>
               <li><strong>Grilla inferior:</strong> Permite ver los artículos que el cliente compró anteriormente.</li>
-              <li><strong>Precios:</strong> Precios en sus diferentes categorías.</li>
-              <li><strong>Stock:</strong> Cantidad del artículo que hay en almacen.</li>
-              <li><strong>Tránsito importaciones:</strong> Listado de artículos que están por llegar incluyendo cantidad y una fecha estimada de llegada.</li>
+              <li><strong>Panel Precios:</strong> Precios en sus diferentes categorías.</li>
+              <li><strong>Panel Stock:</strong> Stock del artículo en todos los almacenes.</li>
+              <li><strong>Panel Tránsito importaciones:</strong> Listado de artículos que se encuentra en transito de importaciones se incluye cantidad y una fecha estimada de llegada.</li>
             </ul>
 
             <!-- FIGURA 10: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 10</strong><br>
+              <strong>Figura 9</strong><br>
               <span style="font-style: italic;">Ventana de Búsqueda de Artículos y Ayudas Comerciales.</span>
             </div>
 
@@ -842,7 +848,7 @@
                 
                 <!-- FIGURA 11: NÚMERO Y TÍTULO (APA 7) -->
                 <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                  <strong>Figura 11</strong><br>
+                  <strong>Figura 10</strong><br>
                   <span style="font-style: italic;">Botón de visualización de imagen.</span>
                 </div>
                 <!-- IMAGEN 1 (Centrada) -->
@@ -850,7 +856,7 @@
                   <img 
                     src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1082 (2).png" 
                     alt="Botón para ver imagen del artículo" 
-                    style="width: 10%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
+                    style="width: 100%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
                   >
                 </div>
                 <!-- FIGURA 11: NOTA (APA 7) -->
@@ -866,7 +872,7 @@
               <!-- ESPACIO FIGMA: VISUALIZADOR DE IMAGEN TÉCNICA -->
               <!-- FIGURA 12: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 16px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 12</strong><br>
+                <strong>Figura 11</strong><br>
                 <span style="font-style: italic;">Ventana emergente con imagen técnica del artículo.</span>
               </div>
               <!-- IMAGEN 2 (Centrada) -->
@@ -889,7 +895,7 @@
                 
                 <!-- FIGURA 13: NÚMERO Y TÍTULO (APA 7) -->
                 <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                  <strong>Figura 13</strong><br>
+                  <strong>Figura 12</strong><br>
                   <span style="font-style: italic;">Selección de artículo en la grilla de búsqueda.</span>
                 </div>
                 <!-- IMAGEN 3 (Centrada) -->
@@ -918,7 +924,7 @@
               <!-- ESPACIO FIGMA: VENTANA PARA DIGITAR CANTIDADES -->
               <!-- FIGURA 14: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-top: 16px; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 14</strong><br>
+                <strong>Figura 13</strong><br>
                 <span style="font-style: italic;">Ventana de captura transaccional del artículo.</span>
               </div>
               <!-- IMAGEN 4 (Centrada) -->
@@ -943,7 +949,7 @@
 
               <!-- FIGURA 15: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 15</strong><br>
+                <strong>Figura 14</strong><br>
                 <span style="font-style: italic;">Botón Importar Excel.</span>
               </div>
               <!-- IMAGEN 1 (Centrada) -->
@@ -951,7 +957,7 @@
                 <img 
                   src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1083 (2).png" 
                   alt="Botón de importación desde Excel" 
-                  style="width: 20%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
+                  style="width: 50%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
                 >
               </div>
               <!-- FIGURA 15: NOTA (APA 7) -->
@@ -967,7 +973,7 @@
 
               <!-- FIGURA 16: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 16</strong><br>
+                <strong>Figura 15</strong><br>
                 <span style="font-style: italic;">Estructura y copiado de datos en Excel.</span>
               </div>
               <!-- IMAGEN 2 (Centrada) -->
@@ -989,7 +995,7 @@
 
               <!-- FIGURA 17: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 17</strong><br>
+                <strong>Figura 16</strong><br>
                 <span style="font-style: italic;">Mensaje de error por formato incorrecto.</span>
               </div>
               <!-- IMAGEN 3 (Centrada) -->
@@ -1011,7 +1017,7 @@
 
               <!-- FIGURA 18: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 18</strong><br>
+                <strong>Figura 17</strong><br>
                 <span style="font-style: italic;">Nota de Pedido con artículos importados.</span>
               </div>
               <!-- IMAGEN 4 (Centrada) -->
@@ -1046,7 +1052,7 @@
 
               <!-- FIGURA 19: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 19</strong><br>
+                <strong>Figura 18</strong><br>
                 <span style="font-style: italic;">Ventana de exploración de archivos temporales.</span>
               </div>
               <!-- IMAGEN 1 (Centrada) -->
@@ -1072,7 +1078,7 @@
 
               <!-- FIGURA 20: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 20</strong><br>
+                <strong>Figura 19</strong><br>
                 <span style="font-style: italic;">Botón para visualizar Guía de Remisión escaneada.</span>
               </div>
               <!-- IMAGEN 2 (Centrada) -->
@@ -1080,7 +1086,7 @@
                 <img 
                   src="../Imagenes/Modulo_Ventas/8.1.0_nota_pedido/image 1088.png" 
                   alt="Botón de Despacho GR para visualizar documento escaneado" 
-                  style="width: 20%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
+                  style="width: 70%; max-width: 650px; height: auto; display: block; border-radius: 6px; border: 1px solid #E2E8F0;"
                 >
               </div>
               <!-- FIGURA 20: NOTA (APA 7) -->
@@ -1098,7 +1104,7 @@
 
               <!-- FIGURA 21: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 21</strong><br>
+                <strong>Figura 20</strong><br>
                 <span style="font-style: italic;">Ventana de Búsqueda de Notas de Pedido.</span>
               </div>
               <!-- IMAGEN 3 (Centrada) -->
@@ -1182,7 +1188,7 @@
 
               <!-- FIGURA 22: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 22</strong><br>
+                <strong>Figura 21</strong><br>
                 <span style="font-style: italic;">Casilla de Aprobación Vtas. en la cabecera.</span>
               </div>
               <!-- IMAGEN 1 (Centrada) -->
@@ -1204,7 +1210,7 @@
 
               <!-- FIGURA 23: NÚMERO Y TÍTULO (APA 7) -->
               <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-                <strong>Figura 23</strong><br>
+                <strong>Figura 22</strong><br>
                 <span style="font-style: italic;">Nota de Pedido en estado Aprobado Ventas.</span>
               </div>
               <!-- IMAGEN 2 (Centrada) -->
@@ -1272,7 +1278,7 @@
 
             <!-- FIGURA 24: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 24</strong><br>
+              <strong>Figura 23</strong><br>
               <span style="font-style: italic;">Opción Abrir Pedido en la cabecera.</span>
             </div>
             <!-- IMAGEN 1 (Centrada) -->
@@ -1294,7 +1300,7 @@
 
             <!-- FIGURA 25: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 25</strong><br>
+              <strong>Figura 24</strong><br>
               <span style="font-style: italic;">Casilla de Despacho marcada.</span>
             </div>
             <!-- IMAGEN 2 (Centrada) -->
@@ -1323,7 +1329,7 @@
 
             <!-- FIGURA 26: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 26</strong><br>
+              <strong>Figura 25</strong><br>
               <span style="font-style: italic;">Ruta de acceso a Facturación de NP - Administración.</span>
             </div>
             <!-- IMAGEN 1 (Centrada) -->
@@ -1345,7 +1351,7 @@
             
             <!-- FIGURA 27: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 27</strong><br>
+              <strong>Figura 26</strong><br>
               <span style="font-style: italic;">Aprobación en la ventana de Facturación de NP - Administración.</span>
             </div>
             <!-- IMAGEN 2 (Centrada) -->
@@ -1367,7 +1373,7 @@
             
             <!-- FIGURA 28: NÚMERO Y TÍTULO (APA 7) -->
             <div style="width: 100%; text-align: left !important; align-self: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.4;">
-              <strong>Figura 28</strong><br>
+              <strong>Figura 27</strong><br>
               <span style="font-style: italic;">Nota de Pedido con el despacho aprobado.</span>
             </div>
             <!-- IMAGEN 3 (Centrada) -->
